@@ -1,3 +1,5 @@
+\UseRawInputEncoding
+
 \documentclass[12pt,a4paper,openright,twoside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{disi-thesis}
@@ -5,9 +7,20 @@
 \usepackage{notes}
 \usepackage{shortcuts}
 \usepackage{acronym}
+\usepackage{xcolor}
+\usepackage{booktabs}
+
+\lstdefinestyle{pseudo}{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\bfseries,
+  commentstyle=\itshape\color{gray},
+  frame=single,
+  breaklines=true,
+  tabsize=2,
+}
 
 \school{\unibo}
-\programme{Corso di Laurea [Magistrale?] in Ingegneria e Scienze Informatiche}
+\programme{Corso di Laurea Magistrale in Ingegneria e Scienze Informatiche}
 \title{Fancy Title}
 \author{Candidate Name}
 \date{\today}
@@ -50,46 +63,761 @@ Optional. Max a few lines.
 \label{chap:introduction}
 %----------------------------------------------------------------------------------------
 
-Write your intro here.
-\sidenote{Add sidenotes in this way. They are named after the author of the thesis}
+Tradizionali approcci di ingegneria del software mostrano limiti crescenti nel rispondere alle esigenze dinamiche del business moderno, e numerosi studi empirici suggeriscono che l’agilità rappresenta una delle soluzioni più promettenti per superarli \cite{AWSJ03,TD08}. I metodi Agile, tra cui {\em Scrum} ed {\em eXtreme Programming} (XP), si fondano sui dodici principi del Manifesto Agile \cite{Manifesto} e sono ormai adottati da un numero sempre maggiore di aziende allo scopo di rendere lo sviluppo software più rapido, adattivo e focalizzato sul valore. In particolare, il metodo Scrum è stato ampiamente discusso in letteratura \cite{SC95}, che ne descrive le idee fondamentali e il ciclo di vita operativo.
 
-You can use acronyms that your defined previously,
-such as \ac{IoT}.
-%
-If you use acronyms twice,
-they will be written in full only once
-(indeed, you can mention the \ac{IoT} now without it being fully explained).
-%
-In some cases, you may need a plural form of the acronym.
-%
-For instance,
-that you are discussing \acp{vm},
-you may need both \ac{vm} and \acp{vm}.
+Un elemento comune ai metodi Agile è la progettazione e implementazione incrementale, in cui il software è suddiviso in funzionalità specifiche ({\em user stories}) e, ad ogni iterazione ({\em sprint}), il team è chiamato a fornire il set di user stories che massimizza il valore per l’utente, soddisfacendo al tempo stesso vincoli di durata, dipendenza e relazioni tra le storie. Secondo il principio della {\em team awareness}, la pianificazione dello sprint si basa sulla condivisione e la mediazione delle stime fornite dai membri del team riguardo complessità delle storie, utilità, rischio di mancata consegna e dipendenze. Avanzare storie ad alto valore può anticipare risultati significativi per l’utente, rafforzando la consapevolezza del team; analogamente, anticipare storie critiche consente di limitare rischi di impatto tardivo, bilanciando però una maggiore probabilità di ritardi nelle fasi iniziali. Il contributo di \cite{C04} offre indicazioni pratiche per valutare complessità e valore delle user stories.
 
-\paragraph{Structure of the Thesis}
+Una pianificazione di sprint efficace è unanimemente riconosciuta come fattore chiave per il successo di un progetto agile \cite{cohn2005agile}. L’efficacia del piano dipende sia dalla precisione delle stime (aspetto legato all’esperienza del team), sia dalla capacità di considerare correttamente variabili e vincoli progettuali: quest’ultimo obiettivo si traduce in un problema di ottimizzazione la cui complessità cresce con la dimensione del progetto, e il cui mancato raggiungimento può generare inefficienze, extracosti e ritardi.
 
-\note{At the end, describe the structure of the paper}
+Questa tesi prende come riferimento il lavoro \cite{BOSCHETTI2014116}, su cui vengono sviluppate e approfondite nuove tecniche di ottimizzazione e strumenti matematici per il supporto alla sprint planning in ambiente Agile.
 
-\chapter{State of the art}
 
-I suggest referencing stuff as follows: \cref{fig:random-image} or \Cref{fig:random-image}
+\chapter{Descrizione del problema}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=.8\linewidth]{figures/random-image.pdf}
-    \caption{Some random image}
-    \label{fig:random-image}
+Poiché la soddisfazione del cliente rappresenta uno dei principali indicatori di successo di un progetto, i metodi agili si propongono di rispondere in modo più efficace alle esigenze degli utenti, riducendo i tempi di consegna e aumentando la flessibilità del processo di sviluppo. Accelerare il time-to-market consente infatti di ridurre la pressione competitiva, mentre la flessibilità permette di adattarsi rapidamente sia ai progressi tecnologici sia ai cambiamenti nei requisiti degli utenti. Per conseguire tali obiettivi, l’approccio agile adotta una serie di pratiche complementari, tra cui lo sviluppo incrementale e iterativo, il coinvolgimento continuo degli utenti, la consapevolezza del team, e una documentazione leggera ma efficace. Dall’esperienza dei professionisti del settore sono nati diversi framework agili basati su questi principi. Tra questi, Scrum e gli approcci ibridi ,che combinano pratiche di Scrum ed eXtreme Programming (XP), risultano i più diffusi nelle aziende: Scrum si focalizza sugli aspetti organizzativi e di gestione del processo, mentre XP introduce pratiche tecniche specifiche, come la programmazione in coppia, per migliorare la qualità e l’efficienza dello sviluppo del codice.
+
+\vspace{1em}
+
+Il ciclo di vita di un progetto Scrum è suddiviso in varie fasi. Durante la definizione delle user story, il team di sviluppo e gli utenti collaborano per delineare la struttura generale del sistema e individuare un insieme di funzionalità. Una user story rappresenta una funzionalità di piccole dimensioni ma di elevato valore per l’utente \cite{cohn2004user}, descritta in modo semplice e sintetico. Essa costituisce una specifica leggera, che può essere ulteriormente approfondita attraverso un dialogo continuo con l’utente, ma deve al contempo contenere informazioni sufficienti a permettere al team di stimarne la complessità di sviluppo e pianificarne l’implementazione in modo efficace.
+
+\vspace{1em}
+
+Durante la fase di stima delle user story, a ciascuna storia vengono attribuiti due principali parametri: l’utilità e la complessità. Le valutazione possono essere effettuate sulla base di esperienze pregresse, pareri di esperti o tramite tecniche basate sul consenso come il planning poker. L’utilità rappresenta il valore per l'azienda percepito dall’utente che ha definito la user story. In alcuni casi è sufficiente stabilire un ordine di priorità tra le storie, mentre in altri l’utilità viene quantificata mediante un punteggio numerico. La complessità di sviluppo, invece, viene espressa in story point, un’unità adimensionale che viene preferita rispetto a misure di tempo o risorse per ridurre la soggettività e favorire la comparabilità tra le stime. L’assegnazione degli story point è effettuata dai membri del team in base alla loro esperienza, alla conoscenza del dominio e alle caratteristiche specifiche del progetto. Sono utilizzabili diverse tecniche di dimensionamento \cite{cohn2005agile} tra cui l'utilizzo di scale numeriche, come la sequenza di Fibonacci, intervalli di valori o l'adozioni di sistemi che si basano su categorie qualitative, come l'utilizzo delle taglie delle magliette.
+
+\vspace{1em}
+
+Durante la fase di prioritizzazione delle user story, il team assegna a ciascuna storia un livello di priorità basato principalmente sulla sua utilità e sul rischio associato, oltre a identificare le eventuali dipendenze tra le diverse storie. Vi sono due categorie di fattori di rischio, vi sono le storie critiche: si tratta di user story che esercitano un forte impatto sulle altre e rappresentano componenti fondamentali del progetto. Una scelta errata nell'assegnazione o nella stima di queste storie può compromettere il successo complessivo dello sprint e dei cicli successivi, creando effetti a cascata su altre dipendenze. E vi sono le storie incerte, caratterizzate da un elevato grado di difficoltà nella stima del tempo e dello sforzo richiesto. Questa incertezza nasce da potenziali imprevisti, come cambiamenti nei requisiti espressi dall'utente, problemi tecnici inaspettati durante l'implementazione, o complessità che emergeranno solo durante lo sviluppo. Entrambe le categorie di rischio vengono generalmente rappresentate tramite valori numerici. Le dipendenze, invece, esprimono vincoli di sequenza nello sviluppo, indicando che una user story può essere avviata solo dopo il completamento di una o più storie precedenti. Sebbene i metodi agili tendano a limitare le dipendenze per mantenere elevata la flessibilità del progetto, alcune di esse risultano inevitabili e devono essere rispettate per garantire la coerenza del processo di sviluppo.
+
+\vspace{1em}
+
+L’elenco delle user story, una volta definite le priorità, costituisce il product backlog, che viene poi suddiviso in sprint durante la fase di pianificazione dello sprint. Gli sprint devono avere una durata breve e costante, solitamente compresa tra una e le quattro settimane, in modo da assicurare un feedback rapido e continuo da parte degli utenti. L'assegnazione delle user story agli sprint si basa su tre elementi fondamentali: la velocità di sviluppo del team, la complessità delle singole story e le possibili correlazioni o affinità tra le story. La velocità di sviluppo rappresenta il numero stimato di story point, che rappresenta l'unita minima per stimare lo sforzo necessario a completare una user story o un’attività, che il team è in grado di completare giornalmente. Questo valore viene utilizzato per calcolare la capacità dello sprint, ovvero il numero massimo di story point che il team può realisticamente erogare durante l'intera durata dello sprint.  Infine, l'affinità tra story si riferisce alle correlazioni logiche o funzionali tra user story che, se incluse nello stesso sprint, generano un valore maggiore per l'utente finale. Quando story correlate vengono realizzate insieme, gli utenti percepiscono più chiaramente il valore complessivo della funzionalità erogata e possono sperimentare un'esperienza più coerente e completa. Considerare l'affinità nella pianificazione permette quindi di massimizzare l'utilità percepita e di ottimizzare l'impatto di ogni rilascio incrementale.
+
+\vspace{1em}
+
+Durante la fase di sviluppo dello sprint gli sviluppatori eseguono un'analisi dettagliata delle user story selezionate e producono lo sprint backlog, ovvero l'elenco operativo delle attività da completare. Successivamente, ogni membro del team si occupa di un sottoinsieme di story, seguendo l'intero ciclo di progettazione, implementazione e test. Al termine dello sprint si svolge la  sprint review, durante la quale gli utenti e gli stakeholder esaminano le story completate per verificare che le funzionalità implementate corrispondano effettivamente ai requisiti richiesti. Le story che superano la revisione vengono considerate completate e consegnate agli utenti come incremento del prodotto, mentre quelle non approvate vengono reinserite nel product backlog. In questa fase conclusiva, il team conduce anche una retrospettiva, analizzando i problemi riscontrati durante lo sprint e le soluzioni adottate, al fine di identificare opportunità di miglioramento per le iterazioni successive. Questo può includere, ad esempio, l'aggiornamento delle stime sulla base dell'esperienza maturata. Se dal feedback degli utenti emergono nuove user story o modifiche significative a quelle esistenti, oppure se le stime vengono riviste in modo sostanziale, viene eseguita una nuova fase di prioritizzazione del backlog prima dell'avvio dello sprint successivo, garantendo così che la pianificazione rimanga sempre allineata alle reali esigenze del progetto.
+
+\vspace{1em}
+
+Il problema della pianificazione dello sprint può essere descritto come dato un insieme di user story e un insieme di sprint, allocare ogni story a uno sprint in modo da soddisfare tutti i vincoli relativi alla capacità dello sprint e alle dipendenze tra le storie e raggiungere anche come obbiettivi la soddisfazione del cliente, che può essere raggiunta fornendo prima le user story con maggiore utilità per aumentare la consapevolezza e la fiducia dell'utente e  includendo storie affini nello stesso sprint per aumentarne il valore per gli utenti, la gestione del rischio ottenibile promuovendo le user story critiche consentendo di identificare tempestivamente eventuali problemi o effetti collaterali che potrebbero propagarsi ad altre funzionalità, evitando impatti negativi tardivi e distribuendo le user story incerte in diversi sprint e posticipandole riducendo il rischio che più incertezze si concentrino nello stesso sprint, minimizzando la probabilità di ritardi nella consegna e garantendo una maggiore stabilità e prevedibilità del ciclo di sviluppo.
+
+\vspace{1em}
+
+Il problema della pianificazione dello sprint può essere formulato come un Generalized Assignment Problem (GAP) con vincoli laterali. Questo tipo di problema consiste nell'assegnare un insieme di compiti a un insieme di risorse con l'obiettivo di ottimizzare una funzione (nel nostro caso, massimizzare l'utilità totale), rispettando i limiti di capacità di ciascuna risorsa e soddisfacendo vincoli aggiuntivi che impongono condizioni specifiche sulle assegnazioni.
+
+\vspace{1em}
+
+Nel contesto della pianificazione agile, gli sprint rappresentano le risorse (o zaini), mentre le user story costituiscono i compiti (o elementi) da assegnare. Ogni user story è caratterizzata da due attributi fondamentali: gli story point, che misurano il peso dell'elemento in termini di sforzo e complessità richiesti, e l'utilità, che ne rappresenta il valore per il progetto e per l'utente finale. La capacità dello sprint corrisponde al limite di capacità della risorsa ed è determinata dal numero massimo di story point che il team può completare, calcolato in base alla durata prevista dello sprint e alla velocità di sviluppo del team stesso. Questa capacità rappresenta quindi il vincolo principale che regola quante e quali user story possono essere assegnate a ciascun sprint.
+
+\vspace{1em}
+
+La funzione obiettivo da massimizzare è l'utilità cumulativa dell'intero progetto. L'utilità di ogni singola user story viene incrementata se alcune storie affini sono incluse nello stesso sprint, poiché questo aumenta il valore percepito dall'utente, e/o se la storia è classificata come critica, riconoscendone l'importanza strategica per il successo del progetto.
+
+\vspace{1em}
+
+Per quanto riguarda la gestione del rischio, nella formulazione del vincolo di capacità, gli story point delle user story vengono aumentati in proporzione alla loro incertezza. Questo meccanismo penalizza l'inclusione di due o più storie incerte nello stesso sprint (obiettivo 2-ii), favorendo una loro distribuzione equilibrata su sprint diversi e riducendo così il rischio di ritardi nella consegna.
+
+\vspace{1em}
+
+È importante sottolineare che il Problema di Assegnazione Generalizzato appartiene alla classe dei problemi NP-hard, il che significa che trovare una soluzione ottimale richiede tempi computazionali che crescono esponenzialmente con le dimensioni del problema, rendendo necessario l'impiego di algoritmi euristici o metaeuristici per progetti di scala reale.
+
+
+\chapter{stato dell'arte}
+
+I principi Agile hanno registrato una diffusione crescente nell'ultimo decennio, stimolando lo sviluppo di numerosi approcci metodologici proposti tanto dai professionisti quanto dalla comunità di ricerca \cite{1201204}. Una revisione sistematica presentata in letteratura \cite{DYBA2008833} confronta diversi metodi Agile analizzandone sia le caratteristiche organizzative che quelle tecniche, evidenziando in particolare la crescente adozione delle pratiche Scrum e XP nei contesti industriali. L'approccio Scrum è approfondito ulteriormente in \cite{10.1007/978-1-4471-0947-1_11}, dove vengono descritti i fondamenti metodologici e il ciclo di vita caratteristico, contribuendo così alla comprensione dei meccanismi e delle peculiarità che contraddistinguono questo framework.
+
+\vspace{1em}
+
+Per quanto concerne la stima del valore del software, la letteratura propone molteplici approcci senza tuttavia convergere verso un modello condiviso. Nel contesto più ampio dell'ingegneria del software basata sul valore, in \cite{ronkko2009integrating} viene introdotta una matrice di decomposizione del valore che integra tre aspetti del software (tecnologia, progettazione e artefatto) con tre componenti del valore (valore intrinseco, esternalità e valore dell'opzione), fornendo in ciascuna cella domande specifiche che guidano gli analisti nell'interpretazione delle diverse combinazioni. Alternativamente, in \cite{park2004new} viene proposto un modello per esprimere il valore del software in termini monetari, sfruttando la relazione tra fattori tecnologici e di mercato. Una sintesi più completa è fornita da \cite{khurum2013software}, che distinguono quattro prospettive di valore: finanziaria, cliente, processo aziendale interno e innovazione e apprendimento. Gli autori sviluppano una Software Value Map (SVM) in cui ciascuna prospettiva è scomposta nelle sue componenti e sottocomponenti principali, offrendo agli analisti uno strumento per costruire una comprensione condivisa del valore. Sulla base della SVM, propongono inoltre un modello pratico articolato in tre fasi per ottenere la stima finale dell'utilità: selezione dello scenario caratterizzante il progetto specifico, identificazione del pattern di componenti di valore che meglio si adatta allo scenario selezionato, e definizione di una valutazione quantitativa del pattern attraverso la stima delle componenti individuate.
+
+\vspace{1em}
+
+Nell'ampio contesto della pianificazione dei progetti, la maggior parte degli sforzi di ricerca degli ultimi anni si è concentrata sullo sviluppo di procedure esatte o euristiche per la generazione di una pianificazione di base praticabile in ambiente deterministico, con numerosi modelli e algoritmi proposti in letteratura come documentato nella panoramica di \cite{KOLISCH2001249}. La complessità aumenta significativamente quando un team deve pianificare simultaneamente più progetti, situazione frequente nella pratica che richiede approcci specifici come evidenziato in \cite{PLATJE1994100}. In questo scenario, \cite{de1998resource} distingue due livelli di pianificazione: il primo livello, denominato pianificazione approssimativa della capacità, affronta il problema di pianificazione a medio termine, mentre il secondo livello, chiamato pianificazione di progetto con vincoli di risorse, si occupa della pianificazione operativa a breve termine. Questo approccio a due livelli, esplorato anche in \cite{Gademann2005153}, utilizza una scomposizione top-down delle attività in grandi pacchetti di lavoro per ridurre la complessità della pianificazione a medio termine.
+
+\vspace{1em}
+
+Secondo le classificazioni dei problemi di pianificazione di progetto proposte in \cite{herroelen1999classification} e \cite{BRUCKER19993}, il problema affrontato può essere classificato come vincolato dalle risorse, con risorse rinnovabili (quali la manodopera) disponibili periodo per periodo. Analogamente al modello PERT/CPM di base, vengono considerate precedenze di tipo finish-to-start con sfasamento temporale nullo e non è consentita alcuna prelazione sulle attività. La funzione obiettivo adottata differisce tuttavia dall'approccio tradizionale: anziché minimizzare la durata complessiva del progetto, si persegue una misura di completamento incrementale che mira a massimizzare il valore aziendale percepito dagli utenti, riflettendo una prospettiva orientata al valore piuttosto che alla sola efficienza temporale.
+
+\vspace{1em}
+
+Il problema della pianificazione ha acquisito crescente interesse nell'ambito delle metodologie iterative e incrementali. In \cite{denne2003software} viene proposta una strategia di sviluppo software basata su fattori finanziari, applicabile in contesti iterativi, che genera una sequenza ottimale di requisiti massimizzando nel tempo il valore attuale netto, ovvero una combinazione di ricavi, costi e rischi di ciascun requisito. Gli autori presentano due strategie risolutive: un algoritmo greedy che seleziona il successivo requisito da soddisfare considerando quelli senza precursori non soddisfatti e con il massimo valore attuale netto, e un approccio look-ahead che estende la strategia greedy analizzando sottoinsiemi di sequenze di precedenza redditizie.
+
+\vspace{1em}
+
+Un modello specificamente orientato ai metodi agili è descritto in \cite{SZOKE2011574}, dove viene presentato un modello concettuale per la pianificazione dei rilasci e sviluppato un modello di ottimizzazione finalizzato all’assegnazione dei requisiti alle diverse iterazioni di un rilascio, con l’obiettivo di massimizzare l’utilità complessiva fornita pur tenendo conto delle precedenze e delle condizioni di accoppiamento. In questo contesto, gli autori illustrano un algoritmo branch-and-bound per la risoluzione del modello, che incorpora esplicitamente la gestione del rischio. Un ulteriore contributo rilevante nel contesto agile è quello di \cite{VANVALKENHOEF20111227}, focalizzato primariamente sulla gestione del rischio e dell’incertezza nei progetti XP. L’approccio proposto stima la velocità di sviluppo del team e considera più set di user story con rilevanza decrescente secondo la classificazione MoSCoW:
+
+\begin{itemize}
+\item set \textit{must have} (requisiti indispensabili)
+\item set \textit{should have} (requisiti importanti)
+\item set \textit{could have} (requisiti desiderabili)
+\end{itemize}
+L’obiettivo è assegnare ciascuna user story al set più appropriato, massimizzando l’utilità complessiva e rispettando le precedenze e gli accoppiamenti tra le user story mediante un algoritmo branch-and-bound per identificare la soluzione ottimale. Tuttavia, il numero limitato di set considerati determina un piano a grana grossa che necessita di successivo raffinamento per ottenere una pianificazione operativa, ad esempio suddividendo i set secondo limiti di budget o frammentando le user story in attività più granulari.
+
+In un precedente lavoro è stato inoltre proposto un approccio per la pianificazione dello sprint di base nei progetti di data warehouse agile \cite{inproceedings}. Il modello presentato in quel contributo si distingue per una struttura più semplice rispetto a quella qui descritta, non includendo storie forzate e adottando una modellazione dell’accoppiamento meno espressiva; inoltre, il problema della ripianificazione non viene affrontato in quella formulazione.
+
+\vspace{1em}
+
+Nei contesti reali, l'ambiente di progetto difficilmente può essere considerato deterministico a causa della varietà di eventi imprevisti che possono verificarsi e dell'imprecisione intrinseca delle stime, rendendo necessarie politiche di gestione del cambiamento. Sebbene nessuno dei lavori precedentemente menzionati si occupi specificamente di gestione del cambiamento, un approccio rilevante in questa direzione è rappresentato in \cite{GREER2004243}, orientato a contesti iterativi e incrementali. In questo framework, un piano di rilascio include diversi incrementi e in ogni fase un insieme di requisiti viene assegnato agli incrementi attuali e futuri in modo da restituire il miglior compromesso tra le priorità degli stakeholder e i vincoli di sviluppo, quali capacità di incremento, precedenze e condizioni di accoppiamento. Il modello è formalizzato come un problema di zaino multiplo e risolto mediante un algoritmo genetico. Per gestire il cambiamento, Evolve implementa una strategia parziale di ripianificazione: a ogni incremento sono consentiti nuovi requisiti e modifiche alle priorità o ai vincoli, e una nuova soluzione viene generata ex novo.
+
+\vspace{1em}
+
+Nel contesto specifico della pianificazione Scrum, in \cite{Li2010375} viene fornita una formulazione a zaino di un modello di ottimizzazione per la pianificazione a singola iterazione che seleziona i requisiti massimizzando il profitto dell'iterazione successiva e rispettando i vincoli di sviluppo. L'evoluzione viene gestita consentendo modifiche ai parametri dopo ogni iterazione e valutandone l'impatto sul modello, con una nuova soluzione per l'iterazione successiva generata da zero incorporando modifiche e storie aggiuntive. Un approccio più sofisticato è rappresentato dalla pianificazione bi-obiettivo proposta in \cite{10.1145/1287624.1287641}, in cui l'iterazione successiva viene pianificata considerando l'impatto di nuovi requisiti o modifiche sul sistema esistente dal punto di vista aziendale e di sviluppo. Viene generato un insieme di piani alternativi, ciascuno dei quali riflette una diversa importanza relativa degli aspetti aziendali e di implementazione; il piano ottimale viene quindi selezionato come quello che meglio soddisfa un gruppo di interdipendenze, denominate SD-coupling, tra i requisiti identificati attraverso l'analisi di impatto. Questo approccio permette di bilanciare in modo esplicito le esigenze di business con le complessità tecniche derivanti dall'evoluzione del sistema.
+
+Sebbene questi approcci affrontino specificamente le problematiche relative all'incertezza e alla ripianificazione, nessuno di essi si occupa di evitare che il nuovo piano interferisca con quello precedente, aspetto che costituisce uno dei contributi distintivi di questo lavoro. Per identificare contributi in questa direzione, è necessario esaminare l'area di ricerca sulla pianificazione in condizioni di incertezza, i cui sforzi si sono concentrati su due fronti principali: la pianificazione proattiva e la pianificazione reattiva \cite{demeulemeester2002project}.
+
+\vspace{1em}
+
+La pianificazione proattiva, o robusta, si concentra sullo sviluppo di una pianificazione di base che incorpora un certo grado di anticipazione della variabilità durante l'esecuzione del progetto al fine di proteggere la pianificazione stessa da perturbazioni. Ad esempio, in \cite{doi:10.1177/875697280203300406} viene definita una pianificazione iniziale aggressiva a cui vengono successivamente aggiunti buffer di risorse e tempo che proteggono i percorsi critici. Oltre alle regole empiriche, come la regola del dimensionamento del buffer al 50\%, metodi più sofisticati per il dimensionamento dei buffer sono discussi in \cite{newbold1998project}.
+
+La schedulazione reattiva si riferisce invece alle modifiche che potrebbero dover essere apportate alla schedulazione durante l'esecuzione del progetto e può basarsi su diverse strategie. Da un lato, l'approccio reattivo può utilizzare tecniche semplici volte a ripristinare rapidamente la coerenza della schedulazione: ad esempio, la regola dello spostamento a destra proposta in \cite{sadeh1993predictive} posticipa tutte le attività interessate dall'interruzione della schedulazione. D'altro canto, un approccio di schedulazione reattiva può comportare una rischedulazione completa delle attività rimanenti. In caso di rischedulazione, la nuova schedulazione può differire notevolmente da quella di base, circostanza non auspicabile poiché annullerebbe gli impegni precedentemente stabiliti generando costi aggiuntivi, tensioni e insoddisfazione sia da parte dei clienti che dei membri del team. Per questo motivo, gli approcci di rischedulazione naïve si basano spesso su euristiche che effettuano riorganizzazioni locali dei piani. In alternativa, la rischedulazione può adottare una strategia di minima perturbazione che mira alla stabilità ex post, basandosi su algoritmi esatti o subottimali il cui obiettivo è la minimizzazione di una funzione delle differenze tra gli istanti di inizio di ciascuna attività nella schedulazione nuova e in quella originale \cite{sakkout2000probe}, oppure la minimizzazione del numero di attività da svolgere in sprint diversi \cite{ALAGOZ2003523}.
+
+
+\chapter{Formulazione matematica}
+
+In questa sezione definiamo matematicamente il problema di pianificazione agile. Consideriamo l'insieme \( U = \{1, \ldots, n\} \) degli indici delle \( n \) user story da realizzare durante il progetto. Ogni user story \( j \in U \) è caratterizzata dai seguenti attributi principali:
+\begin{itemize}
+    \item \( u_j \): l'utilità, che rappresenta il valore apportato dalla user story;
+    \item \( r^{cr}_j \): il rischio critico, che misura l'impatto potenziale della story sulle altre;
+    \item \( r^{unc}_j \): l'incertezza, che quantifica la difficoltà di stima dovuta a possibili imprevisti;
+    \item \( p_j \): la complessità, espressa in story point, che indica lo sforzo necessario per completarla.
+\end{itemize}
+
+Definiamo inoltre \( Y_j \subseteq U \) come l'insieme delle user story affini alla story \( j \), ovvero quelle che, se assegnate allo stesso sprint, generano un valore aggiunto. Per ognuna di esse, \( a_j \) rappresenta l'incremento di utilità ottenuto per ogni user story affine assegnata allo stesso sprint. Nel caso in cui \( Y_j = \emptyset \), poniamo \( a_j = 0 \).
+
+Per gestire le dipendenze tra user story, distinguiamo due sottoinsiemi \( U^{OR} \) e \( U^{AND} \), rispettivamente contenenti le user story con dipendenze di tipo OR e AND.
+\begin{itemize}
+    \item Per ogni \( j \in U^{OR} \), indichiamo con \( D^{OR}_j \subseteq U \) l'insieme delle user story dalle quali \( j \) dipende secondo una logica OR: almeno una delle storie in \( D^{OR}_j \) deve essere assegnata allo stesso sprint di \( j \) o a uno sprint precedente affinché \( j \) possa essere eseguita.
+    \item Per ogni \( j \in U^{AND} \), definiamo \( D^{AND}_j \subseteq U \) come l'insieme delle user story da cui \( j \) dipende in modalità AND: tutte le storie in \( D^{AND}_j \) devono essere assegnate allo stesso sprint di \( j \) o a sprint precedenti.
+\end{itemize}
+
+Consideriamo infine l'insieme \( S = \{1, \ldots, m\} \) degli \( m \) sprint pianificati per il progetto, dove ogni sprint \( i \in S \) ha una capacità massima \( p^{max}_i \), espressa in story point, che rappresenta il limite di lavoro che il team può completare durante quello sprint.
+
+Le variabili decisionali che modellano il problema sono:
+\begin{itemize}
+    \item \( x_{ij} \in \{0,1\} \), variabile binaria che vale 1 se la user story \( j \) viene assegnata allo sprint \( i \), 0 altrimenti;
+    \item \( y_{ij} \in \mathbb{Z}_{\geq 0} \), variabile intera non negativa che indica il numero di user story affini a \( j \) (cioè appartenenti a \( Y_j \)) assegnate allo stesso sprint \( i \).
+\end{itemize}
+
+Il modello di programmazione lineare intera mista è:
+
+\begin{alignat}{3}
+ \qquad z_P  = \max  & \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right)
+                                                                               &\                        \label{Eq1.P1}\\
+  s.t.\ & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} \leq p_i^{max},                   &\ i \in S                \label{Eq1.P2}\\
+        & \sum_{i=1}^{m} x_{ij} = 1,                                           &\ j \in U                \label{Eq1.P3}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} \geq x_{ij},             &\ i \in S, j \in U^{OR}  \label{Eq1.P4}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j^{AND}|, &\quad i \in S, j \in U^{AND} \label{Eq1.P5}\\
+        & y_{ij} \leq \sum_{k \in Y_j} x_{ik},                                 &\ i \in S, j \in U       \label{Eq1.P6}\\
+        & y_{ij} \leq |Y_j| x_{ij},                                            &\ i \in S, j \in U       \label{Eq1.P7}\\
+        & x_{ij} \in \{0,1\},                                                  &\ i \in S, j \in U       \label{Eq1.P8}\\
+        & y_{ij} \geq 0,                                                       &\ i \in S, j \in U       \label{Eq1.P9}
+\end{alignat}
+
+Ecco il testo rielaborato in formato LaTeX:
+
+---
+
+La funzione obiettivo~\eqref{Eq1.P1} ha lo scopo di massimizzare l'utilità complessiva del progetto agile.  
+L'utilità base $u_j$ di ciascuna user story $j$ viene incrementata considerando due fattori principali:
+\begin{enumerate}
+    \item il \textbf{rischio di criticità} $r^{cr}_j$, che assegna un peso maggiore alle storie critiche e ne incentiva l'esecuzione anticipata negli sprint iniziali, riducendo il rischio di impatti tardivi sul progetto;
+    \item l'\textbf{incremento di affinità} $a_j$, che aumenta il valore percepito dall'utente quando storie correlate vengono sviluppate congiuntamente nello stesso sprint, migliorando la coerenza funzionale del rilascio.
+\end{enumerate}
+
+Per ogni user story $j$, il numero di storie affini che vengono incluse nello sprint $i$ è quantificato dalla variabile $y_{ij}$, calcolata come:
+\[
+y_{ij} = \sum_{k \in Y_j} x_{ik},
+\]
+dove $y_{ij} = 0$ quando $x_{ij} = 0$, ovvero quando la story $j$ non è assegnata allo sprint $i$.  
+Trattandosi di un problema di massimizzazione, i vincoli~\eqref{Eq1.P6} e~\eqref{Eq1.P7} garantiscono il corretto calcolo delle variabili $y_{ij}$ senza la necessità di imporre vincoli espliciti di integralità su di esse.
+
+I \textbf{vincoli di capacità}~\eqref{Eq1.P2} assicurano che la complessità complessiva delle user story assegnate a ciascuno sprint, misurata in story point, non ecceda la capacità massima disponibile $p^{\max}_i$ per quello sprint, rispettando così i limiti operativi del team.
+
+I \textbf{vincoli di assegnazione}~\eqref{Eq1.P3} impongono che ogni user story sia assegnata esattamente a uno e un solo sprint, garantendo che nessuna storia venga trascurata o duplicata nella pianificazione.
+
+Le \textbf{relazioni di dipendenza} tra user story sono modellate attraverso i vincoli~\eqref{Eq1.P4} e~\eqref{Eq1.P5}, che regolano l'ordine di esecuzione delle storie in base ai loro prerequisiti:
+\begin{itemize}
+    \item per le dipendenze di tipo \textbf{OR}, il vincolo~\eqref{Eq1.P4} permette l'assegnazione della story $j$ allo sprint $i$ solamente se \textit{almeno una} delle user story appartenenti all'insieme $D^{OR}_j$ è stata completata in uno sprint precedente o nello stesso sprint ($i' \le i$);
+    \item per le dipendenze di tipo \textbf{AND}, il vincolo~\eqref{Eq1.P5} richiede invece che \textit{tutte} le user story contenute nell'insieme $D^{AND}_j$ siano state completate entro lo sprint $i$, assicurando che tutti i prerequisiti necessari siano soddisfatti prima di procedere con l'esecuzione di $j$.
+\end{itemize}
+
+\section{Procedure di riduzione} \label{Sec.Red}
+
+Le procedure di riduzione mirano a rafforzare i vincoli di capacità \eqref{Eq1.P2} modificando le capacità degli sprint o i pesi \( pr_j = p_j r_j^{un} \) delle user story. Approcci simili sono utilizzati per problemi di packing in \cite{BHM02,BM03a,BM10}.
+
+\subsection{Modifica delle capacità degli sprint} \label{SubSec.RedSprint}
+
+Se non esiste alcuna combinazione di user story che saturi esattamente la capacità \( p_i^{max} \) dello sprint \( i \in S \), è possibile ridurre tale capacità rimuovendo i "punti storia inutilizzabili" senza alterare il valore ottimale del problema.  
+La nuova capacità può essere trovata risolvendo il problema di Subset Sum:
+\[
+p_i^{max} = \max \left\{ \sum_{k \in U} pr_k \xi_k : \sum_{k \in U} pr_k \xi_k \leq p_i^{max}, \quad \xi_j \in \{0,1\},\, j \in U \right\}
+\]
+dove \( pr_j = p_j r_j^{un} \) è il peso effettivo associato alla user story \( j \).  
+Il problema di Subset Sum può essere efficacemente risolto utilizzando una procedura di programmazione dinamica.
+
+\subsection{Modifica dei pesi delle user story} \label{SubSec.RedUserStories}
+
+Un ulteriore miglioramento consiste nell'aumentare il peso \( pr_j \) di una user story \( j \in U \), mantenendo la fattibilità dello sprint che la contiene.  
+Per ogni sprint \( i \in S \), definiamo il valore \(p''_{ij}\):
+\[
+p''_{ij} = \max \left\{ \sum_{h \in U} pr_h \xi_h : \sum_{h \in U} pr_h \xi_h \leq p_i^{max}, \quad \xi_j = 1, \quad \xi_k \in \{0,1\},\, k \in U \setminus \{j\} \right\}
+\]
+ossia la massima somma di pesi che include necessariamente la storia \( j \) senza superare la capacità dello sprint.  
+In tal modo, è possibile aggiornare il peso di \( j \) come:
+\[
+pr_j := pr_j + (p_i^{max} - p''_{ij}).
+\]
+
+Per massimizzare il numero di storie a cui aggiornare il peso, si propone di ordinare le user story in ordine decrescente di peso, ovvero:
+\[
+pr_1 \geq pr_2 \geq \dots \geq pr_n.
+\]
+
+Queste tecniche di riduzione sfruttano problemi classici come il Subset Sum, risolvibili con algoritmi di programmazione dinamica, contribuendo a semplificare il modello e a ridurre i tempi di calcolo necessari per la soluzione ottimale.
+
+\iffalse
+\section{Cover Inequalities} \label{SubSec.Cover}
+
+Il nucleo della formulazione matematica proposta è un problema di Generalized Assignment, e per questo motivo il limite superiore della soluzione può essere migliorato sfruttando disuguaglianze valide note per questo problema.  
+Abbiamo indagato in particolare le classiche \emph{Lifted Cover Inequalities} (LCI), corrispondenti ai vincoli di capacità \eqref{Eq1.P2}, come suggerito dalla letteratura su problemi simili (si veda ad esempio \cite{ABV10}).
+
+Nel nostro studio, abbiamo tentato di separare le LCIs a ciascun nodo dell'albero di ricerca, risolvendo i problemi di knapsack necessari tramite una semplice procedura di programmazione dinamica.  
+Le LCIs generalmente riescono a ridurre il numero di nodi generati nell'albero di ricerca, tuttavia il tempo medio di calcolo per risolvere ogni nodo tende ad aumentare significativamente: in media, è circa quattro volte superiore rispetto a quanto richiesto dal modello base, e in alcuni casi può superare persino di venti volte il tempo di calcolo originario.
+
+\section{Dominance Inequalities} \label{SubSec.Dominance}
+
+Dato una user story $j \in U$, definiamo $ur_j = u_j r_j^{cr}$.  
+Due user story $i$ e $j$ di pari peso ($pr_i = pr_j$), assegnate in due sprint differenti, possono sempre essere scambiate. Inoltre, se $ur_i > ur_j$, sarà sempre più vantaggioso eseguire la story $i$ prima della story $j$ (ovvero si ottiene una funzione obiettivo più alta). In tal caso, si dice che la story $i$ \emph{domina} la story $j$.  
+L'idea di base è dunque aggiungere disuguaglianze valide (\emph{Dominance Inequalities}) che proibiscano soluzioni in cui la story $j$ viene eseguita prima di $i$. Queste disuguaglianze risultano ridondanti nel modello intero originale, ma possono essere violate nella rilassazione lineare del modello.
+
+L'idea può essere estesa considerando più di due user stories.
+
+Le dominance inequalities possono essere applicate alle storie che non hanno affinità con altre ($Y_j = \emptyset$) e solo per alcune combinazioni di dipendenze.  
+Definiamo $U^D = U^{OR} \cup U^{AND}$ l'insieme delle storie che hanno dipendenze e $D = \bigcup_{j \in U} (D_j^{OR} \cup D_j^{AND})$ l'insieme delle storie da cui altre storie dipendono.  
+Poniamo inoltre $U' = \{ j \in U : Y_j = \emptyset \text{ e } j \not\in U^D \}$ e $U'' = \{ j \in U : Y_j = \emptyset \text{ e } j \not\in D \}$.
+
+\subsection{Dominanza di Tipo 1}
+
+Se esiste una coppia di user stories $j \in U'$ e $j_1 \in U''$ tale che $ur_j > ur_{j_1}$ e $pr_j = pr_{j_1}$, valgono le seguenti disuguaglianze:
+\begin{equation}
+\sum_{k=1}^{i-1} x_{kj_1} \leq 1 - x_{ij}, \quad \forall\, i \in S
+\label{Dom1}
+\end{equation}
+
+\subsection{Dominanza di Tipo 2}
+
+Se esiste una tripletta di user stories $j \in U'$ e $j_1,j_2 \in U''$ tale che $ur_j > ur_{j_1} + ur_{j_2}$ e $pr_j = pr_{j_1} + pr_{j_2}$, valgono le seguenti disuguaglianze:
+\begin{equation}
+x_{i'j_1} + x_{i'j_2} + x_{ij} \leq 2, \text{ per ogni } i,i' \in S: i' < i
+\label{Dom2}
+\end{equation}
+
+Analogamente, se esiste una tripletta di user stories $j \in U''$ e $j_1,j_2 \in U'$ tale che $ur_j < ur_{j_1} + ur_{j_2}$ e $pr_j = pr_{j_1} + pr_{j_2}$, valgono:
+\begin{equation}
+x_{i'j_1} + x_{i'j_2} + x_{ij} \leq 2, \text{ per ogni } i,i' \in S: i < i'
+\label{Dom2inv}
+\end{equation}
+
+\subsection{Dominanza di Tipo 3}
+
+Se esiste una quadrupla di user stories $j \in U'$ e $j_1,j_2,j_3 \in U''$ tale che $ur_j > ur_{j_1} + ur_{j_2} + ur_{j_3}$ e $pr_j = pr_{j_1} + pr_{j_2} + pr_{j_3}$, valgono:
+\begin{equation}
+x_{i'j_1} + x_{i'j_2} + x_{i'j_3} + x_{ij} \leq 3, \text{ per ogni } i,i' \in S: i' < i
+\label{Dom3}
+\end{equation}
+
+Analogamente, se esiste una quadrupla di user stories $j \in U''$ e $j_1,j_2,j_3 \in U'$ tale che $ur_j < ur_{j_1} + ur_{j_2} + ur_{j_3}$ e $pr_j = pr_{j_1} + pr_{j_2} + pr_{j_3}$, valgono:
+\begin{equation}
+x_{i'j_1} + x_{i'j_2} + x_{i'j_3} + x_{ij} \leq 3, \text{ per ogni } i,i' \in S: i < i'
+\label{Dom3inv}
+\end{equation}
+
+È evidente che le disuguaglianze di dominanza possono essere generalizzate rispetto a un parametro $k \leq n$, se esiste almeno una story $j$ tale che $pr_j = \sum_{i=1}^{k} pr_{j_i}$. Tuttavia, i risultati computazionali mostrano che non si ottengono benefici concreti, a fronte di una complessità computazionale in aumento.
+
+
+\fi
+
+\chapter{Euristiche per la pianificazione degli sprint}
+
+\section{Euristiche greedy e di scambio del lavoro precedente}
+\label{Sec.GreedyPrev}
+
+In \cite{BOSCHETTI2014116} sono state proposte due euristiche greedy per costruire un piano di sprint  e una procedura di post ottimizzazione basata su scambi locali. In questa sezione ne riprendiamo brevemente il funzionamento, poiché tali euristiche costituiscono la base anche per il lavoro sviluppato in questa tesi.
+
+\subsection{GreedyHeuristic: costruzione sprint-per-sprint}
+
+L’idea di base della \emph{GreedyHeuristic} è la seguente: il piano viene costruito iterativamente, ottimizzando uno sprint per volta in ordine cronologico (prima lo sprint 1, poi lo sprint 2, e così via).  
+A ogni passo, fissato uno sprint $i \in S$ e l’insieme $F_i$ delle user story già assegnate agli sprint precedenti, si risolve il sottoproblema $(SP_i)$:
+\begin{alignat}{3}
+(SP_i) \quad z_{SP_i}  = \max  & \sum_{j=1}^{n} (m-i+1)u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) &\ \label{Eq1.SP1}\\
+  s.t.\ & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} \leq p_i^{max}                              &\               \label{Eq1.SP2}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} \geq x_{ij}-|D_j \cap F_i|,        &\ j \in U^{OR}  \label{Eq1.SP4}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j|-|D_j \cap F_i|,  &\ j \in U^{AND} \label{Eq1.SP5}\\
+        & y_{ij} \leq \sum_{k \in Y_j} x_{ik},                      &\ j \in U                 \label{Eq1.SP6}\\
+        & y_{ij} \leq |Y_j| x_{ij},                                 &\ j \in U                 \label{Eq1.SP7}\\
+        & x_{ij} \in \{0,1\},                                       &\ j \in U \setminus F_i   \label{Eq1.SP8a}\\
+        & x_{ij} = 0,                                               &\ j \in F_i               \label{Eq1.SP8b}\\
+        & y_{ij} \geq 0,                                            &\ i \in S, j \in U        \label{Eq1.SP9}
+\end{alignat}
+
+\noindent dove $F_i$ è l’insieme delle storie già assegnate agli sprint $1,\dots,i-1$ (con $F_1=\emptyset$).
+
+\paragraph{Pseudocodice della GreedyHeuristic.}
+
+\begin{figure}[h]
+\begin{lstlisting}[style=pseudo,caption={GreedyHeuristic},label={Alg.GH}]
+GreedyHeuristic
+-------------------------
+Set $F_1 = \emptyset$, $i = 1$
+
+WHILE ($F_i \neq U$ and $i \leq m$):
+    Compute the optimal solution $\mathbf{x}^*$ of subproblem $SP_i$
+    Set $F_{i+1} = F_i \cup \{ j \in U : x^*_{ij} = 1 \}$
+    Set $i = i + 1$
+\end{lstlisting}
 \end{figure}
 
-\section{Some cool topic}
 
-\chapter{Contribution}
+Questa procedura è concettualmente greedy perché, a ogni passo, prende la “miglior scelta locale” per lo sprint corrente (risolvendo $SP_i$) e non rivede le decisioni sugli sprint precedenti. 
 
-You may also put some code snippet (which is NOT float by default), eg: \cref{lst:random-code}.
 
-\lstinputlisting[float,language=Java,label={lst:random-code}]{listings/HelloWorld.java}
+\subsection{QuickGreedyHeuristic: versione veloce basata su knapsack}
+\label{Sec.QuickGreedy}
 
-\section{Fancy formulas here}
+l'euristica \textit{GreedyHeuristic}, riassunta in Figura~\ref{Alg.GH}, è estremamente rapida se eseguita una sola volta, ma il suo costo computazionale può diventare rilevante quando deve essere richiamata ripetutamente. In particolare come mostrato in \cite{BOSCHETTI2014116}, per alcune istanze di grandi dimensioni, una singola esecuzione di \textit{GreedyHeuristic} richiede più di un secondo; di conseguenza, ripeterla per migliaia di iterazioni comporta un tempo totale dell'ordine di migliaia di secondi, imputabile unicamente alla componente greedy.
+
+Per ridurre questo onere, proponiamo una variante accelerata dell'euristica greedy, denominata \textit{QuickGreedyHeuristic}. L'idea di base consiste nel rilassare il sottoproblema $SP_i$ rimuovendo i vincoli~\eqref{Eq1.SP4} \eqref{Eq1.SP7}. Il sottoproblema risultante, indicato con $SP'_i$, si riconduce a un problema di knapsack che può essere risolto in modo efficiente tramite programmazione dinamica. Tale rilassamento introduce tuttavia due criticità:
+
+\begin{itemize}
+    \item in assenza dei vincoli di collegamento~\eqref{Eq1.SP6} \eqref{Eq1.SP7}, le variabili $\{y_{ij}\}$ diventano indipendenti dalle decisioni di assegnazione;
+    \item l'eliminazione dei vincoli di dipendenza~\eqref{Eq1.SP4} \eqref{Eq1.SP5} può determinare violazioni delle relazioni di precedenza tra le user story.
+\end{itemize}
+
+Per risolvere il primo problema, il knapsack $SP'_i$ viene risolto ignorando le variabili $\{y_{ij}\}$, che sono poi valutate a posteriori a partire dalla soluzione $\{x_{ij}\}$ di $SP'_i$. In particolare, per ogni sprint $i$ e user story $j$, poniamo
+\[
+y_{ij} =
+\begin{cases}
+\displaystyle \sum_{k \in Y_j} x_{ik} & \text{se } x_{ij} = 1,\\[4pt]
+0 & \text{altrimenti.}
+\end{cases}
+\]
+In questo modo, le variabili $y_{ij}$ riflettono il numero di user story ``di supporto'' selezionate nello sprint $i$ a fronte della scelta di $j$.
+
+Per quanto riguarda le dipendenze, la soluzione del knapsack rilassato $SP'_i$ può violare i vincoli~\eqref{Eq1.SP4} \eqref{Eq1.SP5}. Fissato lo sprint corrente $i$ e una user story $j$ che viola almeno un vincolo di dipendenza, \textit{QuickGreedyHeuristic} adotta una tra quattro strategie di recupero della fattibilità:
+\begin{enumerate}
+\item \textbf{Esclusione di $j$}. Si proibisce l'uso di $j$ nello sprint $i$ fissando $x_{ij}=0$ e si riottimizza il knapsack $SP'_i$.
+\item \textbf{Inserimento mirato di una dipendenza}. Si seleziona una user story $j' \in D^{OR}_j$ (oppure $j' \in D^{AND}_j$, a seconda del vincolo violato), non presente nella soluzione corrente di $SP'_i$, che massimizza il rapporto
+      \[
+      \frac{u_{j'} r_{j'}^{cr}}{p_{j'} r_{j'}^{un}},
+      \]
+      si fissa $x_{ij'}=1$ e si riottimizza $SP'_i$.
+\item \textbf{Inserimento completo per vincoli AND}. Solo nel caso di dipendenze di tipo AND, si fissano in soluzione tutte le user story $j' \in D^{AND}_j$ non selezionate (ponendo $x_{ij'}=1$) e si riottimizza $SP'_i$; per le dipendenze di tipo OR si applica invece la strategia (ii).
+\item \textbf{Rinforzo progressivo dei profitti}. Per ogni user story $j$ si introduce un coefficiente $\kappa_j$ che moltiplica il profitto in ogni knapsack $SP'_i$. Per ogni $j' \in D^{OR}_j \setminus F_i$ (oppure $j' \in D^{AND}_j \setminus F_i$, a seconda del vincolo violato) con $x_{ij'}=0$ nella soluzione corrente, si aumenta $\kappa_{j'}$ secondo una delle due regole:
+      \begin{enumerate}
+      \item $\kappa_{j'} = \rho \,\kappa_{j'}$,
+      \item $\kappa_{j'} = \kappa_{j'}^2$.
+      \end{enumerate}
+      Successivamente, si riavvia l'euristica greedy dal primo sprint, ponendo $i=1$ e $F_1 = \emptyset$.
+\end{enumerate}
+
+
+\begin{figure}[h]
+\begin{lstlisting}[style=pseudo, caption={QuickGreedyHeuristic},label={Alg.QGH}]
+Set z_star = -infinity
+
+FOR each Strategy s = 1, 2, 3, 4:
+    Set z_temp = 0
+    Set F_1 = empty
+    Set i = 1
+    Set Iter = 0
+
+    WHILE (F_i != U AND i <= m):
+
+        REPEAT:
+            Compute optimal solution x_temp of knapsack SP_i_prime
+
+            IF (x_temp violates some dependency):
+                Apply strategy s
+                IF (s == 4):
+                    Set z_temp = 0
+                    Set F_1 = empty
+                    Set i = 1
+                    Set Iter = Iter + 1
+        UNTIL (x_temp feasible OR SP_i_prime infeasible OR Iter > MaxIter)
+
+        IF (SP_i_prime infeasible OR Iter > MaxIter):
+            Set z_temp = -infinity
+            Set i = m + 1
+        ELSE:
+            z_temp = z_temp + value(SP_i)
+            F_{i+1} = F_i union { j in U with x_temp[i,j] = 1 }
+            i = i + 1
+
+    IF (z_star < z_temp):
+        z_star = z_temp
+        x_star = x_temp
+
+END FOR
+\end{lstlisting}
+\end{figure}
+
+La Figura~\ref{Alg.QGH} riassume il funzionamento dell'algoritmo \textit{QuickGreedyHeuristic}. Per ciascuna strategia $s = 1,2,3,4$, l'algoritmo costruisce iterativamente una soluzione, aggiornando lo sprint corrente $i$, l'insieme delle user story già assegnate agli sprint precedenti ($F_i$) e il valore complessivo $z'$ della soluzione ottenuta. Alla fine, viene mantenuta la migliore soluzione trovata $({\bf x}^*, z^*)$.
+
+In termini di proprietà, la strategia (i) garantisce sempre la convergenza a una soluzione fattibile, poiché ogni violazione viene gestita tramite esclusione della user story responsabile. Al contrario, le strategie (ii) e (iii), in particolare la terza, possono generare istanze di knapsack infeasibii (ad esempio quando la capacità di sprint è insufficiente per ospitare tutte le dipendenze forzate). In tali casi, se $SP'_i$ risulta infeasibie, l'algoritmo interrompe il trattamento dello sprint $i$ e passa all'iterazione successiva della procedura greedy. La strategia (iv) può richiedere un numero elevato di iterazioni prima di raggiungere la fattibilità; per questo motivo, viene imposto un numero massimo di iterazioni $\textit{MaxIter}$, oltre il quale il tentativo con la strategia (iv) viene interrotto.
+
+Nella fase sperimentale, si è fissato $\textit{MaxIter}=1000$. La strategia (iv) è stata applicata una volta utilizzando la regola (b), inizializzando i coefficienti a $\kappa_j = 1.025$ per ogni $j \in U$, e due volte utilizzando la regola (a), con $\kappa_j = 1$ per ogni $j \in U$ e valori di $\rho$ pari a 2 e 5. La scelta di $\kappa_j$ e $\rho$ riflette un compromesso tra tempo di raggiungimento della fattibilità e qualità della soluzione: se i profitti crescono troppo rapidamente, si ottiene spesso una soluzione fattibile in poche iterazioni, ma potenzialmente di bassa qualità, poiché le user story ``rinforzate'' vengono anticipate ai primi sprint senza considerare adeguatamente la loro utilità reale; al contrario, se i profitti aumentano troppo lentamente, il numero di iterazioni necessario per ottenere una soluzione fattibile può diventare eccessivo.
+
+
+\subsection{ExchangeHeuristic: miglioramento locale per scambi}
+
+Sia {\em GreedyHeuristic} sia {\em QuickGreedyHeuristic} possono terminare senza individuare una soluzione fattibile, poiché tutti gli sprint risultano esaminati (cioè $i > m$) ma non tutte le user story sono assegnate agli sprint disponibili (ovvero $F_i \neq U$). Inoltre, anche quando {\em QuickGreedyHeuristic} produce una soluzione fattibile, tale soluzione può in genere essere ulteriormente migliorata: le strategie di recupero della fattibilità rispetto ai vincoli di dipendenza, infatti, possono condurre a configurazioni non localmente ottimali.
+
+In \cite{BOSCHETTI2014116} viene proposta \emph{ExchangeHeuristic} descritta in Figura~\ref{Alg.EH}. Data una soluzione $\mathbf{x}'$ da migliorare, la procedura tenta sistematicamente di scambiare user story tra coppie di sprint, ripetendo il processo fino a quando avviene almeno uno scambio migliorativo. In particolare, {\em ExchangeHeuristic} considera tre tipi di mosse:
+\begin{description}
+\item[1-0:] spostamento di una user story $j \in U$ eseguita nello sprint $i'$ verso uno sprint $i$;
+\item[1-1:] scambio di una user story $j \in U$ eseguita nello sprint $i$ con una user story $j' \in U$ eseguita nello sprint $i'$;
+\item[2-1:] scambio di due user story $j, j' \in U$ eseguite nello sprint $i$ con una user story $j'' \in U$ eseguita nello sprint $i'$.
+\end{description}
+Uno scambio viene effettivamente applicato solo se è contemporaneamente {\em fattibile} e {\em profittevole}. La fattibilità richiede che, dopo lo scambio, i vincoli di capacità degli sprint coinvolti rimangano soddisfatti e che non si generino violazioni delle dipendenze tra user story; la profittabilità richiede invece che il valore complessivo della funzione obiettivo aumenti.
+
+L'algoritmo {\em ExchangeHeuristic} può essere esteso includendo mosse di scambio più complesse (ad esempio scambi $k$-$\ell$ con $k,\ell > 2$). Tuttavia, l'incremento di complessità computazionale associato a tali estensioni tende a non essere compensato da miglioramenti significativi della qualità della soluzione, motivo per cui in questo lavoro ci si limita alle mosse 1-0, 1-1 e 2-1 descritte sopra.
+
+\begin{figure}[h]
+\begin{lstlisting}[style=pseudo, caption={ExchangeHeuristic},label={Alg.EH}]
+Algorithm ExchangeHeuristic(x'):
+Repeat
+    // Apply 1-0 exchanges
+    For sprint i = 1..m-1:
+        For sprint i' = i+1..m:
+            For each story j with x'[i',j] = 1:
+                If moving j from i' to i is feasible and profitable:
+                    x'[i',j] = 0
+                    x'[i,j]   = 1
+
+    // Apply 1-1 exchanges
+    For sprint i = 1..m-1:
+        For sprint i' = i+1..m:
+            For each pair j, j' with x'[i,j]=1 and x'[i',j']=1:
+                If exchanging j and j' is feasible and profitable:
+                    x'[i,j]   = 0
+                    x'[i',j'] = 0
+                    x'[i,j']  = 1
+                    x'[i',j]  = 1
+
+    // Apply 2-1 exchanges
+    For sprint i = 1..m:
+        For sprint i' = 1..m:
+            For each triple j, j', j'' with x'[i,j]=x'[i,j']=x'[i',j'']=1:
+                If exchanging j with {j',j''} is feasible and profitable:
+                    x'[i,j]   = 0
+                    x'[i,j']  = 0
+                    x'[i',j'']= 0
+                    x'[i',j]   = 1
+                    x'[i',j']  = 1
+                    x'[i,j'']  = 1
+
+Until no exchanges occur.
+\end{lstlisting}
+\end{figure}
+
+
+\section{A Lagrangian Heuristic}
+
+
+La letteratura propone numerose euristiche basate su metodi di decomposizione e rilassamento lagrangiano; introduzioni esaustive a questi temi sono disponibili, tra gli altri, in \cite{B93,BM09,BMR09}. In \cite{BOSCHETTI2014116} si descrive una procedura euristica che sfrutta il rilassamento lagrangiano del modello, combinato con un algoritmo del sottogradiente e con le euristiche greedy introdotte in precedenza.
+
+Il rilassamento lagrangiano si ottiene dualizzando i vincoli \eqref{Eq1.P3}–\eqref{Eq1.P7} mediante i vettori di penalità $\{\lambda_j\}$, $\{\lambda^{OR}_{ij}\}$, $\{\lambda^{AND}_{ij}\}$, $\{\lambda^{Y1}_{ij}\}$ e $\{\lambda^{Y2}_{ij}\}$. Le penalità $\lambda_j$, $j \in U$, sono non vincolate, mentre le restanti sono non positive, così da interpretare le violazioni dei vincoli corrispondenti come costi aggiuntivi nel problema rilassato. Il problema lagrangiano risultante è:
+\begin{alignat}{3}
+(LR) \qquad z_{LR}(\boldsymbol{\lambda}) = \max  & \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} \bigl(u'_{ij}(\boldsymbol{\lambda}) x_{ij} + u''_{ij}(\boldsymbol{\lambda}) y_{ij}\bigr)
+                                         + \sum_{j=1}^{n} \lambda_j            & \hspace{-1.0cm}                   \label{Eq1.LR1}\\
+  \text{s.t. } & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} \leq p_i^{\max},                   & \hspace{-1.0cm} i \in S           \label{Eq1.LR2}\\
+        & x_{ij} \in \{0,1\},                                                  & \hspace{-1.0cm} i \in S, j \in U  \label{Eq1.LR8}\\
+        & 0 \leq y_{ij} \leq |Y_j|,                                            & \hspace{-1.0cm} i \in S, j \in U  \label{Eq1.LR9}
+\end{alignat}
+dove le \emph{utilità penalizzate} $u'_{ij}(\boldsymbol{\lambda})$ e $u''_{ij}(\boldsymbol{\lambda})$ sono definite da
+\begin{equation}
+\begin{split}
+u'_{ij}(\boldsymbol{\lambda}) = &\ u_{j} r_j^{cr} - \lambda_j
+                            + \left( \lambda^{OR}_{ij} - \sum_{k=i}^{m}\sum_{j' \in \bar{D}^{OR}_j} \lambda^{OR}_{kj'} \right) + \\
+          &\quad\ + \left( |D^{AND}_j|\lambda^{AND}_{ij} - \sum_{k=i}^{m}\sum_{j' \in \bar{D}^{AND}_j} \lambda^{AND}_{kj'} \right)
+                            - \lambda^{Y1}_{ij} - |Y_j|\lambda^{Y2}_{ij} \\
+u''_{ij}(\boldsymbol{\lambda}) = &\ u_{j} a_j + \lambda^{Y1}_{ij} + \lambda^{Y2}_{ij},
+\end{split}
+\label{Eq.PU}
+\end{equation}
+con $\bar{D}^{OR}_j = \{j' \in U : j \in D^{OR}_{j'}\}$ e $\bar{D}^{AND}_j = \{j' \in U : j \in D^{AND}_{j'}\}$.
+
+Grazie alla struttura dei vincoli di capacità, il problema LR si decompone in $2m$ sottoproblemi indipendenti, due per ogni sprint $i \in S$:
+\begin{alignat}{3}
+(LR^1_i) \qquad z_{LR^1_i}(\boldsymbol{\lambda})  = \max  & \sum_{j=1}^{n} u'_{ij}(\boldsymbol{\lambda}) x_{ij}    &\    \label{Eq1.LR1.1}\\
+  \text{s.t. } & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} \leq p_i^{\max}                  &\              \label{Eq1.LR1.2}\\
+        & x_{ij} \in \{0,1\},                                                &\ j \in U      \label{Eq1.LR1.3}
+\end{alignat}
+e
+\begin{alignat}{3}
+(LR^2_i) \qquad z_{LR^2_i}(\boldsymbol{\lambda})  = \max  & \sum_{j=1}^{n} u''_{ij}(\boldsymbol{\lambda}) y_{ij}   &\    \label{Eq1.LR2.1}\\
+  \text{s.t. } & 0 \leq y_{ij} \leq |Y_j|,                                          &\ j \in U      \label{Eq1.LR2.2}
+\end{alignat}
+Il sottoproblema $LR^1_i$ è un problema di knapsack, mentre $LR^2_i$ è risolvibile per ispezione, assegnando $y_{ij}=|Y_j|$ se $u''_{ij}(\boldsymbol{\lambda})>0$ e $y_{ij}=0$ altrimenti. Il valore ottimo del rilassamento lagrangiano è quindi
+\begin{equation}
+z_{LR}(\boldsymbol{\lambda}) = \sum_{i=1}^{m} (m-i+1)\bigl(z_{LR^1_i}(\boldsymbol{\lambda}) + z_{LR^2_i}(\boldsymbol{\lambda})\bigr) + \sum_{j=1}^{n} \lambda_j,
+\end{equation}
+che fornisce un upper bound valido per il problema originale P [web:52][web:55]. La ricerca del vettore di penalità $\boldsymbol{\lambda}^*$ che minimizza $z_{LR}(\boldsymbol{\lambda})$ porta al \emph{dual lagrangiano} $z_{LR}(\boldsymbol{\lambda}^*) = \min_{\boldsymbol{\lambda}}\{z_{LR}(\boldsymbol{\lambda})\}$, affrontato qui tramite un algoritmo del sottogradiente [web:55][web:59].
+
+Sia $(\boldsymbol{x},\boldsymbol{y})$ la soluzione, di valore $z_{LR}(\boldsymbol{\lambda})$, ottenuta risolvendo LR a una generica iterazione del sottogradiente. I moltiplicatori lagrangiani vengono aggiornati secondo
+\begin{equation}
+\begin{aligned}
+\lambda_j = &\ \lambda_j + \alpha g_j, &\ \qquad j \in U \\
+\lambda^{OR}_{ij} = &\ \max \{0,\lambda^{OR}_{ij} + \alpha g^{OR}_{ij} \}, &\ \qquad i \in S, j \in U^{OR} \\
+\lambda^{AND}_{ij} = &\ \max \{0,\lambda^{AND}_{ij} + \alpha g^{AND}_{ij} \}, &\ \qquad i \in S, j \in U^{AND} \\
+\lambda^{Y1}_{ij} = &\ \max \{0,\lambda^{Y1}_{ij} + \alpha g^{Y1}_{ij} \}, &\ \qquad i \in S, j \in U \\
+\lambda^{Y2}_{ij} = &\ \max \{0,\lambda^{Y2}_{ij} + \alpha g^{Y2}_{ij} \}, &\ \qquad i \in S, j \in U
+\end{aligned}
+\label{EqLD2}
+\end{equation}
+dove $\alpha$ è la lunghezza del passo lungo la direzione di ricerca data dal sottogradiente $\boldsymbol{g}$, le cui componenti sono
+\begin{equation}
+\begin{aligned}
+g_j = &\ \sum_{i=1}^{m} x_{ij} - 1, &\ \qquad j \in U \\
+g^{OR}_{ij} = &\ \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} - x_{ij}, &\ \qquad i \in S, j \in U^{OR} \\
+g^{AND}_{ij} = &\ \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} - x_{ij}|D_j^{AND}|, &\ \qquad i \in S, j \in U^{AND} \\
+g^{Y1}_{ij} = &\ \sum_{k \in Y_j} x_{ik} - y_{ij}, &\ \qquad i \in S, j \in U \\
+g^{Y2}_{ij} = &\ |Y_j| x_{ij} - y_{ij}, &\ \qquad i \in S, j \in U
+\end{aligned}
+\label{EqLD3}
+\end{equation}
+La regola per il passo adottata negli esperimenti è
+\[
+\alpha = \beta \,\frac{0.1\, z_{LR}(\boldsymbol{\lambda})}{\lVert \boldsymbol{g} \rVert^2_2},
+\]
+dove $\beta$ è inizializzato a un valore dipendente dal problema (nel nostro caso, $\beta=3$) e viene ridotto moltiplicandolo per $0.85$ se, dopo un numero prefissato di iterazioni (10), il valore $z_{LR}(\boldsymbol{\lambda})$ non migliora [web:55][web:59]. Il numero massimo di iterazioni è fissato a 5000 e il metodo viene interrotto anticipatamente se, in un intervallo di 50 iterazioni, il valore di $z_{LR}(\boldsymbol{\lambda})$ non si riduce di almeno lo 0.01\%.
+
+La procedura complessiva, denominata {\em LagrangianHeuristic}, è riassunta in Figura~\ref{Alg.LH}. A ogni iterazione del sottogradiente si risolve LR per un dato vettore di penalità $\boldsymbol{\lambda}$, ottenendo il valore $z_{LR}(\boldsymbol{\lambda})$ e aggiornando il miglior upper bound $z^*_{LR}$. Successivamente, si calcola una soluzione euristica $\boldsymbol{x}'$ tramite {\em QuickGreedyHeuristic}, utilizzando le utilità penalizzate definite in \eqref{Eq.PU}, e la si migliora mediante {\em ExchangeHeuristic}; il valore $z'$ della soluzione così ottenuta sostituisce il miglior valore corrente $z^*$ se $z' > z^*$. Inoltre, se la condizione $\gamma z^* \leq z'$ è soddisfatta, si genera una seconda soluzione euristica $\boldsymbol{x}''$ con la più costosa {\em GreedyHeuristic}, sempre basata sulle utilità penalizzate, e il corrispondente valore $z''$ viene confrontato con $z^*$ per un eventuale aggiornamento.
+
+\begin{figure}[h]
+\begin{lstlisting}[style=pseudo, caption={Algorithm LagrangianHeuristic}, label={Alg.LH}]
+LagrangianHeuristic:
+
+Set lambda = 0
+Set z_best = -INF
+Set z_LR_best = +INF
+
+REPEAT
+
+    Compute z_LR(lambda) by solving the Lagrangian problem LR
+
+    IF z_LR(lambda) < z_LR_best THEN
+        z_LR_best = z_LR(lambda)
+    ENDIF
+
+    Compute a heuristic solution x_prime with QuickGreedyHeuristic
+        using penalized utilities
+    Improve x_prime with ExchangeHeuristic
+    Let z_prime = value of x_prime
+
+    IF gamma * z_best <= z_prime THEN
+        Compute a heuristic solution x_second with GreedyHeuristic
+            using penalized utilities
+        Let z_second = value of x_second
+
+        IF z_best < z_second THEN
+            z_best = z_second
+            x_best = x_second
+        ENDIF
+    ENDIF
+
+    IF z_best < z_prime THEN
+        z_best = z_prime
+        x_best = x_prime
+    ENDIF
+
+    Update penalties lambda
+
+UNTIL subgradient stopping conditions are satisfied
+\end{lstlisting}
+\end{figure}
+
+
+
+Il parametro $\gamma$ controlla la frequenza di invocazione di {\em GreedyHeuristic}: ponendo $\gamma=1$ si esegue questa procedura solo quando $\boldsymbol{x}'$ rappresenta la migliore soluzione trovata finora, mentre per $\gamma<1$ {\em GreedyHeuristic} viene attivata anche quando $z'$ è ``sufficientemente vicino'' a $z^*$, cioè entro una distanza percentuale $100(1-\gamma)$. Al termine di {\em LagrangianHeuristic} si dispone di una soluzione fattibile di valore $z^*$ e di un upper bound $z^*_{LR}$ derivante dal rilassamento lagrangiano, che consente di stimare la distanza massima della soluzione euristica dall’ottimo del problema originale.
+
+
+\chapter{Risultati ottenuti}
+
+\section{dati utilizzati}
+
+Gli algoritmi considerati in questo lavoro sono stati implementati in C++ all'interno di Microsoft Visual Studio 2024.
+
+Per la valutazione sperimentale sono stati utilizzati sia progetti reali sia progetti sintetici generati artificialmente.
+
+I progetti reali provengono da contesti applicativi differenti e sono stati realizzati da aziende italiane che adottano metodologie Agile da diversi anni. Di seguito se ne riassumono le principali caratteristiche.
+
+\begin{itemize}
+  \item \textbf{\sf PayTV}  
+  Progetto di sviluppo di un data mart per una grande azienda del settore pay TV.  
+  Caratteristiche principali:
+  \begin{itemize}
+    \item durata complessiva: 8 mesi;
+    \item numero di user stories: 44;
+    \item numero di sprint: 10;
+    \item durata media degli sprint: 17 giorni;
+    \item numero di dipendenze: 35 (prevalentemente di tipo AND);
+    \item numero di affinità: 1;
+    \item velocità di sviluppo: 2,43 story point/giorno, stimata empiricamente su dati storici.
+  \end{itemize}
+
+  \item \textbf{\sf Web}  
+  Progetto di sviluppo di un sito web complesso basato su un Content Management System.  
+  Caratteristiche principali:
+  \begin{itemize}
+    \item numero di user stories: 104 (maggiore di {\sf PayTV});
+    \item numero di sprint: 4;
+    \item durata degli sprint: 10 giorni ciascuno;
+    \item durata complessiva: 40 giorni;
+    \item velocità di sviluppo: 6 story point/giorno;
+    \item dipendenze: 6 dipendenze in catena;
+    \item nessun vincolo di affinità.
+  \end{itemize}
+\end{itemize}
+
+Dal punto di vista dell’efficacia, tutti i piani ottimali generati dagli algoritmi sono stati giudicati fattibili e realistici dai project manager; nella maggior parte dei casi, le differenze rispetto ai piani originariamente proposti dai team sono state valutate come migliorative in termini di composizione degli sprint (si veda \cite{GRT12} per un’analisi dettagliata).
+
+Per mettere maggiormente sotto stress gli algoritmi, è stato inoltre generato un insieme di progetti sintetici.  
+Il generatore di istanze opera come segue:
+\begin{enumerate}
+  \item crea le user stories assegnando in modo casuale utilità, rischio e complessità;
+  \item aggiunge gruppi di dipendenze, organizzati sia come catene (una story dipende da una sola story) sia come DAG (una story dipende da più stories);
+  \item definisce insiemi di storie affini;
+  \item fissa la capacità di sprint a \(45\) story point e la velocità di sviluppo a \(3\) story point/giorno (ogni sprint dura quindi 15 giorni).
+\end{enumerate}
+
+\subsection{Raggruppamento dei progetti}
+
+La Tabella~\ref{Tab.1} riassume le caratteristiche principali di ciascun progetto, riportando:
+\begin{itemize}
+  \item il numero \(n\) di user stories;
+  \item il numero massimo \(m\) di sprint;
+  \item il numero \(n_{aff}\) di stories coinvolte in almeno un vincolo di affinità;
+  \item la cardinalità degli insiemi \(U^{OR}\) e \(U^{AND}\);
+  \item la lunghezza massima \(l_{max}\) dei gruppi di dipendenze;
+  \item il numero massimo \(d_{max}\) di dipendenze che coinvolgono una singola story.
+\end{itemize}
+
+I progetti sono stati raggruppati in cinque cluster:
+
+\begin{description}
+  \item[Gruppo A]  
+  Contiene i progetti reali ({\sf PayTV} e {\sf Web}).  
+  \begin{itemize}
+    \item Parametri derivati da casi industriali.
+    \item Mix realistico di dimensione, dipendenze e (eventuale) presenza di affinità.
+  \end{itemize}
+
+  \item[Gruppi B e C]  
+  Raccolgono progetti sintetici che combinano in modo vario i parametri sopra descritti.  
+  \begin{itemize}
+    \item Dimensioni crescenti in termini di numero di stories e sprint.
+    \item Diversa distribuzione di dipendenze OR/AND e lunghezza delle catene/DAG.
+    \item Presenza o assenza di affinità secondo configurazioni eterogenee.
+  \end{itemize}
+
+  \item[Gruppo D]  
+  Progetti sintetici in cui l’utilità è fortemente correlata alla complessità.  
+  \begin{itemize}
+    \item Per ogni story, la complessità è sempre pari al doppio dell’utilità.
+    \item Scenario utile per analizzare casi in cui “alto valore” implica automaticamente “alta complessità”.
+  \end{itemize}
+
+  \item[Gruppo E]  
+  Progetti caratterizzati da user stories ad elevata complessità.  
+  \begin{itemize}
+    \item Ogni sprint può contenere al più 5 stories.
+    \item Configurazione concepita per studiare il comportamento degli algoritmi in presenza di capacità molto stringenti.
+  \end{itemize}
+\end{description}
+
+\begin{table}[t]
+\scriptsize
+\caption{Problem instances}
+\label{Tab.1}
+\centering
+
+\renewcommand{\arraystretch}{1.1}
+
+\begin{tabular}{llccccccc}
+\toprule
+\textbf{Group} & \textbf{Proj. Name} & $\mathbf{n}$ & $\mathbf{m}$ & $\mathbf{n_{aff}}$ & $\mathbf{|U^{OR}|}$ & $\mathbf{|U^{AND}|}$ & $\mathbf{l_{max}}$ & $\mathbf{d_{max}}$ \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{A – Real}} \\
+PayTV         &       & 44  & 12 & 2 & 8  & 27 & 6 & 5 \\
+Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{B – Basic (Set 1)}} \\
+25Chain-1     &       & 25 & 9  & 0 & 0  & 12 & 4 & 1 \\
+25Graph-1     &       & 25 & 8  & 0 & 10 & 1  & 2 & 2 \\
+25Affinity-1  &       & 25 & 9  & 6 & 5  & 5  & 2 & 2 \\
+50Chain-1     &       & 50 & 12 & 0 & 0  & 20 & 4 & 1 \\
+50Graph-1     &       & 50 & 11 & 0 & 8  & 10 & 2 & 2 \\
+50Affinity-1  &       & 50 & 12 & 6 & 8  & 9  & 2 & 2 \\
+75Chain-1     &       & 75 & 17 & 0 & 0  & 35 & 5 & 1 \\
+75Graph-1     &       & 75 & 19 & 0 & 13 & 20 & 2 & 2 \\
+75Affinity-1  &       & 75 & 17 & 6 & 17 & 13 & 2 & 3 \\
+100Chain-1    &       & 100 & 20 & 0 & 0  & 40 & 5 & 1 \\
+100Graph-1    &       & 100 & 23 & 0 & 20 & 14 & 2 & 3 \\
+100Affinity-1 &       & 100 & 22 & 6 & 16 & 14 & 3 & 4 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{C – Basic (Set 2)}} \\
+25Chain-2     &       & 25 & 8  & 0 & 0  & 12 & 2 & 1 \\
+25Graph-2     &       & 25 & 8  & 0 & 3  & 8  & 3 & 2 \\
+25Affinity-2  &       & 25 & 9  & 6 & 7  & 4  & 3 & 2 \\
+50Chain-2     &       & 50 & 13 & 0 & 0  & 10 & 5 & 1 \\
+50Graph-2     &       & 50 & 13 & 0 & 13 & 8  & 4 & 5 \\
+50Affinity-2  &       & 50 & 13 & 6 & 13 & 9  & 3 & 3 \\
+75Chain-2     &       & 75 & 17 & 0 & 0  & 36 & 3 & 1 \\
+75Graph-2     &       & 75 & 18 & 0 & 14 & 16 & 2 & 2 \\
+75Affinity-2  &       & 75 & 18 & 6 & 17 & 13 & 2 & 2 \\
+100Chain-2    &       & 100 & 22 & 0 & 0  & 30 & 5 & 1 \\
+100Graph-2    &       & 100 & 22 & 0 & 12 & 15 & 5 & 7 \\
+100Affinity-2 &       & 100 & 22 & 6 & 11 & 14 & 3 & 2 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{D – Correlated}} \\
+25Chain-3     &       & 25 & 15 & 0 & 0  & 12 & 4 & 1 \\
+25Graph-3     &       & 25 & 15 & 0 & 5  & 7  & 5 & 4 \\
+25Affinity-3  &       & 25 & 13 & 6 & 5  & 4  & 2 & 2 \\
+50Chain-3     &       & 50 & 22 & 0 & 0  & 20 & 4 & 1 \\
+50Graph-3     &       & 50 & 22 & 0 & 7  & 9  & 2 & 2 \\
+50Affinity-3  &       & 50 & 21 & 6 & 9  & 6  & 2 & 2 \\
+75Chain-3     &       & 75 & 31 & 0 & 0  & 36 & 6 & 1 \\
+75Graph-3     &       & 75 & 29 & 0 & 12 & 17 & 2 & 2 \\
+75Affinity-3  &       & 75 & 33 & 6 & 20 & 7  & 2 & 2 \\
+100Chain-3    &       & 100 & 38 & 0 & 0  & 40 & 8 & 1 \\
+100Graph-3    &       & 100 & 40 & 0 & 16 & 14 & 3 & 3 \\
+100Affinity-3 &       & 100 & 43 & 6 & 16 & 13 & 2 & 2 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{B – Few}} \\
+25Chain-4     &       & 25 & 12 & 0 & 5  & 7  & 4 & 1 \\
+25Graph-4     &       & 25 & 13 & 0 & 5  & 6  & 5 & 4 \\
+25Affinity-4  &       & 25 & 14 & 6 & 3  & 7  & 2 & 2 \\
+50Chain-4     &       & 50 & 21 & 0 & 9  & 11 & 4 & 1 \\
+50Graph-4     &       & 50 & 21 & 0 & 2  & 13 & 2 & 2 \\
+50Affinity-4  &       & 50 & 21 & 6 & 6  & 8  & 2 & 2 \\
+75Chain-4     &       & 75 & 27 & 0 & 15 & 21 & 6 & 1 \\
+75Graph-4     &       & 75 & 29 & 0 & 12 & 12 & 2 & 4 \\
+75Affinity-4  &       & 75 & 29 & 6 & 10 & 12 & 2 & 2 \\
+100Chain-4    &       & 100 & 40 & 0 & 24 & 21 & 9 & 1 \\
+100Graph-4    &       & 100 & 40 & 0 & 8  & 17 & 2 & 2 \\
+100Affinity-4 &       & 100 & 39 & 6 & 18 & 10 & 2 & 2 \\
+\bottomrule
+
+\end{tabular}
+\end{table}
+
+
+\chapter{Conclusioni}
 
 %----------------------------------------------------------------------------------------
 % BIBLIOGRAPHY
