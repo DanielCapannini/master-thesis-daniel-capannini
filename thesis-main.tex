@@ -814,22 +814,36 @@ Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
 \end{tabular}
 \end{table}
 
-\section{esecuzione degli algoritmi}
+\section{risultati computazionali}
 
-Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti eseguendo CPLEX, l'euristica greedy veloce, l'euristica di scambio e l'euristica lagrangiana sulle istanze con riduzione del numero di sprint (nSprint - 2). Per ogni algoritmo.
+Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione degli algoritmi proposti  da \cite{BOSCHETTI2014116} con l'aggiornamento del codice per supportare l'attuale versione della libreria CPLEX.
+
+\begin{description}
+\item[$z$]: valore della migliore soluzione fattibile trovata da ciascun algoritmo;
+\item[$z_{best}$]: valore della migliore soluzione fattibile trovata durante i vari test computazionali da IBM ILog Cplex o {\em LagrangianHeuristic};
+\item[Gap]: gap percentuale tra la migliore soluzione fattibile e il bound superiore associato al miglior nodo rimanente fornito da IBM Ilog Cplex;
+\item[Nodes]: numero di nodi dell'albero generati da IBM Ilog Cplex;
+\item[Cuts]: numero di tagli aggiunti tramite le {\em callback} di IBM ILog Cplex; tale numero include sia i vincoli di precedenza \eqref{Eq1.P4} e \eqref{Eq1.P5}, aggiunti come {\it lazy constraints}, sia le Disuguaglianze di Dominanza (DIs) e le LCIs;
+\item[LGap]: gap percentuale tra il bound superiore $z^*_{LR}$ e il valore $z^*$ della soluzione euristiche fornita da {\em LagrangianHeuristic}, ovvero ${LGap} = 100 \times \frac{z^*_{LR}-z^*}{z^*}$;
+\item[BGap]: gap percentuale tra il valore $z_{best}$ della migliore soluzione fattibile nota e il valore $z$ della soluzione fattibile trovata da ciascun algoritmo, ovvero ${BGap} = 100 \times \frac{z_{best}-z}{z_{best}}$;
+\item[Time]: tempo computazionale complessivo in secondi;
+\item[B/O]: in questa colonna riportiamo la lettera ``b'' se la soluzione fattibile trovata dall'algoritmo corrispondente è la migliore per il test computazionale riportato in tabella, e la lettera ``o'' se la soluzione è ottima.
+\end{description}
+
+Nei test computazionali è stato fissato un limite di tempo di 600 secondi per tutti i risultati riportati di seguito, per cui quando IBM Ilog Cplex non trova una soluzione fattibile per un'istanza entro il limite di tempo assegnato, riportiamo il carattere ``--'' nelle colonne $z$, {\em Gap} e {\em BGap}.
 
 \begin{table}[ht]
 \centering
-\caption{sprint reduction results (nSprint - 2)}
+\caption{Results obtained solving the basic model with IBM Ilog Cplex and adding valid inequalities}
 \label{Tab.2}
 \small
-\begin{tabular}{ll|rrrrr|rrr|rrrr|rrrr}
+\begin{tabular}{|ll|rrrrr|rrr|rrrr|rrrr|}
 \hline
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{5}{c|}{CPLEX} & 
 \multicolumn{3}{c|}{Heuristic} & 
 \multicolumn{4}{c|}{Lagrangian Heuristic} & 
-\multicolumn{4}{c}{Lagrangian Heuristic (clox)} \\
+\multicolumn{4}{c|}{Lagrangian Heuristic (clox)} \\
 \cline{2-18}
 Istanza        &     &              Zopt &     Gap &     Nodes &   NCuts &    Time  &   Zheu &      Time &    GHeu &      Zheu &      Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\
 \hline
@@ -910,7 +924,7 @@ Come mostrato nella Tabella~\ref{Tab.3}
 \caption{sprint reduction results (nSprint - 2)}
 \label{Tab.3}
 \small
-\begin{tabular}{ll|rrrrr|rrr|rrrr|rrrr}
+\begin{tabular}{|ll|rrrrr|rrr|rrrr|rrrr|}
 \hline
 \multicolumn{2}{c|}{   } & 
 \multicolumn{5}{c|}{CPLEX} & 

@@ -1,0 +1,25 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{iii}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Descrizione del problema}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}stato dell'arte}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Formulazione matematica}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Procedure di riduzione}{18}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Modifica delle capacità degli sprint}{19}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Modifica dei pesi delle user story}{19}{subsection.4.1.2}%
+\contentsline {chapter}{\numberline {5}Euristiche per la pianificazione degli sprint}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Euristiche greedy e di scambio del lavoro precedente}{21}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}GreedyHeuristic: costruzione sprint-per-sprint}{21}{subsection.5.1.1}%
+\contentsline {paragraph}{Pseudocodice della GreedyHeuristic.}{22}{lstnumber.5.1.8}%
+\contentsline {subsection}{\numberline {5.1.2}QuickGreedyHeuristic: versione veloce basata su knapsack}{23}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}ExchangeHeuristic: miglioramento locale per scambi}{25}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}A Lagrangian Heuristic}{26}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Risultati ottenuti}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}dati utilizzati}{35}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{36}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}risultati computazionali}{38}{section.6.2}%
+\contentsline {section}{\numberline {6.3}variazione dei parametri}{39}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Riduzione sprint}{39}{subsection.6.3.1}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{43}{chapter.7}%
+\contentsline {part}{}{45}{chapter.7}%
+\contentsline {chapter}{Bibliography}{45}{section*.7}%
