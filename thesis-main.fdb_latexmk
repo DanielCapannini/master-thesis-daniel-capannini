@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis-main"] 1765876436 "thesis-main.aux" "thesis-main.bbl" "thesis-main" 1765876491 0
-  "./bibliography.bib" 1765535939 32043 8ef93a2224f0ccaeafc4a3eb453e0614 ""
+["bibtex thesis-main"] 1765878976 "thesis-main.aux" "thesis-main.bbl" "thesis-main" 1765878976 2
+  "./bibliography.bib" 1765878971 32051 d923453e7766498aa7f3dc2762f4b2d9 ""
   "c:/texlive/2023/texmf-dist/bibtex/bst/base/alpha.bst" 1690893275 23907 a5f93555796fb564b924339521f10a7c ""
-  "thesis-main.aux" 1765876490 13844 80f14aeca51ca391e7701027be0211b0 "pdflatex"
+  "thesis-main.aux" 1765878976 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
   (generated)
   "thesis-main.bbl"
   "thesis-main.blg"
   (rewritten before read)
-["pdflatex"] 1765876488 "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" "thesis-main.pdf" "thesis-main" 1765876491 2
-  "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" 1765876483 90151 dd6a6327381d09091139c8d7ce6dcbc9 ""
+["pdflatex"] 1765878972 "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" "thesis-main.pdf" "thesis-main" 1765878975 2
+  "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" 1765878297 90129 d7bd03be6362e89b9c47b21351187d6e ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1690893644 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1690894652 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1690894201 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -171,12 +171,7 @@
   "c:/texlive/2023/texmf-dist/tex/latex/base/book.cls" 1690895534 23268 4ef3f0c1d276578b68abf6a1d0e1b8ad ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty" 1690895534 5319 5435f8f7051e23a851a1c665c5b84e22 ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty" 1690895534 5048 4a74b0804469fbfae7849704c4687a07 ""
-  "c:/texlive/2023/texmf-dist/tex/latex/base/omsenc.dfu" 1690895534 1990 e3684518104efd8ab391313d3a95eabc ""
-  "c:/texlive/2023/texmf-dist/tex/latex/base/ot1enc.dfu" 1690895534 3534 677f048e60f220b98b4b1af47764329c ""
-  "c:/texlive/2023/texmf-dist/tex/latex/base/t1enc.dfu" 1690895534 12786 8510238fdf91d67f17d2d71c98d75733 ""
   "c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd" 1690895534 2287 cb3a1e15b30810bba16af6241b099c2e ""
-  "c:/texlive/2023/texmf-dist/tex/latex/base/ts1enc.dfu" 1690895534 5133 7337be8a52766e5fc5c57cebd517c870 ""
-  "c:/texlive/2023/texmf-dist/tex/latex/base/utf8.def" 1690895534 11506 e411c600ea537a6f719000b77e33f4cb ""
   "c:/texlive/2023/texmf-dist/tex/latex/bigfoot/suffix.sty" 1690893291 3090 223874a03a08cecb9fb79bd86e5dcf97 ""
   "c:/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty" 1690893350 6078 f1cb470c9199e7110a27851508ed7a5c ""
   "c:/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty" 1690893604 329481 7fc6b003158402a4c694bc0a1b729308 ""
@@ -235,13 +230,13 @@
   "disi-thesis.sty" 1765535939 3769 bbe0150c194d9aed2f371961dab59007 ""
   "notes.sty" 1765535939 627 bb17ef77d529c2a65cd7550e53857e86 ""
   "shortcuts.sty" 1765535939 68 f1356b4bb08967049061aa1f9ba760d5 ""
-  "thesis-main.aux" 1765876490 13844 80f14aeca51ca391e7701027be0211b0 "pdflatex"
-  "thesis-main.bbl" 1765876437 9657 a70daac1d31b58241771d94f01c0f13d "bibtex thesis-main"
-  "thesis-main.lof" 1765876490 170 5172fc40d96ddf0ade05c2687a3253b9 "pdflatex"
-  "thesis-main.lol" 1765876490 349 c95cc53b93d1da891874bc28bad9d334 "pdflatex"
-  "thesis-main.out" 1765876490 4319 63125d9a999a0abfda22eeea393409a5 "pdflatex"
-  "thesis-main.tex" 1765876483 90151 dd6a6327381d09091139c8d7ce6dcbc9 ""
-  "thesis-main.toc" 1765876490 2095 bd5ae5e1dca1fae0aed90438cf232bc0 "pdflatex"
+  "thesis-main.aux" 1765878976 34 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "thesis-main.bbl" 1765878976 0 d41d8cd98f00b204e9800998ecf8427e "bibtex thesis-main"
+  "thesis-main.lof" 0 -1 0 "pdflatex"
+  "thesis-main.lol" 1765878974 349 c95cc53b93d1da891874bc28bad9d334 "pdflatex"
+  "thesis-main.out" 0 -1 0 "pdflatex"
+  "thesis-main.tex" 1765878297 90129 d7bd03be6362e89b9c47b21351187d6e ""
+  "thesis-main.toc" 0 -1 0 "pdflatex"
   (generated)
   "thesis-main.aux"
   "thesis-main.lof"
