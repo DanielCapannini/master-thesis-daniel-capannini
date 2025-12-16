@@ -17,6 +17,9 @@
 \contentsline {chapter}{\numberline {6}Risultati ottenuti}{35}{chapter.6}%
 \contentsline {section}{\numberline {6.1}dati utilizzati}{35}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{36}{subsection.6.1.1}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{39}{chapter.7}%
-\contentsline {part}{}{41}{chapter.7}%
-\contentsline {chapter}{Bibliography}{41}{section*.7}%
+\contentsline {section}{\numberline {6.2}esecuzione degli algoritmi}{38}{section.6.2}%
+\contentsline {section}{\numberline {6.3}variazione dei parametri}{38}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Riduzione sprint}{38}{subsection.6.3.1}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{43}{chapter.7}%
+\contentsline {part}{}{45}{chapter.7}%
+\contentsline {chapter}{Bibliography}{45}{section*.7}%
