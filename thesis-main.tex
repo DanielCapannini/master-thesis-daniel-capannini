@@ -819,15 +819,13 @@ Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
 Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione degli algoritmi proposti  da \cite{BOSCHETTI2014116} con l'aggiornamento del codice per supportare l'attuale versione della libreria CPLEX.
 
 \begin{description}
-\item[$z$]: valore della migliore soluzione fattibile trovata da ciascun algoritmo;
-\item[$z_{best}$]: valore della migliore soluzione fattibile trovata durante i vari test computazionali da IBM ILog Cplex o {\em LagrangianHeuristic};
+\item[$Z_{OPT}$]: valore della della soluzione ottima fornita da IBM Ilog Cplex risolvendo il modello di base;
+\item[$Z_{HEU}$]: valore della migliore soluzione fattibile trovata dai diversi algoritmi euristici;
 \item[Gap]: gap percentuale tra la migliore soluzione fattibile e il bound superiore associato al miglior nodo rimanente fornito da IBM Ilog Cplex;
 \item[Nodes]: numero di nodi dell'albero generati da IBM Ilog Cplex;
-\item[Cuts]: numero di tagli aggiunti tramite le {\em callback} di IBM ILog Cplex; tale numero include sia i vincoli di precedenza \eqref{Eq1.P4} e \eqref{Eq1.P5}, aggiunti come {\it lazy constraints}, sia le Disuguaglianze di Dominanza (DIs) e le LCIs;
-\item[LGap]: gap percentuale tra il bound superiore $z^*_{LR}$ e il valore $z^*$ della soluzione euristiche fornita da {\em LagrangianHeuristic}, ovvero ${LGap} = 100 \times \frac{z^*_{LR}-z^*}{z^*}$;
-\item[BGap]: gap percentuale tra il valore $z_{best}$ della migliore soluzione fattibile nota e il valore $z$ della soluzione fattibile trovata da ciascun algoritmo, ovvero ${BGap} = 100 \times \frac{z_{best}-z}{z_{best}}$;
+\item[NCuts]: numero di tagli aggiunti tramite le {\em callback} di IBM ILog Cplex; tale numero include sia i vincoli di precedenza \eqref{Eq1.P4} e \eqref{Eq1.P5}, aggiunti come {\it lazy constraints}, sia le Disuguaglianze di Dominanza (DIs) e le LCIs;
+\item[GHeu]: gap percentuale tra il bound superiore $Z_{OPT}$ e il valore $Z_{HEU}$ della soluzione euristiche, ovvero ${GHeu} = 100 \times \frac{Z_{OPT}-Z_{HEU}}{Z_{OPT}}$;
 \item[Time]: tempo computazionale complessivo in secondi;
-\item[B/O]: in questa colonna riportiamo la lettera ``b'' se la soluzione fattibile trovata dall'algoritmo corrispondente è la migliore per il test computazionale riportato in tabella, e la lettera ``o'' se la soluzione è ottima.
 \end{description}
 
 Nei test computazionali è stato fissato un limite di tempo di 600 secondi per tutti i risultati riportati di seguito, per cui quando IBM Ilog Cplex non trova una soluzione fattibile per un'istanza entro il limite di tempo assegnato, riportiamo il carattere ``--'' nelle colonne $z$, {\em Gap} e {\em BGap}.
@@ -913,10 +911,9 @@ All'interno del progetto e' stato condotto uno studio per valutare l'impatto di 
 
 \subsection{Riduzione sprint}
 
-La riduzione degli sprint disponibili ha un impatto .... bla bla
-Come mostrato nella Tabella~\ref{Tab.3} 
+La riduzione degli sprint disponibili non influisce sull’esecuzione degli algoritmi proposti fintanto che il numero di sprint rimane tale da garantire la fattibilità delle soluzioni. Questo effetto nasce dal fatto che il metodo mira a riempire gli sprint in modo ottimale: l’inserimento di sprint aggiuntivi non implica necessariamente un miglioramento della soluzione, purché la fattibilità sia preservata. Tuttavia, una riduzione eccessiva del numero di sprint disponibili può compromettere la fattibilità delle soluzioni generate.
 
-
+La differenza sostanziale riguarda il valore della funzione obiettivo \eqref{Eq1.P1}. Come si osserva confrontando la tabella \ref{Tab.2} con la tabella \ref{Tab.3}, tale valore diminuisce con la diminuzione del numero di sprint disponibili. Tale comportamento è attribuibile al metodo di calcolo della funzione obiettivo, che attribuisce un peso maggiore alle user story eseguite nei primi sprint rispetto a quelle eseguite negli sprint successivi, integrando la riduzione disponibile degli sprint.
 
 
 \begin{table}[ht]
@@ -930,7 +927,7 @@ Come mostrato nella Tabella~\ref{Tab.3}
 \multicolumn{5}{c|}{CPLEX} & 
 \multicolumn{3}{c|}{Heuristic} & 
 \multicolumn{4}{c|}{Lagrangian Heuristic} & 
-\multicolumn{4}{c}{Lagrangian Heuristic (clox)} \\
+\multicolumn{4}{c}{Lagrangian Heuristic (coef)} \\
 \cline{2-18}
 Istanza        &     &              Zopt &     Gap &     Nodes &   NCuts &    Time  &   Zheu &      Time &    GHeu &      Zheu &      Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\
 \hline
@@ -977,6 +974,143 @@ web-2                      &     &    20583.3 &   0.00 &       0 &       1 &    
 \end{tabular}
 \end{table}
 
+\subsection{Riduzione capacità degli sprint}
+
+La riduzione della capacità degli sprint disponibili influisce significativamente sulla fattibilità delle soluzioni generate. Una diminuzione della capacità limita il numero di user story assegnabili a ciascun sprint, rendendo più arduo soddisfare i requisiti del progetto entro i vincoli imposti. Nei casi estremi, in presenza di user story di dimensioni elevate, può verificarsi l'assenza di uno sprint con capacità sufficiente per accoglierle; in tali circostanze, risulta necessario rivalutare e suddividere la user story in sotto-story più gestibili.
+
+Come illustrato nella tabella \ref{Tab.4}, una riduzione del 10\% della capacità degli sprint determina una diminuzione del valore della funzione obiettivo in tutte le istanze analizzate. Tale decremento riflette una minore ottimalità delle soluzioni ottenute rispetto al caso di capacità nominale, poiché l'algoritmo deve adattarsi a vincoli più restrittivi. Si osservano inoltre istanze, come 100Chain-3 e 100Affinity-3, in cui anche una riduzione del 10\% compromette irreversibilmente la fattibilità del problema. Questo fenomeno sottolinea l'importanza di preservare una capacità adeguata negli sprint per garantire sia la fattibilità delle soluzioni sia la qualità complessiva del piano di progetto.
+
+Nella tabella \ref{Tab.5} sono riportati i risultati ottenuti con una riduzione del 15\% della capacità degli sprint. L'impatto sulla fattibilità si rivela ancora più marcato, con un numero maggiore di istanze prive di soluzioni fattibili. Si nota inoltre che, in casi come 100Chain-1 e 100Affinity-1, CPLEX non riesce a identificare una soluzione fattibile entro il time limit, mentre gli algoritmi euristici proposti individuano soluzioni fattibili in tempi computazionali ridotti. Questo risultato evidenzia l'efficacia degli euristici nel gestire vincoli severi, fornendo soluzioni praticabili anche in scenari complessi.
+\begin{table}[ht]
+\centering
+\caption{sprint capacity reduction results (capacity - 10\%)}
+\label{Tab.4}
+\small
+\begin{tabular}{|ll|rrrrr|rrr|rrrr|rrrr|}
+\hline
+\multicolumn{2}{c|}{   } & 
+\multicolumn{5}{c|}{CPLEX} & 
+\multicolumn{3}{c|}{Heuristic} & 
+\multicolumn{4}{c|}{Lagrangian Heuristic} & 
+\multicolumn{4}{c}{Lagrangian Heuristic (coef)} \\
+\cline{2-18}
+Istanza        &     &              Zopt &     Gap &     Nodes &   NCuts &    Time  &   Zheu &      Time &    GHeu &      Zheu &      Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\
+\hline
+paytv-2                      &     &    94019.0 &   0.00 &       0 &      44 &    0.16 &   95383.0 &    0.03 &  -1.45 &   95383.0 &   11.95 &   1.38 &  -1.45 &   95383.0 &   14.91 &   1.38 &  -1.45 \\
+web-2                        &     &    32068.5 &   0.00 &       0 &       2 &    0.10 &   31825.9 &    0.01 &   0.76 &   32019.6 &   37.23 &   0.29 &   0.15 &   32019.6 &   37.82 &   0.29 &   0.15   \\
+\hline
+25Chain-1                    &     &    16343.7 &   0.00 &       0 &      13 &    0.03 &   16580.8 &    0.02 &  -1.45 &   16580.8 &    0.91 &   0.06 &  -1.45 &   16580.8 &    0.68 &   0.06 &  -1.45 \\
+25Graph-1                    &     &    13314.5 &   0.00 &       0 &       4 &    0.01 &   13318.9 &    0.01 &  -0.03 &   13318.9 &    0.18 &  -0.25 &  -0.03 &   13318.9 &    0.19 &  -0.25 &  -0.03 \\
+25Affinity-1                 &     &    17983.9 &   0.01 &     882 &      16 &    0.30 &   17758.6 &    0.01 &   1.25 &   17978.7 &    0.25 &   1.51 &   0.03 &   17978.7 &    0.81 &   1.51 &   0.03 \\
+50Chain-1                    &     &    40156.9 &   0.01 &  207573 &     131 &   28.39 &   41561.2 &    0.02 &  -3.50 &   41561.2 &    2.80 &  -1.80 &  -3.50 &   41561.2 &    2.30 &  -1.80 &  -3.50   \\
+50Graph-1                    &     &    33739.9 &   0.01 &    2327 &      33 &    0.60 &   34474.2 &    0.02 &  -2.18 &   34474.2 &    1.90 &  -0.95 &  -2.18 &   34474.2 &    1.79 &  -0.95 &  -2.18 \\
+50Affinity-1                 &     &    39471.5 &   0.01 &    3791 &      41 &    2.73 &   39525.0 &    0.02 &  -0.13 &   39525.0 &    2.31 &   0.16 &  -0.13 &   39525.0 &    4.45 &   0.16 &  -0.13 \\
+75Chain-1                    &     &    85256.9 &   1.34 & 1780257 &     434 &  600.64 &   90409.9 &    0.09 &  -6.04 &   90409.9 &   31.33 &  -2.14 &  -6.04 &   90409.9 &   24.17 &  -2.14 &  -6.04 \\
+75Graph-1                    &     &    90010.7 &   0.37 & 1635908 &     214 &  600.43 &   91542.6 &    0.07 &  -1.70 &   91542.6 &   17.44 &   2.15 &  -1.70 &   91542.6 &   17.48 &   2.15 &  -1.70 \\
+75Affinity-1                 &     &    73712.8 &   0.11 &  751985 &     107 &  600.19 &   74113.5 &    0.07 &  -0.54 &   74113.5 &   22.45 &   0.14 &  -0.54 &   74113.5 &   22.37 &   0.14 &  -0.54 \\
+100Chain-1                   &     &   136193.7 &   0.00 &       0 &      64 &    0.52 &  138164.7 &    0.06 &  -1.45 &  138164.7 &   41.04 &  -0.75 &  -1.45 &  138164.7 &   41.95 &  -0.75 &  -1.45 \\
+100Graph-1                   &     &   143931.9 &   0.35 & 1481825 &     188 &  600.59 &  146179.2 &    0.10 &  -1.56 &  146179.2 &   50.18 &   1.39 &  -1.56 &  146179.2 &   49.90 &   1.39 &  -1.56 \\
+100Affinity-1                &     &   131256.2 &   0.26 &  490600 &     156 &  600.18 &  132139.6 &    0.21 &  -0.67 &  132139.6 &   25.21 &   2.37 &  -0.67 &  132139.6 &   25.15 &   2.37 &  -0.67 \\
+\hline
+25Chain-2                    &     &    13053.2 &   0.00 &       0 &       9 &    0.03 &   13069.2 &    0.02 &  -0.12 &   13069.2 &    0.34 &  -0.11 &  -0.12 &   13069.2 &    0.34 &  -0.11 &  -0.12 \\
+25Graph-2                    &     &    17130.7 &   0.00 &       0 &       3 &    0.04 &   17150.8 &    0.02 &  -0.12 &   17150.8 &    0.22 &  -1.18 &  -0.12 &   17150.8 &    0.20 &  -1.18 &  -0.12 \\
+25Affinity-2                 &     &    12972.7 &   0.00 &       0 &       6 &    0.03 &   13100.4 &    0.02 &  -0.98 &   13100.4 &    0.34 &  -1.19 &  -0.98 &   13100.4 &    0.36 &  -1.19 &  -0.98 \\
+50Chain-2                    &     &    45455.0 &   0.01 &    1282 &      50 &    0.55 &   45755.2 &    0.03 &  -0.66 &   45755.2 &    1.49 &  -0.03 &  -0.66 &   45755.2 &    1.58 &  -0.03 &  -0.66 \\
+50Graph-2                    &     &    38012.7 &   0.00 &       0 &       9 &    0.08 &   38245.9 &    0.03 &  -0.61 &   38245.9 &    4.84 &  -1.63 &  -0.61 &   38245.9 &    4.74 &  -1.63 &  -0.61 \\
+50Affinity-2                 &     &    44624.8 &   0.01 &   83183 &     117 &   39.74 &   46671.2 &    0.07 &  -4.58 &   46671.2 &    6.17 &  -1.71 &  -4.58 &   46671.2 &    3.61 &  -1.71 &  -4.58 \\
+75Chain-2                    &     &    76162.1 &   1.14 & 1456567 &     521 &  600.51 &   82229.7 &    0.06 &  -7.97 &   82229.7 &   16.47 &  -2.65 &  -7.97 &   82229.7 &   16.72 &  -2.65 &  -7.97 \\
+75Graph-2                    &     &    70060.1 &   0.33 & 2003380 &     147 &  600.44 &   72021.8 &    0.07 &  -2.80 &   72021.8 &    8.71 &   2.08 &  -2.80 &   72021.8 &    8.82 &   2.08 &  -2.80 \\
+75Affinity-2                 &     &    81448.4 &   0.14 &  629600 &     151 &  600.18 &   82466.4 &    0.09 &  -1.25 &   82466.4 &    5.10 &   4.48 &  -1.25 &   82466.4 &    5.02 &   4.48 &  -1.25 \\
+100Chain-2                   &     &   129422.3 &   0.44 & 1308546 &     471 &  600.64 &  131598.4 &    0.13 &  -1.68 &  131598.4 &   34.10 &   0.78 &  -1.68 &  131598.4 &   35.36 &   0.78 &  -1.68 \\
+100Graph-2                   &     &   130090.4 &   0.40 & 1423887 &     193 &  600.53 &  131458.9 &    0.15 &  -1.05 &  131458.9 &   37.08 &   1.35 &  -1.05 &  131458.9 &   37.61 &   1.35 &  -1.05 \\
+100Affinity-2                &     &   131498.8 &   0.32 &  472000 &     163 &  600.21 &  132373.5 &    0.13 &  -0.66 &  132373.5 &   37.22 &   1.48 &  -0.66 &  132373.5 &   37.40 &   1.48 &  -0.66 \\
+\hline
+25Chain-3                    &     &     2721.5 &   0.01 &    2156 &      86 &    1.01 &    2712.2 &    0.05 &   0.34 &    2712.2 &    0.69 &   1.27 &   0.34 &    2712.2 &    0.75 &   1.27 &   0.34 \\
+25Graph-3                    &     &     1832.6 &   0.01 &    3729 &      95 &    1.06 &    1876.0 &    0.07 &  -2.37 &    1876.0 &    0.44 &   0.33 &  -2.37 &    1876.0 &    0.36 &   0.33 &  -2.37 \\
+25Affinity-3                 &     &     1902.1 &   0.01 &     412 &      28 &    0.80 &    1877.9 &    0.06 &   1.27 &    1902.1 &    0.37 &   2.32 &   0.00 &    1902.1 &    1.25 &   2.32 &   0.00 \\
+50Chain-3                    &     &     5637.0 &   5.44 &  691800 &     417 &  600.26 &    5796.6 &    0.15 &  -2.83 &    5796.6 &    1.48 &   2.26 &  -2.83 &    5796.6 &    1.68 &   2.26 &  -2.83 \\
+50Graph-3                    &     &     5591.4 &   1.57 & 1897336 &     285 &  600.42 &    5572.3 &    0.15 &   0.34 &    5572.3 &    1.59 &   2.70 &   0.34 &    5572.3 &    1.59 &   2.70 &   0.34 \\
+50Affinity-3                 &     &     4915.2 &   0.90 &  185838 &     169 &  600.12 &    4905.8 &    0.17 &   0.19 &    4905.8 &    1.80 &   2.18 &   0.19 &    4905.8 &    1.76 &   2.18 &   0.19 \\
+75Chain-3                    &     &        0.0 & 100.00 &  768542 &     984 &  600.72 &   11827.4 &    0.31 &   -inf &  11827.4 &   12.20 &   0.21 &   -inf &  11827.4 &   12.08 &   0.21 &   -inf \\
+75Graph-3                    &     &    10607.0 &   1.85 & 1585100 &     573 &  600.89 &   10678.8 &    0.35 &  -0.68 &   10678.8 &    2.06 &   1.48 &  -0.68 &   10678.8 &    2.11 &   1.48 &  -0.68 \\
+75Affinity-3                 &     &        0.0 & 100.00 &  129445 &     330 &  600.12 &   13599.1 &    0.48 &   -inf &  13599.1 &    1.54 &   0.75 &   -inf &  13599.1 &    1.34 &   0.75 &   -inf \\
+100Chain-3                   &     &        0.0 & 100.00 &       0 &       0 &    0.39 &   18539.3 &    0.63 &   -inf &  18539.3 &   12.98 &  -0.32 &   -inf &  18539.3 &   13.43 &  -0.32 &   -inf \\
+100Graph-3                   &     &        0.0 & 100.00 &       0 &       0 &    0.39 &   18605.1 &    0.68 &   -inf &  18605.1 &    2.80 &   0.97 &   -inf &  18605.1 &    2.43 &   0.97 &   -inf \\
+100Affinity-3                &     &        0.0 & 100.00 &       0 &       0 &    0.42 &   23923.1 &    0.73 &   -inf &  23923.1 &    4.14 &   1.22 &   -inf &  23923.1 &    3.26 &   1.22 &   -inf \\
+\hline
+25Chain-4                    &     &    18365.1 &   0.00 &       0 &      14 &    0.07 &   18561.3 &    0.06 &  -1.07 &   18561.3 &    0.39 &  -1.95 &  -1.07 &   18561.3 &    0.39 &  -1.95 &  -1.07 \\
+25Graph-4                    &     &    20614.0 &   0.00 &       0 &      22 &    0.13 &   20916.7 &    0.07 &  -1.47 &   20916.7 &    0.37 &  -0.75 &  -1.47 &   20916.7 &    0.29 &  -0.75 &  -1.47 \\
+25Affinity-4                 &     &    20131.9 &   0.00 &       0 &      30 &    0.27 &   19607.8 &    0.08 &   2.60 &   19607.8 &    0.33 &   6.14 &   2.60 &   19607.8 &    0.33 &   6.14 &   2.60 \\
+50Chain-4                    &     &    57368.1 &   2.07 & 1105500 &     356 &  600.34 &   60460.7 &    0.22 &  -5.39 &   60460.7 &    3.56 &   0.39 &  -5.39 &   60460.7 &    3.79 &   0.39 &  -5.39 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{sprint capacity reduction results (capacity - 15\%)}
+\label{Tab.5}
+\small
+\begin{tabular}{|ll|rrrrr|rrr|rrrr|rrrr|}
+\hline
+\multicolumn{2}{c|}{   } & 
+\multicolumn{5}{c|}{CPLEX} & 
+\multicolumn{3}{c|}{Heuristic} & 
+\multicolumn{4}{c|}{Lagrangian Heuristic} & 
+\multicolumn{4}{c}{Lagrangian Heuristic (coef)} \\
+\cline{2-18}
+Istanza        &     &              Zopt &     Gap &     Nodes &   NCuts &    Time  &   Zheu &      Time &    GHeu &      Zheu &      Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\
+\hline
+paytv -2                      &     &     90203.0 &    0.00 &      167 &      111 &     0.74 &    93089.0 &     0.05 &   -3.20 &    93089.0 &    19.05 &    0.40 &   -3.20 &    93089.0 &    18.46 &    0.40 &   -3.20 \\
+web -2                        &     &     31717.5 &    0.00 &        0 &        1 &     0.24 &    31365.0 &     0.02 &    1.11 &    31553.5 &   112.80 &    0.44 &    0.52 &    31553.5 &   146.92 &    0.44 &    0.52 \\
+\hline
+25Chain -1                    &     &     16151.8 &    0.00 &        0 &        9 &     0.10 &    16244.1 &     0.06 &   -0.57 &    16244.1 &     5.65 &   -0.81 &   -0.57 &    16244.1 &     5.80 &   -0.81 &   -0.57 \\
+ 25Graph -1                    &     &     13076.4 &    0.00 &       32 &        8 &     0.14 &    13097.6 &     0.05 &   -0.16 &    13097.6 &     1.00 &    0.19 &   -0.16 &    13097.6 &     2.21 &    0.19 &   -0.16 \\
+ 25Affinity -1                 &     &     17474.6 &    0.01 &     2648 &       25 &     4.76 &    17401.7 &     0.09 &    0.42 &    17474.6 &     0.91 &    2.79 &    0.00 &    17474.6 &     4.16 &    2.79 &    0.00 \\
+ 50Chain -1                    &     &     40393.6 &    0.00 &        0 &       32 &     0.38 &    40945.3 &     0.09 &   -1.36 &    40945.3 &    10.35 &   -1.92 &   -1.36 &    40945.3 &     6.84 &   -1.92 &   -1.36 \\
+ 50Graph -1                    &     &     33686.1 &    0.00 &        0 &        6 &     0.04 &    33866.2 &     0.02 &   -0.53 &    33866.2 &     4.96 &   -0.85 &   -0.53 &    33866.2 &     6.75 &   -0.85 &   -0.53 \\
+ 50Affinity -1                 &     &     38875.5 &    0.01 &    19674 &       41 &    57.26 &    38897.0 &     0.11 &   -0.05 &    38897.0 &     9.67 &    0.43 &   -0.05 &    38897.0 &    18.00 &    0.43 &   -0.05 \\
+ 75Chain -1                    &     &     81841.0 &    4.02 &   420836 &      464 &   600.63 &    88888.2 &     0.20 &   -8.61 &    88888.2 &   142.45 &   -1.32 &   -8.61 &    88888.2 &    42.38 &   -1.32 &   -8.61 \\
+ 75Graph -1                    &     &     88315.3 &    0.41 &  1208326 &      216 &   600.34 &    89732.7 &     0.09 &   -1.60 &    89732.7 &    11.18 &    1.25 &   -1.60 &    89732.7 &    11.29 &    1.25 &   -1.60 \\
+ 75Affinity -1                 &     &     72325.4 &    0.18 &   589100 &      114 &   600.20 &    72918.7 &     0.10 &   -0.82 &    72918.7 &    18.79 &    1.48 &   -0.82 &    72918.7 &    18.66 &    1.48 &   -0.82 \\
+ 100Chain -1                   &     &         0.0 &  100.00 &  1526739 &      657 &   601.03 &   135632.1 &     0.24 &   -inf   135632.1 &    23.64 &   -1.53 &   -inf   135632.1 &    23.49 &   -1.53 &   -inf \\
+ 100Graph -1                   &     &    140559.4 &    0.49 &  1310000 &      230 &   600.60 &   142750.5 &     0.08 &   -1.56 &   142750.5 &     7.61 &    0.49 &   -1.56 &   142750.5 &     7.36 &    0.49 &   -1.56 \\
+ 100Affinity -1                &     &         0.0 &  100.00 &   445495 &      190 &   600.21 &   129323.7 &     0.25 &   -inf   129323.7 &     7.78 &    0.23 &   -inf   129323.7 &     7.78 &    0.23 &   -inf \\
+ \hline
+ 25Chain -2                    &     &     12839.2 &    0.00 &        0 &       19 &     0.04 &    12950.6 &     0.02 &   -0.87 &    12950.6 &     0.54 &   -0.91 &   -0.87 &    12950.6 &     0.52 &   -0.91 &   -0.87 \\
+ 25Graph -2                    &     &     16735.7 &    0.00 &        0 &       10 &     0.04 &    16813.0 &     0.02 &   -0.46 &    16813.0 &     0.35 &   -0.61 &   -0.46 &    16813.0 &     0.36 &   -0.61 &   -0.46 \\
+ 25Affinity -2                 &     &     12909.6 &    0.00 &        0 &        4 &     0.03 &    12972.6 &     0.02 &   -0.49 &    12972.6 &     0.46 &   -1.60 &   -0.49 &    12972.6 &     0.44 &   -1.60 &   -0.49 \\
+ 50Chain -2                    &     &     44583.7 &    0.01 &  1237477 &       72 &   352.20 &    45109.9 &     0.04 &   -1.18 &    45109.9 &     2.66 &   -0.30 &   -1.18 &    45109.9 &     2.79 &   -0.30 &   -1.18 \\
+ 50Graph -2                    &     &     36304.1 &    0.00 &        0 &       40 &     0.21 &    37346.2 &     0.07 &   -2.87 &    37346.2 &     5.02 &   -1.25 &   -2.87 &    37346.2 &     4.93 &   -1.25 &   -2.87 \\
+ 50Affinity -2                 &     &     43753.9 &    0.01 &   115061 &      144 &    88.63 &    45561.4 &     0.06 &   -4.13 &    45561.4 &     5.71 &   -1.06 &   -4.13 &    45561.4 &     5.64 &   -1.06 &   -4.13 \\
+ 75Chain -2                    &     &     74033.3 &    1.98 &  1012300 &      503 &   600.49 &    80730.9 &     0.14 &   -9.05 &    80730.9 &    19.14 &   -2.11 &   -9.05 &    80730.9 &    19.53 &   -2.11 &   -9.05 \\
+ 75Graph -2                    &     &     69434.8 &    0.00 &        0 &       68 &     0.34 &    70659.9 &     0.13 &   -1.76 &    70659.9 &     7.46 &    1.03 &   -1.76 &    70659.9 &     7.75 &    1.03 &   -1.76 \\
+ 75Affinity -2                 &     &     79740.6 &    0.27 &   390900 &      163 &   600.18 &    80675.3 &     0.17 &   -1.17 &    80675.3 &     9.97 &    2.23 &   -1.17 &    80675.3 &     9.82 &    2.23 &   -1.17 \\
+ 100Chain -2                   &     &         0.0 &  100.00 &  1463211 &      538 &   600.94 &   128940.2 &     0.36 &   -inf &  128940.2 &     9.78 &   -0.69 &   -inf &  128940.2 &    10.62 &   -0.69 &   -inf \\
+ 100Graph -2                   &     &         0.0 &  100.00 &  1658038 &      333 &   600.88 &   128919.9 &     0.37 &   -inf &  128919.9 &     5.06 &   -0.49 &   -inf &  128919.9 &     4.21 &   -0.49 &   -inf \\
+ 100Affinity -2                &     &         0.0 &  100.00 &   544319 &      300 &   600.19 &   129787.6 &     0.41 &   -inf &  129787.6 &     5.02 &   -0.39 &   -inf &  129787.6 &     5.07 &   -0.39 &   -inf \\
+ \hline
+ 25Chain -3                    &     &         0.0 &  100.00 &        0 &        0 &     0.04 &     2608.0 &     0.07 &   -inf &    2608.0 &     1.42 &  -20.68 &   -inf &    2608.0 &     1.70 &  -20.68 &   -inf  \\
+ 25Graph -3                    &     &      1781.0 &    0.00 &     1484 &       84 &     1.06 &     1811.2 &     0.08 &   -1.69 &     1811.2 &     0.42 &    1.18 &   -1.69 &     1811.2 &     0.47 &    1.18 &   -1.69 \\
+ 25Affinity -3                 &     &         0.0 &  100.00 &        0 &        0 &     0.05 &     1819.3 &     0.07 &   -inf &    1819.3 &     0.58 &  -36.63 &   -inf &    1819.3 &     0.54 &  -36.63 &   -inf \\
+ 50Chain -3                    &     &         0.0 &  100.00 &        0 &        0 &     0.15 &     5656.9 &     0.20 &   -inf &    5656.9 &     2.71 &   -0.62 &   -inf &    5656.9 &     2.79 &   -0.62 &   -inf  \\
+ 50Graph -3                    &     &         0.0 &  100.00 &  1643180 &      292 &   600.36 &     5344.5 &     0.20 &   -inf &    5344.5 &     1.06 &    0.78 &   -inf &    5344.5 &     1.26 &    0.78 &   -inf \\
+ 50Affinity -3                 &     &         0.0 &  100.00 &        0 &        0 &     0.12 &     4709.1 &     0.22 &   -inf &    4709.1 &     1.41 &   -7.29 &   -inf &    4709.1 &     1.41 &   -7.29 &   -inf \\
+ 75Chain -3                    &     &         0.0 &  100.00 &        0 &        0 &     0.22 &    11295.5 &     0.37 &   -inf &   11295.5 &     9.88 &  -18.46 &   -inf &   11295.5 &    10.36 &  -18.46 &   -inf \\
+ 75Graph -3                    &     &         0.0 &  100.00 &        0 &        0 &     0.20 &    10312.4 &     0.33 &   -inf &   10312.4 &     2.99 &   -1.74 &   -inf &   10312.4 &     2.40 &   -1.74 &   -inf \\
+ 75Affinity -3                 &     &         0.0 &  100.00 &        0 &        0 &     0.25 &    12970.2 &     0.42 &   -inf &   12970.2 &     2.28 &   -3.23 &   -inf &   12970.2 &     2.63 &   -3.23 &   -inf \\
+ 100Chain -3                   &     &         0.0 &  100.00 &        0 &        0 &     0.38 &    17632.9 &     0.67 &   -inf &   17632.9 &    11.32 &   -5.96 &   -inf &   17632.9 &    10.08 &   -5.96 &   -inf \\
+ 100Graph -3                   &     &         0.0 &  100.00 &        0 &        0 &     0.39 &    17634.1 &     0.61 &   -inf &   17634.1 &     3.19 &    1.43 &   -inf &   17634.1 &     3.92 &    1.43 &   -inf \\
+ 100Affinity -3                &     &         0.0 &  100.00 &        0 &        0 &     0.42 &    22932.6 &     0.70 &   -inf &   22932.6 &     5.58 &   -2.05 &   -inf &   22932.6 &     4.83 &   -2.05 &   -inf \\
+ \hline
+ 25Chain -4                    &     &     18278.3 &    0.00 &        0 &        6 &     0.06 &    18351.9 &     0.07 &   -0.40 &    18351.9 &     0.71 &   -2.31 &   -0.40 &    18351.9 &     0.60 &   -2.31 &   -0.40 \\
+ 25Graph -4                    &     &     19516.4 &    0.00 &     1019 &       71 &     0.47 &    20083.4 &     0.07 &   -2.90 &    20083.4 &     0.30 &    0.39 &   -2.90 &    20083.4 &     0.38 &    0.39 &   -2.90 \\
+ 25Affinity -4                 &     &     19331.6 &    0.01 &        0 &       22 &     0.27 &    18867.3 &     0.08 &    2.40 &    18867.3 &     0.43 &    7.57 &    2.40 &    18867.3 &     0.51 &    7.57 &    2.40 \\
+ 50Chain -4                    &     &         0.0 &  100.00 &  1171081 &      386 &   600.39 &    58512.5 &     0.15 &   -inf &   58512.5 &     1.74 &   -0.33 &   -inf &   58512.5 &     1.75 &   -0.33 &   -inf \\
+ 50Graph -4                    &     &         0.0 &  100.00 &  1183780 &      260 &   600.39 &    63455.7 &     0.20 &   -inf &   63455.7 &     1.12 &   -1.91 &   -inf &   63455.7 &     0.95 &   -1.91 &   -inf \\
+ \hline
+\end{tabular}
+\end{table}
 
 
 \chapter{Conclusioni}

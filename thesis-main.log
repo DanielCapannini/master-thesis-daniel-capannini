@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  16 DEC 2025 12:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  18 DEC 2025 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -722,7 +722,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package cleveref Info: loaded `english' language definitions on input line 25.
+Package cleveref Info: loaded `english' language definitions on input line 26.
  [7])
 \tf@toc=\write5
 \openout5 = `thesis-main.toc'.
@@ -962,49 +962,76 @@ LaTeX Warning: Float too large for page by 50.37184pt on input line 815.
 Package cleveref Info: loaded `english' language definitions on input line 822.
 Package cleveref Info: loaded `english' language definitions on input line 822.
 [37]
-Overfull \hbox (348.95808pt too wide) in paragraph at lines 840--901
+Overfull \hbox (348.95808pt too wide) in paragraph at lines 838--899
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 86.63596pt on input line 901.
+LaTeX Warning: Float too large for page by 86.63596pt on input line 899.
+
+
+Overfull \hbox (7.44885pt too wide) in paragraph at lines 906--907
+[]\OT1/cmr/m/n/12 Effetto della riduzione del nu-mero di sprint disponi-bili sul val-ore della soluzione
+ []
 
 Package cleveref Info: loaded `english' language definitions on input line 908.
 Package cleveref Info: loaded `english' language definitions on input line 908.
 [38]
-Overfull \hbox (7.44885pt too wide) in paragraph at lines 908--909
-[]\OT1/cmr/m/n/12 Effetto della riduzione del nu-mero di sprint disponi-bili sul val-ore della soluzione
- []
-
-
-Overfull \hbox (348.95808pt too wide) in paragraph at lines 927--978
+Overfull \hbox (348.95808pt too wide) in paragraph at lines 924--975
  [][] 
  []
 
 Package cleveref Info: loaded `english' language definitions on input line 982.
 Package cleveref Info: loaded `english' language definitions on input line 982.
 [39]
-Package cleveref Info: loaded `english' language definitions on input line 982.
-Package cleveref Info: loaded `english' language definitions on input line 982.
- [40]
-Package cleveref Info: loaded `english' language definitions on input line 982.
-Package cleveref Info: loaded `english' language definitions on input line 982.
+Overfull \hbox (359.22371pt too wide) in paragraph at lines 989--1047
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 32.66936pt on input line 1047.
+
+
+Overfull \hbox (450.7019pt too wide) in paragraph at lines 1054--1113
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 46.26935pt on input line 1113.
+
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+[40]
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
  [41]
-Package cleveref Info: loaded `english' language definitions on input line 982.
-Package cleveref Info: loaded `english' language definitions on input line 982.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
  [42]
-Chapter 7.
-Package cleveref Info: loaded `english' language definitions on input line 988.
-[43
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+ [43]
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+ [44]
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+ [45]
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+ [46
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 988.
- [44
+Chapter 7.
+Package cleveref Info: loaded `english' language definitions on input line 1122.
+[47]
+Package cleveref Info: loaded `english' language definitions on input line 1122.
+ [48
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 993.
+(hyperref)                be the same. Added a new anchor on input line 1127.
 
 (./thesis-main.bbl
 Underfull \hbox (badness 2671) in paragraph at lines 30--33
@@ -1012,33 +1039,33 @@ Underfull \hbox (badness 2671) in paragraph at lines 30--33
  []
 
 Package cleveref Info: loaded `english' language definitions on input line 37.
-[45
+[49
 
 ]
 Package cleveref Info: loaded `english' language definitions on input line 87.
 Package cleveref Info: loaded `english' language definitions on input line 87.
- [46]
+ [50]
 Package cleveref Info: loaded `english' language definitions on input line 138.
 Package cleveref Info: loaded `english' language definitions on input line 138.
- [47]
+ [51]
 Package cleveref Info: loaded `english' language definitions on input line 180.
 Package cleveref Info: loaded `english' language definitions on input line 180.
- [48]
+ [52]
 Underfull \hbox (badness 1173) in paragraph at lines 202--206
 \OT1/cmr/m/n/12 Post-mus.  Quan-ti-ta-tive re-lease plan-ning in ex-treme pro-gram-
  []
 
 )
-Package cleveref Info: loaded `english' language definitions on input line 995.
-Package cleveref Info: loaded `english' language definitions on input line 995.
- [49]
-Package cleveref Info: loaded `english' language definitions on input line 995.
-Package cleveref Info: loaded `english' language definitions on input line 995.
- [50
+Package cleveref Info: loaded `english' language definitions on input line 1129.
+Package cleveref Info: loaded `english' language definitions on input line 1129.
+ [53]
+Package cleveref Info: loaded `english' language definitions on input line 1129.
+Package cleveref Info: loaded `english' language definitions on input line 1129.
+ [54
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 999.
- [51] (./thesis-main.aux
+Package cleveref Info: loaded `english' language definitions on input line 1133.
+ [55] (./thesis-main.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
 )
  ***********
@@ -1050,21 +1077,21 @@ L3 programming layer <2023-06-30>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis-main.out' has not changed.
-(rerunfilecheck)             Checksum: CD7502B5E88C798BA7FD1C756D829A2C;4306.
+(rerunfilecheck)             Checksum: D2566A6901B4DB2242A679E9234BD051;4535.
  ) 
 Here is how much of TeX's memory you used:
- 27556 strings out of 475237
- 500220 string characters out of 5768556
+ 27568 strings out of 475237
+ 500338 string characters out of 5768556
  2330238 words of memory out of 5000000
- 48038 multiletter control sequences out of 15000+600000
+ 48043 multiletter control sequences out of 15000+600000
  573085 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,19n,115p,1722b,1570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis-main.pdf (63 pages, 418350 bytes).
+Output written on thesis-main.pdf (67 pages, 431801 bytes).
 PDF statistics:
- 873 PDF objects out of 1000 (max. 8388607)
- 750 compressed objects within 8 object streams
- 297 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 902 PDF objects out of 1000 (max. 8388607)
+ 775 compressed objects within 8 object streams
+ 304 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
