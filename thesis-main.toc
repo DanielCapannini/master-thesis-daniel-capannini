@@ -21,6 +21,7 @@
 \contentsline {section}{\numberline {6.3}variazione dei parametri}{38}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Riduzione sprint}{39}{subsection.6.3.1}%
 \contentsline {subsection}{\numberline {6.3.2}Riduzione capacità degli sprint}{39}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}metodo aggiornato}{40}{subsection.6.3.3}%
 \contentsline {chapter}{\numberline {7}Conclusioni}{47}{chapter.7}%
 \contentsline {part}{}{49}{chapter.7}%
 \contentsline {chapter}{Bibliography}{49}{section*.7}%
