@@ -7,6 +7,7 @@
 \usepackage{acronym}
 \usepackage{xcolor}
 \usepackage{booktabs}
+\usepackage{float}
 
 \lstdefinestyle{pseudo}{
   basicstyle=\ttfamily\small,
@@ -733,7 +734,7 @@ I progetti sono stati raggruppati in cinque cluster:
   \end{itemize}
 \end{description}
 
-\begin{table}[ht]
+\begin{table}[H]
 \scriptsize
 \caption{Problem instances}
 \label{Tab.1}
@@ -830,7 +831,7 @@ Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione de
 
 Nei test computazionali è stato fissato un limite di tempo di 600 secondi per tutti i risultati riportati di seguito, per cui quando IBM Ilog Cplex non trova una soluzione fattibile per un'istanza entro il limite di tempo assegnato, riportiamo il carattere ``--'' nelle colonne $z$, {\em Gap} e {\em BGap}.
 
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \caption{Results obtained solving the basic model with IBM Ilog Cplex and adding valid inequalities}
 \label{Tab.2}
@@ -916,7 +917,7 @@ La riduzione degli sprint disponibili non influisce sull’esecuzione degli algo
 La differenza sostanziale riguarda il valore della funzione obiettivo \eqref{Eq1.P1}. Come si osserva confrontando la tabella \ref{Tab.2} con la tabella \ref{Tab.3}, tale valore diminuisce con la diminuzione del numero di sprint disponibili. Tale comportamento è attribuibile al metodo di calcolo della funzione obiettivo, che attribuisce un peso maggiore alle user story eseguite nei primi sprint rispetto a quelle eseguite negli sprint successivi, integrando la riduzione disponibile degli sprint.
 
 
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \caption{sprint reduction results (nSprint - 2)}
 \label{Tab.3}
@@ -982,7 +983,7 @@ La riduzione della capacità degli sprint disponibili influisce significativamen
 Come illustrato nella tabella \ref{Tab.4}, una riduzione del 10\% della capacità degli sprint determina una diminuzione del valore della funzione obiettivo in tutte le istanze analizzate. Tale decremento riflette una minore ottimalità delle soluzioni ottenute rispetto al caso di capacità nominale, poiché l'algoritmo deve adattarsi a vincoli più restrittivi. Si osservano inoltre istanze, come 100Chain-3 e 100Affinity-3, in cui anche una riduzione del 10\% compromette irreversibilmente la fattibilità del problema. Questo fenomeno sottolinea l'importanza di preservare una capacità adeguata negli sprint per garantire sia la fattibilità delle soluzioni sia la qualità complessiva del piano di progetto.
 
 Nella tabella \ref{Tab.5} sono riportati i risultati ottenuti con una riduzione del 15\% della capacità degli sprint. L'impatto sulla fattibilità si rivela ancora più marcato, con un numero maggiore di istanze prive di soluzioni fattibili. Si nota inoltre che, in casi come 100Chain-1 e 100Affinity-1, CPLEX non riesce a identificare una soluzione fattibile entro il time limit, mentre gli algoritmi euristici proposti individuano soluzioni fattibili in tempi computazionali ridotti. Questo risultato evidenzia l'efficacia degli euristici nel gestire vincoli severi, fornendo soluzioni praticabili anche in scenari complessi.
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \caption{sprint capacity reduction results (capacity - 10\%)}
 \label{Tab.4}
@@ -1047,7 +1048,7 @@ web-2                        &     &    32068.5 &   0.00 &       0 &       2 &  
 \end{tabular}
 \end{table}
 
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \caption{sprint capacity reduction results (capacity - 15\%)}
 \label{Tab.5}
@@ -1119,10 +1120,11 @@ web -2                        &     &     31717.5 &    0.00 &        0 &        
 \subsection{metodo aggiornato}
 
 
-\begin{table}[ht]
+
+\begin{table}[H]
 \centering
 \caption{sprint reduction results (nSprint - 2)}
-\label{Tab.7}
+\label{Tab.6}
 \small
 \begin{tabular}{|ll|rrrrr|rrr|rrr|rrrr|rrrr|} 
 \hline
