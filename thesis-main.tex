@@ -688,6 +688,7 @@ I modificatori perseguono due obiettivi principali:
 I risultati computazionali di confronto sono riportati nella Sezione~\ref{confronto:fb}.
 
 
+
 \chapter{Risultati ottenuti}
 
 \section{dati utilizzati}
@@ -790,6 +791,7 @@ I progetti sono stati raggruppati in cinque cluster:
 
 \renewcommand{\arraystretch}{1.1}
 
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{llccccccc}
 \toprule
 \textbf{Group} & \textbf{Proj. Name} & $\mathbf{n}$ & $\mathbf{m}$ & $\mathbf{n_{aff}}$ & $\mathbf{|U^{OR}|}$ & $\mathbf{|U^{AND}|}$ & $\mathbf{l_{max}}$ & $\mathbf{d_{max}}$ \\
@@ -860,6 +862,85 @@ Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
 100Affinity-4 &       & 100 & 39 & 6 & 18 & 10 & 2 & 2 \\
 \bottomrule
 
+\end{tabular}
+}
+\end{table}
+
+\subsection{Generazione nuovi dati}
+
+purtroppo i dati che sono stati utilizzati per la valutazione sperimentale degli algoritmi proposti in \cite{BOSCHETTI2014116} presentano alcune limitazioni, per quanto riguarda i parametri riguardanti il rischio e l'incertezza delle user story essendo che non erano stati presi in considerazione. 
+Percio, per poter valutare al meglio l'efficacia delle nuove funzioni obiettivo introdotte nel Capitolo 4, e' stato generato un nuovo set di dati sintetici i quali sono stati generati tramite un algoritmo che permette di una volte settati i parametri seguenti: 
+
+\begin{itemize}
+    \item numero di user story;
+    \item numero di sprint;
+    \item utilita minima e massima delle user story;
+    \item rischio minimo e massimo delle user story;
+    \item incertezza minima e massima delle user story;
+    \item story point minimo e massimo delle user story;
+    \item capacita minima e massima degli sprint;
+    \item probabilità che una user story abbia vincoli di dipendenza;
+    \item numero massimo di vincoli di dipendenza per user story.
+\end{itemize}
+
+L'algoritmo genera in modo casuale le user story e i relativi parametri, e successivamente genera i vincoli di dipendenza tra le user story in base alla probabilità impostata.
+
+Grazie a questo algoritmo sono stati generati 20 nuovi progetti sintetici suddivi in 4 gruppi da 5 progetti ciascuno, i quali presentano le seguenti caratteristiche:
+
+\begin{itemize}
+  \item \textbf{Gruppo 1}: le istanze sono formate da 30 user story e 6 sprint e massimo 3 vincoli di dipendenza per user story;
+  \item \textbf{Gruppo 2}: le istanze sono formate da 70 user story e 20 sprint e massimo 3 vincoli di dipendenza per user story;
+  \item \textbf{Gruppo 3}: le istanze sono formate da 150 user story e 40 sprint e massimo 4 vincoli di dipendenza per user story;
+  \item \textbf{Gruppo 4}: le istanze sono formate da 350 user story e 100 sprint e massimo 4 vincoli di dipendenza per user story;
+\end{itemize}
+
+Le caratteristiche principali delle istanze generate sono riportate nella Tabella~\ref{Tab.newData}.
+
+\begin{table}[H]
+\scriptsize
+\caption{Instances generated with new data generator}
+\label{Tab.newData}
+\centering
+
+\renewcommand{\arraystretch}{1.1}
+
+\begin{tabular}{llccccccc}
+\hline
+\textbf{Group} & \textbf{Proj. Name} & $n$ & $m$ & $n_{aff}$ & $|U^{OR}|$ & $|U^{AND}|$ & $l_{max}$ & $d_{max}$ \\
+\hline
+\midrule
+
+\multicolumn{9}{c}{\textbf{Gruppo 1}} \\
+instance\_06\_01 &  &  25 & 16 & 11 & 2 & 3 & 3 & 3 \\
+instance\_06\_01 &  &  25 & 16 & 11 & 3 & 5 & 3 & 4 \\
+instance\_06\_01 &  &  25 & 16 & 12 & 2 & 6 & 3 & 5 \\
+instance\_06\_01 &  &  25 & 16 & 13 & 3 & 3 & 3 & 3 \\
+instance\_06\_01 &  &  25 & 16 & 13 & 3 & 5 & 3 & 4 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{Gruppo 2}} \\
+instance\_06\_01 &  &  60 & 40 & 14 & 9 & 9 & 3 & 6 \\
+instance\_06\_01 &  &  60 & 40 & 14 & 6 & 10 & 3 & 6 \\
+instance\_06\_01 &  &  60 & 40 & 14 & 7 & 8 & 3 & 4 \\
+instance\_06\_01 &  &  60 & 40 & 11 & 5 & 7 & 3 & 5 \\
+instance\_06\_01 &  &  60 & 40 & 17 & 5 & 7 & 3 & 3 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{Gruppo 3}} \\
+instance\_06\_01 &  &  120 & 80 & 14 & 18 & 12 & 2 & 3 \\
+instance\_06\_01 &  &  120 & 80 & 17 & 12 & 19 & 2 & 5 \\
+instance\_06\_01 &  &  120 & 80 & 16 & 13 & 22 & 2 & 3 \\
+instance\_06\_01 &  &  120 & 80 & 14 & 16 & 25 & 2 & 5 \\
+instance\_06\_01 &  &  120 & 80 & 12 & 21 & 18 & 2 & 4 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{Gruppo 4}} \\
+instance\_06\_01 &  &  300 & 250 & 16 & 41 & 42 & 2 & 6 \\
+instance\_06\_01 &  &  300 & 250 & 17 & 48 & 52 & 2 & 4 \\
+instance\_06\_01 &  &  300 & 250 & 16 & 50 & 46 & 2 & 5 \\
+instance\_06\_01 &  &  300 & 250 & 17 & 42 & 58 & 2 & 5 \\
+instance\_06\_01 &  &  300 & 250 & 12 & 40 & 52 & 2 & 5 \\
+\midrule
 \end{tabular}
 \end{table}
 
