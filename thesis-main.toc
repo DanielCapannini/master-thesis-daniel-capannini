@@ -27,6 +27,6 @@
 \contentsline {subsection}{\numberline {6.3.2}Riduzione capacità degli sprint}{45}{subsection.6.3.2}%
 \contentsline {subsection}{\numberline {6.3.3}metodo aggiornato}{49}{subsection.6.3.3}%
 \contentsline {section}{\numberline {6.4}Confronto funzioni obbiettivo}{50}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{51}{chapter.7}%
-\contentsline {part}{}{53}{chapter.7}%
-\contentsline {chapter}{Bibliography}{53}{section*.7}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{53}{chapter.7}%
+\contentsline {part}{}{55}{chapter.7}%
+\contentsline {chapter}{Bibliography}{55}{section*.7}%

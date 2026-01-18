@@ -640,7 +640,7 @@ UNTIL subgradient stopping conditions are satisfied
 Il parametro $\gamma$ controlla la frequenza di invocazione di {\em GreedyHeuristic}: ponendo $\gamma=1$ si esegue questa procedura solo quando $\boldsymbol{x}'$ rappresenta la migliore soluzione trovata finora, mentre per $\gamma<1$ {\em GreedyHeuristic} viene attivata anche quando $z'$ è ``sufficientemente vicino'' a $z^*$, cioè entro una distanza percentuale $100(1-\gamma)$. Al termine di {\em LagrangianHeuristic} si dispone di una soluzione fattibile di valore $z^*$ e di un upper bound $z^*_{LR}$ derivante dal rilassamento lagrangiano, che consente di stimare la distanza massima della soluzione euristica dall’ottimo del problema originale.
 
 
-\section{Funzioni obbiettivo}
+\section{Funzioni obbiettivo}\label{sec:fo}
 
 Per valutare approcci alternativi alla funzione obbiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obbiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint:
 
@@ -1325,6 +1325,85 @@ web-2                       &     &    32745.5 &    0.00 &        0 &        1 &
 \end{table}
 
 \section{Confronto funzioni obbiettivo}\label{confronto:fb}
+
+In questa sezione vengono confrontati i risultati ottenuti utilizzando le due diverse funzioni obbiettivo descritte nella sezione \ref{sec:fo}. Si usera come riferimento la tabella \ref{tab.new1} la quale riporta i risultati ottenuti con la funzione obbiettivo \eqref{Eq1.P1} e la tabella \ref{tab.new2} che riporta i risultati delle metriche calcolate su tali risultati.
+
+\begin{table}[H]
+\centering
+\caption{results con funzione obbiettivo \eqref{Eq1.P1}}
+\label{tab.new1}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|ll|rrr|rrr|rrr|} 
+\hline
+\multicolumn{2}{c|}{CPLEX} &     
+\multicolumn{3}{c|}{Heuristic} &    
+\multicolumn{3}{c|}{Lagrangian Heuristic}  \\  
+\hline
+Istanza                       &     &       Zopt &     Gap &     Time &      Zheu &      Time &    GHeu &      Zheu &      Time &    GHeu \\   
+instance\_06\_01              &     &    44354.6 &    0.01 &     0.23 &    42288.7 &     0.03 &    4.66 &    42288.7 &     0.23 &     4.66  \\ 
+instance\_06\_02              &     &    43181.6 &    0.01 &     0.42 &    41593.8 &     0.02 &    3.68 &    41593.8 &     0.22 &     3.68  \\ 
+instance\_06\_03              &     &    41367.7 &    0.01 &     0.30 &    40156.1 &     0.02 &    2.93 &    40156.1 &     0.32 &     2.93  \\ 
+instance\_06\_04              &     &    34073.1 &    0.01 &     0.11 &    27926.6 &     0.03 &   18.04 &    27926.6 &     0.33 &    18.04  \\ 
+instance\_06\_05              &     &    34991.9 &    0.00 &     0.38 &    31021.3 &     0.03 &   11.35 &    31021.3 &     0.16 &    11.35  \\ 
+instance\_20\_01              &     &   182020.7 &    1.02 &   300.10 &   178070.4 &     0.10 &    2.17 &   178070.4 &     3.01 &     2.17  \\ 
+instance\_20\_02              &     &   203651.0 &    0.29 &   300.07 &   190858.2 &     0.12 &    6.28 &   190858.2 &     4.00 &     6.28  \\ 
+instance\_20\_03              &     &   193769.0 &    0.01 &   217.66 &   177088.2 &     0.14 &    8.61 &   177088.2 &     3.03 &     8.61  \\ 
+instance\_20\_04              &     &   173408.3 &    0.01 &   291.01 &   172678.6 &     0.14 &    0.42 &   172678.6 &     4.00 &     0.42  \\ 
+instance\_20\_05              &     &   191724.4 &    3.38 &   300.05 &   170264.4 &     0.21 &   11.19 &   170264.4 &     2.46 &    11.19  \\ 
+instance\_40\_01              &     &   821010.9 &    0.05 &   300.12 &   804849.4 &     0.18 &    1.97 &   804849.4 &    18.34 &     1.97  \\ 
+instance\_40\_02              &     &   859090.7 &    0.08 &   300.12 &   826360.9 &     0.21 &    3.81 &   826360.9 &    14.45 &     3.81  \\ 
+instance\_40\_03              &     &   822323.5 &    0.10 &   300.11 &   801463.7 &     0.15 &    2.54 &   801463.7 &    22.44 &     2.54  \\ 
+instance\_40\_04              &     &   788923.6 &    0.48 &   300.13 &   773077.8 &     0.26 &    2.01 &   773077.8 &    27.66 &     2.01  \\ 
+instance\_40\_05              &     &   789186.1 &    0.26 &   300.12 &   794218.8 &     0.20 &   -0.64 &   794218.8 &    23.21 &    -0.64  \\ 
+instance\_100\_01             &     &  5492730.3 &    3.91 &   301.25 &  5638787.1 &     1.78 &   -2.66 &  5638787.1 &   300.18 &    -2.66  \\ 
+instance\_100\_02             &     &  5361497.2 &    6.61 &   300.93 &  5647903.4 &     1.75 &   -5.34 &  5647903.4 &   300.13 &    -5.34  \\ 
+instance\_100\_03             &     &  5613547.8 &    1.82 &   301.11 &  5631867.9 &     1.60 &   -0.33 &  5631867.9 &   300.72 &    -0.33  \\ 
+instance\_100\_04             &     &  5725382.8 &    5.00 &   300.91 &  5890661.9 &     1.84 &   -2.89 &  5890661.9 &   300.26 &    -2.89  \\ 
+instance\_100\_05             &     &  5430805.7 &    2.16 &   301.12 &  5530004.2 &     1.85 &   -1.83 &  5530004.2 &   300.02 &    -1.83  \\ 
+\hline
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{KPI con funzione obbiettivo \eqref{Eq1.P1}}
+\label{tab.new2}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|ll|rrrrr|rrrrr|rrrrr|} 
+\hline
+
+\multicolumn{2}{c|}{   } & 
+\multicolumn{5}{c|}{CPLEX} &     
+\multicolumn{5}{c|}{Heuristic} &    
+\multicolumn{5}{c|}{Lagrangian Heuristic} \\  
+Istanza  &   &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  \\ 
+instance\_06\_01              &     &       5.0 &      0.956 &      0.167 &      0.074 &        2.0 &        5.0 &      0.954 &      0.099 &      0.097 &        2.0 &        5.0 &      0.954 &      0.099 &      0.097 &        2.0  \\ 
+instance\_06\_01              &     &        7.0 &      0.844 &      0.145 &      0.161 &        3.0 &        7.0 &      0.842 &      0.159 &      0.158 &        2.0 &        7.0 &      0.842 &      0.159 &      0.158 &        2.0   \\ 
+instance\_06\_01              &     &        6.0 &      0.889 &      0.186 &      0.147 &        2.0 &        6.0 &      0.907 &      0.164 &      0.141 &        2.0 &        6.0 &      0.907 &      0.164 &      0.141 &        2.0   \\ 
+instance\_06\_01              &     &        5.0 &      0.866 &      0.155 &      0.116 &        2.0 &        5.0 &      0.861 &      0.130 &      0.195 &        2.0 &        5.0 &      0.861 &      0.130 &      0.195 &        2.0   \\ 
+instance\_06\_01              &     &        5.0 &      0.923 &      0.575 &      0.594 &        2.0 &        6.0 &      0.814 &      0.145 &      0.160 &        2.0 &        6.0 &      0.814 &      0.145 &      0.160 &        2.0   \\ 
+instance\_20\_01              &     &       23.0 &      0.958 &      0.147 &      0.173 &        9.0 &       24.0 &      0.916 &      0.199 &      0.195 &        8.0 &       24.0 &      0.916 &      0.199 &      0.195 &        8.0   \\ 
+instance\_20\_01              &     &       21.0 &      0.932 &      0.163 &      0.184 &        7.0 &       21.0 &      0.929 &      0.164 &      0.189 &        6.0 &       21.0 &      0.929 &      0.164 &      0.189 &        6.0   \\ 
+instance\_20\_01              &     &       21.0 &      0.959 &      0.166 &      0.132 &        8.0 &       22.0 &      0.909 &      0.197 &      0.200 &        7.0 &       22.0 &      0.909 &      0.197 &      0.200 &        7.0   \\ 
+instance\_20\_01              &     &       23.0 &      0.960 &      0.180 &      0.164 &        9.0 &       24.0 &      0.916 &      0.203 &      0.196 &        8.0 &       24.0 &      0.916 &      0.203 &      0.196 &        8.0   \\ 
+instance\_20\_01              &     &       21.0 &      0.961 &      0.155 &      0.175 &        7.0 &       21.0 &      0.961 &      0.183 &      0.186 &        7.0 &       21.0 &      0.961 &      0.183 &      0.186 &        7.0   \\ 
+instance\_40\_01              &     &       21.0 &      0.962 &      0.108 &      0.127 &        6.0 &       21.0 &      0.962 &      0.147 &      0.180 &        6.0 &       21.0 &      0.962 &      0.147 &      0.180 &        6.0   \\ 
+instance\_40\_01              &     &       19.0 &      0.953 &      0.132 &      0.131 &        5.0 &       19.0 &      0.953 &      0.094 &      0.120 &        5.0 &       19.0 &      0.953 &      0.094 &      0.120 &        5.0   \\ 
+instance\_40\_01              &     &       20.0 &      0.992 &      0.134 &      0.133 &        6.0 &       21.0 &      0.943 &      0.145 &      0.143 &        5.0 &       21.0 &      0.943 &      0.145 &      0.143 &        5.0  \\ 
+instance\_40\_01              &     &       22.0 &      0.977 &      0.139 &      0.105 &        7.0 &       22.0 &      0.977 &      0.120 &      0.121 &        6.0 &       22.0 &      0.977 &      0.120 &      0.121 &        6.0   \\ 
+instance\_40\_01              &     &       23.0 &      0.950 &      0.153 &      0.137 &        7.0 &       23.0 &      0.951 &      0.180 &      0.155 &        6.0 &       23.0 &      0.951 &      0.180 &      0.155 &        6.0   \\ 
+instance\_100\_01             &     &      102.0 &      0.920 &      0.188 &      0.175 &       34.0 &       95.0 &      0.987 &      0.187 &      0.191 &       29.0 &       95.0 &      0.987 &      0.187 &      0.191 &       29.0  \\ 
+instance\_100\_01             &     &       93.0 &      0.921 &      0.248 &      0.238 &       32.0 &       88.0 &      0.976 &      0.191 &      0.184 &       29.0 &       88.0 &      0.976 &      0.191 &      0.184 &       29.0  \\ 
+instance\_100\_01             &     &       91.0 &      0.937 &      0.234 &      0.220 &       29.0 &       87.0 &      0.981 &      0.194 &      0.183 &       27.0 &       87.0 &      0.981 &      0.194 &      0.183 &       27.0  \\ 
+instance\_100\_01             &     &      100.0 &      0.909 &      0.287 &      0.284 &       31.0 &       92.0 &      0.986 &      0.187 &      0.178 &       28.0 &       92.0 &      0.986 &      0.187 &      0.178 &       28.0  \\ 
+instance\_100\_01             &     &       95.0 &      0.930 &      0.179 &      0.158 &       30.0 &       90.0 &      0.987 &      0.179 &      0.159 &       27.0 &       90.0 &      0.987 &      0.179 &      0.159 &       27.0 \\ 
+ \hline
+\end{tabular}
+}
+\end{table}
 
 \chapter{Conclusioni}
 
