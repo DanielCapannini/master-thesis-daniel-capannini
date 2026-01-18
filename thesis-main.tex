@@ -640,6 +640,54 @@ UNTIL subgradient stopping conditions are satisfied
 Il parametro $\gamma$ controlla la frequenza di invocazione di {\em GreedyHeuristic}: ponendo $\gamma=1$ si esegue questa procedura solo quando $\boldsymbol{x}'$ rappresenta la migliore soluzione trovata finora, mentre per $\gamma<1$ {\em GreedyHeuristic} viene attivata anche quando $z'$ è ``sufficientemente vicino'' a $z^*$, cioè entro una distanza percentuale $100(1-\gamma)$. Al termine di {\em LagrangianHeuristic} si dispone di una soluzione fattibile di valore $z^*$ e di un upper bound $z^*_{LR}$ derivante dal rilassamento lagrangiano, che consente di stimare la distanza massima della soluzione euristica dall’ottimo del problema originale.
 
 
+\section{Funzioni obbiettivo}
+
+Per valutare approcci alternativi alla funzione obbiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obbiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint:
+
+\begin{alignat}{3}
+z_P^\text{cr}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+    &\label{Eq2.P1}\\
+z_P^\text{unc}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) 
+    &\label{Eq2.P2}\\
+z_P^\text{unc+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+    &\label{Eq2.P3}\\
+z_P^\text{load}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right)
+    &\label{Eq2.P4}\\
+z_P^\text{load+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+    &\label{Eq2.P5}
+\end{alignat}
+
+I nuovi parametri introdotti sono:
+
+\begin{itemize}
+    \item \(dp_{ij}\): \textit{development penalty} (0.25--1.0), misura il completamento delle dipendenze di $j$ prima dello sprint $i$. Assume valore 1.0 se tutte le dipendenze sono completate, 0.25 se nessuna lo è.
+    
+    \item \(ub_{ij}\): \textit{urgency bonus} ($\geq 0$), bonus proporzionale al numero di user story che dipendono da $j$ nello sprint $i$. Vale 0 se $j$ non ha dipendenze in ingresso.
+\end{itemize}
+
+\subsection{Caratteristiche delle funzioni obbiettivo}
+
+Le funzioni \eqref{Eq2.P2}--\eqref{Eq2.P5} incorporano il parametro \(r_j^{unc}\), che quantifica l'\textit{incertezza} nelle stime di sviluppo di $j$. Questo termine privilegia l'assegnazione precoce delle user story più incerte, garantendo tempo sufficiente per gestire eventuali problemi.
+
+Le funzioni \eqref{Eq2.P4}--\eqref{Eq2.P5} utilizzano invece \(p_j\), il peso di $j$, per massimizzare il \textit{carico di lavoro} degli sprint, riducendo lo spreco di capacità e accelerando il completamento del progetto.
+
+\subsection{Ruolo dei parametri di modifica}
+
+Ogni famiglia di funzioni obbiettivo è declinata in due varianti:
+\begin{itemize}
+    \item \textbf{Senza modificatori} (~\eqref{Eq2.P2},~\eqref{Eq2.P4}): versione base.
+    \item \textbf{Con modificatori} (~\eqref{Eq2.P1},~\eqref{Eq2.P3},~\eqref{Eq2.P5}): include \(dp_{ij}\) e \(ub_{ij}\).
+\end{itemize}
+
+I modificatori perseguono due obiettivi principali:
+\begin{enumerate}
+    \item Prioritizzare nelle fasi iniziali le user story ``radice'' (senza dipendenze in ingresso o con molte dipendenze in uscita).
+    \item Migliorare la convergenza algoritmica riducendo le violazioni di dipendenza che attivano i tagli.
+\end{enumerate}
+
+I risultati computazionali di confronto sono riportati nella Sezione~\ref{confronto:fb}.
+
+
 \chapter{Risultati ottenuti}
 
 \section{dati utilizzati}
@@ -1196,6 +1244,7 @@ web-2                       &     &    32745.5 &    0.00 &        0 &        1 &
 \end{tabular}
 \end{table}
 
+\section{Confronto funzioni obbiettivo}\label{confronto:fb}
 
 \chapter{Conclusioni}
 
