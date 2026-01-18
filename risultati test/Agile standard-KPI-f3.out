@@ -6,7 +6,7 @@
 \multicolumn{5}{c|}{Heuristic} &    
 \multicolumn{5}{c|}{Lagrangian Heuristic} &    
 \multicolumn{5}{c}{Lagrangian Heuristic (coef)} \\  
-Istanza  &   &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  \\ 
+Istanza  &   &                                 N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  &  N.S.O.  &  Avg.S.U.  &  Dev.Risk  &  Dev.Unc.Risk  &  Half.U.S.  \\ 
 instance_06_01.txt             &     &        5.0 &      0.956 &      0.073 &      0.051 &        2.0 &        5.0 &      0.953 &      0.057 &      0.050 &        2.0 &        5.0 &      0.953 &      0.057 &      0.050 &        2.0 &        5.0 &      0.953 &      0.057 &      0.050 &        2.0 \\ 
  instance_06_02.txt             &     &        7.0 &      0.845 &      0.093 &      0.211 &        2.0 &        7.0 &      0.845 &      0.143 &      0.210 &        2.0 &        7.0 &      0.845 &      0.143 &      0.210 &        2.0 &        7.0 &      0.845 &      0.143 &      0.210 &        2.0 \\ 
  instance_06_03.txt             &     &        6.0 &      0.889 &      0.186 &      0.147 &        2.0 &        6.0 &      0.888 &      0.188 &      0.116 &        2.0 &        6.0 &      0.888 &      0.188 &      0.116 &        2.0 &        6.0 &      0.888 &      0.188 &      0.116 &        2.0 \\ 

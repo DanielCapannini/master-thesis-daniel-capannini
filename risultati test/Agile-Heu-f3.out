@@ -7,7 +7,7 @@
 \multicolumn{4}{c|}{Lagrangian Heuristic} &    
 \multicolumn{4}{c}{Lagrangian Heuristic (coef)} \\  
 \hline
-Istanza        &     &               Zopt &     Gap &     Nodes &   NCuts &    Time &     Zheu &      Time &    GHeu &      Zheu &      Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\   
+Istanza        &     &                       Zopt &     Gap &     Nodes &   NCuts &    Time &     Zheu &      Time &    GHeu &        Zheu &       Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\   
 instance_06_01.txt             &     &    42778.5 &    0.01 &      234 &       10 &     0.12 &    43412.9 &     0.02 &   -1.48 &    43412.9 &     0.14 &    7.05 &   -1.48 &    43412.9 &     0.16 &    7.05 &   -1.48 \\ 
 instance_06_02.txt             &     &    43145.7 &    0.01 &      826 &       25 &     0.39 &    41489.1 &     0.02 &    3.84 &    41489.1 &     0.24 &   17.20 &    3.84 &    41489.1 &     0.24 &   17.20 &    3.84 \\ 
 instance_06_03.txt             &     &    43457.3 &    0.01 &      400 &       15 &     0.36 &    42504.9 &     0.02 &    2.19 &    42504.9 &     0.41 &   14.70 &    2.19 &    42504.9 &     0.26 &   14.70 &    2.19 \\ 
