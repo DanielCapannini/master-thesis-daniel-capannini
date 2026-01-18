@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  18 JAN 2026 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  18 JAN 2026 18:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1101,29 +1101,36 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.6.8}) ha
                                                   \__shipout_drop_firstpage_...
 l.1407 
        ]
-Package cleveref Info: loaded `english' language definitions on input line 1408.
-Package cleveref Info: loaded `english' language definitions on input line 1408.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package cleveref Info: loaded `english' language definitions on input line 1449.
+Package cleveref Info: loaded `english' language definitions on input line 1449.
  [51
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1408 \chapter
-               {Conclusioni}]
-Package cleveref Info: loaded `english' language definitions on input line 1408.
-Package cleveref Info: loaded `english' language definitions on input line 1408.
+l.1449 
+       ]
+Package cleveref Info: loaded `english' language definitions on input line 1450.
+Package cleveref Info: loaded `english' language definitions on input line 1450.
  [52
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1450 \chapter
+               {Conclusioni}]
+Chapter 7.
+Package cleveref Info: loaded `english' language definitions on input line 1456.
+[53
 
 ]
-Chapter 7.
-Package cleveref Info: loaded `english' language definitions on input line 1414.
-[53]
-Package cleveref Info: loaded `english' language definitions on input line 1414.
+Package cleveref Info: loaded `english' language definitions on input line 1456.
  [54
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1419.
+(hyperref)                be the same. Added a new anchor on input line 1461.
 
 (./thesis-main.bbl
 Underfull \hbox (badness 2671) in paragraph at lines 30--33
@@ -1148,15 +1155,15 @@ Underfull \hbox (badness 1173) in paragraph at lines 202--206
  []
 
 )
-Package cleveref Info: loaded `english' language definitions on input line 1421.
-Package cleveref Info: loaded `english' language definitions on input line 1421.
+Package cleveref Info: loaded `english' language definitions on input line 1463.
+Package cleveref Info: loaded `english' language definitions on input line 1463.
  [59]
-Package cleveref Info: loaded `english' language definitions on input line 1421.
-Package cleveref Info: loaded `english' language definitions on input line 1421.
+Package cleveref Info: loaded `english' language definitions on input line 1463.
+Package cleveref Info: loaded `english' language definitions on input line 1463.
  [60
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 1425.
+Package cleveref Info: loaded `english' language definitions on input line 1467.
  [61] (./thesis-main.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
 )
@@ -1172,18 +1179,18 @@ Package rerunfilecheck Info: File `thesis-main.out' has not changed.
 (rerunfilecheck)             Checksum: BE4290BD37520C466C4932C3CE707575;5727.
  ) 
 Here is how much of TeX's memory you used:
- 27685 strings out of 475237
- 501956 string characters out of 5768556
+ 27688 strings out of 475237
+ 501991 string characters out of 5768556
  2330238 words of memory out of 5000000
- 48133 multiletter control sequences out of 15000+600000
+ 48135 multiletter control sequences out of 15000+600000
  573085 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,19n,115p,1722b,1572s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis-main.pdf (73 pages, 456967 bytes).
+Output written on thesis-main.pdf (73 pages, 459975 bytes).
 PDF statistics:
- 994 PDF objects out of 1000 (max. 8388607)
- 860 compressed objects within 9 object streams
- 327 named destinations out of 1000 (max. 500000)
+ 1008 PDF objects out of 1200 (max. 8388607)
+ 872 compressed objects within 9 object streams
+ 328 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
