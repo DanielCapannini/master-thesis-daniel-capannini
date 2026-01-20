@@ -944,19 +944,65 @@ instance\_06\_01 &  &  300 & 250 & 12 & 40 & 52 & 2 & 5 \\
 \end{tabular}
 \end{table}
 
+\section{KPI di valutazione}
+
+Per valutare le prestazioni degli algoritmi e delle funzioni obbiettivo proposte sono stati ripresi dei KPI (Key Performance Indicators) che erano stati definiti in \cite{BOSCHETTI2014116} per valutare l'efficacia dei vari algoritmi implementati.
+Nello specifico, i KPI considerati sono i seguenti:
+
+\begin{description}
+    \item[\(Z_{OPT}\)] Valore della soluzione ottima dal modello di base risolto da IBM ILOG CPLEX.
+    
+    \item[\(Z_{HEU}\)] Valore della migliore soluzione euristiche trovata.
+    
+    \item[\textbf{Gap}] Gap percentuale tra \(Z_{HEU}\) e il bound superiore del miglior nodo rimanente:
+    \[
+    \text{Gap} = 100 \times \frac{Z_{OPT}^{ub} - Z_{HEU}}{Z_{OPT}^{ub}}
+    \]
+    
+    \item[\textbf{Nodes}] Numero di nodi esplorati nell'albero di branch-and-bound.
+    
+    \item[\textbf{NCuts}] Numero totale di tagli generati dalle callback:
+    \begin{itemize}
+        \item Vincoli di precedenza~\eqref{Eq1.P4}--\eqref{Eq1.P5} (lazy constraints)
+        \item Disuguaglianze di Dominanza (DIs)
+        \item LCIs (Logic-based Cutting Inequalities)
+    \end{itemize}
+    
+    \item[\textbf{GHeu}] Gap percentuale qualità soluzione euristiche:
+    \[
+    G_{heu} = 100 \times \frac{Z_{OPT} - Z_{HEU}}{Z_{OPT}}
+    \]
+    
+    \item[\textbf{Time}] Tempo computazionale totale (secondi).
+\end{description}
+
+A questi KPI sono stato aggiunti altri indicatori per valutare la bonta delle soluzioni proposte, a questo scopo sono stai introdotti i seguenti KPI:
+
+\begin{description}
+    \item[\textbf{N.S.O.} (Numero Sprint Occupati)] Numero di sprint utilizzati nella soluzione, che misura l'efficienza temporale della pianificazione: minori sprint occupati implicano consegna più rapida del progetto.
+    
+    \item[\textbf{Avg.S.U.} (Media Utilizzo Sprint)] Percentuale media di capacità sfruttata negli sprint occupati, che valuta l'efficienza di allocazione delle risorse: valori vicini al 100\% indicano minimizzazione dello spreco di capacità.
+    
+    \item[\textbf{Dev.Risk}] Deviazione standard del rischio~\(r_j^{cr}\) delle user story negli sprint, che quantifica la distribuzione equilibrata del rischio: bassa deviazione evita sprint ``troppo rischiosi'' o ``troppo sicuri''.
+    
+    \item[\textbf{Dev.Unc.}] Deviazione standard dell'incertezza~\(r_j^{unc}\) delle user story negli sprint, che misura la distribuzione equilibrata dell'incertezza: bassa variabilità favorisce gestione prevedibile degli sprint.
+    
+    \item[\textbf{Min.Risk}] Rischio minimo tra tutti gli sprint occupati, che verifica l'assenza di sprint ``eccessivamente sicuri'' evitando sottoutilizzo delle capacità di gestione del rischio del team.
+    
+    \item[\textbf{Min.Unc.}] Incertezza minima tra tutti gli sprint occupati, che garantisce la presenza di user story con incertezza significativa in ogni sprint, evitando sprint ``banali''.
+    
+    \item[\textbf{Max.Risk}] Rischio massimo tra tutti gli sprint occupati, che monitora l'esposizione al rischio nel worst-case: valori eccessivi segnalano sprint critici potenzialmente ingestibili.
+    
+    \item[\textbf{Max.Unc.}] Incertezza massima tra tutti gli sprint occupati, che identifica l'esposizione all'incertezza nel worst-case, essenziale per valutare la robustezza della pianificazione.
+    
+    \item[\textbf{Half.U.S.} (Half Utility Sprint)] Sprint in cui si raggiunge il 50\% del valore totale di utilità~\(U = \sum_j u_j\), che misura la progressione del valore consegnato (time-to-half-value): indica quanto rapidamente il progetto delivers valore al cliente.
+\end{description}
+
+I KPI computazionali valutano la qualità dell'ottimizzazione, mentre i nuovi KPI misurano l'idoneità pratica delle soluzioni per la pianificazione Agile reale, bilanciando qualità tecnica e valore business.
+
 \section{risultati computazionali}
 
 Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione degli algoritmi proposti  da \cite{BOSCHETTI2014116} con l'aggiornamento del codice per supportare l'attuale versione della libreria CPLEX.
-
-\begin{description}
-\item[$Z_{OPT}$]: valore della della soluzione ottima fornita da IBM Ilog Cplex risolvendo il modello di base;
-\item[$Z_{HEU}$]: valore della migliore soluzione fattibile trovata dai diversi algoritmi euristici;
-\item[Gap]: gap percentuale tra la migliore soluzione fattibile e il bound superiore associato al miglior nodo rimanente fornito da IBM Ilog Cplex;
-\item[Nodes]: numero di nodi dell'albero generati da IBM Ilog Cplex;
-\item[NCuts]: numero di tagli aggiunti tramite le {\em callback} di IBM ILog Cplex; tale numero include sia i vincoli di precedenza \eqref{Eq1.P4} e \eqref{Eq1.P5}, aggiunti come {\it lazy constraints}, sia le Disuguaglianze di Dominanza (DIs) e le LCIs;
-\item[GHeu]: gap percentuale tra il bound superiore $Z_{OPT}$ e il valore $Z_{HEU}$ della soluzione euristiche, ovvero ${GHeu} = 100 \times \frac{Z_{OPT}-Z_{HEU}}{Z_{OPT}}$;
-\item[Time]: tempo computazionale complessivo in secondi;
-\end{description}
 
 Nei test computazionali è stato fissato un limite di tempo di 600 secondi per tutti i risultati riportati di seguito, per cui quando IBM Ilog Cplex non trova una soluzione fattibile per un'istanza entro il limite di tempo assegnato, riportiamo il carattere ``--'' nelle colonne $z$, {\em Gap} e {\em BGap}.
 

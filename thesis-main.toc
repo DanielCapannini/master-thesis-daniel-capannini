@@ -21,14 +21,15 @@
 \contentsline {section}{\numberline {6.1}dati utilizzati}{35}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{36}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Generazione nuovi dati}{39}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}risultati computazionali}{40}{section.6.2}%
-\contentsline {section}{\numberline {6.3}variazione dei parametri}{43}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Riduzione sprint}{43}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Riduzione capacità degli sprint}{45}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}metodo aggiornato}{49}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Confronto funzioni obbiettivo}{50}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}funzuone obbiettovo \eqref {Eq2.P1}}{51}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{52}{subsection.6.4.2}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{55}{chapter.7}%
-\contentsline {part}{}{57}{chapter.7}%
-\contentsline {chapter}{Bibliography}{57}{section*.7}%
+\contentsline {section}{\numberline {6.2}KPI di valutazione}{40}{section.6.2}%
+\contentsline {section}{\numberline {6.3}risultati computazionali}{42}{section.6.3}%
+\contentsline {section}{\numberline {6.4}variazione dei parametri}{45}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{45}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{47}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}metodo aggiornato}{51}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Confronto funzioni obbiettivo}{52}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}funzuone obbiettovo \eqref {Eq2.P1}}{53}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{54}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{57}{chapter.7}%
+\contentsline {part}{}{59}{chapter.7}%
+\contentsline {chapter}{Bibliography}{59}{section*.7}%
