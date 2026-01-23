@@ -639,6 +639,81 @@ UNTIL subgradient stopping conditions are satisfied
 
 Il parametro $\gamma$ controlla la frequenza di invocazione di {\em GreedyHeuristic}: ponendo $\gamma=1$ si esegue questa procedura solo quando $\boldsymbol{x}'$ rappresenta la migliore soluzione trovata finora, mentre per $\gamma<1$ {\em GreedyHeuristic} viene attivata anche quando $z'$ è ``sufficientemente vicino'' a $z^*$, cioè entro una distanza percentuale $100(1-\gamma)$. Al termine di {\em LagrangianHeuristic} si dispone di una soluzione fattibile di valore $z^*$ e di un upper bound $z^*_{LR}$ derivante dal rilassamento lagrangiano, che consente di stimare la distanza massima della soluzione euristica dall’ottimo del problema originale.
 
+\section{Aggiornamenti ai metodi di cutting plane}
+
+I metodi di \emph{cutting plane} costituiscono una tecnica fondamentale nella programmazione lineare intera mista (MILP), utilizzata per rafforzare iterativamente il rilassamento lineare continuo aggiungendo disuguaglianze valide (\emph{tagli}) che eliminano soluzioni frazionarie non fattibili per il problema discreto. Nel contesto del problema di assegnazione sprint-user story, i tagli di precedenza OR/AND impongono che, per eseguire una user story $j$ nello sprint $i$, almeno una (OR) o tutte (AND) le sue dipendenze predecessorali siano state completate negli sprint precedenti ($i_1 \leq i$).
+
+Per potenziare la componente di branch-and-cut dell'euristica matmaster, sono stati sostanzialmente rivisti due metodi fondamentali: la funzione di setup \texttt{CuttingPlaneHeu} (ora \texttt{CuttingPlaneHeu\_new}) e l'intero sistema di generazione di tagli di precedenza.
+
+\subsection{Limitazioni della versione originale}
+L'implementazione precedente soffriva di:
+\begin{itemize}
+    \item \textbf{Parametri di debug invasivi}: output eccessivo che rallentava l'esecuzione
+    \item \textbf{Generazione di un solo taglio per callback}: inefficace per problemi con molte violazioni
+    \item \textbf{Bug critico negli indici}: \texttt{OR\_AND\_InequalitiesHeu} usava indici lineari $x_j$ invece di $x_{i,j}$, generando tagli errati
+    \item \textbf{Nessun controllo della profondità}: tagli generati a tutti i livelli dell'albero
+    \item \textbf{Nessuna deduplicazione}: rischio di rigenerare gli stessi tagli
+\end{itemize}
+
+\subsection{Miglioramenti introdotti}
+La nuova versione implementa:
+\begin{enumerate}
+    \item \textbf{Limitazione alla profondità dell'albero}: tagli solo per $depth \leq 3$
+    \item \textbf{Generazione multi-cut}: fino a 10 tagli per callback
+    \item \textbf{Deduplicazione via FNV-1a}: checksum a 64 bit sulle colonne del taglio
+    \item \textbf{Tolleranza ridotta}: $\epsilon = 10^{-6}$ invece di $10^{-3}$
+    \item \textbf{Indici corretti}: iterazione su tutti gli sprint $i_1 \leq i$
+    \item \textbf{Gestione CPLEX avanzata}: \texttt{CPX\_USECUT\_FILTER} per auto-purge
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{lstlisting}[style=pseudo, caption={myHeucutcallbackNew: algoritmo multi-cut},label={Alg.NewCallback}]
+myHeucutcallbackNew(env, cbdata, wherefrom, cbhandle):
+    if FlagLP or depth > 3: return
+    
+    Get node solution x[0..numcols-1]
+    
+    numCutsAdded = 0
+    FOR iter = 1 to 10:
+        if NOT OR_AND_InequalitiesNew(cutinfo): break
+        
+        Add cut with CPX_USECUT_FILTER
+        numCutsAdded++
+    
+    if numCutsAdded > 0:
+        useraction_p = CPX_CALLBACK_SET
+\end{lstlisting}
+\end{figure}
+
+La funzione \texttt{OR\_AND\_InequalitiesNew} ora genera correttamente i tagli di precedenza considerando la dimensione temporale:
+
+\begin{figure}[h]
+\begin{lstlisting}[style=pseudo, caption={OR-AND-InequalitiesNew: tagli corretti},label={Alg.NewCuts}]
+OR_AND_InequalitiesNew(cutinfo):
+    FOR j in user stories:
+        FOR i in sprints:
+            if x[i*n+j] < 1e-9: continue
+            
+            // OR precedence: almeno UNA dipendenza prima
+            lhs = sum_{i1<=i, u in UOR[j]} x[i1*n+u]
+            if lhs - x[i*n+j] > 1e-6:
+                Build cut: sum_{i1<=i,u in UOR[j]} x[i1*n+u] - x[i*n+j] <= 0
+                if checksum != last_cut_checksum:
+                    return VIOLATED
+            
+            // AND precedence: TUTTE le dipendenze prima
+            lhs = sum_{i1<=i, u in UAND[j]} x[i1*n+u]
+            if lhs - |UAND[j]|*x[i*n+j] > 1e-6:
+                Build cut: sum_{i1<=i,u in UAND[j]} x[i1*n+u] - |UAND[j]|*x[i*n+j] <= 0
+                if checksum != last_cut_checksum:
+                    return VIOLATED
+    return NO_VIOLATION
+\end{lstlisting}
+\end{figure}
+
+Questi miglioramenti rendono il branch-and-cut significativamente più robusto ed efficace, specialmente per istanze con catene di dipendenze complesse.
+
+
 
 \section{Funzioni obbiettivo}\label{sec:fo}
 

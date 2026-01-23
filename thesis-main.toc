@@ -14,22 +14,25 @@
 \contentsline {subsection}{\numberline {5.1.2}QuickGreedyHeuristic: versione veloce basata su knapsack}{23}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}ExchangeHeuristic: miglioramento locale per scambi}{25}{subsection.5.1.3}%
 \contentsline {section}{\numberline {5.2}A Lagrangian Heuristic}{26}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Funzioni obbiettivo}{30}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Caratteristiche delle funzioni obbiettivo}{31}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Ruolo dei parametri di modifica}{31}{subsection.5.3.2}%
-\contentsline {chapter}{\numberline {6}Risultati ottenuti}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}dati utilizzati}{35}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{36}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Generazione nuovi dati}{39}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}KPI di valutazione}{40}{section.6.2}%
-\contentsline {section}{\numberline {6.3}risultati computazionali}{42}{section.6.3}%
-\contentsline {section}{\numberline {6.4}variazione dei parametri}{45}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{45}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{47}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}metodo aggiornato}{51}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Confronto funzioni obbiettivo}{52}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}funzuone obbiettovo \eqref {Eq2.P1}}{53}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{54}{subsection.6.5.2}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{57}{chapter.7}%
-\contentsline {part}{}{59}{chapter.7}%
-\contentsline {chapter}{Bibliography}{59}{section*.7}%
+\contentsline {section}{\numberline {5.3}Aggiornamenti ai metodi di cutting plane}{30}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Limitazioni della versione originale}{30}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Miglioramenti introdotti}{31}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Funzioni obbiettivo}{31}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Caratteristiche delle funzioni obbiettivo}{32}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Ruolo dei parametri di modifica}{32}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}Risultati ottenuti}{39}{chapter.6}%
+\contentsline {section}{\numberline {6.1}dati utilizzati}{39}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{40}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Generazione nuovi dati}{43}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}KPI di valutazione}{44}{section.6.2}%
+\contentsline {section}{\numberline {6.3}risultati computazionali}{46}{section.6.3}%
+\contentsline {section}{\numberline {6.4}variazione dei parametri}{49}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{49}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{51}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}metodo aggiornato}{55}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Confronto funzioni obbiettivo}{56}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}funzuone obbiettovo \eqref {Eq2.P1}}{57}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{58}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{61}{chapter.7}%
+\contentsline {part}{}{63}{chapter.7}%
+\contentsline {chapter}{Bibliography}{63}{section*.7}%
