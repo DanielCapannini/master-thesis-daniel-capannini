@@ -362,7 +362,7 @@ A ogni passo, fissato uno sprint $i \in S$ e l’insieme $F_i$ delle user story 
 
 \paragraph{Pseudocodice della GreedyHeuristic.}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}[style=pseudo,caption={GreedyHeuristic},label={Alg.GH}]
 GreedyHeuristic
 -------------------------
@@ -419,7 +419,7 @@ Per quanto riguarda le dipendenze, la soluzione del knapsack rilassato $SP'_i$ p
 \end{enumerate}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}[style=pseudo, caption={QuickGreedyHeuristic},label={Alg.QGH}]
 Set z_star = -infinity
 
@@ -480,7 +480,7 @@ Uno scambio viene effettivamente applicato solo se è contemporaneamente {\em fa
 
 L'algoritmo {\em ExchangeHeuristic} può essere esteso includendo mosse di scambio più complesse (ad esempio scambi $k$-$\ell$ con $k,\ell > 2$). Tuttavia, l'incremento di complessità computazionale associato a tali estensioni tende a non essere compensato da miglioramenti significativi della qualità della soluzione, motivo per cui in questo lavoro ci si limita alle mosse 1-0, 1-1 e 2-1 descritte sopra.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}[style=pseudo, caption={ExchangeHeuristic},label={Alg.EH}]
 Algorithm ExchangeHeuristic(x'):
 Repeat
@@ -592,7 +592,7 @@ dove $\beta$ è inizializzato a un valore dipendente dal problema (nel nostro ca
 
 La procedura complessiva, denominata {\em LagrangianHeuristic}, è riassunta in Figura~\ref{Alg.LH}. A ogni iterazione del sottogradiente si risolve LR per un dato vettore di penalità $\boldsymbol{\lambda}$, ottenendo il valore $z_{LR}(\boldsymbol{\lambda})$ e aggiornando il miglior upper bound $z^*_{LR}$. Successivamente, si calcola una soluzione euristica $\boldsymbol{x}'$ tramite {\em QuickGreedyHeuristic}, utilizzando le utilità penalizzate definite in \eqref{Eq.PU}, e la si migliora mediante {\em ExchangeHeuristic}; il valore $z'$ della soluzione così ottenuta sostituisce il miglior valore corrente $z^*$ se $z' > z^*$. Inoltre, se la condizione $\gamma z^* \leq z'$ è soddisfatta, si genera una seconda soluzione euristica $\boldsymbol{x}''$ con la più costosa {\em GreedyHeuristic}, sempre basata sulle utilità penalizzate, e il corrispondente valore $z''$ viene confrontato con $z^*$ per un eventuale aggiornamento.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}[style=pseudo, caption={Algorithm LagrangianHeuristic}, label={Alg.LH}]
 LagrangianHeuristic:
 
@@ -641,41 +641,31 @@ Il parametro $\gamma$ controlla la frequenza di invocazione di {\em GreedyHeuris
 
 \section{Aggiornamenti ai metodi di cutting plane}
 
-I metodi di \emph{cutting plane} costituiscono una tecnica fondamentale nella programmazione lineare intera mista (MILP), utilizzata per rafforzare iterativamente il rilassamento lineare continuo aggiungendo disuguaglianze valide (\emph{tagli}) che eliminano soluzioni frazionarie non fattibili per il problema discreto. Nel contesto del problema di assegnazione sprint-user story, i tagli di precedenza OR/AND impongono che, per eseguire una user story $j$ nello sprint $i$, almeno una (OR) o tutte (AND) le sue dipendenze predecessorali siano state completate negli sprint precedenti ($i_1 \leq i$).
+I metodi di \emph{cutting plane} costituiscono una tecnica fondamentale nella programmazione lineare intera mista (MILP), utilizzata per rafforzare iterativamente il rilassamento lineare continuo mediante l'aggiunta di disuguaglianze valide (\emph{tagli}) che eliminano soluzioni frazionarie non ammissibili per il problema discreto. Nel contesto del problema di assegnazione sprint-user story, i tagli di precedenza OR/AND garantiscono che, per eseguire una user story $j$ nello sprint $i$, almeno una (OR) oppure tutte (AND) le sue dipendenze predecessorali siano state completate negli sprint precedenti ($i_1 \leq i$).
 
-Per potenziare la componente di branch-and-cut dell'euristica matmaster, sono stati sostanzialmente rivisti due metodi fondamentali: la funzione di setup \texttt{CuttingPlaneHeu} (ora \texttt{CuttingPlaneHeu\_new}) e l'intero sistema di generazione di tagli di precedenza.
+Durante la fase di sperimentazione ci si è resi conto di alcune possibili limitazioni presenti nella componente di branch-and-cut dell'euristica matheuristic proposta da \cite{BOSCHETTI2014116}. In particolare, l'implementazione originale della funzione \texttt{CuttingPlaneHeu} presentava: assenza di controllo sulla profondità dell'albero di branch-and-bound e mancanza di meccanismi di deduplicazione.
 
-\subsection{Limitazioni della versione originale}
-L'implementazione precedente soffriva di:
+La nuova implementazione \texttt{CuttingPlaneHeu\_new} introduce i seguenti potenziamenti:
+
 \begin{itemize}
-    \item \textbf{Parametri di debug invasivi}: output eccessivo che rallentava l'esecuzione
-    \item \textbf{Generazione di un solo taglio per callback}: inefficace per problemi con molte violazioni
-    \item \textbf{Bug critico negli indici}: \texttt{OR\_AND\_InequalitiesHeu} usava indici lineari $x_j$ invece di $x_{i,j}$, generando tagli errati
-    \item \textbf{Nessun controllo della profondità}: tagli generati a tutti i livelli dell'albero
-    \item \textbf{Nessuna deduplicazione}: rischio di rigenerare gli stessi tagli
+\item \textbf{Limitazione alla profondità dell'albero}: i tagli vengono generati esclusivamente per nodi con $\text{depth} \leq 3$, concentrando lo sforzo computazionale dove l'impatto sul bound è massimo, cercando quindi di limitare l'uso di risorse computazionali per l'esecuzione di di tagli di poco conto. La adozione di $\text{depth} \leq 3$ è dovuta a un'analisi sperimentale che ha mostrato come la maggior parte dei miglioramenti significativi del bound si ottenga nei primi livelli dell'albero di branch-and-bound e che la profondita media fosse $\text{Avg\_depth} = 2.7$.
+\item \textbf{Generazione multi-cut}: ogni callback può puo richiamare la funzione che aggiunge i tagli fini a 10 volte, accelerando la scoperta dei tagli da inserire.
+\item \textbf{Deduplicazione mediante hashing FNV-1a}: un checksum a 64 bit sulle colonne non nulle previene la rigenerazione di tagli duplicati.
+\item \textbf{Tolleranza di violazione ridotta}: $\epsilon = 10^{-6}$ per una maggiore selettività.
 \end{itemize}
 
-\subsection{Miglioramenti introdotti}
-La nuova versione implementa:
-\begin{enumerate}
-    \item \textbf{Limitazione alla profondità dell'albero}: tagli solo per $depth \leq 3$
-    \item \textbf{Generazione multi-cut}: fino a 10 tagli per callback
-    \item \textbf{Deduplicazione via FNV-1a}: checksum a 64 bit sulle colonne del taglio
-    \item \textbf{Tolleranza ridotta}: $\epsilon = 10^{-6}$ invece di $10^{-3}$
-    \item \textbf{Indici corretti}: iterazione su tutti gli sprint $i_1 \leq i$
-    \item \textbf{Gestione CPLEX avanzata}: \texttt{CPX\_USECUT\_FILTER} per auto-purge
-\end{enumerate}
-
-\begin{figure}[h]
-\begin{lstlisting}[style=pseudo, caption={myHeucutcallbackNew: algoritmo multi-cut},label={Alg.NewCallback}]
+\begin{figure}[H]
+\begin{lstlisting}[style=pseudo, caption={Algoritmo multi-cut per la callback di generazione tagli},label={Alg.NewCallback}]
 myHeucutcallbackNew(env, cbdata, wherefrom, cbhandle):
-    if FlagLP or depth > 3: return
+    if FlagLP or depth > 3: 
+        return
     
     Get node solution x[0..numcols-1]
     
     numCutsAdded = 0
-    FOR iter = 1 to 10:
-        if NOT OR_AND_InequalitiesNew(cutinfo): break
+    FOR iter = 1 TO 10:
+        if NOT OR_AND_InequalitiesNew(cutinfo): 
+            break
         
         Add cut with CPX_USECUT_FILTER
         numCutsAdded++
@@ -685,39 +675,42 @@ myHeucutcallbackNew(env, cbdata, wherefrom, cbhandle):
 \end{lstlisting}
 \end{figure}
 
-La funzione \texttt{OR\_AND\_InequalitiesNew} ora genera correttamente i tagli di precedenza considerando la dimensione temporale:
+La funzione \texttt{OR\_AND\_InequalitiesNew} implementa correttamente la generazione dei tagli di precedenza considerando la dimensione temporale:
 
-\begin{figure}[h]
-\begin{lstlisting}[style=pseudo, caption={OR-AND-InequalitiesNew: tagli corretti},label={Alg.NewCuts}]
+\begin{figure}[H]
+\begin{lstlisting}[style=pseudo, caption={Generazione corretta dei tagli di precedenza OR-AND},label={Alg.NewCuts}]
 OR_AND_InequalitiesNew(cutinfo):
-    FOR j in user stories:
-        FOR i in sprints:
-            if x[i*n+j] < 1e-9: continue
+    FOR j IN user_stories:
+        FOR i IN sprints:
+            if x[i*n+j] < 1e-9: 
+                continue
             
-            // OR precedence: almeno UNA dipendenza prima
+            // Precedenza OR: almeno UNA dipendenza completata
             lhs = sum_{i1<=i, u in UOR[j]} x[i1*n+u]
-            if lhs - x[i*n+j] > 1e-6:
-                Build cut: sum_{i1<=i,u in UOR[j]} x[i1*n+u] - x[i*n+j] <= 0
+            if lhs - x[i*n+j] < -1e-6:
+                Build cut: sum_{i1<=i, u in UOR[j]} x[i1*n+u] >= x[i*n+j]
                 if checksum != last_cut_checksum:
                     return VIOLATED
             
-            // AND precedence: TUTTE le dipendenze prima
+            // Precedenza AND: TUTTE le dipendenze completate
             lhs = sum_{i1<=i, u in UAND[j]} x[i1*n+u]
-            if lhs - |UAND[j]|*x[i*n+j] > 1e-6:
-                Build cut: sum_{i1<=i,u in UAND[j]} x[i1*n+u] - |UAND[j]|*x[i*n+j] <= 0
+            if lhs - |UAND[j]|*x[i*n+j] < -1e-6:
+                Build cut: sum_{i1<=i, u in UAND[j]} x[i1*n+u] 
+                             >= |UAND[j]|*x[i*n+j]
                 if checksum != last_cut_checksum:
                     return VIOLATED
+    
     return NO_VIOLATION
 \end{lstlisting}
 \end{figure}
 
-Questi miglioramenti rendono il branch-and-cut significativamente più robusto ed efficace, specialmente per istanze con catene di dipendenze complesse.
+\section{Funzioni obiettivo}\label{sec:fo}
 
+Per valutare approcci alternativi alla funzione obiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint. La motivazione principale di questa estensione risiede nella natura multi-obiettivo intrinseca del problema di sprint planning: oltre alla massimizzazione del valore di business, i team di sviluppo devono simultaneamente gestire l'incertezza nelle stime, rispettare le dipendenze tecniche, e ottimizzare l'utilizzo della capacità disponibile. Le funzioni proposte permettono di esplorare sistematicamente come diverse priorità strategiche influenzino la qualità e la fattibilità delle soluzioni ottenute.
 
+\subsection{Formulazioni matematiche}
 
-\section{Funzioni obbiettivo}\label{sec:fo}
-
-Per valutare approcci alternativi alla funzione obbiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obbiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint:
+Le nuove funzioni obiettivo sono definite come segue:
 
 \begin{alignat}{3}
 z_P^\text{cr}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
@@ -735,30 +728,49 @@ z_P^\text{load+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \
 I nuovi parametri introdotti sono:
 
 \begin{itemize}
-    \item \(dp_{ij}\): \textit{development penalty} (0.25--1.0), misura il completamento delle dipendenze di $j$ prima dello sprint $i$. Assume valore 1.0 se tutte le dipendenze sono completate, 0.25 se nessuna lo è.
+    \item \(dp_{ij} \in [0.25, 1.0]\): \textit{development penalty}, coefficiente che quantifica il grado di completamento delle dipendenze della user story $j$ prima dello sprint $i$. Assume valore 1.0 se tutte le dipendenze predecessorali sono state completate, e decade progressivamente fino a 0.25 se nessuna dipendenza è stata ancora eseguita.
     
-    \item \(ub_{ij}\): \textit{urgency bonus} ($\geq 0$), bonus proporzionale al numero di user story che dipendono da $j$ nello sprint $i$. Vale 0 se $j$ non ha dipendenze in ingresso.
+    \item \(ub_{ij} \geq 0\): \textit{urgency bonus}, bonus proporzionale al numero di user story che hanno $j$ come dipendenza e sono pianificate negli sprint successivi. Vale 0 se $j$ non ha dipendenze in uscita.
 \end{itemize}
 
-\subsection{Caratteristiche delle funzioni obbiettivo}
+\subsection{Obiettivi delle diverse funzioni}
 
-Le funzioni \eqref{Eq2.P2}--\eqref{Eq2.P5} incorporano il parametro \(r_j^{unc}\), che quantifica l'\textit{incertezza} nelle stime di sviluppo di $j$. Questo termine privilegia l'assegnazione precoce delle user story più incerte, garantendo tempo sufficiente per gestire eventuali problemi.
+Ciascuna funzione obiettivo persegue una specifica strategia di pianificazione:
 
-Le funzioni \eqref{Eq2.P4}--\eqref{Eq2.P5} utilizzano invece \(p_j\), il peso di $j$, per massimizzare il \textit{carico di lavoro} degli sprint, riducendo lo spreco di capacità e accelerando il completamento del progetto.
+\paragraph{Funzione \texorpdfstring{$z_P^\text{cr}$}{z\_P\^{}cr} (Criticità con modificatori)~\eqref{Eq2.P1}.} 
+Rappresenta la formulazione originale del problema, che massimizza il valore di business ponderato per la criticità $r_j^{cr}$ delle user story. I modificatori $dp_{ij}$ e $ub_{ij}$ penalizzano l'assegnazione precoce di story con dipendenze non soddisfatte e premiano le story ``critiche'' che sbloccano molte altre attività. \textbf{Obiettivo}: bilanciare valore di business e rispetto delle dipendenze architetturali.
 
-\subsection{Ruolo dei parametri di modifica}
+\paragraph{Funzione \texorpdfstring{$z_P^\text{unc}$}{z\_P\^{}unc} (Incertezza senza modificatori)~\eqref{Eq2.P2}.}
+Incorpora il parametro $r_j^{unc}$, che quantifica l'incertezza nelle stime di sviluppo della user story $j$ (tipicamente derivata dalla deviazione standard delle stime del team o dalla volatilità storica di story simili). Questa funzione privilegia l'assegnazione precoce delle user story più incerte, garantendo buffer temporale sufficiente per gestire eventuali ritardi o scoperte impreviste durante l'implementazione. \textbf{Obiettivo}: riduzione del rischio di schedule slippage concentrando le attività ad alto rischio nei primi sprint.
 
-Ogni famiglia di funzioni obbiettivo è declinata in due varianti:
-\begin{itemize}
-    \item \textbf{Senza modificatori} (~\eqref{Eq2.P2},~\eqref{Eq2.P4}): versione base.
-    \item \textbf{Con modificatori} (~\eqref{Eq2.P1},~\eqref{Eq2.P3},~\eqref{Eq2.P5}): include \(dp_{ij}\) e \(ub_{ij}\).
-\end{itemize}
+\paragraph{Funzione \texorpdfstring{$z_P^\text{unc+mod}$}{z\_P\^{}unc+mod} (Incertezza con modificatori)~\eqref{Eq2.P3}.}
+Estende~\eqref{Eq2.P2} integrando i modificatori $dp_{ij}$ e $ub_{ij}$ per combinare la gestione dell'incertezza con il rispetto delle dipendenze. \textbf{Obiettivo}: pianificazione risk-aware che minimizza simultaneamente il rischio tecnico e il rischio di violazione delle dipendenze.
 
-I modificatori perseguono due obiettivi principali:
+\paragraph{Funzione \texorpdfstring{$z_P^\text{load}$}{z\_P\^{}load} (Carico di lavoro senza modificatori)~\eqref{Eq2.P4}.}
+Utilizza il peso $p_j$ (espresso in story points, giorni-persona, o altra metrica di effort) per massimizzare il carico di lavoro complessivo assegnato agli sprint. Questa funzione mira a saturare la capacità disponibile, riducendo gli sprechi di risorse e accelerando il completamento del progetto. \textbf{Obiettivo}: massimizzazione del throughput e riduzione della durata totale del progetto.
+
+\paragraph{Funzione \texorpdfstring{$z_P^\text{load+mod}$}{z\_P\^{}load+mod} (Carico di lavoro con modificatori)~\eqref{Eq2.P5}.}
+Combina l'ottimizzazione del carico con i modificatori per evitare che la saturazione degli sprint violi le dipendenze architetturali. \textbf{Obiettivo}: throughput elevato mantenendo la fattibilità tecnica della pianificazione.
+
+\subsection{Ruolo dei parametri modificatori}
+
+La presenza o assenza dei modificatori $dp_{ij}$ e $ub_{ij}$ definisce due varianti per ciascuna strategia:
+
+\paragraph{Varianti senza modificatori (~\eqref{Eq2.P2},~\eqref{Eq2.P4}).} 
+Rappresentano formulazioni ``pure'' che ottimizzano esclusivamente il criterio principale (incertezza o carico) senza considerazioni esplicite sulle dipendenze. Queste varianti sono utili come baseline per valutare l'impatto dei modificatori, ma possono generare soluzioni che violano frequentemente i vincoli di precedenza, richiedendo correzioni successive.
+
+\paragraph{Varianti con modificatori (~\eqref{Eq2.P1},~\eqref{Eq2.P3},~\eqref{Eq2.P5}).}
+Integrano due meccanismi di guida della ricerca:
+
 \begin{enumerate}
-    \item Prioritizzare nelle fasi iniziali le user story ``radice'' (senza dipendenze in ingresso o con molte dipendenze in uscita).
-    \item Migliorare la convergenza algoritmica riducendo le violazioni di dipendenza che attivano i tagli.
+    \item \textbf{Development penalty ($dp_{ij}$)}: penalizza l'assegnazione di user story $j$ allo sprint $i$ se le sue dipendenze predecessorali non sono state completate, incentivando l'algoritmo a rispettare naturalmente l'ordinamento topologico del grafo delle dipendenze. Questo riduce drasticamente il numero di soluzioni intermedie infeasible esplorate durante la ricerca.
+    
+    \item \textbf{Urgency bonus ($ub_{ij}$)}: premia l'esecuzione anticipata delle user story ``radice'' (senza dipendenze in ingresso) o delle story che sbloccano molte attività successive. Questo favorisce pianificazioni che costruiscono progressivamente l'infrastruttura necessaria per le feature dipendenti, evitando colli di bottiglia negli sprint finali.
 \end{enumerate}
+
+Dal punto di vista algoritmico, i modificatori migliorano significativamente la convergenza dei metodi di branch-and-cut riducendo la frequenza di attivazione dei tagli di precedenza OR/AND (Sezione~\ref{sec:cutting}). Soluzioni che rispettano meglio le dipendenze richiedono meno iterazioni di separazione, accelerando il processo di ottimizzazione complessivo.
+
+\subsection{Confronto sperimentale}
 
 I risultati computazionali di confronto sono riportati nella Sezione~\ref{confronto:fb}.
 
@@ -941,35 +953,61 @@ Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
 }
 \end{table}
 
-\subsection{Generazione nuovi dati}
+\subsection{Generazione di nuove istanze di test}
 
-purtroppo i dati che sono stati utilizzati per la valutazione sperimentale degli algoritmi proposti in \cite{BOSCHETTI2014116} presentano alcune limitazioni, per quanto riguarda i parametri riguardanti il rischio e l'incertezza delle user story essendo che non erano stati presi in considerazione. 
-Percio, per poter valutare al meglio l'efficacia delle nuove funzioni obiettivo introdotte nel Capitolo 4, e' stato generato un nuovo set di dati sintetici i quali sono stati generati tramite un algoritmo che permette di una volte settati i parametri seguenti: 
+I dataset utilizzati per la valutazione sperimentale degli algoritmi proposti in~\cite{BOSCHETTI2014116} presentano alcune limitazioni significative: in particolare, mancano completamente i parametri relativi al rischio ($r_j^{cr}$) e all'incertezza ($r_j^{unc}$) delle user story, essendo stati concepiti prima dell'introduzione di queste metriche nella modellazione del problema. Questa carenza rende impossibile una valutazione empirica significativa delle nuove funzioni obiettivo introdotte nella Sezione~\ref{sec:fo}, che si basano proprio su questi parametri per guidare le decisioni di pianificazione.
 
-\begin{itemize}
-    \item numero di user story;
-    \item numero di sprint;
-    \item utilita minima e massima delle user story;
-    \item rischio minimo e massimo delle user story;
-    \item incertezza minima e massima delle user story;
-    \item story point minimo e massimo delle user story;
-    \item capacita minima e massima degli sprint;
-    \item probabilità che una user story abbia vincoli di dipendenza;
-    \item numero massimo di vincoli di dipendenza per user story.
-\end{itemize}
-
-L'algoritmo genera in modo casuale le user story e i relativi parametri, e successivamente genera i vincoli di dipendenza tra le user story in base alla probabilità impostata.
-
-Grazie a questo algoritmo sono stati generati 20 nuovi progetti sintetici suddivi in 4 gruppi da 5 progetti ciascuno, i quali presentano le seguenti caratteristiche:
+Per ovviare a tale limitazione, è stato sviluppato un generatore sintetico di istanze che permette il controllo completo sui seguenti parametri configurabili:
 
 \begin{itemize}
-  \item \textbf{Gruppo 1}: le istanze sono formate da 30 user story e 6 sprint e massimo 3 vincoli di dipendenza per user story;
-  \item \textbf{Gruppo 2}: le istanze sono formate da 70 user story e 20 sprint e massimo 3 vincoli di dipendenza per user story;
-  \item \textbf{Gruppo 3}: le istanze sono formate da 150 user story e 40 sprint e massimo 4 vincoli di dipendenza per user story;
-  \item \textbf{Gruppo 4}: le istanze sono formate da 350 user story e 100 sprint e massimo 4 vincoli di dipendenza per user story;
+    \item numero di user story ($n$) e numero di sprint ($m$);
+    \item range di utilità delle user story: $u_j \in [u_{\min}, u_{\max}]$;
+    \item range di rischio (criticità): $r_j^{cr} \in [r_{\min}^{cr}, r_{\max}^{cr}]$;
+    \item range di incertezza: $r_j^{unc} \in [r_{\min}^{unc}, r_{\max}^{unc}]$;
+    \item range di story point (peso): $p_j \in [p_{\min}, p_{\max}]$;
+    \item range di capacità degli sprint: $c_i \in [c_{\min}, c_{\max}]$;
+    \item probabilità di dipendenza ($\rho_{\text{dep}}$): probabilità che una user story presenti vincoli di precedenza;
+    \item numero massimo di dipendenze per user story ($d_{\max}$).
 \end{itemize}
 
-Le caratteristiche principali delle istanze generate sono riportate nella Tabella~\ref{Tab.newData}.
+\paragraph{Algoritmo di generazione.}
+Il generatore opera in due fasi sequenziali. Nella prima fase, vengono campionati casualmente da distribuzioni uniformi i parametri numerici di ciascuna user story ($u_j$, $r_j^{cr}$, $r_j^{unc}$, $p_j$) e la capacità di ogni sprint ($c_i$). Nella seconda fase, viene costruito il grafo delle dipendenze: per ogni user story $j$, con probabilità $\rho_{\text{dep}}$ vengono estratti casualmente fino a $d_{\max}$ predecessori dall'insieme delle user story già generate, verificando l'assenza di cicli mediante visita topologica. Questo garantisce che il grafo di dipendenza risultante sia un DAG (Directed Acyclic Graph), condizione necessaria per la fattibilità del problema.
+
+\subsection{Benchmark suite generato}
+
+Utilizzando il generatore descritto, sono state create 25 istanze sintetiche organizzate in 5 gruppi tematici, ciascuno composto da 5 progetti con caratteristiche dimensionali e strutturali omogenee:
+
+\paragraph{Gruppo 1 (istanze small).} 
+Progetti con 25 user story distribuite su 9 sprint, con al massimo 3 dipendenze per story. Queste istanze rappresentano team Scrum di piccole dimensioni che lavorano su progetti di breve durata (circa 2-3 mesi).
+
+\paragraph{Gruppo 2 (istanze medium).}
+Progetti con 60 user story distribuite su 30 sprint, con al massimo 3 dipendenze per story. Simulano progetti di media complessità con cicli di sviluppo di 6-12 mesi.
+
+\paragraph{Gruppo 3 (istanze large).}
+Progetti con 120 user story distribuite su 30 sprint, con al massimo 2 dipendenze per story ma densità di story per sprint più elevata. Rappresentano progetti complessi con backlog ampio ma orizzonte temporale contenuto.
+
+\paragraph{Gruppo 4 (istanze extra-large).}
+Progetti con 300 user story distribuite su 110 sprint, con al massimo 2 dipendenze per story. Queste istanze modellano progetti enterprise di lunga durata (oltre 2 anni) con grafi di dipendenza molto ampi.
+
+\paragraph{Gruppo 5 (istanze Fibonacci).}
+Progetti con 60 user story distribuite su 25 sprint, con al massimo 3 dipendenze per story. La caratteristica distintiva di questo gruppo è l'uso della sequenza di Fibonacci (1, 2, 3, 5, 8, 13, 21) per gli story point, in conformità alle linee guida ufficiali dello Scrum framework~\cite{scrumguide}, che raccomandano l'uso di scale non lineari per riflettere l'incertezza crescente nelle stime di effort elevato.
+
+\paragraph{Distribuzione degli story point.}
+Nei gruppi 1--4, gli story point sono espressi come giorni-uomo e seguono una distribuzione uniforme nell'intervallo $[p_{\min}, p_{\max}]$, modellando una situazione realistica in cui le user story hanno complessità variabile. Nel gruppo 5, gli story point sono campionati uniformemente dall'insieme discreto $\{1, 2, 3, 5, 8, 13, 21\}$, rispecchiando la pratica industriale di Planning Poker e della stima relativa. Questa distinzione permette di valutare la robustezza degli algoritmi rispetto a diverse convenzioni di stima adottate dai team di sviluppo.
+
+\subsection{Caratteristiche strutturali delle istanze}
+
+La Tabella~\ref{Tab.newData} riporta le principali metriche strutturali delle 25 istanze generate, dove:
+\begin{itemize}
+    \item $n$: numero totale di user story;
+    \item $m$: numero di sprint pianificati;
+    \item $n_{\text{aff}}$: numero di user story effettivamente assegnate nella soluzione ottima;
+    \item $|U^{OR}|$: numero totale di vincoli di precedenza OR nel grafo;
+    \item $|U^{AND}|$: numero totale di vincoli di precedenza AND nel grafo;
+    \item $l_{\max}$: lunghezza massima di una catena di dipendenze (profondità del DAG);
+    \item $d_{\max}$: grado in-degree massimo nel grafo delle dipendenze.
+\end{itemize}
+
 
 \begin{table}[H]
 \scriptsize
@@ -986,95 +1024,136 @@ Le caratteristiche principali delle istanze generate sono riportate nella Tabell
 \midrule
 
 \multicolumn{9}{c}{\textbf{Gruppo 1}} \\
-instance\_06\_01 &  &  25 & 16 & 11 & 2 & 3 & 3 & 3 \\
-instance\_06\_01 &  &  25 & 16 & 11 & 3 & 5 & 3 & 4 \\
-instance\_06\_01 &  &  25 & 16 & 12 & 2 & 6 & 3 & 5 \\
-instance\_06\_01 &  &  25 & 16 & 13 & 3 & 3 & 3 & 3 \\
-instance\_06\_01 &  &  25 & 16 & 13 & 3 & 5 & 3 & 4 \\
+instance\_06\_01 &  &  25 & 9 & 11 & 2 & 3 & 3 & 3 \\
+instance\_06\_02 &  &  25 & 9 & 11 & 3 & 5 & 3 & 4 \\
+instance\_06\_03 &  &  25 & 9 & 12 & 2 & 6 & 3 & 5 \\
+instance\_06\_04 &  &  25 & 9 & 13 & 3 & 3 & 3 & 3 \\
+instance\_06\_05 &  &  25 & 9 & 13 & 3 & 5 & 3 & 4 \\
 \midrule
 
 \multicolumn{9}{c}{\textbf{Gruppo 2}} \\
-instance\_06\_01 &  &  60 & 40 & 14 & 9 & 9 & 3 & 6 \\
-instance\_06\_01 &  &  60 & 40 & 14 & 6 & 10 & 3 & 6 \\
-instance\_06\_01 &  &  60 & 40 & 14 & 7 & 8 & 3 & 4 \\
-instance\_06\_01 &  &  60 & 40 & 11 & 5 & 7 & 3 & 5 \\
-instance\_06\_01 &  &  60 & 40 & 17 & 5 & 7 & 3 & 3 \\
+instance\_06\_01 &  &  60 & 30 & 14 & 9 & 9 & 3 & 6 \\
+instance\_06\_02 &  &  60 & 30 & 14 & 6 & 10 & 3 & 6 \\
+instance\_06\_03 &  &  60 & 30 & 14 & 7 & 8 & 3 & 4 \\
+instance\_06\_04 &  &  60 & 30 & 11 & 5 & 7 & 3 & 5 \\
+instance\_06\_05 &  &  60 & 30 & 17 & 5 & 7 & 3 & 3 \\
 \midrule
 
 \multicolumn{9}{c}{\textbf{Gruppo 3}} \\
-instance\_06\_01 &  &  120 & 80 & 14 & 18 & 12 & 2 & 3 \\
-instance\_06\_01 &  &  120 & 80 & 17 & 12 & 19 & 2 & 5 \\
-instance\_06\_01 &  &  120 & 80 & 16 & 13 & 22 & 2 & 3 \\
-instance\_06\_01 &  &  120 & 80 & 14 & 16 & 25 & 2 & 5 \\
-instance\_06\_01 &  &  120 & 80 & 12 & 21 & 18 & 2 & 4 \\
+instance\_06\_01 &  &  120 & 30 & 14 & 18 & 12 & 2 & 3 \\
+instance\_06\_02 &  &  120 & 30 & 17 & 12 & 19 & 2 & 5 \\
+instance\_06\_03 &  &  120 & 30 & 16 & 13 & 22 & 2 & 3 \\
+instance\_06\_04 &  &  120 & 30 & 14 & 16 & 25 & 2 & 5 \\
+instance\_06\_05 &  &  120 & 30 & 12 & 21 & 18 & 2 & 4 \\
 \midrule
 
 \multicolumn{9}{c}{\textbf{Gruppo 4}} \\
-instance\_06\_01 &  &  300 & 250 & 16 & 41 & 42 & 2 & 6 \\
-instance\_06\_01 &  &  300 & 250 & 17 & 48 & 52 & 2 & 4 \\
-instance\_06\_01 &  &  300 & 250 & 16 & 50 & 46 & 2 & 5 \\
-instance\_06\_01 &  &  300 & 250 & 17 & 42 & 58 & 2 & 5 \\
-instance\_06\_01 &  &  300 & 250 & 12 & 40 & 52 & 2 & 5 \\
+instance\_06\_01 &  &  300 & 110 & 16 & 41 & 42 & 2 & 6 \\
+instance\_06\_02 &  &  300 & 110 & 17 & 48 & 52 & 2 & 4 \\
+instance\_06\_03 &  &  300 & 110 & 16 & 50 & 46 & 2 & 5 \\
+instance\_06\_04 &  &  300 & 110 & 17 & 42 & 58 & 2 & 5 \\
+instance\_06\_05 &  &  300 & 110 & 12 & 40 & 52 & 2 & 5 \\
+\midrule
+
+\multicolumn{9}{c}{\textbf{Gruppo 5}} \\
+instance\_06\_01 &  &  60 & 25 & 14 & 10 & 12 & 3 & 5 \\
+instance\_06\_02 &  &  60 & 25 & 16 & 9 & 12 & 3 & 6 \\
+instance\_06\_03 &  &  60 & 25 & 12 & 5 & 11 & 3 & 3 \\
+instance\_06\_04 &  &  60 & 25 & 14 & 10 & 4 & 3 & 4 \\
+instance\_06\_05 &  &  60 & 25 & 14 & 15 & 6 & 3 & 4 \\
 \midrule
 \end{tabular}
 \end{table}
 
+Le istanze mostrano una varietà significativa sia in termini dimensionali (da 25 a 300 user story) sia in termini di complessità del grafo delle dipendenze (profondità massima delle catene compresa tra 2 e 3, grado massimo in-degree tra 3 e 6). Questa eterogeneità permette di testare la scalabilità e la robustezza degli algoritmi proposti su un ampio spettro di scenari operativi realistici.
+
 \section{KPI di valutazione}
 
-Per valutare le prestazioni degli algoritmi e delle funzioni obbiettivo proposte sono stati ripresi dei KPI (Key Performance Indicators) che erano stati definiti in \cite{BOSCHETTI2014116} per valutare l'efficacia dei vari algoritmi implementati.
-Nello specifico, i KPI considerati sono i seguenti:
+Per valutare in modo sistematico le prestazioni degli algoritmi e l'efficacia delle funzioni obiettivo proposte, sono stati adottati due insiemi complementari di indicatori: i KPI computazionali, che misurano l'efficienza dell'ottimizzazione, e i KPI di qualità della pianificazione, che valutano l'idoneità pratica delle soluzioni nel contesto Agile.
+
+\subsection{KPI computazionali}
+
+I seguenti indicatori, già utilizzati in~\cite{BOSCHETTI2014116}, permettono di confrontare le prestazioni algoritmiche e la convergenza verso l'ottimalità:
 
 \begin{description}
-    \item[\(Z_{OPT}\)] Valore della soluzione ottima dal modello di base risolto da IBM ILOG CPLEX.
+    \item[\(Z_{\text{OPT}}\)] Valore della funzione obiettivo nella soluzione ottima certificata da IBM ILOG CPLEX. Costituisce il benchmark di riferimento per valutare la qualità delle soluzioni euristiche.
     
-    \item[\(Z_{HEU}\)] Valore della migliore soluzione euristiche trovata.
+    \item[\(Z_{\text{HEU}}\)] Valore della funzione obiettivo nella migliore soluzione euristica individuata dall'algoritmo matheuristic entro il limite temporale imposto.
     
-    \item[\textbf{Gap}] Gap percentuale tra \(Z_{HEU}\) e il bound superiore del miglior nodo rimanente:
+    \item[\textbf{Gap (\%)}] Gap di ottimalità percentuale tra la migliore soluzione euristica e il bound superiore del miglior nodo rimanente nell'albero di ricerca:
     \[
-    \text{Gap} = 100 \times \frac{Z_{OPT}^{ub} - Z_{HEU}}{Z_{OPT}^{ub}}
+    \text{Gap} = 100 \times \frac{Z_{\text{OPT}}^{\text{ub}} - Z_{\text{HEU}}}{Z_{\text{OPT}}^{\text{ub}}}
     \]
+    dove $Z_{\text{OPT}}^{\text{ub}}$ rappresenta il miglior bound superiore disponibile. Valori bassi indicano che la soluzione euristica è prossima all'ottimo certificabile.
     
-    \item[\textbf{Nodes}] Numero di nodi esplorati nell'albero di branch-and-bound.
+    \item[\textbf{Nodes}] Numero totale di nodi esplorati nell'albero di branch-and-bound durante la ricerca. Quantifica lo sforzo computazionale necessario: meno nodi implicano una ricerca più efficiente grazie a bound più stretti o euristiche di branching più intelligenti.
     
-    \item[\textbf{NCuts}] Numero totale di tagli generati dalle callback:
+    \item[\textbf{NCuts}] Numero complessivo di tagli (cutting planes) generati dalle callback durante l'ottimizzazione, includendo:
     \begin{itemize}
-        \item Vincoli di precedenza~\eqref{Eq1.P4}--\eqref{Eq1.P5} (lazy constraints)
-        \item Disuguaglianze di Dominanza (DIs)
-        \item LCIs (Logic-based Cutting Inequalities)
+        \item vincoli di precedenza OR/AND~\eqref{Eq1.P4}--\eqref{Eq1.P5} inseriti come lazy constraints;
+        \item disuguaglianze di dominanza (DIs) che eliminano soluzioni dominate;
+        \item logic-based cutting inequalities (LCIs) che rafforzano il rilassamento lineare sfruttando la struttura logica del problema.
     \end{itemize}
+    Un numero elevato di tagli può indicare sia efficacia nel rafforzamento del rilassamento, sia presenza di molte violazioni nelle soluzioni frazionarie.
     
-    \item[\textbf{GHeu}] Gap percentuale qualità soluzione euristiche:
+    \item[\textbf{GHeu (\%)}] Gap percentuale di qualità della soluzione euristica rispetto alla soluzione ottima nota:
     \[
-    G_{heu} = 100 \times \frac{Z_{OPT} - Z_{HEU}}{Z_{OPT}}
+    G_{\text{heu}} = 100 \times \frac{Z_{\text{OPT}} - Z_{\text{HEU}}}{Z_{\text{OPT}}}
     \]
+    Misura direttamente la perdita di qualità dovuta all'uso dell'euristica anziché dell'ottimizzazione esatta. Valori prossimi allo zero indicano che l'euristica trova soluzioni quasi ottimali.
     
-    \item[\textbf{Time}] Tempo computazionale totale (secondi).
+    \item[\textbf{Time (s)}] Tempo computazionale totale espresso in secondi, dall'inizializzazione dell'algoritmo fino al termine dell'esecuzione (sia per raggiungimento dell'ottimo certificato sia per time limit). Riflette la scalabilità pratica dell'approccio.
 \end{description}
 
-A questi KPI sono stato aggiunti altri indicatori per valutare la bonta delle soluzioni proposte, a questo scopo sono stai introdotti i seguenti KPI:
+\subsection{KPI di qualità della pianificazione}
+
+Per valutare l'idoneità delle soluzioni nel contesto della pianificazione Agile reale, sono stati introdotti nuovi indicatori che misurano aspetti strategici e operativi non catturati dalla sola funzione obiettivo:
+
+\paragraph{Efficienza temporale e utilizzo delle risorse.}
 
 \begin{description}
-    \item[\textbf{N.S.O.} (Numero Sprint Occupati)] Numero di sprint utilizzati nella soluzione, che misura l'efficienza temporale della pianificazione: minori sprint occupati implicano consegna più rapida del progetto.
+    \item[\textbf{N.S.O.}] \emph{Numero Sprint Occupati}: conta gli sprint effettivamente utilizzati nella soluzione (quelli con almeno una user story assegnata). Valori bassi indicano consegna rapida del progetto, concentrando il lavoro in meno iterazioni e riducendo l'overhead di gestione. Un numero elevato può segnalare frammentazione eccessiva o sottoutilizzo della capacità.
     
-    \item[\textbf{Avg.S.U.} (Media Utilizzo Sprint)] Percentuale media di capacità sfruttata negli sprint occupati, che valuta l'efficienza di allocazione delle risorse: valori vicini al 100\% indicano minimizzazione dello spreco di capacità.
-    
-    \item[\textbf{Dev.Risk}] Deviazione standard del rischio~\(r_j^{cr}\) delle user story negli sprint, che quantifica la distribuzione equilibrata del rischio: bassa deviazione evita sprint ``troppo rischiosi'' o ``troppo sicuri''.
-    
-    \item[\textbf{Dev.Unc.}] Deviazione standard dell'incertezza~\(r_j^{unc}\) delle user story negli sprint, che misura la distribuzione equilibrata dell'incertezza: bassa variabilità favorisce gestione prevedibile degli sprint.
-    
-    \item[\textbf{Min.Risk}] Rischio minimo tra tutti gli sprint occupati, che verifica l'assenza di sprint ``eccessivamente sicuri'' evitando sottoutilizzo delle capacità di gestione del rischio del team.
-    
-    \item[\textbf{Min.Unc.}] Incertezza minima tra tutti gli sprint occupati, che garantisce la presenza di user story con incertezza significativa in ogni sprint, evitando sprint ``banali''.
-    
-    \item[\textbf{Max.Risk}] Rischio massimo tra tutti gli sprint occupati, che monitora l'esposizione al rischio nel worst-case: valori eccessivi segnalano sprint critici potenzialmente ingestibili.
-    
-    \item[\textbf{Max.Unc.}] Incertezza massima tra tutti gli sprint occupati, che identifica l'esposizione all'incertezza nel worst-case, essenziale per valutare la robustezza della pianificazione.
-    
-    \item[\textbf{Half.U.S.} (Half Utility Sprint)] Sprint in cui si raggiunge il 50\% del valore totale di utilità~\(U = \sum_j u_j\), che misura la progressione del valore consegnato (time-to-half-value): indica quanto rapidamente il progetto delivers valore al cliente.
+    \item[\textbf{Avg.S.U. (\%)}] \emph{Media Utilizzo Sprint}: percentuale media di capacità $c_i$ effettivamente sfruttata negli sprint occupati:
+    \[
+    \text{Avg.S.U.} = \frac{100}{|\{i : \exists j, x_{ij} = 1\}|} \sum_{i : \exists j, x_{ij} = 1} \frac{\sum_j p_j x_{ij}}{c_i}
+    \]
+    Valori elevati (prossimi al 100\%) indicano saturazione efficiente della capacità disponibile, minimizzando gli sprechi. Valori troppo bassi suggeriscono che la pianificazione lascia risorse inutilizzate.
 \end{description}
 
-I KPI computazionali valutano la qualità dell'ottimizzazione, mentre i nuovi KPI misurano l'idoneità pratica delle soluzioni per la pianificazione Agile reale, bilanciando qualità tecnica e valore business.
+\paragraph{Distribuzione del rischio e dell'incertezza.}
 
+\begin{description}
+    \item[\textbf{Dev.Risk}] \emph{Deviazione Standard del Rischio}: quantifica la variabilità del rischio medio aggregato $\bar{r}_i^{cr} = \frac{1}{|\{j : x_{ij}=1\}|} \sum_j r_j^{cr} x_{ij}$ tra gli sprint occupati:
+    \[
+    \text{Dev.Risk} = \sqrt{\frac{1}{|\{i : \exists j, x_{ij} = 1\}|} \sum_{i : \exists j, x_{ij} = 1} (\bar{r}_i^{cr} - \bar{r}^{cr})^2}
+    \]
+    dove $\bar{r}^{cr}$ è il rischio medio globale. Bassa deviazione indica distribuzione equilibrata del rischio tra gli sprint, evitando concentrazioni pericolose o sprint eccessivamente sbilanciati.
+    
+    \item[\textbf{Dev.Unc.}] \emph{Deviazione Standard dell'Incertezza}: analoga a Dev.Risk, misura la variabilità dell'incertezza media $\bar{r}_i^{unc}$ tra gli sprint. Bassa variabilità favorisce gestione prevedibile e uniforme delle attività ad alta incertezza, evitando sprint particolarmente volatili.
+    
+    \item[\textbf{Min.Risk}] \emph{Rischio Minimo}: identifica il valore minimo di $\bar{r}_i^{cr}$ tra tutti gli sprint occupati. Valori troppo bassi possono segnalare sprint composti esclusivamente da user story ``sicure'', indicando potenziale sottoutilizzo delle capacità del team di gestire attività complesse.
+    
+    \item[\textbf{Max.Risk}] \emph{Rischio Massimo}: identifica il valore massimo di $\bar{r}_i^{cr}$ tra tutti gli sprint occupati. Valori eccessivamente elevati segnalano sprint critici con esposizione al rischio potenzialmente ingestibile, che richiedono attenzione particolare dal team e dagli stakeholder.
+    
+    \item[\textbf{Min.Unc.}] \emph{Incertezza Minima}: valore minimo di $\bar{r}_i^{unc}$ tra gli sprint occupati. Garantisce che ogni sprint contenga user story con un livello minimo di incertezza, evitando sprint composti solo da attività banali o completamente comprese.
+    
+    \item[\textbf{Max.Unc.}] \emph{Incertezza Massima}: valore massimo di $\bar{r}_i^{unc}$ tra gli sprint occupati. Identifica l'esposizione all'incertezza nel caso peggiore, essenziale per valutare la robustezza della pianificazione rispetto a imprevisti e variazioni nelle stime.
+\end{description}
+
+\paragraph{Progressione del valore consegnato.}
+
+\begin{description}
+    \item[\textbf{Half.U.S.}] \emph{Half Utility Sprint}: indice dello sprint in cui viene raggiunto almeno il 50\% dell'utilità totale cumulata:
+    \[
+    \text{Half.U.S.} = \min \left\{ k : \sum_{i=1}^{k} \sum_{j=1}^{n} u_j x_{ij} \geq \frac{1}{2} \sum_{j=1}^{n} u_j \right\}
+    \]
+    Questo indicatore misura il \emph{time-to-half-value}, ovvero la rapidità con cui il progetto inizia a consegnare valore significativo agli stakeholder. Valori bassi (sprint iniziali) indicano pianificazioni che prioritizzano il rilascio anticipato di feature ad alto valore, conformemente ai principi Agile di early value delivery.
+\end{description}
+
+\subsection{Interpretazione congiunta dei KPI}
+
+I KPI computazionali e i KPI di qualità della pianificazione forniscono prospettive complementari: i primi valutano l'efficienza matematica dell'ottimizzazione, mentre i secondi misurano la traducibilità pratica delle soluzioni in piani di sprint realistici e bilanciati. Una soluzione ideale dovrebbe eccellere in entrambe le dimensioni, presentando gap di ottimalità ridotti (qualità computazionale) e distribuzione equilibrata di rischio, incertezza e valore (qualità gestionale). L'analisi comparativa delle funzioni obiettivo nella Sezione~\ref{confronto:fb} utilizza sistematicamente questi indicatori per identificare i trade-off tra le diverse strategie di pianificazione.
 \section{risultati computazionali}
 
 Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione degli algoritmi proposti  da \cite{BOSCHETTI2014116} con l'aggiornamento del codice per supportare l'attuale versione della libreria CPLEX.
