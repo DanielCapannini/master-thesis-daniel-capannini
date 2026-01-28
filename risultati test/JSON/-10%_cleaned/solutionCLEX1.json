@@ -744,9 +744,7 @@
     }
   ]
 }
-  ]
-}
-"id": 19,
+  ,
 {
    "name": "emi\\newData\\instance_06_04.txt",
    "objective_value": 17490.8000,
@@ -1245,9 +1243,7 @@
     }
   ]
 }
-  ]
-}
-apacity": 0.0000
+  ,
 {
    "name": "e_20_01.txt",
    "objective_value": 120509.0333,
@@ -1889,9 +1885,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-         "id": 38,
+  ,
 {
    "name": "e_20_02.txt",
    "objective_value": 133037.5000,
@@ -2535,9 +2529,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-     "used_capacity": 0.0000
+,
 {
    "name": "e_20_03.txt",
    "objective_value": 128725.0167,
@@ -3181,11 +3173,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-ies": [
-
-
+,
 {
    "name": "e_20_04.txt",
    "objective_value": 114102.8000,
@@ -3828,9 +3816,7 @@ ies": [
     }
   ]
 }
-  ]
-}
-     "used_capacity": 0.0000
+  ,
 {
    "name": "e_20_05.txt",
    "objective_value": 129207.7000,
@@ -4474,11 +4460,7 @@ ies": [
     }
   ]
 }
-  ]
-}
-ories": [
-
-
+,
 {
    "name": "e_40_01.txt",
    "objective_value": 264487.0000,
@@ -5543,9 +5525,7 @@ ories": [
     }
   ]
 }
-  ]
-}
- ]
+,
 {
    "name": "e_40_02.txt",
    "objective_value": 280421.8000,
@@ -6612,9 +6592,7 @@ ories": [
     }
   ]
 }
-  ]
-}
-ity": 46.5300,
+  ,
 {
    "name": "e_40_03.txt",
    "objective_value": 264285.7000,
@@ -7680,8 +7658,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "e_40_04.txt",
    "objective_value": 237013.9167,
@@ -8745,11 +8722,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
-": [
-
-
+,
 {
    "name": "e_40_05.txt",
    "objective_value": 245229.4000,
@@ -9812,11 +9785,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
-    "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 0.0000,
@@ -10704,9 +10673,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
-    }
+,
 {
    "name": "",
    "objective_value": 0.0000,
@@ -11594,9 +11561,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
-0000
+,
 {
    "name": "",
    "objective_value": 1940473.5000,
@@ -14485,9 +14450,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
-109,
+  ,
 {
    "name": "",
    "objective_value": 0.0000,
@@ -15375,9 +15338,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
- "capacity": 65.3400,
+  ,
 {
    "name": "",
    "objective_value": 1861424.4667,
@@ -18259,9 +18220,7 @@ ity": 46.5300,
     }
   ]
 }
-  ]
-}
-city": 0.0000
+,
 {
    "name": "stance_f_01.txt",
    "objective_value": 126887.1000,
@@ -18879,9 +18838,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-    }
+ ,
 {
    "name": "stance_f_02.txt",
    "objective_value": 131695.0000,
@@ -19498,9 +19455,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-},
+,
 {
    "name": "stance_f_03.txt",
    "objective_value": 130529.9000,
@@ -20117,11 +20072,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
- [
-
-
+,
 {
    "name": "stance_f_04.txt",
    "objective_value": 128840.9333,
@@ -20738,9 +20689,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-apacity": 71.7300,
+ ,
 {
    "name": "stance_f_05.txt",
    "objective_value": 136108.9333,

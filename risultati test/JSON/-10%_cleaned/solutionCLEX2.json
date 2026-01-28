@@ -744,9 +744,7 @@
     }
   ]
 }
-  ]
-}
- "id": 15,
+,
 {
    "name": "emi\\newData\\instance_06_04.txt",
    "objective_value": 9426.7750,
@@ -996,56 +994,7 @@
     }
   ]
 }
-  ]
-}
-       "risk": 1.5000,
-          "uncertainty": 1.4000,
-          "story_points": 3.5000
-        },
-        {
-          "id": 23,
-          "utility": 64.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.0000,
-          "story_points": 6.9000
-        }
-      ],
-      "used_capacity": 31.6000
-    },
-    {
-      "id": 4,
-      "capacity": 40.7700,
-      "stories": [
-        {
-          "id": 0,
-          "utility": 44.0000,
-          "risk": 1.6000,
-          "uncertainty": 1.8000,
-          "story_points": 13.3200
-        },
-        {
-          "id": 11,
-          "utility": 24.0000,
-          "risk": 1.8000,
-          "uncertainty": 1.5000,
-          "story_points": 9.6000
-        },
-        {
-          "id": 24,
-          "utility": 19.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.9000,
-          "story_points": 14.0600
-        }
-      ],
-      "used_capacity": 36.9800
-    },
-    {
-      "id": 5,
-      "capacity": 42.9300,
-      "stories": [
-
-      ,
+,
 {
    "name": "emi\\newData\\instance_06_05.txt",
    "objective_value": 8094.4250,
@@ -1294,9 +1243,7 @@
     }
   ]
 }
-  ]
-}
-k": 1.2000,
+  ,
 {
    "name": "e_20_01.txt",
    "objective_value": 47346.2250,
@@ -1938,9 +1885,7 @@ k": 1.2000,
     }
   ]
 }
-  ]
-}
-000
+ ,
 {
    "name": "e_20_02.txt",
    "objective_value": 48714.6500,
@@ -2584,9 +2529,7 @@ k": 1.2000,
     }
   ]
 }
-  ]
-}
-stories": [
+  ,
 {
    "name": "e_20_03.txt",
    "objective_value": 50496.3833,
@@ -3230,9 +3173,7 @@ stories": [
     }
   ]
 }
-  ]
-}
-d": 42,
+  ,
 {
    "name": "e_20_04.txt",
    "objective_value": 43404.3250,
@@ -3875,9 +3816,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
-      ],
+ ,
 {
    "name": "e_20_05.txt",
    "objective_value": 49385.6000,
@@ -4521,9 +4460,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
- 56.2500,
+,
 {
    "name": "e_40_01.txt",
    "objective_value": 94522.4000,
@@ -5588,9 +5525,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
- ]
+,
 {
    "name": "e_40_02.txt",
    "objective_value": 103469.3750,
@@ -6657,8 +6592,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
+  ,
 {
    "name": "e_40_03.txt",
    "objective_value": 94886.0667,
@@ -7723,8 +7657,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
+ ,
 {
    "name": "e_40_04.txt",
    "objective_value": 78961.4500,
@@ -8788,11 +8721,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
-
-
-
+,
 {
    "name": "e_40_05.txt",
    "objective_value": 78729.9000,
@@ -9855,8 +9784,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
+  ,
 {
    "name": "",
    "objective_value": 0.0000,
@@ -10744,9 +10672,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
-      "used_capacity": 0.0000
+  ,
 {
    "name": "",
    "objective_value": 510373.4167,
@@ -13628,9 +13554,7 @@ d": 42,
     }
   ]
 }
-  ]
-}
-city": 0.0000
+ ,
 {
    "name": "",
    "objective_value": 562561.0250,
@@ -16518,11 +16442,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-  "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 0.0000,
@@ -19727,11 +19647,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-   "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 0.0000,
@@ -22623,9 +22539,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-   {
+  ,
 {
    "name": "stance_f_01.txt",
    "objective_value": 45558.1667,
@@ -23243,9 +23157,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-apacity": 80.2800,
+,
 {
    "name": "stance_f_02.txt",
    "objective_value": 50023.7000,
@@ -23862,11 +23774,7 @@ apacity": 80.2800,
     }
   ]
 }
-  ]
-}
-ries": [
-
-
+,
 {
    "name": "stance_f_03.txt",
    "objective_value": 50538.8500,
@@ -24484,9 +24392,7 @@ ries": [
     }
   ]
 }
-  ]
-}
-],
+ ,
 {
    "name": "stance_f_04.txt",
    "objective_value": 51050.4083,
@@ -25103,11 +25009,7 @@ ries": [
     }
   ]
 }
-  ]
-}
-
-
-
+,
 {
    "name": "stance_f_05.txt",
    "objective_value": 54465.6833,
