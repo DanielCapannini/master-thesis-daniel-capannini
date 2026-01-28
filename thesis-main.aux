@@ -2,6 +2,17 @@
 \providecommand\babel@aux[2]{}
 \@nameuse{bbl@beforestart}
 \providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \AC@reset@newl@bel
@@ -116,8 +127,8 @@
 \newlabel{Alg.GH}{{5.1}{22}{GreedyHeuristic}{lstlisting.5.1}{}}
 \newlabel{Alg.GH@cref}{{[lstlisting][1][5]5.1}{[1][22][]22}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.1}GreedyHeuristic}{22}{lstlisting.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Pseudocodice della GreedyHeuristic.}{22}{lstnumber.5.1.6}\protected@file@percent }
 \citation{BOSCHETTI2014116}
-\@writefile{toc}{\contentsline {paragraph}{Pseudocodice della GreedyHeuristic.}{23}{lstnumber.5.1.8}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}QuickGreedyHeuristic: versione veloce basata su knapsack}{23}{subsection.5.1.2}\protected@file@percent }
 \newlabel{Sec.QuickGreedy}{{5.1.2}{23}{QuickGreedyHeuristic: versione veloce basata su knapsack}{subsection.5.1.2}{}}
 \newlabel{Sec.QuickGreedy@cref}{{[subsection][2][5,1]5.1.2}{[1][23][]23}}
@@ -192,7 +203,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Ruolo dei parametri modificatori}{39}{subsection.5.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Varianti senza modificatori (~\eqref  {Eq2.P2},~\eqref  {Eq2.P4}).}{39}{section*.12}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Varianti con modificatori (~\eqref  {Eq2.P1},~\eqref  {Eq2.P3},~\eqref  {Eq2.P5}).}{39}{section*.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Confronto sperimentale}{40}{subsection.5.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Confronto sperimentale}{39}{subsection.5.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Risultati ottenuti}{41}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -203,67 +214,31 @@
 \newlabel{Tab.1}{{6.1}{44}{Problem instances}{table.6.1}{}}
 \newlabel{Tab.1@cref}{{[table][1][6]6.1}{[1][43][]44}}
 \citation{BOSCHETTI2014116}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Problem instances}}{45}{table.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}Generazione di nuove istanze di test}{45}{subsection.6.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Algoritmo di generazione.}{45}{section*.14}\protected@file@percent }
-\citation{scrumguide}
+\@writefile{toc}{\contentsline {paragraph}{Algoritmo di generazione.}{46}{section*.14}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Benchmark suite generato}{46}{subsection.6.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Gruppo 1 (istanze small).}{46}{section*.15}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Gruppo 2 (istanze medium).}{46}{section*.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Gruppo 3 (istanze large).}{46}{section*.17}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Gruppo 4 (istanze extra-large).}{46}{section*.18}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Gruppo 5 (istanze Fibonacci).}{46}{section*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Distribuzione degli story point.}{46}{section*.20}\protected@file@percent }
+\citation{scrumguide}
+\@writefile{toc}{\contentsline {paragraph}{Gruppo 4 (istanze extra-large).}{47}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Gruppo 5 (istanze Fibonacci).}{47}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Distribuzione degli story point.}{47}{section*.20}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Caratteristiche strutturali delle istanze}{47}{subsection.6.1.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Instances generated with new data generator}}{48}{table.6.2}\protected@file@percent }
-\newlabel{Tab.newData}{{6.2}{48}{Instances generated with new data generator}{table.6.2}{}}
-\newlabel{Tab.newData@cref}{{[table][2][6]6.2}{[1][47][]48}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Instances generated with new data generator}}{48}{table.6.3}\protected@file@percent }
+\newlabel{Tab.newData}{{6.3}{48}{Instances generated with new data generator}{table.6.3}{}}
+\newlabel{Tab.newData@cref}{{[table][3][6]6.3}{[1][47][]48}}
 \citation{BOSCHETTI2014116}
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}KPI di valutazione}{49}{section.6.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}KPI computazionali}{49}{subsection.6.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}KPI di qualità della pianificazione}{50}{subsection.6.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Efficienza temporale e utilizzo delle risorse.}{50}{section*.21}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Distribuzione del rischio e dell'incertezza.}{51}{section*.22}\protected@file@percent }
-\citation{BOSCHETTI2014116}
 \@writefile{toc}{\contentsline {paragraph}{Progressione del valore consegnato.}{52}{section*.23}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{52}{subsection.6.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}risultati computazionali}{53}{section.6.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Results obtained solving the basic model with IBM Ilog Cplex and adding valid inequalities}}{54}{table.6.3}\protected@file@percent }
-\newlabel{Tab.2}{{6.3}{54}{Results obtained solving the basic model with IBM Ilog Cplex and adding valid inequalities}{table.6.3}{}}
-\newlabel{Tab.2@cref}{{[table][3][6]6.3}{[1][53][]54}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}variazione dei parametri}{55}{section.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{55}{subsection.6.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces sprint reduction results (nSprint - 2)}}{56}{table.6.4}\protected@file@percent }
-\newlabel{Tab.3}{{6.4}{56}{sprint reduction results (nSprint - 2)}{table.6.4}{}}
-\newlabel{Tab.3@cref}{{[table][4][6]6.4}{[1][55][]56}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{57}{subsection.6.4.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces sprint capacity reduction results (capacity - 10\%)}}{58}{table.6.5}\protected@file@percent }
-\newlabel{Tab.4}{{6.5}{58}{sprint capacity reduction results (capacity - 10\%)}{table.6.5}{}}
-\newlabel{Tab.4@cref}{{[table][5][6]6.5}{[1][57][]58}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces sprint capacity reduction results (capacity - 15\%)}}{59}{table.6.6}\protected@file@percent }
-\newlabel{Tab.5}{{6.6}{59}{sprint capacity reduction results (capacity - 15\%)}{table.6.6}{}}
-\newlabel{Tab.5@cref}{{[table][6][6]6.6}{[1][59][]59}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}metodo aggiornato}{61}{subsection.6.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces sprint reduction results (nSprint - 2)}}{61}{table.6.7}\protected@file@percent }
-\newlabel{Tab.6}{{6.7}{61}{sprint reduction results (nSprint - 2)}{table.6.7}{}}
-\newlabel{Tab.6@cref}{{[table][7][6]6.7}{[1][60][]61}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Confronto funzioni obbiettivo}{62}{section.6.5}\protected@file@percent }
-\newlabel{confronto:fb}{{6.5}{62}{Confronto funzioni obbiettivo}{section.6.5}{}}
-\newlabel{confronto:fb@cref}{{[section][5][6]6.5}{[1][62][]62}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces results con funzione obbiettivo \eqref  {Eq1.P1}}}{62}{table.6.8}\protected@file@percent }
-\newlabel{tab.new1}{{6.8}{62}{results con funzione obbiettivo \eqref {Eq1.P1}}{table.6.8}{}}
-\newlabel{tab.new1@cref}{{[table][8][6]6.8}{[1][62][]62}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.9}{\ignorespaces KPI con funzione obbiettivo \eqref  {Eq1.P1}}}{63}{table.6.9}\protected@file@percent }
-\newlabel{tab.new2}{{6.9}{63}{KPI con funzione obbiettivo \eqref {Eq1.P1}}{table.6.9}{}}
-\newlabel{tab.new2@cref}{{[table][9][6]6.9}{[1][62][]63}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.1}funzuone obbiettovo \eqref  {Eq2.P1}}{63}{subsection.6.5.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.10}{\ignorespaces confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref  {Eq1.P1} e \eqref  {Eq2.P1}}}{64}{table.6.10}\protected@file@percent }
-\newlabel{tab.new3}{{6.10}{64}{confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref {Eq1.P1} e \eqref {Eq2.P1}}{table.6.10}{}}
-\newlabel{tab.new3@cref}{{[table][10][6]6.10}{[1][63][]64}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5.2}Funzione obbiettivo \eqref  {Eq2.P2} e \eqref  {Eq2.P3}}{64}{subsection.6.5.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.11}{\ignorespaces confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref  {Eq2.P2} e \eqref  {Eq2.P3}}}{65}{table.6.11}\protected@file@percent }
-\newlabel{tab.new4}{{6.11}{65}{confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{table.6.11}{}}
-\newlabel{tab.new4@cref}{{[table][11][6]6.11}{[1][64][]65}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusioni}{67}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusioni}{55}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \citation{*}
@@ -276,8 +251,8 @@
 \bibcite{8719453}{AZDCG18}
 \bibcite{Manifesto}{B{$^{+}$}01}
 \bibcite{beck2001agile}{BBvB{$^{+}$}01}
-\@writefile{toc}{\contentsline {part}{}{69}{chapter.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{69}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {part}{}{57}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{57}{section*.24}\protected@file@percent }
 \bibcite{BRUCKER19993}{BDM{$^{+}$}99}
 \bibcite{BOSCHETTI2014116}{BGRT14}
 \bibcite{BHM02}{BHM02}
@@ -311,4 +286,4 @@
 \bibcite{10.1145/1287624.1287641}{SR07}
 \bibcite{sakkout2000probe}{SW00}
 \bibcite{VANVALKENHOEF20111227}{vTdP11}
-\gdef \@abspage@last{87}
+\gdef \@abspage@last{75}

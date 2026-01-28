@@ -364,8 +364,6 @@ A ogni passo, fissato uno sprint $i \in S$ e l’insieme $F_i$ delle user story 
 
 \begin{figure}[H]
 \begin{lstlisting}[style=pseudo,caption={GreedyHeuristic},label={Alg.GH}]
-GreedyHeuristic
--------------------------
 Set $F_1 = \emptyset$, $i = 1$
 
 WHILE ($F_i \neq U$ and $i \leq m$):
@@ -428,9 +426,7 @@ FOR each Strategy s = 1, 2, 3, 4:
     Set F_1 = empty
     Set i = 1
     Set Iter = 0
-
     WHILE (F_i != U AND i <= m):
-
         REPEAT:
             Compute optimal solution x_temp of knapsack SP_i_prime
 
@@ -442,7 +438,6 @@ FOR each Strategy s = 1, 2, 3, 4:
                     Set i = 1
                     Set Iter = Iter + 1
         UNTIL (x_temp feasible OR SP_i_prime infeasible OR Iter > MaxIter)
-
         IF (SP_i_prime infeasible OR Iter > MaxIter):
             Set z_temp = -infinity
             Set i = m + 1
@@ -450,11 +445,9 @@ FOR each Strategy s = 1, 2, 3, 4:
             z_temp = z_temp + value(SP_i)
             F_{i+1} = F_i union { j in U with x_temp[i,j] = 1 }
             i = i + 1
-
     IF (z_star < z_temp):
         z_star = z_temp
         x_star = x_temp
-
 END FOR
 \end{lstlisting}
 \end{figure}
@@ -482,7 +475,6 @@ L'algoritmo {\em ExchangeHeuristic} può essere esteso includendo mosse di scamb
 
 \begin{figure}[H]
 \begin{lstlisting}[style=pseudo, caption={ExchangeHeuristic},label={Alg.EH}]
-Algorithm ExchangeHeuristic(x'):
 Repeat
     // Apply 1-0 exchanges
     For sprint i = 1..m-1:
@@ -491,7 +483,6 @@ Repeat
                 If moving j from i' to i is feasible and profitable:
                     x'[i',j] = 0
                     x'[i,j]   = 1
-
     // Apply 1-1 exchanges
     For sprint i = 1..m-1:
         For sprint i' = i+1..m:
@@ -501,7 +492,6 @@ Repeat
                     x'[i',j'] = 0
                     x'[i,j']  = 1
                     x'[i',j]  = 1
-
     // Apply 2-1 exchanges
     For sprint i = 1..m:
         For sprint i' = 1..m:
@@ -513,7 +503,6 @@ Repeat
                     x'[i',j]   = 1
                     x'[i',j']  = 1
                     x'[i,j'']  = 1
-
 Until no exchanges occur.
 \end{lstlisting}
 \end{figure}
@@ -594,25 +583,19 @@ La procedura complessiva, denominata {\em LagrangianHeuristic}, è riassunta in 
 
 \begin{figure}[H]
 \begin{lstlisting}[style=pseudo, caption={Algorithm LagrangianHeuristic}, label={Alg.LH}]
-LagrangianHeuristic:
-
 Set lambda = 0
 Set z_best = -INF
 Set z_LR_best = +INF
 
 REPEAT
-
-    Compute z_LR(lambda) by solving the Lagrangian problem LR
-
+    Compute z_LR(lambda) by solving the LagrangianProblemLR
     IF z_LR(lambda) < z_LR_best THEN
         z_LR_best = z_LR(lambda)
     ENDIF
-
     Compute a heuristic solution x_prime with QuickGreedyHeuristic
         using penalized utilities
     Improve x_prime with ExchangeHeuristic
     Let z_prime = value of x_prime
-
     IF gamma * z_best <= z_prime THEN
         Compute a heuristic solution x_second with GreedyHeuristic
             using penalized utilities
@@ -623,12 +606,10 @@ REPEAT
             x_best = x_second
         ENDIF
     ENDIF
-
     IF z_best < z_prime THEN
         z_best = z_prime
         x_best = x_prime
     ENDIF
-
     Update penalties lambda
 
 UNTIL subgradient stopping conditions are satisfied
@@ -744,7 +725,7 @@ Rappresenta la formulazione originale del problema, che massimizza il valore di 
 Incorpora il parametro $r_j^{unc}$, che quantifica l'incertezza nelle stime di sviluppo della user story $j$ (tipicamente derivata dalla deviazione standard delle stime del team o dalla volatilità storica di story simili). Questa funzione privilegia l'assegnazione precoce delle user story più incerte, garantendo buffer temporale sufficiente per gestire eventuali ritardi o scoperte impreviste durante l'implementazione. \textbf{Obiettivo}: riduzione del rischio di schedule slippage concentrando le attività ad alto rischio nei primi sprint.
 
 \paragraph{Funzione \texorpdfstring{$z_P^\text{unc+mod}$}{z\_P\^{}unc+mod} (Incertezza con modificatori)~\eqref{Eq2.P3}.}
-Estende~\eqref{Eq2.P2} integrando i modificatori $dp_{ij}$ e $ub_{ij}$ per combinare la gestione dell'incertezza con il rispetto delle dipendenze. \textbf{Obiettivo}: pianificazione risk-aware che minimizza simultaneamente il rischio tecnico e il rischio di violazione delle dipendenze.
+Estende~\eqref{Eq2.P2} integrando i modificatori $dp_{ij}$ e $ub_{ij}$ per combinare la gestione dell'incertezza con il rispetto delle dipendenze. \textbf{Obiettivo}: bilanciare il rischio di schedule slippage e il rispetto delle dipendenze.
 
 \paragraph{Funzione \texorpdfstring{$z_P^\text{load}$}{z\_P\^{}load} (Carico di lavoro senza modificatori)~\eqref{Eq2.P4}.}
 Utilizza il peso $p_j$ (espresso in story points, giorni-persona, o altra metrica di effort) per massimizzare il carico di lavoro complessivo assegnato agli sprint. Questa funzione mira a saturare la capacità disponibile, riducendo gli sprechi di risorse e accelerando il completamento del progetto. \textbf{Obiettivo}: massimizzazione del throughput e riduzione della durata totale del progetto.
@@ -767,8 +748,6 @@ Integrano due meccanismi di guida della ricerca:
     
     \item \textbf{Urgency bonus ($ub_{ij}$)}: premia l'esecuzione anticipata delle user story ``radice'' (senza dipendenze in ingresso) o delle story che sbloccano molte attività successive. Questo favorisce pianificazioni che costruiscono progressivamente l'infrastruttura necessaria per le feature dipendenti, evitando colli di bottiglia negli sprint finali.
 \end{enumerate}
-
-Dal punto di vista algoritmico, i modificatori migliorano significativamente la convergenza dei metodi di branch-and-cut riducendo la frequenza di attivazione dei tagli di precedenza OR/AND (Sezione~\ref{sec:cutting}). Soluzioni che rispettano meglio le dipendenze richiedono meno iterazioni di separazione, accelerando il processo di ottimizzazione complessivo.
 
 \subsection{Confronto sperimentale}
 
@@ -870,6 +849,7 @@ I progetti sono stati raggruppati in cinque cluster:
   \end{itemize}
 \end{description}
 
+
 \begin{table}[H]
 \scriptsize
 \caption{Problem instances}
@@ -878,7 +858,7 @@ I progetti sono stati raggruppati in cinque cluster:
 
 \renewcommand{\arraystretch}{1.1}
 
-\resizebox{\textwidth}{!}{%
+%\resizebox{\textwidth}{!}{%
 \begin{tabular}{llccccccc}
 \toprule
 \textbf{Group} & \textbf{Proj. Name} & $\mathbf{n}$ & $\mathbf{m}$ & $\mathbf{n_{aff}}$ & $\mathbf{|U^{OR}|}$ & $\mathbf{|U^{AND}|}$ & $\mathbf{l_{max}}$ & $\mathbf{d_{max}}$ \\
@@ -932,6 +912,25 @@ Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
 100Chain-3    &       & 100 & 38 & 0 & 0  & 40 & 8 & 1 \\
 100Graph-3    &       & 100 & 40 & 0 & 16 & 14 & 3 & 3 \\
 100Affinity-3 &       & 100 & 43 & 6 & 16 & 13 & 2 & 2 \\
+\bottomrule
+
+\end{tabular}
+%}
+\end{table}
+
+
+
+\begin{table}[H]
+\scriptsize
+\caption{Problem instances}
+\centering
+
+\renewcommand{\arraystretch}{1.1}
+
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccccc}
+\toprule
+\textbf{Group} & \textbf{Proj. Name} & $\mathbf{n}$ & $\mathbf{m}$ & $\mathbf{n_{aff}}$ & $\mathbf{|U^{OR}|}$ & $\mathbf{|U^{AND}|}$ & $\mathbf{l_{max}}$ & $\mathbf{d_{max}}$ \\
 \midrule
 
 \multicolumn{9}{c}{\textbf{B – Few}} \\
@@ -950,7 +949,7 @@ Web           &       & 104 & 6  & 5 & 0  & 4  & 4 & 1 \\
 \bottomrule
 
 \end{tabular}
-}
+%}
 \end{table}
 
 \subsection{Generazione di nuove istanze di test}
@@ -1155,6 +1154,7 @@ Per valutare l'idoneità delle soluzioni nel contesto della pianificazione Agile
 
 I KPI computazionali e i KPI di qualità della pianificazione forniscono prospettive complementari: i primi valutano l'efficienza matematica dell'ottimizzazione, mentre i secondi misurano la traducibilità pratica delle soluzioni in piani di sprint realistici e bilanciati. Una soluzione ideale dovrebbe eccellere in entrambe le dimensioni, presentando gap di ottimalità ridotti (qualità computazionale) e distribuzione equilibrata di rischio, incertezza e valore (qualità gestionale). L'analisi comparativa delle funzioni obiettivo nella Sezione~\ref{confronto:fb} utilizza sistematicamente questi indicatori per identificare i trade-off tra le diverse strategie di pianificazione.
 \section{risultati computazionali}
+\iffalse
 
 Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione degli algoritmi proposti  da \cite{BOSCHETTI2014116} con l'aggiornamento del codice per supportare l'attuale versione della libreria CPLEX.
 
@@ -1691,6 +1691,8 @@ instance\_100\_05            &     &  301.10 &     1.64 &   300.52 &  301.10 &  
 \end{tabular}
 }
 \end{table}
+
+\fi
 
 \chapter{Conclusioni}
 
