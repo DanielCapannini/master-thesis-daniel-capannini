@@ -746,9 +746,7 @@
     }
   ]
 }
-  ]
-}
-points": 13.9200
+,
 {
    "name": "stance_06_04.txt",
    "objective_value": 7156.7500,
@@ -1248,9 +1246,7 @@ points": 13.9200
     }
   ]
 }
-  ]
-}
-ed_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 28253.1562,
@@ -1895,9 +1891,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-  "risk": 2.0000,
+,
 {
    "name": "",
    "objective_value": 31502.3256,
@@ -2544,9 +2538,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 29352.4063,
@@ -3193,8 +3185,6 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
 ,
 {
    "name": "",
@@ -3839,9 +3829,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-      "used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 24736.3458,
@@ -4487,9 +4475,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-pacity": 62.5000,
+,
 {
    "name": "",
    "objective_value": 42090.2500,
@@ -5556,9 +5542,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-": 0.0000
+,
 {
    "name": "",
    "objective_value": 45372.5000,
@@ -6627,9 +6611,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-   "capacity": 51.7000,
+,
 {
    "name": "",
    "objective_value": 39266.4771,
@@ -7697,8 +7679,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 28573.8750,
@@ -8764,9 +8745,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 27783.0750,
@@ -9832,9 +9811,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-city": 59.8000,
+,
 {
    "name": "",
    "objective_value": 207251.4812,
@@ -12726,9 +12703,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
- 0.0000
+,
 {
    "name": "",
    "objective_value": 209424.5000,
@@ -15629,9 +15604,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
-   },
+,
 {
    "name": "",
    "objective_value": 216858.5667,
@@ -18533,9 +18506,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
-"id": 109,
+,
 {
    "name": "",
    "objective_value": 212999.2292,
@@ -21429,9 +21400,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
-     "capacity": 66.0000,
+,
 {
    "name": "",
    "objective_value": 142390.2750,
@@ -24329,9 +24298,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
-: 79.0000,
+,
 {
    "name": "",
    "objective_value": 20173.7000,
@@ -24950,8 +24917,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 25443.4208,
@@ -25569,9 +25535,7 @@ city": 59.8000,
     }
   ]
 }
-  ]
-}
-used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 26607.5000,
@@ -26190,9 +26154,7 @@ used_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-   "used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 24125.3333,
@@ -26810,9 +26772,7 @@ used_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-     "used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 21859.7833,

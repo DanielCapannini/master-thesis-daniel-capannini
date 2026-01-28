@@ -746,9 +746,7 @@
     }
   ]
 }
-  ]
-}
-points": 13.9200
+,
 {
    "name": "stance_06_04.txt",
    "objective_value": 9987.3250,
@@ -1248,9 +1246,7 @@ points": 13.9200
     }
   ]
 }
-  ]
-}
-ed_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 50447.4750,
@@ -1895,9 +1891,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 57532.8750,
@@ -2545,8 +2539,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 56900.9500,
@@ -3193,8 +3186,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
+
 ,
 {
    "name": "",
@@ -3840,9 +3832,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-      "used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 50773.0250,
@@ -4489,9 +4479,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-pacity": 62.5000,
+,
 {
    "name": "",
    "objective_value": 93919.9250,
@@ -5558,9 +5546,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-]
+,
 {
    "name": "",
    "objective_value": 106314.9250,
@@ -6629,9 +6615,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-     "capacity": 51.7000,
+,
 {
    "name": "",
    "objective_value": 95180.6333,
@@ -7698,9 +7682,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 81703.1333,
@@ -8766,11 +8748,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-s": [
-
-
+,
 {
    "name": "",
    "objective_value": 82583.6000,
@@ -9835,9 +9813,7 @@ s": [
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 623421.8500,
@@ -12726,9 +12702,7 @@ s": [
     }
   ]
 }
-  ]
-}
-.0000
+,
 {
    "name": "",
    "objective_value": 619543.3750,
@@ -15626,9 +15600,7 @@ s": [
     }
   ]
 }
-  ]
-}
-{
+,
 {
    "name": "",
    "objective_value": 608665.1750,
@@ -18527,9 +18499,7 @@ s": [
     }
   ]
 }
-  ]
-}
-  "capacity": 75.1000,
+,
 {
    "name": "",
    "objective_value": 632659.2750,
@@ -21422,9 +21392,7 @@ s": [
     }
   ]
 }
-  ]
-}
-: 66.0000,
+,
 {
    "name": "",
    "objective_value": 533385.7417,
@@ -24320,11 +24288,7 @@ s": [
     }
   ]
 }
-  ]
-}
-      "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 47100.3417,
@@ -24943,8 +24907,7 @@ s": [
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 50860.1833,
@@ -25562,8 +25525,7 @@ s": [
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 51676.3500,
@@ -26182,9 +26144,7 @@ s": [
     }
   ]
 }
-  ]
-}
-    "used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 53227.2083,
@@ -26802,117 +26762,7 @@ s": [
     }
   ]
 }
-  ]
-}
-pacity": 0.0000
-          "story_points": 25.8000
-        }
-      ],
-      "used_capacity": 46.1500
-    },
-    {
-      "id": 92,
-      "capacity": 92.2000,
-      "stories": [
-        {
-          "id": 14,
-          "utility": 13.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.7000,
-          "story_points": 28.2200
-        },
-        {
-          "id": 102,
-          "utility": 14.0000,
-          "risk": 1.9000,
-          "uncertainty": 1.7000,
-          "story_points": 25.5000
-        },
-        {
-          "id": 289,
-          "utility": 11.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.9000,
-          "story_points": 29.6400
-        }
-      ],
-      "used_capacity": 83.3600
-    },
-    {
-      "id": 93,
-      "capacity": 62.2000,
-      "stories": [
-        {
-          "id": 149,
-          "utility": 11.0000,
-          "risk": 1.3000,
-          "uncertainty": 1.6000,
-          "story_points": 24.6400
-        },
-        {
-          "id": 282,
-          "utility": 19.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.9000,
-          "story_points": 36.4800
-        }
-      ],
-      "used_capacity": 61.1200
-    },
-    {
-      "id": 94,
-      "capacity": 79.4000,
-      "stories": [
-        {
-          "id": 48,
-          "utility": 15.0000,
-          "risk": 1.1000,
-          "uncertainty": 1.1000,
-          "story_points": 19.2500
-        },
-        {
-          "id": 63,
-          "utility": 15.0000,
-          "risk": 1.3000,
-          "uncertainty": 1.4000,
-          "story_points": 25.0600
-        },
-        {
-          "id": 84,
-          "utility": 19.0000,
-          "risk": 1.6000,
-          "uncertainty": 1.2000,
-          "story_points": 15.0000
-        }
-      ],
-      "used_capacity": 59.3100
-    },
-    {
-      "id": 95,
-      "capacity": 76.2000,
-      "stories": [
-        {
-          "id": 167,
-          "utility": 23.0000,
-          "risk": 1.1000,
-          "uncertainty": 1.6000,
-          "story_points": 22.5600
-        },
-        {
-          "id": 236,
-          "utility": 14.0000,
-          "risk": 1.9000,
-          "uncertainty": 1.3000,
-          "story_points": 23.1400
-        },
-        {
-          "id": 262,
-          "utility": 16.0000,
-          "risk": 1.4000,
-          "uncertainty": 1.6000,
-          "story_points": 24.4800
-        }
-      ,
+,
 {
    "name": "",
    "objective_value": 55327.7583,

@@ -746,9 +746,7 @@
     }
   ]
 }
-  ]
-}
- "id": 5,
+,
 {
    "name": "stance_06_04.txt",
    "objective_value": 9978.1000,
@@ -1247,9 +1245,7 @@
     }
   ]
 }
-  ]
-}
-d_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 47393.1417,
@@ -1893,9 +1889,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-          "story_points": 35.0200
+,
 {
    "name": "",
    "objective_value": 56600.6000,
@@ -2542,9 +2536,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 52009.1938,
@@ -3191,11 +3183,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
- "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 51484.9000,
@@ -3839,9 +3827,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-acity": 0.0000
+,
 {
    "name": "",
    "objective_value": 48379.9000,
@@ -4487,9 +4473,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-: 62.5000,
+,
 {
    "name": "",
    "objective_value": 91145.2750,
@@ -5556,9 +5540,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-]
+,
 {
    "name": "",
    "objective_value": 97654.0813,
@@ -6627,9 +6609,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-     "capacity": 51.7000,
+,
 {
    "name": "",
    "objective_value": 94894.2750,
@@ -7696,9 +7676,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 82320.8750,
@@ -8764,11 +8742,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-": [
-
-
+,
 {
    "name": "",
    "objective_value": 82542.6500,
@@ -9833,11 +9807,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-": [
-
-
+,
 {
    "name": "",
    "objective_value": 609492.4750,
@@ -12730,9 +12700,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 625105.9500,
@@ -15632,9 +15600,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 612481.0000,
@@ -18535,8 +18501,6 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
 ,
 {
    "name": "",
@@ -21433,9 +21397,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
-: 66.0000,
+,
 {
    "name": "",
    "objective_value": 553025.7833,
@@ -24333,21 +24295,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
-      "stories": [
-
-
-          "story_points": 4.6800
-        },
-        {
-          "id": 100,
-          "utility": 83.0000,
-          "risk": 1.4000,
-          "uncertainty": 1.3000,
-          "story_points": 11.0500
-        }
-      ,
+,
 {
    "name": "",
    "objective_value": 42625.5125,
@@ -24966,11 +24914,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
- [
-
-
+,
 {
    "name": "",
    "objective_value": 52897.1188,
@@ -25588,9 +25532,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
-      ,
+,
 {
    "name": "",
    "objective_value": 48162.9500,
@@ -26209,9 +26151,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
-  ],
+,
 {
    "name": "",
    "objective_value": 50532.0833,
@@ -26829,11 +26769,7 @@ _capacity": 0.0000
     }
   ]
 }
-  ]
-}
- [
-
-
+,
 {
    "name": "",
    "objective_value": 47513.3083,

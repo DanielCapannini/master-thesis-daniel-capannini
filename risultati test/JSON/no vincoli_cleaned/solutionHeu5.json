@@ -746,9 +746,7 @@
     }
   ]
 }
-  ]
-}
-oints": 13.9200
+,
 {
    "name": "stance_06_04.txt",
    "objective_value": 8028.7000,
@@ -1248,9 +1246,7 @@ oints": 13.9200
     }
   ]
 }
-  ]
-}
-ed_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 42599.5000,
@@ -1895,9 +1891,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-  "risk": 1.6000,
+,
 {
    "name": "",
    "objective_value": 48052.9000,
@@ -2544,9 +2538,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 44868.5000,
@@ -3193,8 +3185,6 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
 ,
 {
    "name": "",
@@ -3839,9 +3829,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-      "used_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 39294.6333,
@@ -4488,9 +4476,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-pacity": 62.5000,
+,
 {
    "name": "",
    "objective_value": 53110.8000,
@@ -5557,9 +5543,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 55805.5000,
@@ -6628,9 +6612,7 @@ pacity": 62.5000,
     }
   ]
 }
-  ]
-}
-capacity": 51.7000,
+,
 {
    "name": "",
    "objective_value": 49612.6333,
@@ -7698,9 +7680,7 @@ capacity": 51.7000,
     }
   ]
 }
-  ]
-}
-ity": 0.0000
+,
 {
    "name": "",
    "objective_value": 39412.4000,
@@ -8766,11 +8746,7 @@ ity": 0.0000
     }
   ]
 }
-  ]
-}
-: [
-
-
+,
 {
    "name": "",
    "objective_value": 38911.4000,
@@ -9836,9 +9812,7 @@ ity": 0.0000
     }
   ]
 }
-  ]
-}
-9.8000,
+,
 {
    "name": "",
    "objective_value": 439276.0000,
@@ -12730,9 +12704,7 @@ ity": 0.0000
     }
   ]
 }
-  ]
-}
-sed_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 447920.0000,
@@ -15633,9 +15605,7 @@ sed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-: 109,
+,
 {
    "name": "",
    "objective_value": 457907.1667,
@@ -18537,8 +18507,7 @@ sed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 444182.2667,
@@ -21432,9 +21401,7 @@ sed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-: 66.0000,
+,
 {
    "name": "",
    "objective_value": 377723.1500,
@@ -24332,94 +24299,7 @@ sed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-    {
-      "id": 98,
-      "capacity": 96.9000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 99,
-      "capacity": 97.9000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 100,
-      "capacity": 55.4000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 101,
-      "capacity": 52.8000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 102,
-      "capacity": 90.1000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 103,
-      "capacity": 87.7000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 104,
-      "capacity": 50.6000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 105,
-      "capacity": 52.5000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 106,
-      "capacity": 83.1000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 107,
-      "capacity": 82.6000,
-      "stories": [
-
-      ],
-      "used_capacity": 0.0000
-    },
-    {
-      "id": 108,
-      "capacity": 58.8000,
-      "stories": [
-
-      ,
+,
 {
    "name": "",
    "objective_value": 28048.8000,
@@ -25038,9 +24918,7 @@ sed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-00
+,
 {
    "name": "",
    "objective_value": 32973.2333,
@@ -25658,11 +25536,7 @@ sed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-ies": [
-
-
+,
 {
    "name": "",
    "objective_value": 33568.5000,
@@ -26281,9 +26155,7 @@ ies": [
     }
   ]
 }
-  ]
-}
-    ],
+,
 {
    "name": "",
    "objective_value": 31055.0833,
@@ -26901,9 +26773,7 @@ ies": [
     }
   ]
 }
-  ]
-}
-]
+,
 {
    "name": "",
    "objective_value": 27854.0333,

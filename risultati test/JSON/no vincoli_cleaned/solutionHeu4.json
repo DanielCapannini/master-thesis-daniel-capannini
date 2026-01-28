@@ -746,9 +746,7 @@
     }
   ]
 }
-  ]
-}
- "id": 9,
+,
 {
    "name": "stance_06_04.txt",
    "objective_value": 10096.1750,
@@ -1247,9 +1245,7 @@
     }
   ]
 }
-  ]
-}
-d_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 46405.1917,
@@ -1893,9 +1889,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-      "capacity": 82.9000,
+,
 {
    "name": "",
    "objective_value": 54619.0750,
@@ -2542,9 +2536,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 51602.0500,
@@ -3191,11 +3183,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
- "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 53264.4250,
@@ -3839,9 +3827,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-acity": 0.0000
+,
 {
    "name": "",
    "objective_value": 47979.8229,
@@ -4488,9 +4474,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-": 62.5000,
+,
 {
    "name": "",
    "objective_value": 88606.3625,
@@ -5557,9 +5541,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-0
+,
 {
    "name": "",
    "objective_value": 97683.7688,
@@ -6628,9 +6610,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-   "capacity": 51.7000,
+,
 {
    "name": "",
    "objective_value": 93851.0958,
@@ -7697,9 +7677,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-     "id": 29,
+,
 {
    "name": "",
    "objective_value": 81293.3000,
@@ -8765,11 +8743,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-[
-
-
+,
 {
    "name": "",
    "objective_value": 82585.5500,
@@ -9834,9 +9808,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
- ],
+,
 {
    "name": "",
    "objective_value": 604091.3750,
@@ -12729,9 +12701,7 @@ acity": 0.0000
     }
   ]
 }
-  ]
-}
-d_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 608449.4500,
@@ -15632,9 +15602,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 613443.1250,
@@ -18535,9 +18503,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-
+,
 {
    "name": "",
    "objective_value": 625925.5583,
@@ -21433,9 +21399,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
- 66.0000,
+,
 {
    "name": "",
    "objective_value": 538083.6688,
@@ -24333,11 +24297,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-    "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 41723.6750,
@@ -24956,9 +24916,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-],
+,
 {
    "name": "",
    "objective_value": 50974.0958,
@@ -25576,11 +25534,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-     "stories": [
-
-
+,
 {
    "name": "",
    "objective_value": 48840.1250,
@@ -26199,9 +26153,7 @@ d_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-ed_capacity": 0.0000
+,
 {
    "name": "",
    "objective_value": 53220.8583,
@@ -26819,9 +26771,7 @@ ed_capacity": 0.0000
     }
   ]
 }
-  ]
-}
-0000
+,
 {
    "name": "",
    "objective_value": 47398.8333,
