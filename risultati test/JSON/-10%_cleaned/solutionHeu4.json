@@ -744,9 +744,7 @@
     }
   ]
 }
-  ]
-}
-"id": 18,
+  ,
 {
    "name": "emi\\newData\\instance_06_04.txt",
    "objective_value": 9362.8750,
@@ -1244,9 +1242,7 @@
     }
   ]
 }
-  ]
-}
-apacity": 0.0000
+  ,
 {
    "name": "e_20_01.txt",
    "objective_value": 44461.5687,
@@ -1888,9 +1884,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-   "used_capacity": 62.6100
+  ,
 {
    "name": "e_20_02.txt",
    "objective_value": 46636.5500,
@@ -2533,10 +2527,7 @@ apacity": 0.0000
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-     "used_capacity": 0.0000
+},
 {
    "name": "e_20_03.txt",
    "objective_value": 50260.4000,
@@ -3180,11 +3171,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-es": [
-
-
+  ,
 {
    "name": "e_20_04.txt",
    "objective_value": 46082.0583,
@@ -3826,9 +3813,7 @@ es": [
     }
   ]
 }
-  ]
-}
-    "used_capacity": 0.0000
+  ,
 {
    "name": "e_20_05.txt",
    "objective_value": 46518.0833,
@@ -4472,9 +4457,7 @@ es": [
     }
   ]
 }
-  ]
-}
-: 56.2500,
+  ,
 {
    "name": "e_40_01.txt",
    "objective_value": 86878.6250,
@@ -5539,10 +5522,7 @@ es": [
     }
   ]
 }
-  ]
-}
-
-
+  ,
 {
    "name": "e_40_02.txt",
    "objective_value": 95354.3500,
@@ -6609,9 +6589,7 @@ es": [
     }
   ]
 }
-  ]
-}
-apacity": 46.5300,
+ ,
 {
    "name": "e_40_03.txt",
    "objective_value": 91907.7708,
@@ -7676,9 +7654,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
-  {
+  ,
 {
    "name": "e_40_04.txt",
    "objective_value": 78869.3500,
@@ -8742,9 +8718,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
-
+ ,
 {
    "name": "e_40_05.txt",
    "objective_value": 80283.2750,
@@ -9807,9 +9781,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
-8200,
+ ,
 {
    "name": "",
    "objective_value": 566678.2000,
@@ -12690,9 +12662,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
-    {
+  ,
 {
    "name": "",
    "objective_value": 585815.1750,
@@ -15582,9 +15552,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
- 109,
+ ,
 {
    "name": "",
    "objective_value": 560692.4667,
@@ -18476,9 +18444,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
-: 109,
+  ,
 {
    "name": "",
    "objective_value": 587987.6000,
@@ -21362,12 +21328,7 @@ apacity": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-": [
-
-
+},
 {
    "name": "",
    "objective_value": 515038.8958,
@@ -24255,11 +24216,7 @@ apacity": 46.5300,
     }
   ]
 }
-  ]
-}
-tories": [
-
-
+ ,
 {
    "name": "stance_f_01.txt",
    "objective_value": 38739.3500,
@@ -24874,8 +24831,6 @@ tories": [
       ],
       "used_capacity": 0.0000
     }
-  ]
-}
   ]
 }
 ,
@@ -25495,9 +25450,7 @@ tories": [
     }
   ]
 }
-  ]
-}
-  "used_capacity": 0.0000
+  ,
 {
    "name": "stance_f_03.txt",
    "objective_value": 48478.1750,
@@ -26114,9 +26067,7 @@ tories": [
     }
   ]
 }
-  ]
-}
-apacity": 0.0000
+,
 {
    "name": "stance_f_04.txt",
    "objective_value": 52819.3333,
@@ -26733,9 +26684,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-city": 0.0000
+,
 {
    "name": "stance_f_05.txt",
    "objective_value": 46723.5417,

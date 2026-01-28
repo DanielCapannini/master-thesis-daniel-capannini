@@ -744,9 +744,7 @@
     }
   ]
 }
-  ]
-}
-"id": 8,
+ ,
 {
    "name": "emi\\newData\\instance_06_04.txt",
    "objective_value": 5966.6000,
@@ -1245,9 +1243,7 @@
     }
   ]
 }
-  ]
-}
-apacity": 0.0000
+,
 {
    "name": "e_20_01.txt",
    "objective_value": 37166.6500,
@@ -1888,9 +1884,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-          "id": 46,
+,
 {
    "name": "e_20_02.txt",
    "objective_value": 40743.6000,
@@ -2534,9 +2528,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-   ],
+,
 {
    "name": "e_20_03.txt",
    "objective_value": 43647.5000,
@@ -3180,11 +3172,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-     "stories": [
-
-
+,
 {
    "name": "e_20_04.txt",
    "objective_value": 36901.8000,
@@ -3826,9 +3814,7 @@ apacity": 0.0000
     }
   ]
 }
-  ]
-}
-city": 0.0000
+,
 {
    "name": "e_20_05.txt",
    "objective_value": 37994.4667,
@@ -4473,9 +4459,7 @@ city": 0.0000
     }
   ]
 }
-  ]
-}
-y": 56.2500,
+,
 {
    "name": "e_40_01.txt",
    "objective_value": 49751.8333,
@@ -5540,8 +5524,7 @@ y": 56.2500,
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "e_40_02.txt",
    "objective_value": 52808.1000,
@@ -6608,9 +6591,7 @@ y": 56.2500,
     }
   ]
 }
-  ]
-}
-city": 46.5300,
+,
 {
    "name": "e_40_03.txt",
    "objective_value": 51018.3000,
@@ -7676,9 +7657,7 @@ city": 46.5300,
     }
   ]
 }
-  ]
-}
- "id": 29,
+,
 {
    "name": "e_40_04.txt",
    "objective_value": 38546.3500,
@@ -8742,8 +8721,7 @@ city": 46.5300,
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "e_40_05.txt",
    "objective_value": 38069.7000,
@@ -9806,9 +9784,7 @@ city": 46.5300,
     }
   ]
 }
-  ]
-}
-": 53.8200,
+,
 {
    "name": "",
    "objective_value": 406776.4000,
@@ -12689,9 +12665,7 @@ city": 46.5300,
     }
   ]
 }
-  ]
-}
-      "id": 109,
+,
 {
    "name": "",
    "objective_value": 429286.6000,
@@ -15581,8 +15555,7 @@ city": 46.5300,
     }
   ]
 }
-  ]
-}
+,
 {
    "name": "",
    "objective_value": 404411.9333,
@@ -18474,9 +18447,7 @@ city": 46.5300,
     }
   ]
 }
-  ]
-}
-  "capacity": 67.5900,
+ ,
 {
    "name": "",
    "objective_value": 402998.3000,
@@ -21358,8 +21329,6 @@ city": 46.5300,
       ],
       "used_capacity": 0.0000
     }
-  ]
-}
   ]
 }
 ,
@@ -24250,10 +24219,7 @@ city": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
- 71.1000,
+},
 {
    "name": "stance_f_01.txt",
    "objective_value": 26134.5333,
@@ -24870,117 +24836,7 @@ city": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-": 0.0000
-        },
-        {
-          "id": 80,
-          "utility": 60.0000,
-          "risk": 1.1000,
-          "uncertainty": 1.2000,
-          "story_points": 9.2400
-        },
-        {
-          "id": 98,
-          "utility": 56.0000,
-          "risk": 1.3000,
-          "uncertainty": 1.1000,
-          "story_points": 7.5900
-        }
-      ],
-      "used_capacity": 38.0000
-    },
-    {
-      "id": 10,
-      "capacity": 37.6200,
-      "stories": [
-        {
-          "id": 16,
-          "utility": 16.0000,
-          "risk": 1.3000,
-          "uncertainty": 1.1000,
-          "story_points": 5.9400
-        },
-        {
-          "id": 45,
-          "utility": 86.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.6000,
-          "story_points": 15.3600
-        },
-        {
-          "id": 74,
-          "utility": 91.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.7000,
-          "story_points": 15.3000
-        }
-      ],
-      "used_capacity": 36.6000
-    },
-    {
-      "id": 11,
-      "capacity": 36.0900,
-      "stories": [
-        {
-          "id": 46,
-          "utility": 55.0000,
-          "risk": 1.6000,
-          "uncertainty": 1.3000,
-          "story_points": 10.7900
-        },
-        {
-          "id": 63,
-          "utility": 50.0000,
-          "risk": 1.9000,
-          "uncertainty": 1.4000,
-          "story_points": 11.4800
-        },
-        {
-          "id": 71,
-          "utility": 77.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.5000,
-          "story_points": 13.3500
-        }
-      ],
-      "used_capacity": 35.6200
-    },
-    {
-      "id": 12,
-      "capacity": 48.7800,
-      "stories": [
-        {
-          "id": 21,
-          "utility": 77.0000,
-          "risk": 1.1000,
-          "uncertainty": 1.2000,
-          "story_points": 11.8800
-        },
-        {
-          "id": 38,
-          "utility": 38.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.4000,
-          "story_points": 7.2800
-        },
-        {
-          "id": 60,
-          "utility": 88.0000,
-          "risk": 1.3000,
-          "uncertainty": 1.6000,
-          "story_points": 15.5200
-        },
-        {
-          "id": 106,
-          "utility": 58.0000,
-          "risk": 1.8000,
-          "uncertainty": 1.6000,
-          "story_points": 12.3200
-        }
-      ,
+},
 {
    "name": "stance_f_02.txt",
    "objective_value": 29108.7000,
@@ -25596,10 +25452,7 @@ city": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-
+},
 {
    "name": "stance_f_03.txt",
    "objective_value": 33230.9000,
@@ -26216,10 +26069,7 @@ city": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-{
+},
 {
    "name": "stance_f_04.txt",
    "objective_value": 34581.3333,
@@ -26835,10 +26685,7 @@ city": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-}
+},
 {
    "name": "stance_f_05.txt",
    "objective_value": 25508.8667,

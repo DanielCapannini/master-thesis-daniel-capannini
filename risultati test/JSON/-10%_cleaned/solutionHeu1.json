@@ -744,9 +744,7 @@
     }
   ]
 }
-  ]
-}
-"id": 11,
+ ,
 {
    "name": "emi\\newData\\instance_06_04.txt",
    "objective_value": 15845.3000,
@@ -996,33 +994,7 @@
     }
   ]
 }
-  ]
-}
- 1.8000,
-          "story_points": 2.8800
-        },
-        {
-          "id": 17,
-          "utility": 89.0000,
-          "risk": 1.6000,
-          "uncertainty": 1.3000,
-          "story_points": 2.3400
-        },
-        {
-          "id": 22,
-          "utility": 37.0000,
-          "risk": 1.4000,
-          "uncertainty": 1.9000,
-          "story_points": 13.3000
-        },
-        {
-          "id": 23,
-          "utility": 64.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.0000,
-          "story_points": 6.9000
-        }
-      ,
+ ,
 {
    "name": "emi\\newData\\instance_06_05.txt",
    "objective_value": 16901.2000,
@@ -1271,8 +1243,7 @@
     }
   ]
 }
-  ]
-}
+  ,
 {
    "name": "e_20_01.txt",
    "objective_value": 116403.1500,
@@ -1913,9 +1884,7 @@
     }
   ]
 }
-  ]
-}
-3000
+ ,
 {
    "name": "e_20_02.txt",
    "objective_value": 132873.3000,
@@ -2558,9 +2527,7 @@
     }
   ]
 }
-  ]
-}
-],
+ ,
 {
    "name": "e_20_03.txt",
    "objective_value": 126479.9003,
@@ -3204,11 +3171,7 @@
     }
   ]
 }
-  ]
-}
-    "stories": [
-
-
+ ,
 {
    "name": "e_20_04.txt",
    "objective_value": 113205.8667,
@@ -3851,9 +3814,7 @@
     }
   ]
 }
-  ]
-}
-ity": 0.0000
+  ,
 {
    "name": "e_20_05.txt",
    "objective_value": 120206.6667,
@@ -4497,9 +4458,7 @@ ity": 0.0000
     }
   ]
 }
-  ]
-}
-: 56.2500,
+,
 {
    "name": "e_40_01.txt",
    "objective_value": 261302.3500,
@@ -5563,8 +5522,7 @@ ity": 0.0000
     }
   ]
 }
-  ]
-}
+ ,
 {
    "name": "e_40_02.txt",
    "objective_value": 268564.3000,
@@ -6631,9 +6589,7 @@ ity": 0.0000
     }
   ]
 }
-  ]
-}
-capacity": 46.5300,
+  ,
 {
    "name": "e_40_03.txt",
    "objective_value": 255799.0667,
@@ -7698,9 +7654,7 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
-   {
+  ,
 {
    "name": "e_40_04.txt",
    "objective_value": 237989.0667,
@@ -8764,9 +8718,7 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
-}
+ ,
 {
    "name": "e_40_05.txt",
    "objective_value": 247906.7005,
@@ -9829,9 +9781,7 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
-53.8200,
+  ,
 {
    "name": "",
    "objective_value": 1932833.9500,
@@ -12712,9 +12662,7 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
-109,
+  ,
 {
    "name": "",
    "objective_value": 1985073.3000,
@@ -15604,8 +15552,7 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
+ ,
 {
    "name": "",
    "objective_value": 1989352.6667,
@@ -18496,8 +18443,6 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
 ,
 {
    "name": "",
@@ -21382,12 +21327,7 @@ capacity": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-      "stories": [
-
-
+},
 {
    "name": "",
    "objective_value": 1935508.9333,
@@ -24275,49 +24215,7 @@ capacity": 46.5300,
     }
   ]
 }
-  ]
-}
-[
-
-
-          "story_points": 6.8600
-        },
-        {
-          "id": 11,
-          "utility": 24.0000,
-          "risk": 1.7000,
-          "uncertainty": 1.6000,
-          "story_points": 8.8000
-        },
-        {
-          "id": 24,
-          "utility": 19.0000,
-          "risk": 1.8000,
-          "uncertainty": 1.3000,
-          "story_points": 7.0200
-        },
-        {
-          "id": 42,
-          "utility": 59.0000,
-          "risk": 1.9000,
-          "uncertainty": 1.2000,
-          "story_points": 4.4400
-        },
-        {
-          "id": 43,
-          "utility": 99.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.1000,
-          "story_points": 6.7100
-        },
-        {
-          "id": 103,
-          "utility": 45.0000,
-          "risk": 1.6000,
-          "uncertainty": 1.7000,
-          "story_points": 5.4400
-        }
-      ,
+ ,
 {
    "name": "stance_f_01.txt",
    "objective_value": 117277.2667,
@@ -24933,10 +24831,7 @@ capacity": 46.5300,
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-ty": 77.8500,
+},
 {
    "name": "stance_f_02.txt",
    "objective_value": 124368.8500,
@@ -25553,9 +25448,7 @@ ty": 77.8500,
     }
   ]
 }
-  ]
-}
-      "used_capacity": 0.0000
+  ,
 {
    "name": "stance_f_03.txt",
    "objective_value": 123233.2667,
@@ -26172,132 +26065,7 @@ ty": 77.8500,
     }
   ]
 }
-  ]
-}
-sed_capacity": 0.0000
-          "uncertainty": 1.5000,
-          "story_points": 22.2000
-        },
-        {
-          "id": 246,
-          "utility": 12.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.2000,
-          "story_points": 19.2000
-        },
-        {
-          "id": 256,
-          "utility": 24.0000,
-          "risk": 1.1000,
-          "uncertainty": 1.2000,
-          "story_points": 22.3200
-        }
-      ],
-      "used_capacity": 63.7200
-    },
-    {
-      "id": 25,
-      "capacity": 75.4200,
-      "stories": [
-        {
-          "id": 48,
-          "utility": 70.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.2000,
-          "story_points": 19.3200
-        },
-        {
-          "id": 128,
-          "utility": 71.0000,
-          "risk": 1.3000,
-          "uncertainty": 1.6000,
-          "story_points": 17.1200
-        },
-        {
-          "id": 160,
-          "utility": 83.0000,
-          "risk": 1.1000,
-          "uncertainty": 1.3000,
-          "story_points": 13.3900
-        },
-        {
-          "id": 181,
-          "utility": 39.0000,
-          "risk": 1.8000,
-          "uncertainty": 1.3000,
-          "story_points": 13.0000
-        },
-        {
-          "id": 290,
-          "utility": 45.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.0000,
-          "story_points": 12.1000
-        }
-      ],
-      "used_capacity": 74.9300
-    },
-    {
-      "id": 26,
-      "capacity": 81.0000,
-      "stories": [
-        {
-          "id": 108,
-          "utility": 92.0000,
-          "risk": 1.0000,
-          "uncertainty": 1.6000,
-          "story_points": 17.6000
-        },
-        {
-          "id": 124,
-          "utility": 96.0000,
-          "risk": 1.5000,
-          "uncertainty": 1.5000,
-          "story_points": 27.0000
-        },
-        {
-          "id": 171,
-          "utility": 72.0000,
-          "risk": 1.8000,
-          "uncertainty": 1.3000,
-          "story_points": 24.7000
-        },
-        {
-          "id": 298,
-          "utility": 54.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.1000,
-          "story_points": 11.6600
-        }
-      ],
-      "used_capacity": 80.9600
-    },
-    {
-      "id": 27,
-      "capacity": 78.3900,
-      "stories": [
-        {
-          "id": 18,
-          "utility": 48.0000,
-          "risk": 1.6000,
-          "uncertainty": 1.6000,
-          "story_points": 29.9200
-        },
-        {
-          "id": 20,
-          "utility": 91.0000,
-          "risk": 1.2000,
-          "uncertainty": 1.4000,
-          "story_points": 18.4800
-        },
-        {
-          "id": 241,
-          "utility": 85.0000,
-          "risk": 1.4000,
-          "uncertainty": 1.5000,
-          "story_points": 22.8000
-        }
-      ,
+  ,
 {
    "name": "stance_f_04.txt",
    "objective_value": 125090.9333,
@@ -26913,12 +26681,7 @@ sed_capacity": 0.0000
       "used_capacity": 0.0000
     }
   ]
-}
-  ]
-}
-tories": [
-
-
+},
 {
    "name": "stance_f_05.txt",
    "objective_value": 120024.6000,
