@@ -48,6 +48,13 @@
 \contentsline {paragraph}{Progressione del valore consegnato.}{52}{section*.23}%
 \contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{52}{subsection.6.2.3}%
 \contentsline {section}{\numberline {6.3}risultati computazionali}{53}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{55}{chapter.7}%
-\contentsline {part}{}{57}{chapter.7}%
-\contentsline {chapter}{Bibliography}{57}{section*.24}%
+\contentsline {section}{\numberline {6.4}variazione dei parametri}{55}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{55}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{57}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}metodo aggiornato}{61}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Confronto funzioni obbiettivo}{62}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}funzuone obbiettovo \eqref {Eq2.P1}}{63}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{64}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{67}{chapter.7}%
+\contentsline {part}{}{69}{chapter.7}%
+\contentsline {chapter}{Bibliography}{69}{section*.24}%
