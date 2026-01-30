@@ -1525,9 +1525,8 @@ web-2                       &     &    32745.5 &    0.00 &     0.11 &    32450.9
 
 \section{Confronto funzioni obbiettivo}\label{confronto:fb}
 
-In questa sezione vengono confrontati i risultati ottenuti utilizzando le due diverse funzioni obbiettivo descritte nella sezione \ref{sec:fo}. Si usera come riferimento la tabella \ref{tab.new1} la quale riporta i risultati ottenuti con la funzione obbiettivo \eqref{Eq1.P1} e la tabella \ref{tab.new2} che riporta i risultati delle metriche calcolate su tali risultati.
+In questa sezione vengono confrontati i risultati ottenuti utilizzando le due diverse funzioni obbiettivo descritte nella sezione \ref{sec:fo}. Si usera come riferimento la tabella \ref{tab.new1} la quale riporta i risultati ottenuti con la funzione obbiettivo \eqref{Eq1.P1} e nelle tabelle \ref{tab.new2}, \ref{tab.new02} che riportano i risultati delle metriche calcolate su tali risultati.
 
-a
 \begin{table}[H]
 \centering
 \caption{results con funzione obbiettivo \eqref{Eq1.P1}}
@@ -1561,6 +1560,11 @@ instance\_100\_02             &     &  5361497.2 &    6.61 &   300.93 &  5647903
 instance\_100\_03             &     &  5613547.8 &    1.82 &   301.11 &  5631867.9 &     1.60 &   -0.33 &  5631867.9 &   300.72 &    -0.33  \\ 
 instance\_100\_04             &     &  5725382.8 &    5.00 &   300.91 &  5890661.9 &     1.84 &   -2.89 &  5890661.9 &   300.26 &    -2.89  \\ 
 instance\_100\_05             &     &  5430805.7 &    2.16 &   301.12 &  5530004.2 &     1.85 &   -1.83 &  5530004.2 &   300.02 &    -1.83  \\ 
+instance\_f\_01              &     &   130009.8 &    0.00 &      0.22 &   120411.2 &     0.27 &    7.38 &   120411.2 &    23.69 &      7.38 \\ 
+instance\_f\_02              &     &   134864.3 &    0.01 &     53.07 &   127857.5 &     0.31 &    5.20 &   127857.5 &    23.25 &      5.20 \\ 
+instance\_f\_03              &     &   132266.3 &    0.00 &      0.77 &   124444.8 &     0.36 &    5.91 &   124444.8 &    14.66 &      5.91 \\ 
+instance\_f\_04              &     &   130108.4 &    0.01 &     40.23 &   127565.4 &     0.27 &    1.96 &   127565.4 &    12.34 &      1.96 \\ 
+instance\_f\_05              &     &   137811.6 &    0.01 &     19.82 &   121055.0 &     0.29 &   12.16 &   121055.0 &    17.91 &     12.16 \\
 \hline
 \end{tabular}
 }
@@ -1659,8 +1663,8 @@ come si notare nella tabella \ref{tab.new1} nella colonna del tempo di esecuzion
 \subsection{funzuone obbiettovo \eqref{Eq2.P1}}
 
 Nella tabella \ref{tab.new3} vi e' riportato il confronto tra la funzione obbiettivo \eqref{Eq1.P1} e la funzione obbiettivo \eqref{Eq2.P1} in termini di tempo di esecuzione. come si pou notare vi differenze tra i tempi di esecuzione delle 2 funzioni obbiettivo, non considerando CPLEX che come gia detto tende a saturare il tempo massimo di esecuzione, i tempi di esecuzione del algoritmo euristico con la funzione obbiettivo \eqref{Eq2.P1} sono il $16.3\%$ piu veloci rispetto quelli della funzione obbiettivo \eqref{Eq1.P1}, mentre i tempi di esecuzione dell'euristica lagrangiana variano soli di un $2.2\%$ sempre a favore della funzione obbiettivo\eqref{Eq2.P1}. 
-Per quanto riguarda i KPI non sono presenti differenze , questo e' dovuto al fatto che entrambe le funzioni obbiettivo mirano a minimizzare il numero di slot utilizzati e la varianza del rischio, pertanto le soluzioni ottenute sono simili in termini di qualita' e l'inserimento dei parametri $dp_{ij}$ e $ub_{ij}$ ha portato semplicemente a un miglioramento dei tempi di esecuzione delle euristiche senza influire sulla soluzione.
-
+Per quanto riguarda i KPI delle due funzioni obbiettivo si possono notare delle differenze minime, tra le tabelle \ref{tab.new2} e \ref{tab.new03} si possono notare che vi sono alcune istanze per cui i KPI N.U.S. e H.U.S. risultano inferiri per le istanze delle funzione obbiettivo \eqref{Eq2.P1}, percio questo indica che l'anticipare se possibile la risoluzione dei vincoli porta poi successivamente a veloccizzare il progetto.
+Si puo anche notare confrontando le tabelle \ref{tab.new02} e \ref{tab.new04} che i valori di D.R. e R.MAX risultano essere leggermente maggiori per la funzione obbiettivo \eqref{Eq1.P1}, rispettivamente D.R. della funzione obbiettivo \eqref{Eq1.P1} e' $9.8\%$ maggiore rispettoa quello della funzione obbiettivo \eqref{Eq2.P1} metre per  R.MAX e' maggiore del $ 13.2\%$, questo indica che anticipare la risoluzione dei vincoli porta ad avere sprint mediamente meno rischiosi.
 
 \begin{table}[H]
 \centering
@@ -1796,7 +1800,12 @@ instance\_f\_05               &     &   7.0  &   23.7  &  2.7  &   6.3  &   20.9
 
 \subsection{Funzione obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3}}
 
-I risultati ottenuti utilizzando le funzioni obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} come riportato nella tabella \ref{tab.new4}, che indica i tempi di esecuzione delle 2 funzioni obbiettivo, come nella relazione tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, vi e' un discostamento a per quanto riguarda i tempi di esecuzione dell'algoritmo euristico in cui la funzione obbiettivo \eqref{Eq2.P3} risulta piu veloce del $15.1\%$ rispetto alla sua controparte \eqref{Eq2.P2}, mentre per quanto riguarda l'euristica lagrangiana i tempi di esecuzione non si discostano in modo significativo. Per quanto riguarda i KPI non vi sono presenti differenze significative tra le 2 funzioni obbiettivo.
+I risultati ottenuti utilizzando le funzioni obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} come riportato nella tabella \ref{tab.new4}, che indica i tempi di esecuzione delle 2 funzioni obbiettivo, come nella relazione tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, vi e' un discostamento a per quanto riguarda i tempi di esecuzione dell'algoritmo euristico in cui la funzione obbiettivo \eqref{Eq2.P3} risulta piu veloce del $15.1\%$ rispetto alla sua controparte \eqref{Eq2.P2}, mentre per quanto riguarda l'euristica lagrangiana i tempi di esecuzione non si discostano in modo significativo. 
+Al contrario di quello che si e' notato nel confronto tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, in questo caso il confronto dei KPI N.U.S. e H.U.S. tra le due funzioni obbiettivo risulta risulta per alcune istanze favorevole alla funzione obbiettivo \eqref{Eq2.P2} che risulta riuscire a concludere le istanze con un numero leggermente minore di sprint rispetto alla funzione obbiettivo \eqref{Eq2.P3}.
+Per quanto riguarda i KPI D.U. e U.MAX si puo notare confrontando le tabelle \ref{tab.new004} e \ref{tab.new005} che la funzione obbiettivo \eqref{Eq2.P2} rusulta avere un valore del D.U. del $ 8.1\%$ maggiore rispetto a quello della funzione obbiettivo \eqref{Eq2.P3}, mentre per il KPI U.MAX risulta essere maggiore del $ 12.3\%$, questo indica che vi sono presenti in media sprint maggiormente incerti. 
+
+
+
 \begin{table}[H]
 \centering
 \caption{confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3}}
@@ -2019,6 +2028,10 @@ instance\_f\_05               &     &  7.0  &   22.4  &  2.7  &   7.0  &   22.2 
 
 \subsection{Funzione obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5}}
 
+I risultati ottenuti risolvendo le istanze con le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} per quanto riguarda i tempi di esecuzione come mostrato nella tabella \ref{tab.new6} risulta esserci una differenza che mostra che la funzione obbiettivo \eqref{Eq2.P5} risulta essere piu veloce del $14.6\%$ se si usa il metodo euristoco e del $16.4\%$ se si usa l'euristica Lagrangiana rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
+Osservando i KPI nelle tabelle \ref{tab.new06} e \ref{tab.new07} si nota una differenza in alcune istanze sostanzile per quanto riguarda il valore di H.U.S. che risulta essere piu basso utilizzando la funzione obbiettivo \eqref{Eq2.P4} rispetto alla funzione obbiettivo \eqref{Eq2.P5}, mentre il valore di N.U.S. rusilta essere pressoche uguale, questo sta ad indicare che per questa tipologia di funzione obbiettivo considerare i vincoli $dp_{ij}$ e $ub_{ij}$ a un risultato non efficente dal punto di vista dell'utilita dell'utente.
+Osservando invece le tabelle \ref{tab.new006} e \ref{tab.new007} si nota come i valori di D.R., D.U. R.MAX e U.MAX risultano essere piu bassi utilizzando la funzione obbiettivo \eqref{Eq2.P5} di un valore compreso tra $19.8\%$ e $21.5\%$ rispetto alla funzione obbiettivo \eqref{Eq2.P4}, questo indica che la funzione obbiettivo \eqref{Eq2.P5} riesce a distribuire meglio sia il rischio che l'incertezza lungo i vari sprint rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
+
 
 \begin{table}[H]
 \centering
@@ -2240,6 +2253,12 @@ instance\_f\_05               &     &   4.6  &   19.7  &  4.8  &   3.6  &   17.4
 \end{tabular}
 }
 \end{table}
+
+\subsection{Confronto funzioni obbiettivo}
+
+In questa sezione si confrontano i risultati presentati precedentemente delle diverse funzioni obbiettivo considerando solo il metodo euristico.
+
+
 
 \chapter{Conclusioni}
 
