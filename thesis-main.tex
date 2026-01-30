@@ -2029,7 +2029,7 @@ instance\_f\_05               &     &  7.0  &   22.4  &  2.7  &   7.0  &   22.2 
 \subsection{Funzione obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5}}
 
 I risultati ottenuti risolvendo le istanze con le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} per quanto riguarda i tempi di esecuzione come mostrato nella tabella \ref{tab.new6} risulta esserci una differenza che mostra che la funzione obbiettivo \eqref{Eq2.P5} risulta essere piu veloce del $14.6\%$ se si usa il metodo euristoco e del $16.4\%$ se si usa l'euristica Lagrangiana rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
-Osservando i KPI nelle tabelle \ref{tab.new06} e \ref{tab.new07} si nota una differenza in alcune istanze sostanzile per quanto riguarda il valore di H.U.S. che risulta essere piu basso utilizzando la funzione obbiettivo \eqref{Eq2.P4} rispetto alla funzione obbiettivo \eqref{Eq2.P5}, mentre il valore di N.U.S. rusilta essere pressoche uguale, questo sta ad indicare che per questa tipologia di funzione obbiettivo considerare i vincoli $dp_{ij}$ e $ub_{ij}$ a un risultato non efficente dal punto di vista dell'utilita dell'utente.
+Osservando i KPI nelle tabelle \ref{tab.new06} e \ref{tab.new07} si nota una differenza in alcune istanze sostanzile per quanto riguarda il valore di H.U.S. che risulta essere piu basso utilizzando la funzione obbiettivo \eqref{Eq2.P4} rispetto alla funzione obbiettivo \eqref{Eq2.P5}, mentre il valore di N.U.S. rusilta essere pressoche uguale, questo sta ad indicare che per questa tipologia di funzione obbiettivo considerare i parametri $dp_{ij}$ e $ub_{ij}$ a un risultato non efficente dal punto di vista dell'utilita dell'utente.
 Osservando invece le tabelle \ref{tab.new006} e \ref{tab.new007} si nota come i valori di D.R., D.U. R.MAX e U.MAX risultano essere piu bassi utilizzando la funzione obbiettivo \eqref{Eq2.P5} di un valore compreso tra $19.8\%$ e $21.5\%$ rispetto alla funzione obbiettivo \eqref{Eq2.P4}, questo indica che la funzione obbiettivo \eqref{Eq2.P5} riesce a distribuire meglio sia il rischio che l'incertezza lungo i vari sprint rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
 
 
@@ -2257,6 +2257,64 @@ instance\_f\_05               &     &   4.6  &   19.7  &  4.8  &   3.6  &   17.4
 \subsection{Confronto funzioni obbiettivo}
 
 In questa sezione si confrontano i risultati presentati precedentemente delle diverse funzioni obbiettivo considerando solo il metodo euristico.
+
+Come si puo osservare nella figura \ref{fig:tempoFO}, tutte le funzioni obbiettivo presentano tempi di calcolo simili per quanto riguara i primi tre gruppi di istanze (es. instance\_06\_xx, instance\_20\_xx, instance\_40\_xx). Per le istanze piu grandi del gruppo 4 e quelle che presentano story point in base alle sequenza di Fibonacci (es. instance\_100\_xx e instance\_f\_xx) si nota che le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} impiegano piu tempo per essere risolte ed e' visibile il grap che e' stato presentato prima tra la funzione obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, la funzione obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} .
+Questa differenza di tempi tra le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} e le altre e' probabilmente dovuta al fatto che gli algoritmi risultano in diffilcolta a selezionare la combinazione di user story migliori confrontando la quantita di story point che richiedono.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/tempoFO.png}
+    \caption{Tempo di calcolo per le diverse funzioni obbiettivo}
+    \label{fig:tempoFO}
+\end{figure}
+
+Analizzando la figura \ref{fig:POSFO} si puo notare che la percentuale di utilizzo degli sprint risulta essere similare per tutte le funzioni obbiettivo, la funzione obbiettivo \eqref{Eq2.P5} risulta essere quella che si discosta piu spesso dalle altre ma solo per alcune istanze, il fatto che lo scostamento sia solo su certe istanze sta ad indicare che per quelle istanze in cui riesce a presentare una percentuale miglire rispetto alle altre e' dovuto al fatto che riesce a ad utilizzare uno sprint in meno e quindi rispetto agli altri non presentare uno sprint semi vuoto che abbassa la percentuale di utilizzo degli sprint. migliora questo paragrafo
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/POSFO.png}
+    \caption{Tempo di calcolo per le diverse funzioni obbiettivo}
+    \label{fig:POSFO}
+\end{figure}
+
+nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo notare che in tutte e 4 le funzioni obbiettivo \eqref{Eq1.P1}, \eqref{Eq2.P2} e \eqref{Eq2.P4} risulatno presentare valori simili tra loro e maggiori rispetto alle altre funzioni obbiettivo, mentre la funzione obbiettivo \eqref{Eq2.P5} risulta essere quella che presenta i valori piu bassi in tutte e 4 le metriche considerate. Questo indica che la funzione obbiettivo \eqref{Eq2.P5} e' quella che riesce a bilanciare meglio il rischio e l'incertezza tra gli sprint rispetto alle altre funzioni obbiettivo e che le funzioni obbiettivo come la \eqref{Eq2.P1}, \eqref{Eq2.P3} e \eqref{Eq2.P5} che presentano al loro interno i parametri $dp_{ij}$ e $ub_{ij}$ risultano presentare valori minori rispetto alle controparti senza quindi riescono a distribuire meglio i rischi e le incertezze all'interno dei vari sprint. migliora questo paragrafo
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/dr1.png}
+    \caption{Deviazione standard del rischio per le diverse funzioni obbiettivo}
+    \label{fig:dr}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/rmax1.png}
+    \caption{Valore massimo del rischio per le diverse funzioni obbiettivo}
+    \label{fig:rmax}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/du1.png}
+    \caption{Deviazione standard dell'incertezza per le diverse funzioni obbiettivo}
+    \label{fig:du}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/umax1.png}
+    \caption{Valore massimo dell'incertezza per le diverse funzioni obbiettivo}
+    \label{fig:umax}
+\end{figure}
+
+
+
 
 
 

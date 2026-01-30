@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  30 JAN 2026 14:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  30 JAN 2026 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1377,29 +1377,110 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.6.23}) h
                                                   \__shipout_drop_firstpage_...
 l.2256 
        ]
-Package cleveref Info: loaded `english' language definitions on input line 2263.
-Package cleveref Info: loaded `english' language definitions on input line 2263.
+<figures/tempoFO.png, id=1106, 613.5723pt x 395.3169pt>
+File: figures/tempoFO.png Graphic file (type png)
+<use figures/tempoFO.png>
+Package pdftex.def Info: figures/tempoFO.png  used on input line 2267.
+(pdftex.def)             Requested size: 376.42575pt x 242.52428pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package cleveref Info: loaded `english' language definitions on input line 2271.
+Package cleveref Info: loaded `english' language definitions on input line 2271.
  [77
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.24}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2263 \chapter
-               {Conclusioni}]
-Package cleveref Info: loaded `english' language definitions on input line 2263.
-Package cleveref Info: loaded `english' language definitions on input line 2263.
+l.2271 
+       ]
+<figures/POSFO.png, id=1114, 625.8582pt x 395.3169pt>
+File: figures/POSFO.png Graphic file (type png)
+<use figures/POSFO.png>
+Package pdftex.def Info: figures/POSFO.png  used on input line 2277.
+(pdftex.def)             Requested size: 376.42575pt x 237.765pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package cleveref Info: loaded `english' language definitions on input line 2281.
+Package cleveref Info: loaded `english' language definitions on input line 2281.
  [78
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2281 
+        <./figures/tempoFO.png>]
+<figures/dr1.png, id=1132, 609.9588pt x 395.3169pt>
+File: figures/dr1.png Graphic file (type png)
+<use figures/dr1.png>
+Package pdftex.def Info: figures/dr1.png  used on input line 2287.
+(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package cleveref Info: loaded `english' language definitions on input line 2291.
+Package cleveref Info: loaded `english' language definitions on input line 2291.
+ [79
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2291 
+        <./figures/POSFO.png>]
+<figures/rmax1.png, id=1139, 609.9588pt x 395.3169pt>
+File: figures/rmax1.png Graphic file (type png)
+<use figures/rmax1.png>
+Package pdftex.def Info: figures/rmax1.png  used on input line 2295.
+(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
+<figures/du1.png, id=1140, 609.9588pt x 395.3169pt>
+File: figures/du1.png Graphic file (type png)
+<use figures/du1.png>
+Package pdftex.def Info: figures/du1.png  used on input line 2304.
+(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
+Package cleveref Info: loaded `english' language definitions on input line 2308.
+Package cleveref Info: loaded `english' language definitions on input line 2308.
+ [80
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2308 
+       
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2308 
+        <./figures/dr1.png> <./figures/rmax1.png>]
+<figures/umax1.png, id=1148, 609.9588pt x 395.3169pt>
+File: figures/umax1.png Graphic file (type png)
+<use figures/umax1.png>
+Package pdftex.def Info: figures/umax1.png  used on input line 2311.
+(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
+Package cleveref Info: loaded `english' language definitions on input line 2321.
+Package cleveref Info: loaded `english' language definitions on input line 2321.
+ [81
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2321 \chapter
+               {Conclusioni}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.2321 \chapter
+               {Conclusioni} <./figures/du1.png> <./figures/umax1.png>]
+Package cleveref Info: loaded `english' language definitions on input line 2321.
+Package cleveref Info: loaded `english' language definitions on input line 2321.
+ [82
 
 ]
 Chapter 7.
-Package cleveref Info: loaded `english' language definitions on input line 2269.
-[79]
-Package cleveref Info: loaded `english' language definitions on input line 2269.
- [80
+Package cleveref Info: loaded `english' language definitions on input line 2327.
+[83]
+Package cleveref Info: loaded `english' language definitions on input line 2327.
+ [84
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 2274.
+(hyperref)                be the same. Added a new anchor on input line 2332.
 
 (./thesis-main.bbl
 Underfull \hbox (badness 2671) in paragraph at lines 30--33
@@ -1407,33 +1488,33 @@ Underfull \hbox (badness 2671) in paragraph at lines 30--33
  []
 
 Package cleveref Info: loaded `english' language definitions on input line 37.
-[81
+[85
 
 ]
 Package cleveref Info: loaded `english' language definitions on input line 87.
 Package cleveref Info: loaded `english' language definitions on input line 87.
- [82]
+ [86]
 Package cleveref Info: loaded `english' language definitions on input line 138.
 Package cleveref Info: loaded `english' language definitions on input line 138.
- [83]
+ [87]
 Package cleveref Info: loaded `english' language definitions on input line 180.
 Package cleveref Info: loaded `english' language definitions on input line 180.
- [84]
+ [88]
 Underfull \hbox (badness 1173) in paragraph at lines 202--206
 \OT1/cmr/m/n/12 Post-mus.  Quan-ti-ta-tive re-lease plan-ning in ex-treme pro-gram-
  []
 
 )
-Package cleveref Info: loaded `english' language definitions on input line 2276.
-Package cleveref Info: loaded `english' language definitions on input line 2276.
- [85]
-Package cleveref Info: loaded `english' language definitions on input line 2276.
-Package cleveref Info: loaded `english' language definitions on input line 2276.
- [86
+Package cleveref Info: loaded `english' language definitions on input line 2334.
+Package cleveref Info: loaded `english' language definitions on input line 2334.
+ [89]
+Package cleveref Info: loaded `english' language definitions on input line 2334.
+Package cleveref Info: loaded `english' language definitions on input line 2334.
+ [90
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 2280.
- [87] (./thesis-main.aux
+Package cleveref Info: loaded `english' language definitions on input line 2338.
+ [91] (./thesis-main.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
 )
  ***********
@@ -1448,18 +1529,18 @@ Package rerunfilecheck Info: File `thesis-main.out' has not changed.
 (rerunfilecheck)             Checksum: 4A0D33A92BA2A116BB158ADC5A9EA77A;8586.
  ) 
 Here is how much of TeX's memory you used:
- 27823 strings out of 475237
- 503676 string characters out of 5768556
- 2172238 words of memory out of 5000000
- 48179 multiletter control sequences out of 15000+600000
+ 27888 strings out of 475237
+ 504917 string characters out of 5768556
+ 2171238 words of memory out of 5000000
+ 48234 multiletter control sequences out of 15000+600000
  573085 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,19n,115p,1722b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis-main.pdf (99 pages, 537091 bytes).
+Output written on thesis-main.pdf (103 pages, 973029 bytes).
 PDF statistics:
- 1338 PDF objects out of 1440 (max. 8388607)
- 1167 compressed objects within 12 object streams
- 419 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1406 PDF objects out of 1440 (max. 8388607)
+ 1218 compressed objects within 13 object streams
+ 429 named destinations out of 1000 (max. 500000)
+ 387 words of extra memory for PDF output out of 10000 (max. 10000000)
 
