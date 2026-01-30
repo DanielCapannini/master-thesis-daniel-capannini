@@ -55,7 +55,7 @@
 \contentsline {section}{\numberline {6.5}Confronto funzioni obbiettivo}{62}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}funzuone obbiettovo \eqref {Eq2.P1}}{64}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{67}{subsection.6.5.2}%
-\contentsline {subsection}{\numberline {6.5.3}Funzione obbiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{72}{subsection.6.5.3}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{77}{chapter.7}%
-\contentsline {part}{}{79}{chapter.7}%
-\contentsline {chapter}{Bibliography}{79}{section*.24}%
+\contentsline {subsection}{\numberline {6.5.3}Funzione obbiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{73}{subsection.6.5.3}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{79}{chapter.7}%
+\contentsline {part}{}{81}{chapter.7}%
+\contentsline {chapter}{Bibliography}{81}{section*.24}%

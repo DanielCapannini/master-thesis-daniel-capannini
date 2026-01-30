@@ -1,0 +1,16 @@
+\begin{tabular}{|ll|rrrrr|rrr|rrrr|rrrr|} 
+\hline
+
+\multicolumn{2}{c|}{   } & 
+\multicolumn{5}{c|}{CPLEX} &     
+\multicolumn{3}{c|}{Heuristic} &    
+\multicolumn{4}{c|}{Lagrangian Heuristic} &    
+\multicolumn{4}{c}{Lagrangian Heuristic (coef)} \\  
+\hline
+Istanza        &     &               Zopt &     Gap &     Nodes &   NCuts &    Time &     Zheu &      Time &    GHeu &      Zheu &      Time &    Gap &    GHeu &      Zheu &      Time &    Gap &    GHeu \\   
+instance_f_01.txt              &     &    46065.4 &    0.01 &     4245 &       55 &     6.08 &    42625.5 &     0.28 &    7.47 &    42625.5 &    25.06 &  209.80 &    7.47 \\ 
+ instance_f_02.txt              &     &    52060.7 &    0.01 &    23499 &      103 &    76.14 &    52391.0 &     0.26 &   -0.63 &    52391.0 &    21.04 &  168.27 &   -0.63 \\ 
+ instance_f_03.txt              &     &    50941.9 &    0.01 &    13368 &       46 &    73.87 &    48153.7 &     0.25 &    5.47 &    48153.7 &    13.35 &  180.49 &    5.47 \\ 
+ instance_f_04.txt              &     &    51422.1 &    0.01 &    16753 &       55 &    61.72 &    50528.8 &     0.26 &    1.74 &    50528.8 &    11.22 &  167.97 &    1.74 \\ 
+ instance_f_05.txt              &     &    55110.8 &    0.01 &     7595 &       58 &    25.08 &    47605.6 &     0.29 &   13.62 &    47605.6 &    17.36 &  199.87 &   13.62 \\ 
+ 
