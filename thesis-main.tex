@@ -620,7 +620,7 @@ UNTIL subgradient stopping conditions are satisfied
 
 Il parametro $\gamma$ controlla la frequenza di invocazione di {\em GreedyHeuristic}: ponendo $\gamma=1$ si esegue questa procedura solo quando $\boldsymbol{x}'$ rappresenta la migliore soluzione trovata finora, mentre per $\gamma<1$ {\em GreedyHeuristic} viene attivata anche quando $z'$ è ``sufficientemente vicino'' a $z^*$, cioè entro una distanza percentuale $100(1-\gamma)$. Al termine di {\em LagrangianHeuristic} si dispone di una soluzione fattibile di valore $z^*$ e di un upper bound $z^*_{LR}$ derivante dal rilassamento lagrangiano, che consente di stimare la distanza massima della soluzione euristica dall’ottimo del problema originale.
 
-\section{Aggiornamenti ai metodi di cutting plane}
+\section{Aggiornamenti ai metodi di cutting plane}\label{sec:newheu}
 
 I metodi di \emph{cutting plane} costituiscono una tecnica fondamentale nella programmazione lineare intera mista (MILP), utilizzata per rafforzare iterativamente il rilassamento lineare continuo mediante l'aggiunta di disuguaglianze valide (\emph{tagli}) che eliminano soluzioni frazionarie non ammissibili per il problema discreto. Nel contesto del problema di assegnazione sprint-user story, i tagli di precedenza OR/AND garantiscono che, per eseguire una user story $j$ nello sprint $i$, almeno una (OR) oppure tutte (AND) le sue dipendenze predecessorali siano state completate negli sprint precedenti ($i_1 \leq i$).
 
@@ -1445,82 +1445,53 @@ web -2                        &     &     31717.5 &    0.00 &    0.24 &    31365
 
 
  
-\subsection{metodo aggiornato}
+\section{metodo aggiornato}
 
+Nella tabella \ref{Tab.6} sono riportati i confronti tra il metodo euristico originale e la versione aggiornata che incorpora le modifiche descritte nella sezione \ref{sec:newheu}. I risulati mostrano che la versione aggiornata dell'euristica riporta la stessa soluzione di quella originale ma con un aumento dei tempi di esecuzione.
+Questo sta ad indicare che le modifiche apportate ai tagli non sono riusciti a portare il miglioramento sperato, anzi a portato ad un peggioramento dei tempi di calcolo senza alcun beneficio in termini di qualità della soluzione.
 
-\begin{table}[H]
+\begin{table}[h]
 \centering
-\caption{sprint reduction results (nSprint - 2)}
+\caption{new heuristic results}
 \label{Tab.6}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|ll|rrr|rrr|rrr|rrr|} 
+%\resizebox{\textwidth}{!}{%
+\small
+\begin{tabular}{|ll|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
-\multicolumn{3}{c|}{CPLEX} &     
-\multicolumn{3}{c|}{Heuristic} &    
-\multicolumn{3}{c|}{Improved Heuristic} &      
-\multicolumn{3}{c|}{Lagrangian Heuristic} \\  
+\multicolumn{2}{c|}{   } &     
+\multicolumn{2}{c|}{Heuristic} &    
+\multicolumn{2}{c|}{Improved Heuristic}  \\  
 \hline
-Istanza        &     &               Zopt &     Gap &      Time &     Zheu &      Time &    GHeu &      Zheu &      Time &    GHeu &      Zheu &      Time &       GHeu  \\   
-paytv-2                     &     &    97746.0 &    0.00 &     0.08 &    98873.0 &     0.03 &   -1.15 &    98228.6 &     0.07 &   -0.49 &    98873.0 &    15.76 &  -1.15 \\ 
-web-2                       &     &    32745.5 &    0.00 &     0.11 &    32450.9 &     0.01 &    0.90 &    31672.5 &     0.02 &    3.28 &    32683.6 &    45.44 &   0.19 \\ 
-\hline
-25Chain-1                   &     &    17000.6 &    0.00 &     0.01 &    17075.0 &     0.02 &   -0.44 &    17075.0 &     0.03 &   -0.44 &    17075.0 &     0.22 &   -0.44 \\ 
-25Graph-1                   &     &    13515.1 &    0.01 &     0.10 &    13583.7 &     0.01 &   -0.51 &    13584.0 &     0.03 &   -0.51 &    13583.7 &     0.10 &   -0.51 \\ 
-25Affinity-1                &     &    18567.3 &    0.00 &     0.26 &    18298.0 &     0.01 &    1.45 &    16641.3 &     0.03 &   10.37 &    18505.1 &     0.34 &    0.34 \\ 
-50Chain-1                   &     &    42449.3 &    0.00 &     0.03 &    42689.1 &     0.02 &   -0.56 &    42759.8 &     0.06 &   -0.73 &    42689.1 &     2.14 &   -0.56 \\ 
-50Graph-1                   &     &    34802.7 &    0.00 &     0.04 &    35346.8 &     0.02 &   -1.56 &    35414.8 &     0.04 &   -1.76 &    35346.8 &     0.73 &   -1.56 \\ 
-50Affinity-1                &     &    40545.1 &    0.01 &     0.97 &    40623.2 &     0.03 &   -0.19 &    39142.3 &     0.06 &    3.46 &    40623.2 &     2.78 &   -0.19 \\ 
-75Chain-1                   &     &    91864.8 &    0.00 &     0.17 &    93223.5 &     0.04 &   -1.48 &    93329.7 &     0.08 &   -1.59 &    93223.5 &    29.00 &   -1.48 \\ 
-75Graph-1                   &     &    93196.4 &    0.01 &     1.29 &    94302.5 &     0.03 &   -1.19 &    94155.4 &     0.09 &   -1.03 &    94302.5 &    29.88 &   -1.19 \\ 
-75Affinity-1                &     &    76076.2 &    0.01 &    62.44 &    76525.3 &     0.05 &   -0.59 &    74865.3 &     0.10 &    1.59 &    76525.3 &    15.90 &   -0.59 \\ 
-100Chain-1                  &     &   137043.9 &    0.01 &   153.73 &   142276.9 &     0.04 &   -3.82 &   142529.0 &     0.13 &   -4.00 &   142276.9 &    39.44 &   -3.82 \\ 
-100Graph-1                  &     &   149527.6 &    0.22 &   600.55 &   151302.6 &     0.06 &   -1.19 &   151559.1 &     0.19 &   -1.36 &   151302.6 &    60.06 &   -1.19 \\ 
-100Affinity-1               &     &   136146.9 &    0.14 &   600.17 &   136426.7 &     0.12 &   -0.20 &   133898.8 &     0.16 &    1.65 &   136426.7 &    71.18 &   -0.20 \\ 
-\hline
-25Chain-2                   &     &    13384.9 &    0.00 &    0.02 &    13346.6 &     0.01 &    0.29 &    13346.6 &     0.03 &    0.29 &    13346.6 &     0.27 &   0.29 \\ 
-25Graph-2                   &     &    17574.2 &    0.00 &    0.01 &    17596.1 &     0.01 &   -0.12 &    17596.1 &     0.03 &   -0.12 &    17596.1 &     0.15 &  -0.12 \\ 
-25Affinity-2                &     &    13371.9 &    0.00 &    0.01 &    13445.1 &     0.01 &   -0.55 &    12595.7 &     0.03 &    5.81 &    13445.1 &     0.28 &  -0.55 \\ 
-50Chain-2                   &     &    46761.2 &    0.01 &    0.14 &    46986.5 &     0.02 &   -0.48 &    47019.7 &     0.06 &   -0.55 &    46986.5 &     1.42 &  -0.48 \\ 
-50Graph-2                   &     &    38844.8 &    0.00 &    0.08 &    39487.7 &     0.02 &   -1.65 &    39488.8 &     0.07 &   -1.66 &    39487.7 &     3.63 &  -1.65 \\ 
-50Affinity-2                &     &    46153.1 &    0.01 &   10.44 &    47976.3 &     0.02 &   -3.95 &    44983.1 &     0.05 &    2.54 &    47976.3 &     2.90 &  -3.95 \\ 
-75Chain-2                   &     &    83638.0 &    0.00 &    0.18 &    84754.3 &     0.03 &   -1.33 &    84769.8 &     0.09 &   -1.35 &    84754.3 &    16.39 &  -1.33 \\ 
-75Graph-2                   &     &    74014.5 &    0.00 &    0.06 &    74264.7 &     0.04 &   -0.34 &    74329.2 &     0.11 &   -0.42 &    74264.7 &    19.47 &  -0.34 \\ 
-75Affinity-2                &     &    84371.2 &    0.01 &  590.22 &    85075.3 &     0.04 &   -0.83 &    83209.2 &     0.11 &    1.38 &    85075.3 &    28.35 &  -0.83 \\ 
-100Chain-2                  &     &   134438.0 &    0.29 &  600.62 &   136437.4 &     0.08 &   -1.49 &   136523.2 &     0.15 &   -1.55 &   136437.4 &    27.02 &  -1.49 \\ 
-100Graph-2                  &     &   134978.3 &    0.30 &  600.49 &   136397.7 &     0.07 &   -1.05 &   136523.2 &     0.15 &   -1.14 &   136397.7 &    59.64 &  -1.05 \\ 
-100Affinity-2               &     &   136477.0 &    0.21 &  600.15 &   137159.8 &     0.07 &   -0.50 &   131805.7 &     0.21 &    3.42 &   137159.8 &    46.57 &  -0.50 \\ 
-\hline
-25Chain-3                   &     &     2855.2 &    0.01 &    2.69 &     2864.0 &     0.04 &   -0.31 &     2826.5 &     0.08 &    1.01 &     2864.0 &     0.25 &   -0.31 \\ 
-25Graph-3                   &     &     1935.7 &    0.01 &   15.60 &     1963.0 &     0.04 &   -1.41 &     1969.2 &     0.07 &   -1.73 &     1963.0 &     0.18 &   -1.41 \\ 
-25Affinity-3                &     &     2002.4 &    0.01 &    1.80 &     1966.5 &     0.04 &    1.79 &     1858.2 &     0.08 &    7.20 &     1994.9 &     0.35 &    0.37 \\ 
-50Chain-3                   &     &     6262.1 &    0.82 &  600.23 &     6300.6 &     0.13 &   -0.61 &     6055.0 &     0.19 &    3.31 &     6300.6 &     2.68 &   -0.61 \\ 
-50Graph-3                   &     &     5909.9 &    1.57 &  600.38 &     5952.4 &     0.12 &   -0.72 &     5920.7 &     0.15 &   -0.18 &     5952.4 &     2.04 &   -0.72 \\ 
-50Affinity-3                &     &     5229.6 &    0.66 &  600.29 &     5210.4 &     0.13 &    0.37 &     4995.3 &     0.18 &    4.48 &     5210.4 &     3.23 &    0.37 \\ 
-75Chain-3                   &     &    12245.5 &    2.25 &  600.43 &    12672.7 &     0.20 &   -3.49 &    12460.8 &     0.30 &   -1.76 &    12672.7 &    24.64 &   -3.49 \\ 
-75Graph-3                   &     &    11395.1 &    0.89 &  600.96 &    11467.9 &     0.36 &   -0.64 &    11250.3 &     0.43 &    1.27 &    11467.9 &     3.60 &   -0.64 \\ 
-75Affinity-3                &     &    14477.1 &    1.43 &  600.09 &    14323.2 &     0.47 &    1.06 &    13989.5 &     0.62 &    3.37 &    14436.8 &     5.42 &    0.28 \\ 
-100Chain-3                  &     &    19520.5 &    1.93 &  600.61 &    19872.7 &     0.34 &   -1.80 &    19587.0 &     0.52 &   -0.34 &    19872.7 &    35.70 &   -1.80 \\ 
-100Graph-3                  &     &    19952.5 &    0.80 &  600.66 &    19834.5 &     0.49 &    0.59 &    19391.4 &     0.59 &    2.81 &    19925.1 &    43.35 &    0.14 \\ 
-100Affinity-3               &     &    25457.7 &    2.64 &  600.31 &    25737.6 &     0.49 &   -1.10 &    24942.8 &     0.56 &    2.02 &    25737.6 &    23.64 &   -1.10 \\ 
-\hline
-25Chain-4                   &     &    19033.8 &    0.00 &      0.04 &    19183.5 &     0.03 &   -0.79 &    19190.7 &     0.06 &   -0.82 &    19183.5 &     0.60 &    -0.79 \\ 
-25Graph-4                   &     &    21261.5 &    0.00 &      0.16 &    21784.2 &     0.04 &   -2.46 &    21802.2 &     0.07 &   -2.54 &    21784.2 &     0.25 &    -2.46 \\ 
-25Affinity-4                &     &    21216.1 &    0.00 &      0.15 &    20638.5 &     0.04 &    2.72 &    19842.9 &     0.09 &    6.47 &    20638.5 &     0.17 &     2.72 \\ 
-50Chain-4                   &     &    61557.3 &    0.01 &      0.98 &    63368.7 &     0.09 &   -2.94 &    63362.2 &     0.14 &   -2.93 &    63368.7 &     4.05 &    -2.94 \\ 
-50Graph-4                   &     &    66307.3 &    0.78 &    600.37 &    67815.8 &     0.10 &   -2.27 &    67836.8 &     0.14 &   -2.31 &    67815.8 &     3.58 &    -2.27 \\ 
-50Affinity-4                &     &    60073.0 &    0.01 &    527.66 &    60005.8 &     0.12 &    0.11 &    58195.6 &     0.18 &    3.13 &    60005.8 &     5.39 &     0.11 \\ 
-75Chain-4                   &     &   111001.1 &    5.32 &    600.85 &   119950.6 &     0.25 &   -8.06 &   120103.4 &     0.33 &   -8.20 &   119950.6 &    34.09 &    -8.06 \\ 
-75Graph-4                   &     &   130536.6 &    1.05 &    600.32 &   132829.3 &     0.29 &   -1.76 &   132521.4 &     0.39 &   -1.52 &   132829.3 &    11.27 &    -1.76 \\ 
-75Affinity-4                &     &   125032.0 &    0.95 &    600.11 &   126928.4 &     0.32 &   -1.52 &   123784.7 &     0.38 &    1.00 &   126928.4 &    13.10 &    -1.52 \\ 
-100Chain-4                  &     &        0.0 &  100.00 &    600.70 &   231268.0 &     0.36 &    -inf &   230929.5 &     0.46 &    -inf &   231268.0 &   150.92 &     -inf \\ 
-100Graph-4                  &     &   247404.2 &    0.66 &    600.40 &   249157.3 &     0.38 &   -0.71 &   249181.5 &     0.49 &   -0.72 &   249157.3 &    25.73 &    -0.71 \\ 
-100Affinity-4               &     &   237768.5 &    0.83 &    600.13 &   238076.4 &     0.46 &   -0.13 &   236102.5 &     0.57 &    0.70 &   238076.4 &    25.14 &    -0.13 \\ 
-
+Istanza        &     &                   Zheu &      Time &       Zheu &      Time   \\   
+instance\_06\_01            &     &    22686.6  &      0.03  &      22686.6  &     0.05  \\ 
+instance\_06\_02            &     &    21740.6  &      0.03  &      21740.6  &     0.05  \\ 
+instance\_06\_03            &     &    21159.2  &      0.03  &      21159.2  &     0.06  \\ 
+instance\_06\_04            &     &    15175.4  &      0.04  &      15175.4  &     0.05  \\ 
+instance\_06\_05            &     &    16450.1  &      0.06  &      16450.1  &     0.06  \\ 
+instance\_20\_01            &     &   123352.1  &      0.10  &     123352.1  &     0.25  \\ 
+instance\_20\_02            &     &   135481.2  &      0.10  &     135481.2  &     0.22  \\ 
+instance\_20\_03            &     &   125447.2  &      0.14  &     125447.2  &     0.22  \\ 
+instance\_20\_04            &     &   120783.4  &      0.20  &     120783.4  &     0.26  \\ 
+instance\_20\_05            &     &   119839.7  &      0.28  &     119839.7  &     0.33  \\ 
+instance\_40\_01            &     &   267873.5  &      0.10  &     267873.5  &     0.31  \\ 
+instance\_40\_02            &     &   279010.9  &      0.14  &     279010.9  &     0.26  \\ 
+instance\_40\_03            &     &   268060.4  &      0.06  &     268060.4  &     0.27  \\ 
+instance\_40\_04            &     &   247839.4  &      0.15  &     247839.4  &     0.46  \\ 
+instance\_40\_05            &     &   259333.8  &      0.11  &     259333.8  &     0.31  \\ 
+instance\_100\_01            &     &  2050139.1  &      1.15  &    2050139.1  &     1.78  \\ 
+instance\_100\_02            &     &  2082565.4  &      1.05  &    2082565.4  &     1.52  \\ 
+instance\_100\_03            &     &  2086918.6  &      0.99  &    2086918.6  &     1.69  \\ 
+instance\_100\_04            &     &  2148900.6  &      0.87  &    2148900.6  &     1.83  \\ 
+instance\_100\_05            &     &  2015801.2  &      0.99  &    2015801.2  &     1.99  \\ 
+instance\_f\_01            &     &   120411.2  &      0.04  &     120411.2  &     0.11  \\ 
+instance\_f\_02            &     &   127857.5  &      0.04  &     127857.5  &     0.13  \\ 
+instance\_f\_03            &     &   124444.8  &      0.04  &     124444.8  &     0.11  \\ 
+instance\_f\_04            &     &   127565.4  &      0.03  &     127565.4  &     0.11  \\ 
+instance\_f\_05            &     &   121055.0  &      0.04  &     121055.0  &     0.10  \\ 
 \hline
 \end{tabular}
-}
+%}
 \end{table}
 
 \section{Confronto funzioni obbiettivo}\label{confronto:fb}
@@ -2312,10 +2283,6 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
     \caption{Valore massimo dell'incertezza per le diverse funzioni obbiettivo}
     \label{fig:umax}
 \end{figure}
-
-
-
-
 
 
 \chapter{Conclusioni}
