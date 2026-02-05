@@ -20,7 +20,7 @@
 
 \school{\unibo}
 \programme{Corso di Laurea Magistrale in Ingegneria e Scienze Informatiche}
-\title{Fancy Title}
+\title{Modelli per l'analisi dello sprint planning di Scrum}
 \author{Candidate Name}
 \date{\today}
 \subject{Supervisor's course name}
@@ -58,18 +58,17 @@ Optional. Max a few lines.
 \mainmatter
 
 %----------------------------------------------------------------------------------------
-\chapter{Introduction}
+\chapter{Introduzione}
 \label{chap:introduction}
 %----------------------------------------------------------------------------------------
 
-Tradizionali approcci di ingegneria del software mostrano limiti crescenti nel rispondere alle esigenze dinamiche del business moderno, e numerosi studi empirici suggeriscono che l’agilità rappresenta una delle soluzioni più promettenti per superarli \cite{AWSJ03,TD08}. I metodi Agile, tra cui {\em Scrum} ed {\em eXtreme Programming} (XP), si fondano sui dodici principi del Manifesto Agile \cite{Manifesto} e sono ormai adottati da un numero sempre maggiore di aziende allo scopo di rendere lo sviluppo software più rapido, adattivo e focalizzato sul valore. In particolare, il metodo Scrum è stato ampiamente discusso in letteratura \cite{SC95}, che ne descrive le idee fondamentali e il ciclo di vita operativo.
+I tradizionali approcci di ingegneria del software mostrano limiti crescenti nel rispondere alle esigenze dinamiche del business moderno, e numerosi studi empirici suggeriscono che l'agilit\`a rappresenta una delle soluzioni pi\`u promettenti per superarli~\cite{AWSJ03,TD08}. I metodi Agile, tra cui \emph{Scrum} ed \emph{eXtreme Programming} (XP), si fondano sui dodici principi del Manifesto Agile~\cite{Manifesto} e sono ormai adottati da un numero sempre maggiore di aziende per rendere lo sviluppo software pi\`u rapido, adattivo e focalizzato sul valore. In particolare, il metodo Scrum \`e stato ampiamente discusso in letteratura~\cite{SC95}, che ne descrive le idee fondamentali e il ciclo di vita operativo.
 
-Un elemento comune ai metodi Agile è la progettazione e implementazione incrementale, in cui il software è suddiviso in funzionalità specifiche ({\em user stories}) e, ad ogni iterazione ({\em sprint}), il team è chiamato a fornire il set di user stories che massimizza il valore per l’utente, soddisfacendo al tempo stesso vincoli di durata, dipendenza e relazioni tra le storie. Secondo il principio della {\em team awareness}, la pianificazione dello sprint si basa sulla condivisione e la mediazione delle stime fornite dai membri del team riguardo complessità delle storie, utilità, rischio di mancata consegna e dipendenze. Avanzare storie ad alto valore può anticipare risultati significativi per l’utente, rafforzando la consapevolezza del team; analogamente, anticipare storie critiche consente di limitare rischi di impatto tardivo, bilanciando però una maggiore probabilità di ritardi nelle fasi iniziali. Il contributo di \cite{C04} offre indicazioni pratiche per valutare complessità e valore delle user stories.
+Un elemento comune ai metodi Agile \`e la progettazione e implementazione incrementale, in cui il software \`e suddiviso in funzionalit\`a specifiche (\emph{user stories}) e, ad ogni iterazione (\emph{sprint}), il team \`e chiamato a fornire il set di \emph{user stories} che massimizza il valore per l'utente, soddisfacendo al tempo stesso vincoli di durata, dipendenze e relazioni tra le storie. Secondo il principio della \emph{team awareness}, la pianificazione dello sprint si basa sulla condivisione e la mediazione delle stime fornite dai membri del team riguardo alla complessit\`a delle storie, utilit\`a, rischio di mancata consegna e dipendenze. Avanzare storie ad alto valore pu\`o anticipare risultati significativi per l'utente, rafforzando la consapevolezza del team; analogamente, anticipare storie critiche consente di limitare rischi di impatto tardivo, bilanciando per\`o una maggiore probabilit\`a di ritardi nelle fasi iniziali. Il contributo di~\cite{C04} offre indicazioni pratiche per valutare complessit\`a e valore delle \emph{user stories}.
 
-Una pianificazione di sprint efficace è unanimemente riconosciuta come fattore chiave per il successo di un progetto agile \cite{cohn2005agile}. L’efficacia del piano dipende sia dalla precisione delle stime (aspetto legato all’esperienza del team), sia dalla capacità di considerare correttamente variabili e vincoli progettuali: quest’ultimo obiettivo si traduce in un problema di ottimizzazione la cui complessità cresce con la dimensione del progetto, e il cui mancato raggiungimento può generare inefficienze, extracosti e ritardi.
+Una pianificazione di sprint efficace \`e unanimemente riconosciuta come fattore chiave per il successo di un progetto agile~\cite{cohn2005agile}. L'efficacia del piano dipende sia dalla precisione delle stime (aspetto legato all'esperienza del team), sia dalla capacit\`a di considerare correttamente variabili e vincoli progettuali: quest'ultimo obiettivo si traduce in un problema di ottimizzazione la cui complessit\`a cresce con la dimensione del progetto, e il cui mancato raggiungimento pu\`o generare inefficienze, extracosti e ritardi.
 
-Questa tesi prende come riferimento il lavoro \cite{BOSCHETTI2014116}, su cui vengono sviluppate e approfondite nuove tecniche di ottimizzazione e strumenti matematici per il supporto alla sprint planning in ambiente Agile.
-
+Questa tesi prende come riferimento il lavoro~\cite{BOSCHETTI2014116}, dal quale si parte per valutare l'efficacia dei modelli proposti e analizzare come il variare delle propriet\`a dei progetti influenzi le prestazioni degli algoritmi. Successivamente, si introducono nuove funzioni obiettivo da integrare nei modelli, al fine di analizzare il loro impatto sulla qualit\`a delle soluzioni ottenute. Infine, si propongono nuovi modelli estensibili per migliorare ulteriormente la qualit\`a delle soluzioni e rendere pi\`u flessibile la parametrizzazione degli sprint e delle \emph{user stories}.
 
 \chapter{Descrizione del problema}
 
@@ -120,7 +119,7 @@ Per quanto riguarda la gestione del rischio, nella formulazione del vincolo di c
 È importante sottolineare che il Problema di Assegnazione Generalizzato appartiene alla classe dei problemi NP-hard, il che significa che trovare una soluzione ottimale richiede tempi computazionali che crescono esponenzialmente con le dimensioni del problema, rendendo necessario l'impiego di algoritmi euristici o metaeuristici per progetti di scala reale.
 
 
-\chapter{stato dell'arte}
+\chapter{Stato dell'arte}
 
 I principi Agile hanno registrato una diffusione crescente nell'ultimo decennio, stimolando lo sviluppo di numerosi approcci metodologici proposti tanto dai professionisti quanto dalla comunità di ricerca \cite{1201204}. Una revisione sistematica presentata in letteratura \cite{DYBA2008833} confronta diversi metodi Agile analizzandone sia le caratteristiche organizzative che quelle tecniche, evidenziando in particolare la crescente adozione delle pratiche Scrum e XP nei contesti industriali. L'approccio Scrum è approfondito ulteriormente in \cite{10.1007/978-1-4471-0947-1_11}, dove vengono descritti i fondamenti metodologici e il ciclo di vita caratteristico, contribuendo così alla comprensione dei meccanismi e delle peculiarità che contraddistinguono questo framework.
 
@@ -757,7 +756,7 @@ I risultati computazionali di confronto sono riportati nella Sezione~\ref{confro
 
 \chapter{Risultati ottenuti}
 
-\section{dati utilizzati}
+\section{Dati utilizzati}
 
 Gli algoritmi considerati in questo lavoro sono stati implementati in C++ all'interno di Microsoft Visual Studio 2024.
 
@@ -1153,7 +1152,7 @@ Per valutare l'idoneità delle soluzioni nel contesto della pianificazione Agile
 \subsection{Interpretazione congiunta dei KPI}
 
 I KPI computazionali e i KPI di qualità della pianificazione forniscono prospettive complementari: i primi valutano l'efficienza matematica dell'ottimizzazione, mentre i secondi misurano la traducibilità pratica delle soluzioni in piani di sprint realistici e bilanciati. Una soluzione ideale dovrebbe eccellere in entrambe le dimensioni, presentando gap di ottimalità ridotti (qualità computazionale) e distribuzione equilibrata di rischio, incertezza e valore (qualità gestionale). L'analisi comparativa delle funzioni obiettivo nella Sezione~\ref{confronto:fb} utilizza sistematicamente questi indicatori per identificare i trade-off tra le diverse strategie di pianificazione.
-\section{risultati computazionali}
+\section{Risultati computazionali}
 
 Nella Tabella~\ref{Tab.2} sono riportati i risultati ottenuti dall'esecuzione degli algoritmi proposti  da \cite{BOSCHETTI2014116} con l'aggiornamento del codice per supportare l'attuale versione della libreria CPLEX.
 
@@ -1228,7 +1227,7 @@ web-2                        &     &    32745.5 &   0.00 &       0 &       1 &  
 \end{table}
 
 
-\section{variazione dei parametri}
+\section{Variazione dei parametri}
 
 All'interno del progetto e' stato condotto uno studio per valutare l'impatto di alcuni parametri sul progetto. In particolare, sono stati analizzati i seguenti aspetti:
 \begin{itemize}
@@ -1445,7 +1444,7 @@ web -2                        &     &     31717.5 &    0.00 &    0.24 &    31365
 
 
  
-\section{metodo aggiornato}
+\section{Metodo aggiornato}
 
 Nella tabella \ref{Tab.6} sono riportati i confronti tra il metodo euristico originale e la versione aggiornata che incorpora le modifiche descritte nella sezione \ref{sec:newheu}. I risulati mostrano che la versione aggiornata dell'euristica riporta la stessa soluzione di quella originale ma con un aumento dei tempi di esecuzione.
 Questo sta ad indicare che le modifiche apportate ai tagli non sono riusciti a portare il miglioramento sperato, anzi a portato ad un peggioramento dei tempi di calcolo senza alcun beneficio in termini di qualità della soluzione.

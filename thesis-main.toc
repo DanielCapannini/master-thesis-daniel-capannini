@@ -1,8 +1,8 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Abstract}{iii}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Descrizione del problema}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}stato dell'arte}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Stato dell'arte}{9}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Formulazione matematica}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Procedure di riduzione}{18}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Modifica delle capacità degli sprint}{19}{subsection.4.1.1}%
@@ -28,7 +28,7 @@
 \contentsline {paragraph}{Varianti con modificatori (~\eqref {Eq2.P1},~\eqref {Eq2.P3},~\eqref {Eq2.P5}).}{39}{section*.13}%
 \contentsline {subsection}{\numberline {5.4.4}Confronto sperimentale}{39}{subsection.5.4.4}%
 \contentsline {chapter}{\numberline {6}Risultati ottenuti}{41}{chapter.6}%
-\contentsline {section}{\numberline {6.1}dati utilizzati}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.1}Dati utilizzati}{41}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{42}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Generazione di nuove istanze di test}{45}{subsection.6.1.2}%
 \contentsline {paragraph}{Algoritmo di generazione.}{46}{section*.14}%
@@ -47,11 +47,11 @@
 \contentsline {paragraph}{Distribuzione del rischio e dell'incertezza.}{51}{section*.22}%
 \contentsline {paragraph}{Progressione del valore consegnato.}{52}{section*.23}%
 \contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{52}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}risultati computazionali}{53}{section.6.3}%
-\contentsline {section}{\numberline {6.4}variazione dei parametri}{55}{section.6.4}%
+\contentsline {section}{\numberline {6.3}Risultati computazionali}{53}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Variazione dei parametri}{55}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{55}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{57}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}metodo aggiornato}{60}{section.6.5}%
+\contentsline {section}{\numberline {6.5}Metodo aggiornato}{60}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Confronto funzioni obbiettivo}{61}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}funzuone obbiettovo \eqref {Eq2.P1}}{63}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{66}{subsection.6.6.2}%
