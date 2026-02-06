@@ -64,11 +64,17 @@ Optional. Max a few lines.
 
 I tradizionali approcci di ingegneria del software mostrano limiti crescenti nel rispondere alle esigenze dinamiche del business moderno, e numerosi studi empirici suggeriscono che l'agilit\`a rappresenta una delle soluzioni pi\`u promettenti per superarli~\cite{AWSJ03,TD08}. I metodi Agile, tra cui \emph{Scrum} ed \emph{eXtreme Programming} (XP), si fondano sui dodici principi del Manifesto Agile~\cite{Manifesto} e sono ormai adottati da un numero sempre maggiore di aziende per rendere lo sviluppo software pi\`u rapido, adattivo e focalizzato sul valore. In particolare, il metodo Scrum \`e stato ampiamente discusso in letteratura~\cite{SC95}, che ne descrive le idee fondamentali e il ciclo di vita operativo.
 
+\vspace{1em}
+
 Un elemento comune ai metodi Agile \`e la progettazione e implementazione incrementale, in cui il software \`e suddiviso in funzionalit\`a specifiche (\emph{user stories}) e, ad ogni iterazione (\emph{sprint}), il team \`e chiamato a fornire il set di \emph{user stories} che massimizza il valore per l'utente, soddisfacendo al tempo stesso vincoli di durata, dipendenze e relazioni tra le storie. Secondo il principio della \emph{team awareness}, la pianificazione dello sprint si basa sulla condivisione e la mediazione delle stime fornite dai membri del team riguardo alla complessit\`a delle storie, utilit\`a, rischio di mancata consegna e dipendenze. Avanzare storie ad alto valore pu\`o anticipare risultati significativi per l'utente, rafforzando la consapevolezza del team; analogamente, anticipare storie critiche consente di limitare rischi di impatto tardivo, bilanciando per\`o una maggiore probabilit\`a di ritardi nelle fasi iniziali. Il contributo di~\cite{C04} offre indicazioni pratiche per valutare complessit\`a e valore delle \emph{user stories}.
+
+\vspace{1em}
 
 Una pianificazione di sprint efficace \`e unanimemente riconosciuta come fattore chiave per il successo di un progetto agile~\cite{cohn2005agile}. L'efficacia del piano dipende sia dalla precisione delle stime (aspetto legato all'esperienza del team), sia dalla capacit\`a di considerare correttamente variabili e vincoli progettuali: quest'ultimo obiettivo si traduce in un problema di ottimizzazione la cui complessit\`a cresce con la dimensione del progetto, e il cui mancato raggiungimento pu\`o generare inefficienze, extracosti e ritardi.
 
-Questa tesi prende come riferimento il lavoro~\cite{BOSCHETTI2014116}, dal quale si parte per valutare l'efficacia dei modelli proposti e analizzare come il variare delle propriet\`a dei progetti influenzi le prestazioni degli algoritmi. Successivamente, si introducono nuove funzioni obiettivo da integrare nei modelli, al fine di analizzare il loro impatto sulla qualit\`a delle soluzioni ottenute. Infine, si propongono nuovi modelli estensibili per migliorare ulteriormente la qualit\`a delle soluzioni e rendere pi\`u flessibile la parametrizzazione degli sprint e delle \emph{user stories}.
+\vspace{1em}
+
+Questa tesi prende come riferimento il lavoro~\cite{BOSCHETTI2014116}, il quale proponeva dei modelli euristici per la pianificazione degli sprint, dal quale si parte per valutare l'efficacia dei modelli proposti e analizzare come il variare delle propriet\`a dei progetti influenzi le prestazioni degli algoritmi. Successivamente, si introducono nuove funzioni obiettivo da integrare nei modelli, al fine di analizzare il loro impatto sulla qualit\`a delle soluzioni ottenute. Infine, si propongono nuovi modelli per migliorare ulteriormente la qualit\`a delle soluzioni e rendere pi\`u flessibile la parametrizzazione degli sprint e delle \emph{user stories}.
 
 \chapter{Descrizione del problema}
 
@@ -100,15 +106,11 @@ Il problema della pianificazione dello sprint può essere descritto come dato un
 
 \vspace{1em}
 
-Il problema della pianificazione dello sprint può essere formulato come un Generalized Assignment Problem (GAP) con vincoli laterali. Questo tipo di problema consiste nell'assegnare un insieme di compiti a un insieme di risorse con l'obiettivo di ottimizzare una funzione (nel nostro caso, massimizzare l'utilità totale), rispettando i limiti di capacità di ciascuna risorsa e soddisfacendo vincoli aggiuntivi che impongono condizioni specifiche sulle assegnazioni.
+Il problema della pianificazione dello sprint può essere formulato come un Generalized Assignment Problem (GAP) con vincoli laterali. Questo tipo di problema consiste nell'assegnare un insieme di compiti a un insieme di risorse con l'obiettivo di ottimizzare una funzione (nel nostro caso, saranno varie per poter confrontare i loro risultati), rispettando i limiti di capacità di ciascuna risorsa e soddisfacendo vincoli aggiuntivi che impongono condizioni specifiche sulle assegnazioni.
 
 \vspace{1em}
 
 Nel contesto della pianificazione agile, gli sprint rappresentano le risorse (o zaini), mentre le user story costituiscono i compiti (o elementi) da assegnare. Ogni user story è caratterizzata da due attributi fondamentali: gli story point, che misurano il peso dell'elemento in termini di sforzo e complessità richiesti, e l'utilità, che ne rappresenta il valore per il progetto e per l'utente finale. La capacità dello sprint corrisponde al limite di capacità della risorsa ed è determinata dal numero massimo di story point che il team può completare, calcolato in base alla durata prevista dello sprint e alla velocità di sviluppo del team stesso. Questa capacità rappresenta quindi il vincolo principale che regola quante e quali user story possono essere assegnate a ciascun sprint.
-
-\vspace{1em}
-
-La funzione obiettivo da massimizzare è l'utilità cumulativa dell'intero progetto. L'utilità di ogni singola user story viene incrementata se alcune storie affini sono incluse nello stesso sprint, poiché questo aumenta il valore percepito dall'utente, e/o se la storia è classificata come critica, riconoscendone l'importanza strategica per il successo del progetto.
 
 \vspace{1em}
 
