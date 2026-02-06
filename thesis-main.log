@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  6 FEB 2026 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  6 FEB 2026 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -591,48 +591,274 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box67
 \@float@everytoks=\toks47
 \@floatcapt=\box68
-) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+) (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+ (c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count333
+ (c:/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count334
+\c@listtotal=\count335
+\c@listcount=\count336
+\c@liststart=\count337
+\c@liststop=\count338
+\c@citecount=\count339
+\c@citetotal=\count340
+\c@multicitecount=\count341
+\c@multicitetotal=\count342
+\c@instcount=\count343
+\c@maxnames=\count344
+\c@minnames=\count345
+\c@maxitems=\count346
+\c@minitems=\count347
+\c@citecounter=\count348
+\c@maxcitecounter=\count349
+\c@savedcitecounter=\count350
+\c@uniquelist=\count351
+\c@uniquename=\count352
+\c@refsection=\count353
+\c@refsegment=\count354
+\c@maxextratitle=\count355
+\c@maxextratitleyear=\count356
+\c@maxextraname=\count357
+\c@maxextradate=\count358
+\c@maxextraalpha=\count359
+\c@abbrvpenalty=\count360
+\c@highnamepenalty=\count361
+\c@lownamepenalty=\count362
+\c@maxparens=\count363
+\c@parenlevel=\count364
+\blx@tempcnta=\count365
+\blx@tempcntb=\count366
+\blx@tempcntc=\count367
+\c@blx@maxsection=\count368
+\blx@maxsegment@0=\count369
+\blx@notetype=\count370
+\blx@parenlevel@text=\count371
+\blx@parenlevel@foot=\count372
+\blx@sectionciteorder@0=\count373
+\blx@sectionciteorderinternal@0=\count374
+\blx@entrysetcounter=\count375
+\blx@biblioinstance=\count376
+\labelnumberwidth=\skip70
+\labelalphawidth=\skip71
+\biblabelsep=\skip72
+\bibitemsep=\skip73
+\bibnamesep=\skip74
+\bibinitsep=\skip75
+\bibparsep=\skip76
+\bibhang=\skip77
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language88
+\c@mincomprange=\count377
+\c@maxcomprange=\count378
+\c@mincompwidth=\count379
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count380
+\c@savedafterword=\count381
+\c@annotator=\count382
+\c@savedannotator=\count383
+\c@author=\count384
+\c@savedauthor=\count385
+\c@bookauthor=\count386
+\c@savedbookauthor=\count387
+\c@commentator=\count388
+\c@savedcommentator=\count389
+\c@editor=\count390
+\c@savededitor=\count391
+\c@editora=\count392
+\c@savededitora=\count393
+\c@editorb=\count394
+\c@savededitorb=\count395
+\c@editorc=\count396
+\c@savededitorc=\count397
+\c@foreword=\count398
+\c@savedforeword=\count399
+\c@holder=\count400
+\c@savedholder=\count401
+\c@introduction=\count402
+\c@savedintroduction=\count403
+\c@namea=\count404
+\c@savednamea=\count405
+\c@nameb=\count406
+\c@savednameb=\count407
+\c@namec=\count408
+\c@savednamec=\count409
+\c@translator=\count410
+\c@savedtranslator=\count411
+\c@shortauthor=\count412
+\c@savedshortauthor=\count413
+\c@shorteditor=\count414
+\c@savedshorteditor=\count415
+\c@labelname=\count416
+\c@savedlabelname=\count417
+\c@institution=\count418
+\c@savedinstitution=\count419
+\c@lista=\count420
+\c@savedlista=\count421
+\c@listb=\count422
+\c@savedlistb=\count423
+\c@listc=\count424
+\c@savedlistc=\count425
+\c@listd=\count426
+\c@savedlistd=\count427
+\c@liste=\count428
+\c@savedliste=\count429
+\c@listf=\count430
+\c@savedlistf=\count431
+\c@location=\count432
+\c@savedlocation=\count433
+\c@organization=\count434
+\c@savedorganization=\count435
+\c@origlocation=\count436
+\c@savedoriglocation=\count437
+\c@origpublisher=\count438
+\c@savedorigpublisher=\count439
+\c@publisher=\count440
+\c@savedpublisher=\count441
+\c@language=\count442
+\c@savedlanguage=\count443
+\c@origlanguage=\count444
+\c@savedoriglanguage=\count445
+\c@pageref=\count446
+\c@savedpageref=\count447
+\shorthandwidth=\skip78
+\shortjournalwidth=\skip79
+\shortserieswidth=\skip80
+\shorttitlewidth=\skip81
+\shortauthorwidth=\skip82
+\shorteditorwidth=\skip83
+\locallabelnumberwidth=\skip84
+\locallabelalphawidth=\skip85
+\localshorthandwidth=\skip86
+\localshortjournalwidth=\skip87
+\localshortserieswidth=\skip88
+\localshorttitlewidth=\skip89
+\localshortauthorwidth=\skip90
+\localshorteditorwidth=\skip91
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count448
+\c@textcitetotal=\count449
+\c@textcitemaxnames=\count450
+\c@biburlbigbreakpenalty=\count451
+\c@biburlbreakpenalty=\count452
+\c@biburlnumpenalty=\count453
+\c@biburlucpenalty=\count454
+\c@biburllcpenalty=\count455
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count456
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count457
+\c@bbx:relatedtotal=\count458
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+ (c:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-06-30 L3 programming layer (loader) 
+ (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count333
+\l__color_backend_stack_int=\count459
 \l__pdf_internal_box=\box69
-) (./thesis-main.aux)
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2023-06-30 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (c:/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (c:/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
+
+Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
+(biblatex)                Loading 'csquotes' recommended.
+
+\@quotelevel=\count460
+\@quotereset=\count461
+No file thesis-main.aux.
 \openout1 = `thesis-main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-Package hyperref Info: Link coloring OFF on input line 40.
- (./thesis-main.out) (./thesis-main.out)
-\@outlinefile=\write4
-\openout4 = `thesis-main.out'.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+Package hyperref Info: Link coloring OFF on input line 47.
+\@outlinefile=\write5
+\openout5 = `thesis-main.out'.
 
- (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count334
+\scratchcounter=\count462
 \scratchdimen=\dimen291
 \scratchbox=\box70
-\nofMPsegments=\count335
-\nofMParguments=\count336
+\nofMPsegments=\count463
+\nofMParguments=\count464
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count337
+\MPscratchCnt=\count465
 \MPscratchDim=\dimen292
-\MPnumerator=\count338
-\makeMPintoPDFobject=\count339
+\MPnumerator=\count466
+\makeMPintoPDFobject=\count467
 \everyMPtoPDFconversion=\toks49
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -674,7 +900,34 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count340
+\c@lstlisting=\count468
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(c:/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `thesis-main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'thesis-main.bbl' found.
+ (./thesis-main.bbl)
+Runaway argument?
+{Most agile methods divide a project into sprints (iterations), and i\ETC.
+c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex:47: File ended while scanning use of \field.
+<inserted text> 
+                \par 
+l.47 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+Package biblatex Info: Reference section=0 on input line 47.
+Package biblatex Info: Reference segment=0 on input line 47.
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -719,812 +972,196 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 ] [5] [6
 
-] (./thesis-main.toc
-Package cleveref Info: loaded `english' language definitions on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
- (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
- (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Package cleveref Info: loaded `english' language definitions on input line 44.
- [7])
-\tf@toc=\write5
-\openout5 = `thesis-main.toc'.
+]
+No file thesis-main.toc.
+\tf@toc=\write6
+\openout6 = `thesis-main.toc'.
 
-Package cleveref Info: loaded `english' language definitions on input line 54.
-Package cleveref Info: loaded `english' language definitions on input line 54.
- [8] (./thesis-main.lof
-Package cleveref Info: loaded `english' language definitions on input line 1.
-)
-\tf@lof=\write6
-\openout6 = `thesis-main.lof'.
-
-Package cleveref Info: loaded `english' language definitions on input line 55.
- [9
+Package cleveref Info: loaded `english' language definitions on input line 61.
+[7]
+Package cleveref Info: loaded `english' language definitions on input line 61.
+Package cleveref Info: loaded `english' language definitions on input line 61.
+ [8
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 55.
-Package cleveref Info: loaded `english' language definitions on input line 55.
+No file thesis-main.lof.
+\tf@lof=\write7
+\openout7 = `thesis-main.lof'.
+
+Package cleveref Info: loaded `english' language definitions on input line 62.
+[9]
+Package cleveref Info: loaded `english' language definitions on input line 62.
+Package cleveref Info: loaded `english' language definitions on input line 62.
  [10
 
 ] (./thesis-main.lol)
-\tf@lol=\write7
-\openout7 = `thesis-main.lol'.
+\tf@lol=\write8
+\openout8 = `thesis-main.lol'.
 
-Package cleveref Info: loaded `english' language definitions on input line 58.
+Package cleveref Info: loaded `english' language definitions on input line 65.
  [11]
-Package cleveref Info: loaded `english' language definitions on input line 58.
-Package cleveref Info: loaded `english' language definitions on input line 58.
+Package cleveref Info: loaded `english' language definitions on input line 65.
+Package cleveref Info: loaded `english' language definitions on input line 65.
  [12
 
 ]
 Chapter 1.
-Package cleveref Info: loaded `english' language definitions on input line 72.
+
+LaTeX Warning: Citation 'SC95' on page 1 undefined on input line 73.
+
+Package cleveref Info: loaded `english' language definitions on input line 78.
 [1
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 79.
+Package cleveref Info: loaded `english' language definitions on input line 87.
  [2]
 Chapter 2.
-Package cleveref Info: loaded `english' language definitions on input line 86.
+Package cleveref Info: loaded `english' language definitions on input line 94.
 [3
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 94.
+Package cleveref Info: loaded `english' language definitions on input line 102.
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 102.
+Package cleveref Info: loaded `english' language definitions on input line 110.
  [5]
-Package cleveref Info: loaded `english' language definitions on input line 114.
+Package cleveref Info: loaded `english' language definitions on input line 122.
  [6]
-Overfull \hbox (19.69038pt too wide) in paragraph at lines 121--122
+Overfull \hbox (19.69038pt too wide) in paragraph at lines 129--130
 \OT1/cmr/m/n/12 men-sioni del prob-lema, ren-dendo nec-es-sario l'impiego di al-go-ritmi eu-ris-tici o metaeuris-
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 124.
+Package cleveref Info: loaded `english' language definitions on input line 132.
 [7]
-Package cleveref Info: loaded `english' language definitions on input line 124.
+Package cleveref Info: loaded `english' language definitions on input line 132.
  [8
 
 ]
 Chapter 3.
-Package cleveref Info: loaded `english' language definitions on input line 131.
+
+LaTeX Warning: Citation '10.1007/978-1-4471-0947-1_11' on page 9 undefined on input line 134.
+
+
+LaTeX Warning: Citation 'ronkko2009integrating' on page 9 undefined on input line 138.
+
+
+LaTeX Warning: Citation 'park2004new' on page 9 undefined on input line 138.
+
+
+LaTeX Warning: Citation 'khurum2013software' on page 9 undefined on input line 138.
+
+
+Overfull \hbox (34.52911pt too wide) in paragraph at lines 138--139
+\OT1/cmr/m/n/12 testo pi^^Ru am-pio dell'ingegneria del soft-ware basata sul val-ore, in []
+ []
+
+
+Overfull \hbox (18.75233pt too wide) in paragraph at lines 138--139
+\OT1/cmr/m/n/12 tec-no-logici e di mer-cato. Una sin-tesi pi^^Ru com-pleta ^^Re for-nita da [],
+ []
+
+Package cleveref Info: loaded `english' language definitions on input line 139.
 [9]
+
+LaTeX Warning: Citation 'KOLISCH2001249' on page 10 undefined on input line 142.
+
+
+LaTeX Warning: Citation 'PLATJE1994100' on page 10 undefined on input line 142.
+
+
+LaTeX Warning: Citation 'herroelen1999classification' on page 10 undefined on input line 146.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 143.
+Package cleveref Info: loaded `english' language definitions on input line 147.
  [10]
-Package cleveref Info: loaded `english' language definitions on input line 156.
- [11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 164.
- [12]
-Underfull \vbox (badness 3646) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 172.
- [13]
-Package cleveref Info: loaded `english' language definitions on input line 174.
- [14]
-Chapter 4.
-Package cleveref Info: loaded `english' language definitions on input line 189.
-[15
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 213.
- [16]
-Overfull \hbox (4.15443pt too wide) in paragraph at lines 223--224
-\OT1/cmr/m/n/12 quando sto-rie cor-re-late ven-gono svilup-pate con-giun-ta-mente nello stesso sprint,
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 229.
-[17]
-Package cleveref Info: loaded `english' language definitions on input line 251.
-Package cleveref Info: loaded `english' language definitions on input line 251.
- [18]
-Package cleveref Info: loaded `english' language definitions on input line 339.
-Package cleveref Info: loaded `english' language definitions on input line 339.
- [19]
-Package cleveref Info: loaded `english' language definitions on input line 339.
-Package cleveref Info: loaded `english' language definitions on input line 339.
- [20
-
-]
-Chapter 5.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 360.
- [21]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 367.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 368.
- (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
-File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-Package cleveref Info: loaded `english' language definitions on input line 381.
-Package cleveref Info: loaded `english' language definitions on input line 381.
- [22]
-Overfull \hbox (14.81416pt too wide) in paragraph at lines 381--381
-[]\OT1/cmr/bx/n/14.4 QuickGreedyHeuristic: ver-sione ve-loce basata su knap-
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 405.
-Package cleveref Info: loaded `english' language definitions on input line 405.
-[23]
-Underfull \vbox (badness 1596) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 455.
-Package cleveref Info: loaded `english' language definitions on input line 455.
- [24]
-Overfull \vbox (1.16217pt too high) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 455.
-Package cleveref Info: loaded `english' language definitions on input line 455.
- [25]
-Package cleveref Info: loaded `english' language definitions on input line 466.
-Package cleveref Info: loaded `english' language definitions on input line 466.
- [26]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 510.
-Package cleveref Info: loaded `english' language definitions on input line 510.
- [27]
-Overfull \vbox (18.03972pt too high) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 510.
-Package cleveref Info: loaded `english' language definitions on input line 510.
- [28]
-
-LaTeX Warning: Citation `B93' on page 29 undefined on input line 515.
+LaTeX Warning: Citation 'SZOKE2011574' on page 11 undefined on input line 154.
 
 
-LaTeX Warning: Citation `BM09' on page 29 undefined on input line 515.
+LaTeX Warning: Citation 'VANVALKENHOEF20111227' on page 11 undefined on input line 154.
 
 
-LaTeX Warning: Citation `BMR09' on page 29 undefined on input line 515.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 543.
-Package cleveref Info: loaded `english' language definitions on input line 543.
- [29]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 565.
-Package cleveref Info: loaded `english' language definitions on input line 565.
- [30]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 584.
-Package cleveref Info: loaded `english' language definitions on input line 584.
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 619.
-Package cleveref Info: loaded `english' language definitions on input line 619.
- [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 623.
-Package cleveref Info: loaded `english' language definitions on input line 623.
- [33]
-Package cleveref Info: loaded `english' language definitions on input line 634.
-Package cleveref Info: loaded `english' language definitions on input line 634.
- [34]
-Overfull \hbox (3.15067pt too wide) in paragraph at lines 660--661
-[]\OT1/cmr/m/n/12 La fun-zione \OT1/cmtt/m/n/12 OR[]AND[]InequalitiesNew \OT1/cmr/m/n/12 im-ple-menta cor-ret-ta-mente la gen-er-azione
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 688.
-Package cleveref Info: loaded `english' language definitions on input line 688.
-[35]
-Package cleveref Info: loaded `english' language definitions on input line 692.
-Package cleveref Info: loaded `english' language definitions on input line 692.
- [36]
-Package cleveref Info: loaded `english' language definitions on input line 722.
-Package cleveref Info: loaded `english' language definitions on input line 722.
- [37]
-Overfull \hbox (3.93506pt too wide) in paragraph at lines 726--727
- []\OT1/cmr/bx/n/12 Funzione $\OML/cmm/m/it/12 z[]$ \OT1/cmr/bx/n/12 (In-certezza senza mod-i-fi-ca-tori) [].[] \OT1/cmr/m/n/12 In-cor-pora il parametro
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 736.
-Package cleveref Info: loaded `english' language definitions on input line 736.
-[38]
-Package cleveref Info: loaded `english' language definitions on input line 759.
-Package cleveref Info: loaded `english' language definitions on input line 759.
- [39]
-Package cleveref Info: loaded `english' language definitions on input line 759.
-Package cleveref Info: loaded `english' language definitions on input line 759.
- [40
-
-]
-Chapter 6.
-
-Overfull \hbox (3.77806pt too wide) in paragraph at lines 763--764
-\OT1/cmr/m/n/12 Gli al-go-ritmi con-siderati in questo la-voro sono stati im-ple-men-tati in C++ all'interno
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 787.
-[41]
-
-LaTeX Warning: Citation `GRT12' on page 42 undefined on input line 797.
-
-
-Overfull \hbox (4.15443pt too wide) in paragraph at lines 803--804
-[]\OT1/cmr/m/n/12 aggiunge gruppi di dipen-denze, or-ga-niz-zati sia come catene (una story dipende
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 816.
-Package cleveref Info: loaded `english' language definitions on input line 816.
-[42]
-Overfull \hbox (8.85017pt too wide) in paragraph at lines 827--828
-[]\OT1/cmr/m/n/12 Mix re-al-is-tico di di-men-sione, dipen-denze e (even-tuale) pre-senza di affinit^^Ra. 
+Overfull \hbox (22.36908pt too wide) in paragraph at lines 154--155
+[]\OT1/cmr/m/n/12 Un mod-ello speci-fi-ca-mente ori-en-tato ai metodi ag-ili ^^Re de-scritto in [],
  []
 
 
-Overfull \hbox (20.09401pt too wide) in paragraph at lines 831--833
-[]\OT1/cmr/m/n/12 Raccolgono pro-getti sin-tetici che com-bi-nano in modo vario i parametri
+Overfull \hbox (53.05165pt too wide) in paragraph at lines 154--155
+\OT1/cmr/m/n/12 ul-te-ri-ore con-trib-uto ril-e-vante nel con-testo ag-ile ^^Re quello di [],
  []
 
-
-Overfull \hbox (26.53763pt too wide) in paragraph at lines 834--835
-[]\OT1/cmr/m/n/12 Diversa dis-tribuzione di dipen-denze OR/AND e lunghezza delle catene/DAG. 
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 921.
-Package cleveref Info: loaded `english' language definitions on input line 921.
-[43]
-Overfull \vbox (16.80164pt too high) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 921.
-Package cleveref Info: loaded `english' language definitions on input line 921.
- [44
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.921 
-      ]
-Overfull \hbox (19.69606pt too wide) in paragraph at lines 958--959
-\OT1/cmr/m/n/12 I dataset uti-liz-zati per la va-l-u-tazione sper-i-men-tale degli al-go-ritmi pro-posti in [[]]
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 970.
-Package cleveref Info: loaded `english' language definitions on input line 970.
-[45
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.970     \item n
-                 umero massimo di dipendenze per user story ($d_{\max}$).]
-Package cleveref Info: loaded `english' language definitions on input line 991.
-Package cleveref Info: loaded `english' language definitions on input line 991.
- [46]
-
-LaTeX Warning: Citation `scrumguide' on page 47 undefined on input line 993.
-
-Package cleveref Info: loaded `english' language definitions on input line 1067.
-Package cleveref Info: loaded `english' language definitions on input line 1067.
-[47]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1073.
-Package cleveref Info: loaded `english' language definitions on input line 1073.
- [48
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1073 
-       ]
-Overfull \hbox (3.0322pt too wide) in paragraph at lines 1093--1094
-[]\OT1/cmr/m/n/12 vincoli di prece-denza OR/AND []--[] in-ser-iti come lazy con-straints; 
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 1095.
-Package cleveref Info: loaded `english' language definitions on input line 1095.
-[49]
-Overfull \hbox (15.89662pt too wide) in paragraph at lines 1099--1100
-[]\OT1/cmr/m/n/12 Gap per-centuale di qualit^^Ra della soluzione eu-ris-tica rispetto alla soluzione
- []
-
-
-Overfull \hbox (14.01128pt too wide) in paragraph at lines 1105--1106
-\OT1/cmr/m/n/12 dell'algoritmo fino al ter-mine dell'esecuzione (sia per rag-giung-i-mento dell'ottimo
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 1120.
-Package cleveref Info: loaded `english' language definitions on input line 1120.
-[50]
-Package cleveref Info: loaded `english' language definitions on input line 1140.
-Package cleveref Info: loaded `english' language definitions on input line 1140.
- [51]
-Package cleveref Info: loaded `english' language definitions on input line 1160.
-Package cleveref Info: loaded `english' language definitions on input line 1160.
- [52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1230.
-Package cleveref Info: loaded `english' language definitions on input line 1230.
- [53]
-Overfull \vbox (55.90775pt too high) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1230.
-Package cleveref Info: loaded `english' language definitions on input line 1230.
- [54
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1230 
-       ]
-Overfull \hbox (7.44885pt too wide) in paragraph at lines 1236--1237
-[]\OT1/cmr/m/n/12 Effetto della riduzione del nu-mero di sprint disponi-bili sul val-ore della soluzione
- []
-
-
-Underfull \vbox (badness 2005) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1306.
-Package cleveref Info: loaded `english' language definitions on input line 1306.
- [55]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1311.
-Package cleveref Info: loaded `english' language definitions on input line 1311.
- [56
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1311 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1379.
-Package cleveref Info: loaded `english' language definitions on input line 1379.
- [57]
-Overfull \vbox (78.40407pt too high) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1379.
-Package cleveref Info: loaded `english' language definitions on input line 1379.
- [58
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1379 
-       ]
-Overfull \vbox (80.69398pt too high) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1446.
-Package cleveref Info: loaded `english' language definitions on input line 1446.
- [59
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1446 
-       ]
-Underfull \vbox (badness 1783) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1501.
-Package cleveref Info: loaded `english' language definitions on input line 1501.
- [60
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1501 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1588.
-Package cleveref Info: loaded `english' language definitions on input line 1588.
- [61
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1588 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1632.
-Package cleveref Info: loaded `english' language definitions on input line 1632.
- [62
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1632 
-       ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 1635.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 1635.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1635.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 1635.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@italiccorr' on input line 1635.
-
-Package cleveref Info: loaded `english' language definitions on input line 1640.
-Package cleveref Info: loaded `english' language definitions on input line 1640.
-[63
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.11}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1640 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1728.
-Package cleveref Info: loaded `english' language definitions on input line 1728.
- [64
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1728 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1772.
-Package cleveref Info: loaded `english' language definitions on input line 1772.
- [65
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.13}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1772 
-       ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@italiccorr' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 1773.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@italiccorr' on input line 1773.
-
-Package cleveref Info: loaded `english' language definitions on input line 1824.
-Package cleveref Info: loaded `english' language definitions on input line 1824.
-[66
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.14}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1824 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1868.
-Package cleveref Info: loaded `english' language definitions on input line 1868.
- [67
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.15}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1868 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1912.
-Package cleveref Info: loaded `english' language definitions on input line 1912.
- [68
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.16}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1912 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 1956.
-Package cleveref Info: loaded `english' language definitions on input line 1956.
- [69
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.17}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1956 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2000.
-Package cleveref Info: loaded `english' language definitions on input line 2000.
- [70
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.18}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2000 
-       ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@italiccorr' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\hbox' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathsurround' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 2001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@italiccorr' on input line 2001.
-
-Package cleveref Info: loaded `english' language definitions on input line 2051.
-Package cleveref Info: loaded `english' language definitions on input line 2051.
-[71
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.19}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2051 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2096.
-Package cleveref Info: loaded `english' language definitions on input line 2096.
- [72
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.20}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2096 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2140.
-Package cleveref Info: loaded `english' language definitions on input line 2140.
- [73
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.21}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2140 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2184.
-Package cleveref Info: loaded `english' language definitions on input line 2184.
- [74
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.22}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2184 
-       ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2228.
-Package cleveref Info: loaded `english' language definitions on input line 2228.
- [75
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.23}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2228 
-       ]
-<figures/tempoFO.png, id=1104, 613.5723pt x 395.3169pt>
-File: figures/tempoFO.png Graphic file (type png)
-<use figures/tempoFO.png>
-Package pdftex.def Info: figures/tempoFO.png  used on input line 2239.
-(pdftex.def)             Requested size: 376.42575pt x 242.52428pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2243.
-Package cleveref Info: loaded `english' language definitions on input line 2243.
- [76
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.24}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2243 
-       ]
-<figures/POSFO.png, id=1112, 625.8582pt x 395.3169pt>
-File: figures/POSFO.png Graphic file (type png)
-<use figures/POSFO.png>
-Package pdftex.def Info: figures/POSFO.png  used on input line 2249.
-(pdftex.def)             Requested size: 376.42575pt x 237.765pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2253.
-Package cleveref Info: loaded `english' language definitions on input line 2253.
- [77
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2253 
-        <./figures/tempoFO.png>]
-<figures/dr1.png, id=1130, 609.9588pt x 395.3169pt>
-File: figures/dr1.png Graphic file (type png)
-<use figures/dr1.png>
-Package pdftex.def Info: figures/dr1.png  used on input line 2259.
-(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2263.
-Package cleveref Info: loaded `english' language definitions on input line 2263.
- [78
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2263 
-        <./figures/POSFO.png>]
-<figures/rmax1.png, id=1136, 609.9588pt x 395.3169pt>
-File: figures/rmax1.png Graphic file (type png)
-<use figures/rmax1.png>
-Package pdftex.def Info: figures/rmax1.png  used on input line 2267.
-(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-<figures/du1.png, id=1137, 609.9588pt x 395.3169pt>
-File: figures/du1.png Graphic file (type png)
-<use figures/du1.png>
-Package pdftex.def Info: figures/du1.png  used on input line 2276.
-(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-Package cleveref Info: loaded `english' language definitions on input line 2280.
-Package cleveref Info: loaded `english' language definitions on input line 2280.
- [79
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2280 
-       
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2280 
-        <./figures/dr1.png> <./figures/rmax1.png>]
-<figures/umax1.png, id=1146, 609.9588pt x 395.3169pt>
-File: figures/umax1.png Graphic file (type png)
-<use figures/umax1.png>
-Package pdftex.def Info: figures/umax1.png  used on input line 2283.
-(pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-Package cleveref Info: loaded `english' language definitions on input line 2289.
-Package cleveref Info: loaded `english' language definitions on input line 2289.
- [80
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2289 \chapter
-               {Conclusioni}
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.2289 \chapter
-               {Conclusioni} <./figures/du1.png> <./figures/umax1.png>]
-Chapter 7.
-Package cleveref Info: loaded `english' language definitions on input line 2295.
-[81
-
-]
-Package cleveref Info: loaded `english' language definitions on input line 2295.
- [82
-
-]
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 2300.
-
-(./thesis-main.bbl
-Underfull \hbox (badness 2671) in paragraph at lines 30--33
-[]\OT1/cmr/m/n/12 K. Beck et al.  Man-i-festo for ag-ile soft-ware de-vel-op-ment.
- []
-
-Package cleveref Info: loaded `english' language definitions on input line 37.
-[83
-
-]
-Package cleveref Info: loaded `english' language definitions on input line 87.
-Package cleveref Info: loaded `english' language definitions on input line 87.
- [84]
-Package cleveref Info: loaded `english' language definitions on input line 138.
-Package cleveref Info: loaded `english' language definitions on input line 138.
- [85]
-Package cleveref Info: loaded `english' language definitions on input line 180.
-Package cleveref Info: loaded `english' language definitions on input line 180.
- [86]
-Underfull \hbox (badness 1173) in paragraph at lines 202--206
-\OT1/cmr/m/n/12 Post-mus.  Quan-ti-ta-tive re-lease plan-ning in ex-treme pro-gram-
- []
+c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex:157: Illegal parameter number in definition of \NewCount.
+<to be read again> 
+                   1
+l.157 \item
+            set \textit{must have} (requisiti indispensabili)
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex:157: Illegal parameter number in definition of \NewCount.
+<to be read again> 
+                   1
+l.157 \item
+            set \textit{must have} (requisiti indispensabili)
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex:157: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.157 \item
+            set \textit{must have} (requisiti indispensabili)
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex:157: Undefined control sequence.
+<argument> \blx@bbl@data 
+                         
+l.157 \item
+            set \textit{must have} (requisiti indispensabili)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex:157: Missing \endcsname inserted.
+<to be read again> 
+                   \protect 
+l.157 \item
+            set \textit{must have} (requisiti indispensabili)
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
 
 )
-Package cleveref Info: loaded `english' language definitions on input line 2302.
-Package cleveref Info: loaded `english' language definitions on input line 2302.
- [87]
-Package cleveref Info: loaded `english' language definitions on input line 2302.
-Package cleveref Info: loaded `english' language definitions on input line 2302.
- [88
+! Incomplete \iffalse; all text was ignored after line 157.
+<inserted text> 
+                \fi 
+<*> ...ter-thesis-daniel-capannini/thesis-main.tex
+                                                  
+The file ended while I was skipping conditional text.
+This kind of error happens when you say `\if...' and forget
+the matching `\fi'. I've inserted a `\fi'; this might work.
 
-]
-Package cleveref Info: loaded `english' language definitions on input line 2306.
- [89] (./thesis-main.aux
-Package cleveref Info: loaded `english' language definitions on input line 21.
-)
- ***********
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-06-30>
- ***********
+! Emergency stop.
+<*> ...ter-thesis-daniel-capannini/thesis-main.tex
+                                                  
+*** (job aborted, no legal \end found)
 
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `thesis-main.out' has not changed.
-(rerunfilecheck)             Checksum: 912B8CEC1BE74E655C3FDDCC7A842A18;8579.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 27888 strings out of 475237
- 504922 string characters out of 5768556
- 2172238 words of memory out of 5000000
- 48236 multiletter control sequences out of 15000+600000
- 573085 words of font info for 90 fonts, out of 8000000 for 9000
+ 34000 strings out of 475237
+ 637306 string characters out of 5768556
+ 1927238 words of memory out of 5000000
+ 54740 multiletter control sequences out of 15000+600000
+ 561179 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 114i,19n,115p,1722b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis-main.pdf (101 pages, 970095 bytes).
-PDF statistics:
- 1399 PDF objects out of 1440 (max. 8388607)
- 1213 compressed objects within 13 object streams
- 427 named destinations out of 1000 (max. 500000)
- 387 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 114i,11n,115p,2268b,1551s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -9,6 +9,13 @@
 \usepackage{booktabs}
 \usepackage{float}
 
+\usepackage[
+  backend=biber,
+  style=authoryear,
+  citestyle=authoryear
+]{biblatex}
+\addbibresource{bibliography.bib}
+
 \lstdefinestyle{pseudo}{
   basicstyle=\ttfamily\small,
   keywordstyle=\bfseries,
@@ -61,6 +68,7 @@ Optional. Max a few lines.
 \chapter{Introduzione}
 \label{chap:introduction}
 %----------------------------------------------------------------------------------------
+
 
 I tradizionali approcci di ingegneria del software mostrano limiti crescenti nel rispondere alle esigenze dinamiche del business moderno, e numerosi studi empirici suggeriscono che l'agilit\`a rappresenta una delle soluzioni pi\`u promettenti per superarli~\cite{AWSJ03,TD08}. I metodi Agile, tra cui \emph{Scrum} ed \emph{eXtreme Programming} (XP), si fondano sui dodici principi del Manifesto Agile~\cite{Manifesto} e sono ormai adottati da un numero sempre maggiore di aziende per rendere lo sviluppo software pi\`u rapido, adattivo e focalizzato sul valore. In particolare, il metodo Scrum \`e stato ampiamente discusso in letteratura~\cite{SC95}, che ne descrive le idee fondamentali e il ciclo di vita operativo.
 
@@ -274,67 +282,6 @@ pr_1 \geq pr_2 \geq \dots \geq pr_n.
 
 Queste tecniche di riduzione sfruttano problemi classici come il Subset Sum, risolvibili con algoritmi di programmazione dinamica, contribuendo a semplificare il modello e a ridurre i tempi di calcolo necessari per la soluzione ottimale.
 
-\iffalse
-\section{Cover Inequalities} \label{SubSec.Cover}
-
-Il nucleo della formulazione matematica proposta è un problema di Generalized Assignment, e per questo motivo il limite superiore della soluzione può essere migliorato sfruttando disuguaglianze valide note per questo problema.  
-Abbiamo indagato in particolare le classiche \emph{Lifted Cover Inequalities} (LCI), corrispondenti ai vincoli di capacità \eqref{Eq1.P2}, come suggerito dalla letteratura su problemi simili (si veda ad esempio \cite{ABV10}).
-
-Nel nostro studio, abbiamo tentato di separare le LCIs a ciascun nodo dell'albero di ricerca, risolvendo i problemi di knapsack necessari tramite una semplice procedura di programmazione dinamica.  
-Le LCIs generalmente riescono a ridurre il numero di nodi generati nell'albero di ricerca, tuttavia il tempo medio di calcolo per risolvere ogni nodo tende ad aumentare significativamente: in media, è circa quattro volte superiore rispetto a quanto richiesto dal modello base, e in alcuni casi può superare persino di venti volte il tempo di calcolo originario.
-
-\section{Dominance Inequalities} \label{SubSec.Dominance}
-
-Dato una user story $j \in U$, definiamo $ur_j = u_j r_j^{cr}$.  
-Due user story $i$ e $j$ di pari peso ($pr_i = pr_j$), assegnate in due sprint differenti, possono sempre essere scambiate. Inoltre, se $ur_i > ur_j$, sarà sempre più vantaggioso eseguire la story $i$ prima della story $j$ (ovvero si ottiene una funzione obiettivo più alta). In tal caso, si dice che la story $i$ \emph{domina} la story $j$.  
-L'idea di base è dunque aggiungere disuguaglianze valide (\emph{Dominance Inequalities}) che proibiscano soluzioni in cui la story $j$ viene eseguita prima di $i$. Queste disuguaglianze risultano ridondanti nel modello intero originale, ma possono essere violate nella rilassazione lineare del modello.
-
-L'idea può essere estesa considerando più di due user stories.
-
-Le dominance inequalities possono essere applicate alle storie che non hanno affinità con altre ($Y_j = \emptyset$) e solo per alcune combinazioni di dipendenze.  
-Definiamo $U^D = U^{OR} \cup U^{AND}$ l'insieme delle storie che hanno dipendenze e $D = \bigcup_{j \in U} (D_j^{OR} \cup D_j^{AND})$ l'insieme delle storie da cui altre storie dipendono.  
-Poniamo inoltre $U' = \{ j \in U : Y_j = \emptyset \text{ e } j \not\in U^D \}$ e $U'' = \{ j \in U : Y_j = \emptyset \text{ e } j \not\in D \}$.
-
-\subsection{Dominanza di Tipo 1}
-
-Se esiste una coppia di user stories $j \in U'$ e $j_1 \in U''$ tale che $ur_j > ur_{j_1}$ e $pr_j = pr_{j_1}$, valgono le seguenti disuguaglianze:
-\begin{equation}
-\sum_{k=1}^{i-1} x_{kj_1} \leq 1 - x_{ij}, \quad \forall\, i \in S
-\label{Dom1}
-\end{equation}
-
-\subsection{Dominanza di Tipo 2}
-
-Se esiste una tripletta di user stories $j \in U'$ e $j_1,j_2 \in U''$ tale che $ur_j > ur_{j_1} + ur_{j_2}$ e $pr_j = pr_{j_1} + pr_{j_2}$, valgono le seguenti disuguaglianze:
-\begin{equation}
-x_{i'j_1} + x_{i'j_2} + x_{ij} \leq 2, \text{ per ogni } i,i' \in S: i' < i
-\label{Dom2}
-\end{equation}
-
-Analogamente, se esiste una tripletta di user stories $j \in U''$ e $j_1,j_2 \in U'$ tale che $ur_j < ur_{j_1} + ur_{j_2}$ e $pr_j = pr_{j_1} + pr_{j_2}$, valgono:
-\begin{equation}
-x_{i'j_1} + x_{i'j_2} + x_{ij} \leq 2, \text{ per ogni } i,i' \in S: i < i'
-\label{Dom2inv}
-\end{equation}
-
-\subsection{Dominanza di Tipo 3}
-
-Se esiste una quadrupla di user stories $j \in U'$ e $j_1,j_2,j_3 \in U''$ tale che $ur_j > ur_{j_1} + ur_{j_2} + ur_{j_3}$ e $pr_j = pr_{j_1} + pr_{j_2} + pr_{j_3}$, valgono:
-\begin{equation}
-x_{i'j_1} + x_{i'j_2} + x_{i'j_3} + x_{ij} \leq 3, \text{ per ogni } i,i' \in S: i' < i
-\label{Dom3}
-\end{equation}
-
-Analogamente, se esiste una quadrupla di user stories $j \in U''$ e $j_1,j_2,j_3 \in U'$ tale che $ur_j < ur_{j_1} + ur_{j_2} + ur_{j_3}$ e $pr_j = pr_{j_1} + pr_{j_2} + pr_{j_3}$, valgono:
-\begin{equation}
-x_{i'j_1} + x_{i'j_2} + x_{i'j_3} + x_{ij} \leq 3, \text{ per ogni } i,i' \in S: i < i'
-\label{Dom3inv}
-\end{equation}
-
-È evidente che le disuguaglianze di dominanza possono essere generalizzate rispetto a un parametro $k \leq n$, se esiste almeno una story $j$ tale che $pr_j = \sum_{i=1}^{k} pr_{j_i}$. Tuttavia, i risultati computazionali mostrano che non si ottengono benefici concreti, a fronte di una complessità computazionale in aumento.
-
-
-\fi
 
 \chapter{Euristiche per la pianificazione degli sprint}
 
@@ -2296,8 +2243,8 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 
 \nocite{*} % Remove this as soon as you have the first citation
 
-\bibliographystyle{alpha}
-\bibliography{bibliography}
+
+
 
 \begin{acknowledgements} % this is optional
 Optional. Max 1 page.
