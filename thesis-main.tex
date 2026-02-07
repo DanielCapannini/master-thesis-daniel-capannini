@@ -1632,7 +1632,7 @@ instance\_f\_05               &     &   6.0  &   21.8  &  2.7  &   5.5  &   20.7
 
 come si notare nella tabella \ref{tab.new1} nella colonna del tempo di esecuzione relativa alla esecuzione di CPLEX, gia dal secondo gruppo di istanze  il tempo di esecuzione e sempre al limite massimo di 300 secondi, questo indica che CPLEX non riesce a trovare la soluzione ottima in tempi ragionevoli. 
 
-\subsection{funzuone obbiettovo \eqref{Eq2.P1}}
+\subsection{funzuone obbiettovo \texorpdfstring{\eqref{Eq2.P1}}{(5.23)}}
 
 Nella tabella \ref{tab.new3} vi e' riportato il confronto tra la funzione obbiettivo \eqref{Eq1.P1} e la funzione obbiettivo \eqref{Eq2.P1} in termini di tempo di esecuzione. come si pou notare vi differenze tra i tempi di esecuzione delle 2 funzioni obbiettivo, non considerando CPLEX che come gia detto tende a saturare il tempo massimo di esecuzione, i tempi di esecuzione del algoritmo euristico con la funzione obbiettivo \eqref{Eq2.P1} sono il $16.3\%$ piu veloci rispetto quelli della funzione obbiettivo \eqref{Eq1.P1}, mentre i tempi di esecuzione dell'euristica lagrangiana variano soli di un $2.2\%$ sempre a favore della funzione obbiettivo\eqref{Eq2.P1}. 
 Per quanto riguarda i KPI delle due funzioni obbiettivo si possono notare delle differenze minime, tra le tabelle \ref{tab.new2} e \ref{tab.new03} si possono notare che vi sono alcune istanze per cui i KPI N.U.S. e H.U.S. risultano inferiri per le istanze delle funzione obbiettivo \eqref{Eq2.P1}, percio questo indica che l'anticipare se possibile la risoluzione dei vincoli porta poi successivamente a veloccizzare il progetto.
@@ -1770,7 +1770,7 @@ instance\_f\_05               &     &   7.0  &   23.7  &  2.7  &   6.3  &   20.9
 }
 \end{table}
 
-\subsection{Funzione obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3}}
+\subsection{Funzione obbiettivo \texorpdfstring{\eqref{Eq2.P2}}{(5.24)} e \texorpdfstring{\eqref{Eq2.P3}}{(5.25)}}
 
 I risultati ottenuti utilizzando le funzioni obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} come riportato nella tabella \ref{tab.new4}, che indica i tempi di esecuzione delle 2 funzioni obbiettivo, come nella relazione tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, vi e' un discostamento a per quanto riguarda i tempi di esecuzione dell'algoritmo euristico in cui la funzione obbiettivo \eqref{Eq2.P3} risulta piu veloce del $15.1\%$ rispetto alla sua controparte \eqref{Eq2.P2}, mentre per quanto riguarda l'euristica lagrangiana i tempi di esecuzione non si discostano in modo significativo. 
 Al contrario di quello che si e' notato nel confronto tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, in questo caso il confronto dei KPI N.U.S. e H.U.S. tra le due funzioni obbiettivo risulta risulta per alcune istanze favorevole alla funzione obbiettivo \eqref{Eq2.P2} che risulta riuscire a concludere le istanze con un numero leggermente minore di sprint rispetto alla funzione obbiettivo \eqref{Eq2.P3}.
@@ -1856,7 +1856,7 @@ instance\_100\_02             &     &     92  &  98.13\%  &   29    &   87  &  9
 instance\_100\_03             &     &     92  &  92.29\%  &   29    &   87  &  98.13\%  &   27   &   87  &   98.13\%  &   27  \\     
 instance\_100\_04             &     &     100  &  91.01\%  &   34   &   92  &  98.66\%  &   30   &   92  &   98.66\%  &   30  \\      
 instance\_100\_05             &     &     96  &  91.82\%  &   29    &   90  &  98.72\%  &   28   &   90  &   98.72\%  &   28  \\
-instance\_f\_01               &     &     9  &    92.25\%  &   2    &   9  &     92.11\%  &   2  &   9  &   10  92.11\%  &   2  \\  
+instance\_f\_01               &     &     9  &    92.25\%  &   2    &   9  &     92.11\%  &   2  &   9  &     92.11\%  &   2  \\  
 instance\_f\_02               &     &     10  &    93.65\%  &   3   &   10  &  93.72\%  &   2   &   10  &     93.72\%  &   2  \\   
 instance\_f\_03               &     &     9  &    95.45\%  &   2    &   9  &    95.36\%  &   2   &   9  &     95.36\%  &   2  \\  
 instance\_f\_04               &     &     10  &    93.10\%  &   2   &   10  &   93.23\%  &   2   &   10  &     93.23\%  &   2  \\   
@@ -1998,7 +1998,7 @@ instance\_f\_05               &     &  7.0  &   22.4  &  2.7  &   7.0  &   22.2 
 }
 \end{table}
 
-\subsection{Funzione obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5}}
+\subsection{Funzione obbiettivo \texorpdfstring{\eqref{Eq2.P4}}{(5.26)} e \texorpdfstring{\eqref{Eq2.P5}}{(5.27)}}
 
 I risultati ottenuti risolvendo le istanze con le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} per quanto riguarda i tempi di esecuzione come mostrato nella tabella \ref{tab.new6} risulta esserci una differenza che mostra che la funzione obbiettivo \eqref{Eq2.P5} risulta essere piu veloce del $14.6\%$ se si usa il metodo euristoco e del $16.4\%$ se si usa l'euristica Lagrangiana rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
 Osservando i KPI nelle tabelle \ref{tab.new06} e \ref{tab.new07} si nota una differenza in alcune istanze sostanzile per quanto riguarda il valore di H.U.S. che risulta essere piu basso utilizzando la funzione obbiettivo \eqref{Eq2.P4} rispetto alla funzione obbiettivo \eqref{Eq2.P5}, mentre il valore di N.U.S. rusilta essere pressoche uguale, questo sta ad indicare che per questa tipologia di funzione obbiettivo considerare i parametri $dp_{ij}$ e $ub_{ij}$ a un risultato non efficente dal punto di vista dell'utilita dell'utente.
@@ -2084,7 +2084,7 @@ instance\_100\_02             &     &     92  &  98.13\%  &   29    &   87  &  9
 instance\_100\_03             &     &     92  &  92.29\%  &   29    &   87  &  98.13\%  &   27   &   87  &   98.13\%  &   27  \\     
 instance\_100\_04             &     &     100  &  91.01\%  &   34   &   92  &  98.66\%  &   30   &   92  &   98.66\%  &   30  \\      
 instance\_100\_05             &     &     96  &  91.82\%  &   29    &   90  &  98.72\%  &   28   &   90  &   98.72\%  &   28  \\
-instance\_f\_01               &     &     9  &    92.25\%  &   2    &   9  &     92.11\%  &   2  &   9  &   10  92.11\%  &   2  \\  
+instance\_f\_01               &     &     9  &    92.25\%  &   2    &   9  &     92.11\%  &   2  &   9  &     92.11\%  &   2  \\  
 instance\_f\_02               &     &     10  &    93.65\%  &   3   &   10  &  93.72\%  &   2   &   10  &     93.72\%  &   2  \\   
 instance\_f\_03               &     &     9  &    95.45\%  &   2    &   9  &    95.36\%  &   2   &   9  &     95.36\%  &   2  \\  
 instance\_f\_04               &     &     10  &    93.10\%  &   2   &   10  &   93.23\%  &   2   &   10  &     93.23\%  &   2  \\   
