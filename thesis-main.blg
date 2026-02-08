@@ -1,52 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis-main.aux
-The style file: alpha.bst
+The style file: apalike.bst
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "B93"
-Warning--I didn't find a database entry for "BM09"
-Warning--I didn't find a database entry for "BMR09"
-Warning--I didn't find a database entry for "GRT12"
-Warning--I didn't find a database entry for "scrumguide"
 You've used 40 entries,
-            2543 wiz_defined-function locations,
-            825 strings with 11686 characters,
-and the built_in function-call counts, 17696 in all, are:
-= -- 1748
-> -- 913
-< -- 17
-+ -- 329
-- -- 317
-* -- 1301
-:= -- 2884
+            1935 wiz_defined-function locations,
+            728 strings with 10873 characters,
+and the built_in function-call counts, 17058 in all, are:
+= -- 1669
+> -- 689
+< -- 31
++ -- 250
+- -- 229
+* -- 1410
+:= -- 2883
 add.period$ -- 127
 call.type$ -- 40
-change.case$ -- 264
+change.case$ -- 304
 chr.to.int$ -- 37
 cite$ -- 40
-duplicate$ -- 680
-empty$ -- 1263
-format.name$ -- 360
-if$ -- 3660
+duplicate$ -- 675
+empty$ -- 1217
+format.name$ -- 296
+if$ -- 3442
 int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 43
-newline$ -- 207
+newline$ -- 206
 num.names$ -- 122
-pop$ -- 251
+pop$ -- 291
 preamble$ -- 1
 purify$ -- 311
 quote$ -- 0
-skip$ -- 592
+skip$ -- 513
 stack$ -- 0
-substring$ -- 1005
-swap$ -- 132
-text.length$ -- 17
-text.prefix$ -- 6
+substring$ -- 1214
+swap$ -- 123
+text.length$ -- 9
+text.prefix$ -- 0
 top$ -- 0
-type$ -- 296
+type$ -- 228
 warning$ -- 0
-while$ -- 160
-width$ -- 42
-write$ -- 527
-(There were 5 warnings)
+while$ -- 128
+width$ -- 0
+write$ -- 526

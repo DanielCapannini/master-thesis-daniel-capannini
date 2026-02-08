@@ -1,207 +1,206 @@
-\newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{LvdABD10}
+\begin{thebibliography}{}
 
-\bibitem[AA03]{ALAGOZ2003523}
-Oğuzhan Alagöz and Meral Azizoğlu.
-\newblock Rescheduling of identical parallel machines under machine eligibility constraints.
-\newblock {\em European Journal of Operational Research}, 149(3):523--532, 2003.
-
-\bibitem[ABV10]{ABV10}
-P.~Avella, M.~Boccia, and I.~Vasilyev.
-\newblock A computational study of exact kanpsack separation for the generalized assignment problem.
-\newblock {\em Computational Optimization and Applications}, 45:543--555, 2010.
-
-\bibitem[AWSR03a]{1201204}
-P.~Abrahamsson, J.~Warsta, M.T. Siponen, and J.~Ronkainen.
+\bibitem[Abrahamsson et~al., 2003a]{1201204}
+Abrahamsson, P., Warsta, J., Siponen, M., and Ronkainen, J. (2003a).
 \newblock New directions on agile methods: a comparative analysis.
-\newblock In {\em 25th International Conference on Software Engineering, 2003. Proceedings.}, pages 244--254, 2003.
+\newblock In {\em 25th International Conference on Software Engineering, 2003. Proceedings.}, pages 244--254.
 
-\bibitem[AWSR03b]{AWSJ03}
-Pekka Abrahamsson, Juhani Warsta, Mikko~T. Siponen, and Jussi Ronkainen.
+\bibitem[Abrahamsson et~al., 2003b]{AWSJ03}
+Abrahamsson, P., Warsta, J., Siponen, M.~T., and Ronkainen, J. (2003b).
 \newblock New directions on agile methods: A comparative analysis.
-\newblock In {\em Proc. ICSE}, pages 244--254, 2003.
+\newblock In {\em Proc. ICSE}, pages 244--254.
 
-\bibitem[AZDCG18]{8719453}
-Wisam Haitham~Abbood Al-Zubaidi, Hoa~Khanh Dam, Morakot Choetkiertikul, and Aditya Ghose.
+\bibitem[Al-Zubaidi et~al., 2018]{8719453}
+Al-Zubaidi, W. H.~A., Dam, H.~K., Choetkiertikul, M., and Ghose, A. (2018).
 \newblock Multi-objective iteration planning in agile development.
-\newblock In {\em 2018 25th Asia-Pacific Software Engineering Conference (APSEC)}, pages 484--493, 2018.
+\newblock In {\em 2018 25th Asia-Pacific Software Engineering Conference (APSEC)}, pages 484--493.
 
-\bibitem[B{\etalchar{+}}01]{Manifesto}
-K.~Beck et~al.
+\bibitem[Alagöz and Azizoğlu, 2003]{ALAGOZ2003523}
+Alagöz, O. and Azizoğlu, M. (2003).
+\newblock Rescheduling of identical parallel machines under machine eligibility constraints.
+\newblock {\em European Journal of Operational Research}, 149(3):523--532.
+
+\bibitem[Avella et~al., 2010]{ABV10}
+Avella, P., Boccia, M., and Vasilyev, I. (2010).
+\newblock A computational study of exact kanpsack separation for the generalized assignment problem.
+\newblock {\em Computational Optimization and Applications}, 45:543--555.
+
+\bibitem[Beck et~al., 2001a]{beck2001agile}
+Beck, K., Beedle, M., van Bennekum, A., Cockburn, A., Cunningham, W., Fowler, M., Grenning, J., Highsmith, J., Hunt, A., Jeffries, R., Kern, J., Marick, B., Martin, R.~C., Mellor, S., Schwaber, K., Sutherland, J., and Thomas, D. (2001a).
 \newblock Manifesto for agile software development.
-\newblock http://agilemanifesto.org, 2001.
 
-\bibitem[BBvB{\etalchar{+}}01]{beck2001agile}
-Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Jim Highsmith, Andrew Hunt, Ron Jeffries, Jon Kern, Brian Marick, Robert~C. Martin, Steve Mellor, Ken Schwaber, Jeff Sutherland, and Dave Thomas.
-\newblock Manifesto for agile software development, 2001.
+\bibitem[Beck et~al., 2001b]{Manifesto}
+Beck, K. et~al. (2001b).
+\newblock Manifesto for agile software development.
+\newblock http://agilemanifesto.org.
 
-\bibitem[BDM{\etalchar{+}}99]{BRUCKER19993}
-Peter Brucker, Andreas Drexl, Rolf Möhring, Klaus Neumann, and Erwin Pesch.
-\newblock Resource-constrained project scheduling: Notation, classification, models, and methods.
-\newblock {\em European Journal of Operational Research}, 112(1):3--41, 1999.
-
-\bibitem[BGRT14]{BOSCHETTI2014116}
-Marco~A. Boschetti, Matteo Golfarelli, Stefano Rizzi, and Elisa Turricchia.
-\newblock A lagrangian heuristic for sprint planning in agile software development.
-\newblock {\em Computers {\&} Operations Research}, 43:116--128, 2014.
-
-\bibitem[BHM02]{BHM02}
-M.A. Boschetti, E.~Hadjinconstantinou, and A.~Mingozzi.
+\bibitem[Boschetti et~al., 2002]{BHM02}
+Boschetti, M., Hadjinconstantinou, E., and Mingozzi, A. (2002).
 \newblock New upper bounds for the finite two-dimensional orthogonal non-guillotine cutting stock problem.
-\newblock {\em IMA Journal of Management Mathematics}, 13:95--119, 2002.
+\newblock {\em IMA Journal of Management Mathematics}, 13:95--119.
 
-\bibitem[BM03]{BM03a}
-M.A. Boschetti and A.~Mingozzi.
+\bibitem[Boschetti and Mingozzi, 2003]{BM03a}
+Boschetti, M. and Mingozzi, A. (2003).
 \newblock The two-dimensional finite bin packing problem. {Part I}: {N}ew lower bounds for the oriented case.
-\newblock {\em 4OR}, 1:27--42, 2003.
+\newblock {\em 4OR}, 1:27--42.
 
-\bibitem[BM10]{BM10}
-Marco~Antonio Boschetti and Lorenza Montaletti.
+\bibitem[Boschetti et~al., 2014]{BOSCHETTI2014116}
+Boschetti, M.~A., Golfarelli, M., Rizzi, S., and Turricchia, E. (2014).
+\newblock A lagrangian heuristic for sprint planning in agile software development.
+\newblock {\em Computers {\&} Operations Research}, 43:116--128.
+
+\bibitem[Boschetti and Montaletti, 2010]{BM10}
+Boschetti, M.~A. and Montaletti, L. (2010).
 \newblock An exact algorithm for the two-dimensional strip-packing problem.
-\newblock {\em Operations Research}, 58(6):1774--1791, November 2010.
+\newblock {\em Operations Research}, 58(6):1774--1791.
 
-\bibitem[Coh04a]{C04}
-Mike Cohn.
+\bibitem[Brucker et~al., 1999]{BRUCKER19993}
+Brucker, P., Drexl, A., Möhring, R., Neumann, K., and Pesch, E. (1999).
+\newblock Resource-constrained project scheduling: Notation, classification, models, and methods.
+\newblock {\em European Journal of Operational Research}, 112(1):3--41.
+
+\bibitem[Cohn, 2004a]{C04}
+Cohn, M. (2004a).
 \newblock {\em User Stories Applied: For Agile Software Development}.
-\newblock Addison-Wesley Professional, 2004.
+\newblock Addison-Wesley Professional.
 
-\bibitem[Coh04b]{cohn2004user}
-Mike Cohn.
+\bibitem[Cohn, 2004b]{cohn2004user}
+Cohn, M. (2004b).
 \newblock {\em User stories applied: For agile software development}.
-\newblock Addison-Wesley Professional, 2004.
+\newblock Addison-Wesley Professional.
 
-\bibitem[Coh05]{cohn2005agile}
-Mike Cohn.
+\bibitem[Cohn, 2005]{cohn2005agile}
+Cohn, M. (2005).
 \newblock {\em Agile estimating and planning}.
-\newblock Pearson Education, 2005.
+\newblock Pearson Education.
 
-\bibitem[DB98]{de1998resource}
-Ronald De~Boer.
+\bibitem[De~Boer, 1998]{de1998resource}
+De~Boer, R. (1998).
 \newblock {\em Resource-constrained multi-project management}.
-\newblock PhD thesis, PhD thesis, University of Twente, The Netherlands, 1998.
+\newblock PhD thesis, PhD thesis, University of Twente, The Netherlands.
 
-\bibitem[DCH03]{denne2003software}
-Mark Denne and Jane Cleland-Huang.
-\newblock {\em Software by numbers: Low-risk, high-return development}.
-\newblock Prentice Hall Professional, 2003.
-
-\bibitem[DD08a]{TD08}
-Tore Dyb{\aa} and Torgeir Dings{\o}yr.
-\newblock Empirical studies of agile software development: A systematic review.
-\newblock {\em Information {\&} Software Technology}, 50(9-10):833--859, 2008.
-
-\bibitem[DD08b]{DYBA2008833}
-Tore Dybå and Torgeir Dingsøyr.
-\newblock Empirical studies of agile software development: A systematic review.
-\newblock {\em Information and Software Technology}, 50(9):833--859, 2008.
-
-\bibitem[DH02]{demeulemeester2002project}
-Erik~L Demeulemeester and Willy~S Herroelen.
+\bibitem[Demeulemeester and Herroelen, 2002]{demeulemeester2002project}
+Demeulemeester, E.~L. and Herroelen, W.~S. (2002).
 \newblock {\em Project scheduling: a research handbook}.
-\newblock Springer, 2002.
+\newblock Springer.
 
-\bibitem[GR04]{GREER2004243}
-D~Greer and G~Ruhe.
-\newblock Software release planning: an evolutionary and iterative approach.
-\newblock {\em Information and Software Technology}, 46(4):243--253, 2004.
+\bibitem[Denne and Cleland-Huang, 2003]{denne2003software}
+Denne, M. and Cleland-Huang, J. (2003).
+\newblock {\em Software by numbers: Low-risk, high-return development}.
+\newblock Prentice Hall Professional.
 
-\bibitem[GRT12]{inproceedings}
-Matteo Golfarelli, Stefano Rizzi, and Elisa Turricchia.
-\newblock Sprint planning optimization in agile data warehouse design.
-\newblock In {\em Data Warehousing and Knowledge Discovery}, pages 30--41, 09 2012.
+\bibitem[Dyb{\aa} and Dings{\o}yr, 2008]{TD08}
+Dyb{\aa}, T. and Dings{\o}yr, T. (2008).
+\newblock Empirical studies of agile software development: A systematic review.
+\newblock {\em Information {\&} Software Technology}, 50(9-10):833--859.
 
-\bibitem[GRT13]{GOLFARELLI20132357}
-Matteo Golfarelli, Stefano Rizzi, and Elisa Turricchia.
-\newblock Multi-sprint planning and smooth replanning: An optimization model.
-\newblock {\em Journal of Systems and Software}, 86(9):2357--2370, 2013.
+\bibitem[Dybå and Dingsøyr, 2008]{DYBA2008833}
+Dybå, T. and Dingsøyr, T. (2008).
+\newblock Empirical studies of agile software development: A systematic review.
+\newblock {\em Information and Software Technology}, 50(9):833--859.
 
-\bibitem[GS05]{Gademann2005153}
-Noud Gademann and Marco Schutten.
+\bibitem[Gademann and Schutten, 2005]{Gademann2005153}
+Gademann, N. and Schutten, M. (2005).
 \newblock Linear-programming-based heuristics for project capacity planning.
-\newblock {\em IIE Transactions (Institute of Industrial Engineers)}, 37(2):153 – 165, 2005.
+\newblock {\em IIE Transactions (Institute of Industrial Engineers)}, 37(2):153 – 165.
 \newblock Cited by: 31.
 
-\bibitem[HDDR99]{herroelen1999classification}
-Willy Herroelen, Erik Demeulemeester, and Bert De~Reyck.
+\bibitem[Golfarelli et~al., 2012]{inproceedings}
+Golfarelli, M., Rizzi, S., and Turricchia, E. (2012).
+\newblock Sprint planning optimization in agile data warehouse design.
+\newblock In {\em Data Warehousing and Knowledge Discovery}, pages 30--41.
+
+\bibitem[Golfarelli et~al., 2013]{GOLFARELLI20132357}
+Golfarelli, M., Rizzi, S., and Turricchia, E. (2013).
+\newblock Multi-sprint planning and smooth replanning: An optimization model.
+\newblock {\em Journal of Systems and Software}, 86(9):2357--2370.
+
+\bibitem[Greer and Ruhe, 2004]{GREER2004243}
+Greer, D. and Ruhe, G. (2004).
+\newblock Software release planning: an evolutionary and iterative approach.
+\newblock {\em Information and Software Technology}, 46(4):243--253.
+
+\bibitem[Herroelen et~al., 1999]{herroelen1999classification}
+Herroelen, W., Demeulemeester, E., and De~Reyck, B. (1999).
 \newblock A classification scheme for project scheduling.
-\newblock In {\em Project scheduling: recent models, algorithms and applications}, pages 1--26. Springer, 1999.
+\newblock In {\em Project scheduling: recent models, algorithms and applications}, pages 1--26. Springer.
 
-\bibitem[HLD02]{doi:10.1177/875697280203300406}
-Willy Herroelen, Roel Leus, and Erik Demeulemeester.
+\bibitem[Herroelen et~al., 2002]{doi:10.1177/875697280203300406}
+Herroelen, W., Leus, R., and Demeulemeester, E. (2002).
 \newblock Critical chain project scheduling: Do not oversimplify.
-\newblock {\em Project Management Journal}, 33(4):48--60, 2002.
+\newblock {\em Project Management Journal}, 33(4):48--60.
 
-\bibitem[KGW13]{khurum2013software}
-Mahvish Khurum, Tony Gorschek, and Magnus Wilson.
+\bibitem[Khurum et~al., 2013]{khurum2013software}
+Khurum, M., Gorschek, T., and Wilson, M. (2013).
 \newblock The software value map—an exhaustive collection of value aspects for the development of software intensive products.
-\newblock {\em Journal of software: Evolution and Process}, 25(7):711--741, 2013.
+\newblock {\em Journal of software: Evolution and Process}, 25(7):711--741.
 
-\bibitem[KP01]{KOLISCH2001249}
-R~Kolisch and R~Padman.
+\bibitem[Kolisch and Padman, 2001]{KOLISCH2001249}
+Kolisch, R. and Padman, R. (2001).
 \newblock An integrated survey of deterministic project scheduling.
-\newblock {\em Omega}, 29(3):249--272, 2001.
+\newblock {\em Omega}, 29(3):249--272.
 
-\bibitem[kS11]{SZOKE2011574}
-\'A kos Sz{\"o}ke.
+\bibitem[kos Sz{\"o}ke, 2011]{SZOKE2011574}
+kos Sz{\"o}ke, A. (2011).
 \newblock Conceptual scheduling model and optimized release scheduling for agile environments.
-\newblock {\em Information and Software Technology}, 53(6):574--591, 2011.
+\newblock {\em Information and Software Technology}, 53(6):574--591.
 \newblock Special Section: Best papers from the APSEC.
 
-\bibitem[LvdABD10]{Li2010375}
-Chen Li, Marjan van~den Akker, Sjaak Brinkkemper, and Guido Diepen.
+\bibitem[Li et~al., 2010]{Li2010375}
+Li, C., van~den Akker, M., Brinkkemper, S., and Diepen, G. (2010).
 \newblock An integrated approach for requirement selection and scheduling in software release planning.
-\newblock {\em Requirements Engineering}, 15(4):375 – 396, 2010.
+\newblock {\em Requirements Engineering}, 15(4):375 – 396.
 \newblock Cited by: 48; All Open Access, Hybrid Gold Open Access.
 
-\bibitem[New98]{newbold1998project}
-Robert~C Newbold.
+\bibitem[Newbold, 1998]{newbold1998project}
+Newbold, R.~C. (1998).
 \newblock {\em Project management in the fast lane: applying the theory of constraints}.
-\newblock CRC Press, 1998.
+\newblock CRC Press.
 
-\bibitem[PP04]{park2004new}
-Yongtae Park and Gwangman Park.
+\bibitem[Park and Park, 2004]{park2004new}
+Park, Y. and Park, G. (2004).
 \newblock A new method for technology valuation in monetary value: procedure and application.
-\newblock {\em Technovation}, 24(5):387--394, 2004.
+\newblock {\em Technovation}, 24(5):387--394.
 
-\bibitem[PSW94]{PLATJE1994100}
-Adri Platje, Harald Seidel, and Sipke Wadman.
+\bibitem[Platje et~al., 1994]{PLATJE1994100}
+Platje, A., Seidel, H., and Wadman, S. (1994).
 \newblock Project and portfolio planning cycle: Project-based management for the multiproject challenge.
-\newblock {\em International Journal of Project Management}, 12(2):100--106, 1994.
+\newblock {\em International Journal of Project Management}, 12(2):100--106.
 
-\bibitem[RFB09]{ronkko2009integrating}
-Mikko R{\"o}nkk{\"o}, Christian Fr{\"u}hwirth, and Stefan Biffl.
+\bibitem[R{\"o}nkk{\"o} et~al., 2009]{ronkko2009integrating}
+R{\"o}nkk{\"o}, M., Fr{\"u}hwirth, C., and Biffl, S. (2009).
 \newblock Integrating value and utility concepts into a value decomposition model for value-based software engineering.
-\newblock In {\em International Conference on Product-Focused Software Process Improvement}, pages 362--374. Springer, 2009.
+\newblock In {\em International Conference on Product-Focused Software Process Improvement}, pages 362--374. Springer.
 
-\bibitem[Sch95]{SC95}
-K.~Schwaber.
-\newblock {SCRUM} development process.
-\newblock In {\em Proc. OOPSLA}, 1995.
-
-\bibitem[Sch97]{10.1007/978-1-4471-0947-1_11}
-Ken Schwaber.
-\newblock Scrum development process.
-\newblock In Jeff Sutherland, Cory Casanave, Joaquin Miller, Philip Patel, and Glenn Hollowell, editors, {\em Business Object Design and Implementation}, pages 117--134, London, 1997. Springer London.
-
-\bibitem[SOS93]{sadeh1993predictive}
-Norman Sadeh, Shinichi Otsuka, and R~Schedlback.
+\bibitem[Sadeh et~al., 1993]{sadeh1993predictive}
+Sadeh, N., Otsuka, S., and Schedlback, R. (1993).
 \newblock Predictive and reactive scheduling with the microboss production scheduling and control system.
-\newblock In {\em Proceedings of the IJCAI-93 workshop on knowledge-based production planning, scheduling and control}, pages 293--306, 1993.
+\newblock In {\em Proceedings of the IJCAI-93 workshop on knowledge-based production planning, scheduling and control}, pages 293--306.
 
-\bibitem[SR07]{10.1145/1287624.1287641}
-Moshood~Omolade Saliu and Guenther Ruhe.
-\newblock Bi-objective release planning for evolving software systems.
-\newblock In {\em Proceedings of the the 6th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering}, ESEC-FSE '07, page 105–114, New York, NY, USA, 2007. Association for Computing Machinery.
-
-\bibitem[SW00]{sakkout2000probe}
-Hani~El Sakkout and Mark Wallace.
+\bibitem[Sakkout and Wallace, 2000]{sakkout2000probe}
+Sakkout, H.~E. and Wallace, M. (2000).
 \newblock Probe backtrack search for minimal perturbation in dynamic scheduling.
-\newblock {\em Constraints}, 5(4):359--388, 2000.
+\newblock {\em Constraints}, 5(4):359--388.
 
-\bibitem[vTdP11]{VANVALKENHOEF20111227}
-Gert {van Valkenhoef}, Tommi Tervonen, Bert {de Brock}, and Douwe Postmus.
+\bibitem[Saliu and Ruhe, 2007]{10.1145/1287624.1287641}
+Saliu, M.~O. and Ruhe, G. (2007).
+\newblock Bi-objective release planning for evolving software systems.
+\newblock In {\em Proceedings of the the 6th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software Engineering}, ESEC-FSE '07, page 105–114, New York, NY, USA. Association for Computing Machinery.
+
+\bibitem[Schwaber, 1995]{SC95}
+Schwaber, K. (1995).
+\newblock {SCRUM} development process.
+\newblock In {\em Proc. OOPSLA}.
+
+\bibitem[Schwaber, 1997]{10.1007/978-1-4471-0947-1_11}
+Schwaber, K. (1997).
+\newblock Scrum development process.
+\newblock In Sutherland, J., Casanave, C., Miller, J., Patel, P., and Hollowell, G., editors, {\em Business Object Design and Implementation}, pages 117--134, London. Springer London.
+
+\bibitem[{van Valkenhoef} et~al., 2011]{VANVALKENHOEF20111227}
+{van Valkenhoef}, G., Tervonen, T., {de Brock}, B., and Postmus, D. (2011).
 \newblock Quantitative release planning in extreme programming.
-\newblock {\em Information and Software Technology}, 53(11):1227--1235, 2011.
+\newblock {\em Information and Software Technology}, 53(11):1227--1235.
 \newblock AMOST 2010.
 
 \end{thebibliography}

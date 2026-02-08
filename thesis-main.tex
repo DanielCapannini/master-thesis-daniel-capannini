@@ -212,9 +212,6 @@ Il modello di programmazione lineare intera mista è:
         & y_{ij} \geq 0,                                                       &\ i \in S, j \in U       \label{Eq1.P9}
 \end{alignat}
 
-Ecco il testo rielaborato in formato LaTeX:
-
----
 
 La funzione obiettivo~\eqref{Eq1.P1} ha lo scopo di massimizzare l'utilità complessiva del progetto agile.  
 L'utilità base $u_j$ di ciascuna user story $j$ viene incrementata considerando due fattori principali:
@@ -239,6 +236,74 @@ Le \textbf{relazioni di dipendenza} tra user story sono modellate attraverso i v
     \item per le dipendenze di tipo \textbf{OR}, il vincolo~\eqref{Eq1.P4} permette l'assegnazione della story $j$ allo sprint $i$ solamente se \textit{almeno una} delle user story appartenenti all'insieme $D^{OR}_j$ è stata completata in uno sprint precedente o nello stesso sprint ($i' \le i$);
     \item per le dipendenze di tipo \textbf{AND}, il vincolo~\eqref{Eq1.P5} richiede invece che \textit{tutte} le user story contenute nell'insieme $D^{AND}_j$ siano state completate entro lo sprint $i$, assicurando che tutti i prerequisiti necessari siano soddisfatti prima di procedere con l'esecuzione di $j$.
 \end{itemize}
+
+\section{Funzioni obiettivo}\label{sec:fo}
+
+Per valutare approcci alternativi alla funzione obiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint. La motivazione principale di questa estensione risiede nella natura multi-obiettivo intrinseca del problema di sprint planning: oltre alla massimizzazione del valore di business, i team di sviluppo devono simultaneamente gestire l'incertezza nelle stime, rispettare le dipendenze tecniche, e ottimizzare l'utilizzo della capacità disponibile. Le funzioni proposte permettono di esplorare sistematicamente come diverse priorità strategiche influenzino la qualità e la fattibilità delle soluzioni ottenute.
+
+\subsection{Formulazioni matematiche}
+
+Le nuove funzioni obiettivo sono definite come segue:
+
+\begin{alignat}{3}
+z_P^\text{cr}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+    &\label{Eq2.P1}\\
+z_P^\text{unc}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) 
+    &\label{Eq2.P2}\\
+z_P^\text{unc+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+    &\label{Eq2.P3}\\
+z_P^\text{load}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right)
+    &\label{Eq2.P4}\\
+z_P^\text{load+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+    &\label{Eq2.P5}
+\end{alignat}
+
+I nuovi parametri introdotti sono:
+
+\begin{itemize}
+    \item \(dp_{ij} \in [0.25, 1.0]\): \textit{development penalty}, coefficiente che quantifica il grado di completamento delle dipendenze della user story $j$ prima dello sprint $i$. Assume valore 1.0 se tutte le dipendenze predecessorali sono state completate, e decade progressivamente fino a 0.25 se nessuna dipendenza è stata ancora eseguita.
+    
+    \item \(ub_{ij} \geq 0\): \textit{urgency bonus}, bonus proporzionale al numero di user story che hanno $j$ come dipendenza e sono pianificate negli sprint successivi. Vale 0 se $j$ non ha dipendenze in uscita.
+\end{itemize}
+
+\subsection{Obiettivi delle diverse funzioni}
+
+Ciascuna funzione obiettivo persegue una specifica strategia di pianificazione:
+
+\paragraph{Funzione \texorpdfstring{$z_P^\text{cr}$}{z\_P\^{}cr} (Criticità con modificatori)~\eqref{Eq2.P1}.} 
+Rappresenta la formulazione originale del problema, che massimizza il valore di business ponderato per la criticità $r_j^{cr}$ delle user story. I modificatori $dp_{ij}$ e $ub_{ij}$ penalizzano l'assegnazione precoce di story con dipendenze non soddisfatte e premiano le story ``critiche'' che sbloccano molte altre attività. \textbf{Obiettivo}: bilanciare valore di business e rispetto delle dipendenze architetturali.
+
+\paragraph{Funzione \texorpdfstring{$z_P^\text{unc}$}{z\_P\^{}unc} (Incertezza senza modificatori)~\eqref{Eq2.P2}.}
+Incorpora il parametro $r_j^{unc}$, che quantifica l'incertezza nelle stime di sviluppo della user story $j$ (tipicamente derivata dalla deviazione standard delle stime del team o dalla volatilità storica di story simili). Questa funzione privilegia l'assegnazione precoce delle user story più incerte, garantendo buffer temporale sufficiente per gestire eventuali ritardi o scoperte impreviste durante l'implementazione. \textbf{Obiettivo}: riduzione del rischio di schedule slippage concentrando le attività ad alto rischio nei primi sprint.
+
+\paragraph{Funzione \texorpdfstring{$z_P^\text{unc+mod}$}{z\_P\^{}unc+mod} (Incertezza con modificatori)~\eqref{Eq2.P3}.}
+Estende~\eqref{Eq2.P2} integrando i modificatori $dp_{ij}$ e $ub_{ij}$ per combinare la gestione dell'incertezza con il rispetto delle dipendenze. \textbf{Obiettivo}: bilanciare il rischio di schedule slippage e il rispetto delle dipendenze.
+
+\paragraph{Funzione \texorpdfstring{$z_P^\text{load}$}{z\_P\^{}load} (Carico di lavoro senza modificatori)~\eqref{Eq2.P4}.}
+Utilizza il peso $p_j$ (espresso in story points, giorni-persona, o altra metrica di effort) per massimizzare il carico di lavoro complessivo assegnato agli sprint. Questa funzione mira a saturare la capacità disponibile, riducendo gli sprechi di risorse e accelerando il completamento del progetto. \textbf{Obiettivo}: massimizzazione del throughput e riduzione della durata totale del progetto.
+
+\paragraph{Funzione \texorpdfstring{$z_P^\text{load+mod}$}{z\_P\^{}load+mod} (Carico di lavoro con modificatori)~\eqref{Eq2.P5}.}
+Combina l'ottimizzazione del carico con i modificatori per evitare che la saturazione degli sprint violi le dipendenze architetturali. \textbf{Obiettivo}: throughput elevato mantenendo la fattibilità tecnica della pianificazione.
+
+\subsection{Ruolo dei parametri modificatori}
+
+La presenza o assenza dei modificatori $dp_{ij}$ e $ub_{ij}$ definisce due varianti per ciascuna strategia:
+
+\paragraph{Varianti senza modificatori (~\eqref{Eq2.P2},~\eqref{Eq2.P4}).} 
+Rappresentano formulazioni ``pure'' che ottimizzano esclusivamente il criterio principale (incertezza o carico) senza considerazioni esplicite sulle dipendenze. Queste varianti sono utili come baseline per valutare l'impatto dei modificatori, ma possono generare soluzioni che violano frequentemente i vincoli di precedenza, richiedendo correzioni successive.
+
+\paragraph{Varianti con modificatori (~\eqref{Eq2.P1},~\eqref{Eq2.P3},~\eqref{Eq2.P5}).}
+Integrano due meccanismi di guida della ricerca:
+
+\begin{enumerate}
+    \item \textbf{Development penalty ($dp_{ij}$)}: penalizza l'assegnazione di user story $j$ allo sprint $i$ se le sue dipendenze predecessorali non sono state completate, incentivando l'algoritmo a rispettare naturalmente l'ordinamento topologico del grafo delle dipendenze. Questo riduce drasticamente il numero di soluzioni intermedie infeasible esplorate durante la ricerca.
+    
+    \item \textbf{Urgency bonus ($ub_{ij}$)}: premia l'esecuzione anticipata delle user story ``radice'' (senza dipendenze in ingresso) o delle story che sbloccano molte attività successive. Questo favorisce pianificazioni che costruiscono progressivamente l'infrastruttura necessaria per le feature dipendenti, evitando colli di bottiglia negli sprint finali.
+\end{enumerate}
+
+\subsection{Confronto sperimentale}
+
+I risultati computazionali di confronto sono riportati nella Sezione~\ref{confronto:fb}.
 
 \section{Procedure di riduzione} \label{Sec.Red}
 
@@ -512,7 +577,7 @@ Until no exchanges occur.
 \section{A Lagrangian Heuristic}
 
 
-La letteratura propone numerose euristiche basate su metodi di decomposizione e rilassamento lagrangiano; introduzioni esaustive a questi temi sono disponibili, tra gli altri, in \cite{B93,BM09,BMR09}. In \cite{BOSCHETTI2014116} si descrive una procedura euristica che sfrutta il rilassamento lagrangiano del modello, combinato con un algoritmo del sottogradiente e con le euristiche greedy introdotte in precedenza.
+La letteratura propone numerose euristiche basate su metodi di decomposizione e rilassamento lagrangiano. In \cite{BOSCHETTI2014116} si descrive una procedura euristica che sfrutta il rilassamento lagrangiano del modello, combinato con un algoritmo del sottogradiente e con le euristiche greedy introdotte in precedenza.
 
 Il rilassamento lagrangiano si ottiene dualizzando i vincoli \eqref{Eq1.P3}–\eqref{Eq1.P7} mediante i vettori di penalità $\{\lambda_j\}$, $\{\lambda^{OR}_{ij}\}$, $\{\lambda^{AND}_{ij}\}$, $\{\lambda^{Y1}_{ij}\}$ e $\{\lambda^{Y2}_{ij}\}$. Le penalità $\lambda_j$, $j \in U$, sono non vincolate, mentre le restanti sono non positive, così da interpretare le violazioni dei vincoli corrispondenti come costi aggiuntivi nel problema rilassato. Il problema lagrangiano risultante è:
 \begin{alignat}{3}
@@ -686,73 +751,6 @@ OR_AND_InequalitiesNew(cutinfo):
 \end{lstlisting}
 \end{figure}
 
-\section{Funzioni obiettivo}\label{sec:fo}
-
-Per valutare approcci alternativi alla funzione obiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint. La motivazione principale di questa estensione risiede nella natura multi-obiettivo intrinseca del problema di sprint planning: oltre alla massimizzazione del valore di business, i team di sviluppo devono simultaneamente gestire l'incertezza nelle stime, rispettare le dipendenze tecniche, e ottimizzare l'utilizzo della capacità disponibile. Le funzioni proposte permettono di esplorare sistematicamente come diverse priorità strategiche influenzino la qualità e la fattibilità delle soluzioni ottenute.
-
-\subsection{Formulazioni matematiche}
-
-Le nuove funzioni obiettivo sono definite come segue:
-
-\begin{alignat}{3}
-z_P^\text{cr}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
-    &\label{Eq2.P1}\\
-z_P^\text{unc}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) 
-    &\label{Eq2.P2}\\
-z_P^\text{unc+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
-    &\label{Eq2.P3}\\
-z_P^\text{load}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right)
-    &\label{Eq2.P4}\\
-z_P^\text{load+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} p_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
-    &\label{Eq2.P5}
-\end{alignat}
-
-I nuovi parametri introdotti sono:
-
-\begin{itemize}
-    \item \(dp_{ij} \in [0.25, 1.0]\): \textit{development penalty}, coefficiente che quantifica il grado di completamento delle dipendenze della user story $j$ prima dello sprint $i$. Assume valore 1.0 se tutte le dipendenze predecessorali sono state completate, e decade progressivamente fino a 0.25 se nessuna dipendenza è stata ancora eseguita.
-    
-    \item \(ub_{ij} \geq 0\): \textit{urgency bonus}, bonus proporzionale al numero di user story che hanno $j$ come dipendenza e sono pianificate negli sprint successivi. Vale 0 se $j$ non ha dipendenze in uscita.
-\end{itemize}
-
-\subsection{Obiettivi delle diverse funzioni}
-
-Ciascuna funzione obiettivo persegue una specifica strategia di pianificazione:
-
-\paragraph{Funzione \texorpdfstring{$z_P^\text{cr}$}{z\_P\^{}cr} (Criticità con modificatori)~\eqref{Eq2.P1}.} 
-Rappresenta la formulazione originale del problema, che massimizza il valore di business ponderato per la criticità $r_j^{cr}$ delle user story. I modificatori $dp_{ij}$ e $ub_{ij}$ penalizzano l'assegnazione precoce di story con dipendenze non soddisfatte e premiano le story ``critiche'' che sbloccano molte altre attività. \textbf{Obiettivo}: bilanciare valore di business e rispetto delle dipendenze architetturali.
-
-\paragraph{Funzione \texorpdfstring{$z_P^\text{unc}$}{z\_P\^{}unc} (Incertezza senza modificatori)~\eqref{Eq2.P2}.}
-Incorpora il parametro $r_j^{unc}$, che quantifica l'incertezza nelle stime di sviluppo della user story $j$ (tipicamente derivata dalla deviazione standard delle stime del team o dalla volatilità storica di story simili). Questa funzione privilegia l'assegnazione precoce delle user story più incerte, garantendo buffer temporale sufficiente per gestire eventuali ritardi o scoperte impreviste durante l'implementazione. \textbf{Obiettivo}: riduzione del rischio di schedule slippage concentrando le attività ad alto rischio nei primi sprint.
-
-\paragraph{Funzione \texorpdfstring{$z_P^\text{unc+mod}$}{z\_P\^{}unc+mod} (Incertezza con modificatori)~\eqref{Eq2.P3}.}
-Estende~\eqref{Eq2.P2} integrando i modificatori $dp_{ij}$ e $ub_{ij}$ per combinare la gestione dell'incertezza con il rispetto delle dipendenze. \textbf{Obiettivo}: bilanciare il rischio di schedule slippage e il rispetto delle dipendenze.
-
-\paragraph{Funzione \texorpdfstring{$z_P^\text{load}$}{z\_P\^{}load} (Carico di lavoro senza modificatori)~\eqref{Eq2.P4}.}
-Utilizza il peso $p_j$ (espresso in story points, giorni-persona, o altra metrica di effort) per massimizzare il carico di lavoro complessivo assegnato agli sprint. Questa funzione mira a saturare la capacità disponibile, riducendo gli sprechi di risorse e accelerando il completamento del progetto. \textbf{Obiettivo}: massimizzazione del throughput e riduzione della durata totale del progetto.
-
-\paragraph{Funzione \texorpdfstring{$z_P^\text{load+mod}$}{z\_P\^{}load+mod} (Carico di lavoro con modificatori)~\eqref{Eq2.P5}.}
-Combina l'ottimizzazione del carico con i modificatori per evitare che la saturazione degli sprint violi le dipendenze architetturali. \textbf{Obiettivo}: throughput elevato mantenendo la fattibilità tecnica della pianificazione.
-
-\subsection{Ruolo dei parametri modificatori}
-
-La presenza o assenza dei modificatori $dp_{ij}$ e $ub_{ij}$ definisce due varianti per ciascuna strategia:
-
-\paragraph{Varianti senza modificatori (~\eqref{Eq2.P2},~\eqref{Eq2.P4}).} 
-Rappresentano formulazioni ``pure'' che ottimizzano esclusivamente il criterio principale (incertezza o carico) senza considerazioni esplicite sulle dipendenze. Queste varianti sono utili come baseline per valutare l'impatto dei modificatori, ma possono generare soluzioni che violano frequentemente i vincoli di precedenza, richiedendo correzioni successive.
-
-\paragraph{Varianti con modificatori (~\eqref{Eq2.P1},~\eqref{Eq2.P3},~\eqref{Eq2.P5}).}
-Integrano due meccanismi di guida della ricerca:
-
-\begin{enumerate}
-    \item \textbf{Development penalty ($dp_{ij}$)}: penalizza l'assegnazione di user story $j$ allo sprint $i$ se le sue dipendenze predecessorali non sono state completate, incentivando l'algoritmo a rispettare naturalmente l'ordinamento topologico del grafo delle dipendenze. Questo riduce drasticamente il numero di soluzioni intermedie infeasible esplorate durante la ricerca.
-    
-    \item \textbf{Urgency bonus ($ub_{ij}$)}: premia l'esecuzione anticipata delle user story ``radice'' (senza dipendenze in ingresso) o delle story che sbloccano molte attività successive. Questo favorisce pianificazioni che costruiscono progressivamente l'infrastruttura necessaria per le feature dipendenti, evitando colli di bottiglia negli sprint finali.
-\end{enumerate}
-
-\subsection{Confronto sperimentale}
-
-I risultati computazionali di confronto sono riportati nella Sezione~\ref{confronto:fb}.
 
 
 
@@ -794,7 +792,7 @@ I progetti reali provengono da contesti applicativi differenti e sono stati real
   \end{itemize}
 \end{itemize}
 
-Dal punto di vista dell’efficacia, tutti i piani ottimali generati dagli algoritmi sono stati giudicati fattibili e realistici dai project manager; nella maggior parte dei casi, le differenze rispetto ai piani originariamente proposti dai team sono state valutate come migliorative in termini di composizione degli sprint (si veda \cite{GRT12} per un’analisi dettagliata).
+Dal punto di vista dell’efficacia, tutti i piani ottimali generati dagli algoritmi sono stati giudicati fattibili e realistici dai project manager; nella maggior parte dei casi, le differenze rispetto ai piani originariamente proposti dai team sono state valutate come migliorative in termini di composizione degli sprint.
 
 Per mettere maggiormente sotto stress gli algoritmi, è stato inoltre generato un insieme di progetti sintetici.  
 Il generatore di istanze opera come segue:
@@ -990,7 +988,7 @@ Progetti con 120 user story distribuite su 30 sprint, con al massimo 2 dipendenz
 Progetti con 300 user story distribuite su 110 sprint, con al massimo 2 dipendenze per story. Queste istanze modellano progetti enterprise di lunga durata (oltre 2 anni) con grafi di dipendenza molto ampi.
 
 \paragraph{Gruppo 5 (istanze Fibonacci).}
-Progetti con 60 user story distribuite su 25 sprint, con al massimo 3 dipendenze per story. La caratteristica distintiva di questo gruppo è l'uso della sequenza di Fibonacci (1, 2, 3, 5, 8, 13, 21) per gli story point, in conformità alle linee guida ufficiali dello Scrum framework~\cite{scrumguide}, che raccomandano l'uso di scale non lineari per riflettere l'incertezza crescente nelle stime di effort elevato.
+Progetti con 60 user story distribuite su 25 sprint, con al massimo 3 dipendenze per story. La caratteristica distintiva di questo gruppo è l'uso della sequenza di Fibonacci (1, 2, 3, 5, 8, 13, 21) per gli story point, in conformità alle linee guida ufficiali dello Scrum framework, che raccomandano l'uso di scale non lineari per riflettere l'incertezza crescente nelle stime di effort elevato.
 
 \paragraph{Distribuzione degli story point.}
 Nei gruppi 1--4, gli story point sono espressi come giorni-uomo e seguono una distribuzione uniforme nell'intervallo $[p_{\min}, p_{\max}]$, modellando una situazione realistica in cui le user story hanno complessità variabile. Nel gruppo 5, gli story point sono campionati uniformemente dall'insieme discreto $\{1, 2, 3, 5, 8, 13, 21\}$, rispecchiando la pratica industriale di Planning Poker e della stima relativa. Questa distinzione permette di valutare la robustezza degli algoritmi rispetto a diverse convenzioni di stima adottate dai team di sviluppo.
@@ -2288,6 +2286,8 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 
 \chapter{Conclusioni}
 
+
+
 %----------------------------------------------------------------------------------------
 % BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
@@ -2296,8 +2296,9 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 
 \nocite{*} % Remove this as soon as you have the first citation
 
-\bibliographystyle{alpha}
+\bibliographystyle{apalike}
 \bibliography{bibliography}
+
 
 \begin{acknowledgements} % this is optional
 Optional. Max 1 page.
