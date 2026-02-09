@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex thesis-main"] 1770552966 "thesis-main.aux" "thesis-main.bbl" "thesis-main" 1770552972 0
+["bibtex thesis-main"] 1770628335 "thesis-main.aux" "thesis-main.bbl" "thesis-main" 1770630640 0
   "./bibliography.bib" 1770460493 32603 c86c971efc3ab4c1f1b9ad7c2e94d931 ""
   "c:/texlive/2023/texmf-dist/bibtex/bst/base/apalike.bst" 1690893275 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "thesis-main.aux" 1770552971 30263 b80c99b1b2c3c464b7d1aabc035cb784 "pdflatex"
+  "thesis-main.aux" 1770630639 30097 f2ad3048437e6110e63b751ffc0b85db "pdflatex"
   (generated)
   "thesis-main.bbl"
   "thesis-main.blg"
   (rewritten before read)
-["pdflatex"] 1770552967 "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" "thesis-main.pdf" "thesis-main" 1770552972 0
-  "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" 1770552961 213717 23b176be68eee1825dbe75ea64bdfde4 ""
+["pdflatex"] 1770630635 "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" "thesis-main.pdf" "thesis-main" 1770630640 0
+  "c:/Users/danie/OneDrive/Documenti/GitHub/master-thesis-daniel-capannini/thesis-main.tex" 1770630634 213676 c1b1393286e71ddeb50cc56490a89565 ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1690893644 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1690894652 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1690894201 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -230,21 +230,21 @@
   "c:/texlive/2023/texmf.cnf" 1690899012 713 e69b156964470283e0530f5060668171 ""
   "code-lstlistings.sty" 1765535939 1455 fd1f7f09e199430433e4bbcfbd742acb ""
   "disi-thesis.sty" 1765535939 3769 bbe0150c194d9aed2f371961dab59007 ""
-  "figures/POSFO.png" 1769781242 88079 4a3d3bbe2319899ee4b08d88bb72c327 ""
-  "figures/dr1.png" 1769791608 89365 82eb3841eeb7ab3ed84c9c4a6c0230a5 ""
-  "figures/du1.png" 1769791638 85031 1fe28fdc7cefcd1b7a517a6daf362408 ""
-  "figures/rmax1.png" 1769791624 98279 4647c464cd4e3a75136008a52cbce390 ""
-  "figures/tempoFO.png" 1769780306 67809 a8bbc2642cf4ba7086590c654c803b23 ""
-  "figures/umax1.png" 1769791651 94611 1dfb5aa41e1be6241c6cab5c74f31600 ""
+  "figures/POSFO1.png" 1770630537 89649 40a8daff8e9767665d082df0948fd7a1 ""
+  "figures/dr2.png" 1770630415 91156 a0e60aca8b2db2677b394077eece8672 ""
+  "figures/du2.png" 1770630386 87853 4ab40e83fa9ce47c08dce2d1446e2088 ""
+  "figures/rmax2.png" 1770630402 98681 beb69c09ba6873923a8897f9be3af4ce ""
+  "figures/tempoFO1.png" 1770630565 69390 4f971f994062bba9297c155b2bc75dce ""
+  "figures/umax2.png" 1770630363 96166 3c04a9c51718e4ed6868ea5c53c35a70 ""
   "notes.sty" 1765535939 627 bb17ef77d529c2a65cd7550e53857e86 ""
   "shortcuts.sty" 1765535939 68 f1356b4bb08967049061aa1f9ba760d5 ""
-  "thesis-main.aux" 1770552971 30263 b80c99b1b2c3c464b7d1aabc035cb784 "pdflatex"
-  "thesis-main.bbl" 1770552967 10106 19825fa4b9b522f6a1a6a1370d0d8864 "bibtex thesis-main"
-  "thesis-main.lof" 1770552971 984 7e2adb4f2aa7d89a7a4ff49f48143b1e "pdflatex"
-  "thesis-main.lol" 1770552971 590 7b01bd99185304c480e04b72402176ee "pdflatex"
-  "thesis-main.out" 1770552971 8579 871ccc79338e66fa33ae130e1221fee2 "pdflatex"
-  "thesis-main.tex" 1770552961 213717 23b176be68eee1825dbe75ea64bdfde4 ""
-  "thesis-main.toc" 1770552971 5715 e3c7c63fa300516732bbcb3616d0de3f "pdflatex"
+  "thesis-main.aux" 1770630639 30097 f2ad3048437e6110e63b751ffc0b85db "pdflatex"
+  "thesis-main.bbl" 1770628335 10106 19825fa4b9b522f6a1a6a1370d0d8864 "bibtex thesis-main"
+  "thesis-main.lof" 1770630639 984 7e2adb4f2aa7d89a7a4ff49f48143b1e "pdflatex"
+  "thesis-main.lol" 1770630639 590 7b01bd99185304c480e04b72402176ee "pdflatex"
+  "thesis-main.out" 1770630639 8394 67ab34229c4da56ada0628b8d42f8414 "pdflatex"
+  "thesis-main.tex" 1770630634 213676 c1b1393286e71ddeb50cc56490a89565 ""
+  "thesis-main.toc" 1770630639 5620 19911fd7cd2738794f05951ac752dcf8 "pdflatex"
   (generated)
   "thesis-main.aux"
   "thesis-main.lof"

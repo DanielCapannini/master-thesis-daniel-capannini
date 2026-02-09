@@ -21,14 +21,14 @@
 \school{\unibo}
 \programme{Corso di Laurea Magistrale in Ingegneria e Scienze Informatiche}
 \title{Modelli per l'analisi dello sprint planning di Scrum}
-\author{Candidate Name}
+\author{Daniel Capannini}
 \date{\today}
-\subject{Supervisor's course name}
-\supervisor{Prof. Supervisor Here}
-\cosupervisor{Dott. CoSupervisor 1}
-\morecosupervisor{Dott. CoSupervisor 2}
+\subject{Project Management}
+\supervisor{Marco Antonio Boschetti}
+%\cosupervisor{Dott. CoSupervisor 1}
+%\morecosupervisor{Dott. CoSupervisor 2}
 \session{I}
-\academicyear{2022-2023}
+\academicyear{2024-2025}
 
 % Definition of acronyms
 \acrodef{IoT}{Internet of Thing}
@@ -241,7 +241,6 @@ Le \textbf{relazioni di dipendenza} tra user story sono modellate attraverso i v
 
 Per valutare approcci alternativi alla funzione obiettivo originale~\eqref{Eq1.P1}, sono state introdotte cinque nuove funzioni obiettivo, progettate per catturare diversi aspetti critici della pianificazione degli sprint. La motivazione principale di questa estensione risiede nella natura multi-obiettivo intrinseca del problema di sprint planning: oltre alla massimizzazione del valore di business, i team di sviluppo devono simultaneamente gestire l'incertezza nelle stime, rispettare le dipendenze tecniche, e ottimizzare l'utilizzo della capacità disponibile. Le funzioni proposte permettono di esplorare sistematicamente come diverse priorità strategiche influenzino la qualità e la fattibilità delle soluzioni ottenute.
 
-\subsection{Formulazioni matematiche}
 
 Le nuove funzioni obiettivo sono definite come segue:
 
@@ -750,7 +749,6 @@ OR_AND_InequalitiesNew(cutinfo):
     return NO_VIOLATION
 \end{lstlisting}
 \end{figure}
-
 
 
 
@@ -2234,7 +2232,7 @@ Questa differenza di tempi tra le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/tempoFO.png}
+    \includegraphics[width=0.9\textwidth]{figures/tempoFO1.png}
     \caption{Tempo di calcolo per le diverse funzioni obbiettivo}
     \label{fig:tempoFO}
 \end{figure}
@@ -2244,7 +2242,7 @@ Analizzando la figura \ref{fig:POSFO} si puo notare che la percentuale di utiliz
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/POSFO.png}
+    \includegraphics[width=0.9\textwidth]{figures/POSFO1.png}
     \caption{Tempo di calcolo per le diverse funzioni obbiettivo}
     \label{fig:POSFO}
 \end{figure}
@@ -2254,7 +2252,7 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/dr1.png}
+    \includegraphics[width=0.9\textwidth]{figures/dr2.png}
     \caption{Deviazione standard del rischio per le diverse funzioni obbiettivo}
     \label{fig:dr}
 \end{figure}
@@ -2262,7 +2260,7 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/rmax1.png}
+    \includegraphics[width=0.9\textwidth]{figures/rmax2.png}
     \caption{Valore massimo del rischio per le diverse funzioni obbiettivo}
     \label{fig:rmax}
 \end{figure}
@@ -2271,21 +2269,20 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/du1.png}
+    \includegraphics[width=0.9\textwidth]{figures/du2.png}
     \caption{Deviazione standard dell'incertezza per le diverse funzioni obbiettivo}
     \label{fig:du}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/umax1.png}
+    \includegraphics[width=0.9\textwidth]{figures/umax2.png}
     \caption{Valore massimo dell'incertezza per le diverse funzioni obbiettivo}
     \label{fig:umax}
 \end{figure}
 
 
 \chapter{Conclusioni}
-
 
 
 %----------------------------------------------------------------------------------------

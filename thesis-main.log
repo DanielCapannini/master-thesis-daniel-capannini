@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  8 FEB 2026 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  9 FEB 2026 10:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -852,31 +852,31 @@ Package cleveref Info: loaded `english' language definitions on input line 226.
 Package cleveref Info: loaded `english' language definitions on input line 243.
 Package cleveref Info: loaded `english' language definitions on input line 243.
  [18]
-Package cleveref Info: loaded `english' language definitions on input line 267.
-Package cleveref Info: loaded `english' language definitions on input line 267.
+Package cleveref Info: loaded `english' language definitions on input line 272.
+Package cleveref Info: loaded `english' language definitions on input line 272.
  [19]
-Overfull \hbox (3.93506pt too wide) in paragraph at lines 277--278
+Overfull \hbox (3.93506pt too wide) in paragraph at lines 276--277
  []\OT1/cmr/bx/n/12 Funzione $\OML/cmm/m/it/12 z[]$ \OT1/cmr/bx/n/12 (In-certezza senza mod-i-fi-ca-tori) [].[] \OT1/cmr/m/n/12 In-cor-pora il parametro
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 287.
-Package cleveref Info: loaded `english' language definitions on input line 287.
+Package cleveref Info: loaded `english' language definitions on input line 286.
+Package cleveref Info: loaded `english' language definitions on input line 286.
 [20]
-Overfull \hbox (20.85706pt too wide) in paragraph at lines 310--311
+Overfull \hbox (20.85706pt too wide) in paragraph at lines 309--310
 \OT1/cmr/m/n/12 liz-zati per prob-lemi di pack-ing in [[], [],
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 311.
-Package cleveref Info: loaded `english' language definitions on input line 311.
+Package cleveref Info: loaded `english' language definitions on input line 310.
+Package cleveref Info: loaded `english' language definitions on input line 310.
 [21]
-Package cleveref Info: loaded `english' language definitions on input line 338.
-Package cleveref Info: loaded `english' language definitions on input line 338.
+Package cleveref Info: loaded `english' language definitions on input line 337.
+Package cleveref Info: loaded `english' language definitions on input line 337.
  [22]
-Package cleveref Info: loaded `english' language definitions on input line 404.
-Package cleveref Info: loaded `english' language definitions on input line 404.
+Package cleveref Info: loaded `english' language definitions on input line 403.
+Package cleveref Info: loaded `english' language definitions on input line 403.
  [23]
-Package cleveref Info: loaded `english' language definitions on input line 404.
-Package cleveref Info: loaded `english' language definitions on input line 404.
+Package cleveref Info: loaded `english' language definitions on input line 403.
+Package cleveref Info: loaded `english' language definitions on input line 403.
  [24
 
 ]
@@ -884,501 +884,501 @@ Chapter 5.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 425.
+Package cleveref Info: loaded `english' language definitions on input line 424.
  [25]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 432.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 433.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 431.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 432.
  (c:/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Package cleveref Info: loaded `english' language definitions on input line 446.
-Package cleveref Info: loaded `english' language definitions on input line 446.
+Package cleveref Info: loaded `english' language definitions on input line 445.
+Package cleveref Info: loaded `english' language definitions on input line 445.
  [26]
-Overfull \hbox (14.81416pt too wide) in paragraph at lines 446--446
+Overfull \hbox (14.81416pt too wide) in paragraph at lines 445--445
 []\OT1/cmr/bx/n/14.4 QuickGreedyHeuristic: ver-sione ve-loce basata su knap-
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 470.
-Package cleveref Info: loaded `english' language definitions on input line 470.
+Package cleveref Info: loaded `english' language definitions on input line 469.
+Package cleveref Info: loaded `english' language definitions on input line 469.
 [27]
 Underfull \vbox (badness 1596) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 520.
-Package cleveref Info: loaded `english' language definitions on input line 520.
+Package cleveref Info: loaded `english' language definitions on input line 519.
+Package cleveref Info: loaded `english' language definitions on input line 519.
  [28]
 Overfull \vbox (1.16217pt too high) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 520.
-Package cleveref Info: loaded `english' language definitions on input line 520.
+Package cleveref Info: loaded `english' language definitions on input line 519.
+Package cleveref Info: loaded `english' language definitions on input line 519.
  [29]
-Package cleveref Info: loaded `english' language definitions on input line 531.
-Package cleveref Info: loaded `english' language definitions on input line 531.
+Package cleveref Info: loaded `english' language definitions on input line 530.
+Package cleveref Info: loaded `english' language definitions on input line 530.
  [30]
-Overfull \hbox (19.18542pt too wide) in paragraph at lines 532--534
+Overfull \hbox (19.18542pt too wide) in paragraph at lines 531--533
 []\OT1/cmr/m/n/12 In [[]] viene pro-posta \OT1/cmr/m/it/12 Ex-change-Heuris-tic \OT1/cmr/m/n/12 de-scritta in Figura []5.3[].
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 575.
-Package cleveref Info: loaded `english' language definitions on input line 575.
+Package cleveref Info: loaded `english' language definitions on input line 574.
+Package cleveref Info: loaded `english' language definitions on input line 574.
  [31]
 Overfull \vbox (18.03972pt too high) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 575.
-Package cleveref Info: loaded `english' language definitions on input line 575.
+Package cleveref Info: loaded `english' language definitions on input line 574.
+Package cleveref Info: loaded `english' language definitions on input line 574.
  [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 608.
-Package cleveref Info: loaded `english' language definitions on input line 608.
+Package cleveref Info: loaded `english' language definitions on input line 607.
+Package cleveref Info: loaded `english' language definitions on input line 607.
  [33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 630.
-Package cleveref Info: loaded `english' language definitions on input line 630.
+Package cleveref Info: loaded `english' language definitions on input line 629.
+Package cleveref Info: loaded `english' language definitions on input line 629.
  [34]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 649.
-Package cleveref Info: loaded `english' language definitions on input line 649.
+Package cleveref Info: loaded `english' language definitions on input line 648.
+Package cleveref Info: loaded `english' language definitions on input line 648.
  [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 684.
-Package cleveref Info: loaded `english' language definitions on input line 684.
+Package cleveref Info: loaded `english' language definitions on input line 683.
+Package cleveref Info: loaded `english' language definitions on input line 683.
  [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 688.
-Package cleveref Info: loaded `english' language definitions on input line 688.
+Package cleveref Info: loaded `english' language definitions on input line 687.
+Package cleveref Info: loaded `english' language definitions on input line 687.
  [37]
-Package cleveref Info: loaded `english' language definitions on input line 699.
-Package cleveref Info: loaded `english' language definitions on input line 699.
+Package cleveref Info: loaded `english' language definitions on input line 698.
+Package cleveref Info: loaded `english' language definitions on input line 698.
  [38]
-Overfull \hbox (3.15067pt too wide) in paragraph at lines 725--726
+Overfull \hbox (3.15067pt too wide) in paragraph at lines 724--725
 []\OT1/cmr/m/n/12 La fun-zione \OT1/cmtt/m/n/12 OR[]AND[]InequalitiesNew \OT1/cmr/m/n/12 im-ple-menta cor-ret-ta-mente la gen-er-azione
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 753.
-Package cleveref Info: loaded `english' language definitions on input line 753.
+Package cleveref Info: loaded `english' language definitions on input line 752.
+Package cleveref Info: loaded `english' language definitions on input line 752.
 [39]
-Package cleveref Info: loaded `english' language definitions on input line 757.
-Package cleveref Info: loaded `english' language definitions on input line 757.
+Package cleveref Info: loaded `english' language definitions on input line 755.
+Package cleveref Info: loaded `english' language definitions on input line 755.
  [40]
 Chapter 6.
 
-Overfull \hbox (3.77806pt too wide) in paragraph at lines 761--762
+Overfull \hbox (3.77806pt too wide) in paragraph at lines 759--760
 \OT1/cmr/m/n/12 Gli al-go-ritmi con-siderati in questo la-voro sono stati im-ple-men-tati in C++ all'interno
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 785.
+Package cleveref Info: loaded `english' language definitions on input line 783.
 [41
 
 ]
-Overfull \hbox (4.15443pt too wide) in paragraph at lines 801--802
+Overfull \hbox (4.15443pt too wide) in paragraph at lines 799--800
 []\OT1/cmr/m/n/12 aggiunge gruppi di dipen-denze, or-ga-niz-zati sia come catene (una story dipende
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 814.
-Package cleveref Info: loaded `english' language definitions on input line 814.
+Package cleveref Info: loaded `english' language definitions on input line 812.
+Package cleveref Info: loaded `english' language definitions on input line 812.
 [42]
-Overfull \hbox (8.85017pt too wide) in paragraph at lines 825--826
+Overfull \hbox (8.85017pt too wide) in paragraph at lines 823--824
 []\OT1/cmr/m/n/12 Mix re-al-is-tico di di-men-sione, dipen-denze e (even-tuale) pre-senza di affinit^^Ra. 
  []
 
 
-Overfull \hbox (20.09401pt too wide) in paragraph at lines 829--831
+Overfull \hbox (20.09401pt too wide) in paragraph at lines 827--829
 []\OT1/cmr/m/n/12 Raccolgono pro-getti sin-tetici che com-bi-nano in modo vario i parametri
  []
 
 
-Overfull \hbox (26.53763pt too wide) in paragraph at lines 832--833
+Overfull \hbox (26.53763pt too wide) in paragraph at lines 830--831
 []\OT1/cmr/m/n/12 Diversa dis-tribuzione di dipen-denze OR/AND e lunghezza delle catene/DAG. 
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 919.
-Package cleveref Info: loaded `english' language definitions on input line 919.
+Package cleveref Info: loaded `english' language definitions on input line 917.
+Package cleveref Info: loaded `english' language definitions on input line 917.
 [43]
 Overfull \vbox (16.80164pt too high) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 919.
-Package cleveref Info: loaded `english' language definitions on input line 919.
+Package cleveref Info: loaded `english' language definitions on input line 917.
+Package cleveref Info: loaded `english' language definitions on input line 917.
  [44
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.919 
+l.917 
       ]
-Overfull \hbox (82.83844pt too wide) in paragraph at lines 956--957
+Overfull \hbox (82.83844pt too wide) in paragraph at lines 954--955
 \OT1/cmr/m/n/12 I dataset uti-liz-zati per la va-l-u-tazione sper-i-men-tale degli al-go-ritmi pro-posti in [[]]
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 968.
-Package cleveref Info: loaded `english' language definitions on input line 968.
+Package cleveref Info: loaded `english' language definitions on input line 966.
+Package cleveref Info: loaded `english' language definitions on input line 966.
 [45
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.968     \item n
+l.966     \item n
                  umero massimo di dipendenze per user story ($d_{\max}$).]
-Package cleveref Info: loaded `english' language definitions on input line 989.
-Package cleveref Info: loaded `english' language definitions on input line 989.
+Package cleveref Info: loaded `english' language definitions on input line 987.
+Package cleveref Info: loaded `english' language definitions on input line 987.
  [46]
-Package cleveref Info: loaded `english' language definitions on input line 1065.
-Package cleveref Info: loaded `english' language definitions on input line 1065.
+Package cleveref Info: loaded `english' language definitions on input line 1063.
+Package cleveref Info: loaded `english' language definitions on input line 1063.
  [47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1071.
-Package cleveref Info: loaded `english' language definitions on input line 1071.
+Package cleveref Info: loaded `english' language definitions on input line 1069.
+Package cleveref Info: loaded `english' language definitions on input line 1069.
  [48
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1071 
+l.1069 
        ]
-Overfull \hbox (3.0322pt too wide) in paragraph at lines 1091--1092
+Overfull \hbox (3.0322pt too wide) in paragraph at lines 1089--1090
 []\OT1/cmr/m/n/12 vincoli di prece-denza OR/AND []--[] in-ser-iti come lazy con-straints; 
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 1093.
-Package cleveref Info: loaded `english' language definitions on input line 1093.
+Package cleveref Info: loaded `english' language definitions on input line 1091.
+Package cleveref Info: loaded `english' language definitions on input line 1091.
 [49]
-Overfull \hbox (15.89662pt too wide) in paragraph at lines 1097--1098
+Overfull \hbox (15.89662pt too wide) in paragraph at lines 1095--1096
 []\OT1/cmr/m/n/12 Gap per-centuale di qualit^^Ra della soluzione eu-ris-tica rispetto alla soluzione
  []
 
 
-Overfull \hbox (14.01128pt too wide) in paragraph at lines 1103--1104
+Overfull \hbox (14.01128pt too wide) in paragraph at lines 1101--1102
 \OT1/cmr/m/n/12 dell'algoritmo fino al ter-mine dell'esecuzione (sia per rag-giung-i-mento dell'ottimo
  []
 
-Package cleveref Info: loaded `english' language definitions on input line 1118.
-Package cleveref Info: loaded `english' language definitions on input line 1118.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
+Package cleveref Info: loaded `english' language definitions on input line 1116.
 [50]
-Package cleveref Info: loaded `english' language definitions on input line 1138.
-Package cleveref Info: loaded `english' language definitions on input line 1138.
+Package cleveref Info: loaded `english' language definitions on input line 1136.
+Package cleveref Info: loaded `english' language definitions on input line 1136.
  [51]
-Package cleveref Info: loaded `english' language definitions on input line 1158.
-Package cleveref Info: loaded `english' language definitions on input line 1158.
+Package cleveref Info: loaded `english' language definitions on input line 1156.
+Package cleveref Info: loaded `english' language definitions on input line 1156.
  [52]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1228.
-Package cleveref Info: loaded `english' language definitions on input line 1228.
+Package cleveref Info: loaded `english' language definitions on input line 1226.
+Package cleveref Info: loaded `english' language definitions on input line 1226.
  [53]
 Overfull \vbox (55.90775pt too high) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1228.
-Package cleveref Info: loaded `english' language definitions on input line 1228.
+Package cleveref Info: loaded `english' language definitions on input line 1226.
+Package cleveref Info: loaded `english' language definitions on input line 1226.
  [54
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1228 
+l.1226 
        ]
-Overfull \hbox (7.44885pt too wide) in paragraph at lines 1234--1235
+Overfull \hbox (7.44885pt too wide) in paragraph at lines 1232--1233
 []\OT1/cmr/m/n/12 Effetto della riduzione del nu-mero di sprint disponi-bili sul val-ore della soluzione
  []
 
 
 Underfull \vbox (badness 2005) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1304.
-Package cleveref Info: loaded `english' language definitions on input line 1304.
+Package cleveref Info: loaded `english' language definitions on input line 1302.
+Package cleveref Info: loaded `english' language definitions on input line 1302.
  [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1309.
-Package cleveref Info: loaded `english' language definitions on input line 1309.
+Package cleveref Info: loaded `english' language definitions on input line 1307.
+Package cleveref Info: loaded `english' language definitions on input line 1307.
  [56
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1309 
+l.1307 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1377.
-Package cleveref Info: loaded `english' language definitions on input line 1377.
+Package cleveref Info: loaded `english' language definitions on input line 1375.
+Package cleveref Info: loaded `english' language definitions on input line 1375.
  [57]
 Overfull \vbox (78.40407pt too high) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1377.
-Package cleveref Info: loaded `english' language definitions on input line 1377.
+Package cleveref Info: loaded `english' language definitions on input line 1375.
+Package cleveref Info: loaded `english' language definitions on input line 1375.
  [58
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1377 
+l.1375 
        ]
 Overfull \vbox (80.69398pt too high) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1444.
-Package cleveref Info: loaded `english' language definitions on input line 1444.
+Package cleveref Info: loaded `english' language definitions on input line 1442.
+Package cleveref Info: loaded `english' language definitions on input line 1442.
  [59
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1444 
+l.1442 
        ]
 Underfull \vbox (badness 1783) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1499.
-Package cleveref Info: loaded `english' language definitions on input line 1499.
+Package cleveref Info: loaded `english' language definitions on input line 1497.
+Package cleveref Info: loaded `english' language definitions on input line 1497.
  [60
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1499 
+l.1497 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1586.
-Package cleveref Info: loaded `english' language definitions on input line 1586.
+Package cleveref Info: loaded `english' language definitions on input line 1584.
+Package cleveref Info: loaded `english' language definitions on input line 1584.
  [61
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1586 
+l.1584 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1630.
-Package cleveref Info: loaded `english' language definitions on input line 1630.
+Package cleveref Info: loaded `english' language definitions on input line 1628.
+Package cleveref Info: loaded `english' language definitions on input line 1628.
  [62
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1630 
+l.1628 
        ]
-Package cleveref Info: loaded `english' language definitions on input line 1638.
-Package cleveref Info: loaded `english' language definitions on input line 1638.
+Package cleveref Info: loaded `english' language definitions on input line 1636.
+Package cleveref Info: loaded `english' language definitions on input line 1636.
  [63
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1638 
+l.1636 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1726.
-Package cleveref Info: loaded `english' language definitions on input line 1726.
+Package cleveref Info: loaded `english' language definitions on input line 1724.
+Package cleveref Info: loaded `english' language definitions on input line 1724.
  [64
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1726 
+l.1724 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1770.
-Package cleveref Info: loaded `english' language definitions on input line 1770.
+Package cleveref Info: loaded `english' language definitions on input line 1768.
+Package cleveref Info: loaded `english' language definitions on input line 1768.
  [65
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.13}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1770 
+l.1768 
        ]
-Package cleveref Info: loaded `english' language definitions on input line 1822.
-Package cleveref Info: loaded `english' language definitions on input line 1822.
+Package cleveref Info: loaded `english' language definitions on input line 1820.
+Package cleveref Info: loaded `english' language definitions on input line 1820.
  [66
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.14}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1822 
+l.1820 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1866.
-Package cleveref Info: loaded `english' language definitions on input line 1866.
+Package cleveref Info: loaded `english' language definitions on input line 1864.
+Package cleveref Info: loaded `english' language definitions on input line 1864.
  [67
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.15}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1866 
+l.1864 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1910.
-Package cleveref Info: loaded `english' language definitions on input line 1910.
+Package cleveref Info: loaded `english' language definitions on input line 1908.
+Package cleveref Info: loaded `english' language definitions on input line 1908.
  [68
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.16}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1910 
+l.1908 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1954.
-Package cleveref Info: loaded `english' language definitions on input line 1954.
+Package cleveref Info: loaded `english' language definitions on input line 1952.
+Package cleveref Info: loaded `english' language definitions on input line 1952.
  [69
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1954 
+l.1952 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 1998.
-Package cleveref Info: loaded `english' language definitions on input line 1998.
+Package cleveref Info: loaded `english' language definitions on input line 1996.
+Package cleveref Info: loaded `english' language definitions on input line 1996.
  [70
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.18}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1998 
+l.1996 
        ]
-Package cleveref Info: loaded `english' language definitions on input line 2049.
-Package cleveref Info: loaded `english' language definitions on input line 2049.
+Package cleveref Info: loaded `english' language definitions on input line 2047.
+Package cleveref Info: loaded `english' language definitions on input line 2047.
  [71
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.19}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2049 
+l.2047 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2094.
-Package cleveref Info: loaded `english' language definitions on input line 2094.
+Package cleveref Info: loaded `english' language definitions on input line 2092.
+Package cleveref Info: loaded `english' language definitions on input line 2092.
  [72
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.20}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2094 
+l.2092 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2138.
-Package cleveref Info: loaded `english' language definitions on input line 2138.
+Package cleveref Info: loaded `english' language definitions on input line 2136.
+Package cleveref Info: loaded `english' language definitions on input line 2136.
  [73
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.21}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2138 
+l.2136 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2182.
-Package cleveref Info: loaded `english' language definitions on input line 2182.
+Package cleveref Info: loaded `english' language definitions on input line 2180.
+Package cleveref Info: loaded `english' language definitions on input line 2180.
  [74
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.22}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2182 
+l.2180 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2226.
-Package cleveref Info: loaded `english' language definitions on input line 2226.
+Package cleveref Info: loaded `english' language definitions on input line 2224.
+Package cleveref Info: loaded `english' language definitions on input line 2224.
  [75
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.23}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2226 
+l.2224 
        ]
-<figures/tempoFO.png, id=1104, 613.5723pt x 395.3169pt>
-File: figures/tempoFO.png Graphic file (type png)
-<use figures/tempoFO.png>
-Package pdftex.def Info: figures/tempoFO.png  used on input line 2237.
+<figures/tempoFO1.png, id=1099, 613.5723pt x 395.3169pt>
+File: figures/tempoFO1.png Graphic file (type png)
+<use figures/tempoFO1.png>
+Package pdftex.def Info: figures/tempoFO1.png  used on input line 2235.
 (pdftex.def)             Requested size: 376.42575pt x 242.52428pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2241.
-Package cleveref Info: loaded `english' language definitions on input line 2241.
+Package cleveref Info: loaded `english' language definitions on input line 2239.
+Package cleveref Info: loaded `english' language definitions on input line 2239.
  [76
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.24}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2241 
+l.2239 
        ]
-<figures/POSFO.png, id=1112, 625.8582pt x 395.3169pt>
-File: figures/POSFO.png Graphic file (type png)
-<use figures/POSFO.png>
-Package pdftex.def Info: figures/POSFO.png  used on input line 2247.
+<figures/POSFO1.png, id=1107, 625.8582pt x 395.3169pt>
+File: figures/POSFO1.png Graphic file (type png)
+<use figures/POSFO1.png>
+Package pdftex.def Info: figures/POSFO1.png  used on input line 2245.
 (pdftex.def)             Requested size: 376.42575pt x 237.765pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2251.
-Package cleveref Info: loaded `english' language definitions on input line 2251.
+Package cleveref Info: loaded `english' language definitions on input line 2249.
+Package cleveref Info: loaded `english' language definitions on input line 2249.
  [77
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2251 
-        <./figures/tempoFO.png>]
-<figures/dr1.png, id=1130, 609.9588pt x 395.3169pt>
-File: figures/dr1.png Graphic file (type png)
-<use figures/dr1.png>
-Package pdftex.def Info: figures/dr1.png  used on input line 2257.
+l.2249 
+        <./figures/tempoFO1.png>]
+<figures/dr2.png, id=1125, 609.9588pt x 395.3169pt>
+File: figures/dr2.png Graphic file (type png)
+<use figures/dr2.png>
+Package pdftex.def Info: figures/dr2.png  used on input line 2255.
 (pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2261.
-Package cleveref Info: loaded `english' language definitions on input line 2261.
+Package cleveref Info: loaded `english' language definitions on input line 2259.
+Package cleveref Info: loaded `english' language definitions on input line 2259.
  [78
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2261 
-        <./figures/POSFO.png>]
-<figures/rmax1.png, id=1136, 609.9588pt x 395.3169pt>
-File: figures/rmax1.png Graphic file (type png)
-<use figures/rmax1.png>
-Package pdftex.def Info: figures/rmax1.png  used on input line 2265.
+l.2259 
+        <./figures/POSFO1.png>]
+<figures/rmax2.png, id=1131, 609.9588pt x 395.3169pt>
+File: figures/rmax2.png Graphic file (type png)
+<use figures/rmax2.png>
+Package pdftex.def Info: figures/rmax2.png  used on input line 2263.
 (pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-<figures/du1.png, id=1137, 609.9588pt x 395.3169pt>
-File: figures/du1.png Graphic file (type png)
-<use figures/du1.png>
-Package pdftex.def Info: figures/du1.png  used on input line 2274.
+<figures/du2.png, id=1132, 609.9588pt x 395.3169pt>
+File: figures/du2.png Graphic file (type png)
+<use figures/du2.png>
+Package pdftex.def Info: figures/du2.png  used on input line 2272.
 (pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-Package cleveref Info: loaded `english' language definitions on input line 2278.
-Package cleveref Info: loaded `english' language definitions on input line 2278.
+Package cleveref Info: loaded `english' language definitions on input line 2276.
+Package cleveref Info: loaded `english' language definitions on input line 2276.
  [79
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2278 
+l.2276 
        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2278 
-        <./figures/dr1.png> <./figures/rmax1.png>]
-<figures/umax1.png, id=1146, 609.9588pt x 395.3169pt>
-File: figures/umax1.png Graphic file (type png)
-<use figures/umax1.png>
-Package pdftex.def Info: figures/umax1.png  used on input line 2281.
+l.2276 
+        <./figures/dr2.png> <./figures/rmax2.png>]
+<figures/umax2.png, id=1140, 609.9588pt x 395.3169pt>
+File: figures/umax2.png Graphic file (type png)
+<use figures/umax2.png>
+Package pdftex.def Info: figures/umax2.png  used on input line 2279.
 (pdftex.def)             Requested size: 376.42575pt x 243.96594pt.
-Package cleveref Info: loaded `english' language definitions on input line 2287.
-Package cleveref Info: loaded `english' language definitions on input line 2287.
+Package cleveref Info: loaded `english' language definitions on input line 2285.
+Package cleveref Info: loaded `english' language definitions on input line 2285.
  [80
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2287 \chapter
+l.2285 \chapter
                {Conclusioni}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2287 \chapter
-               {Conclusioni} <./figures/du1.png> <./figures/umax1.png>]
+l.2285 \chapter
+               {Conclusioni} <./figures/du2.png> <./figures/umax2.png>]
 Chapter 7.
-Package cleveref Info: loaded `english' language definitions on input line 2295.
+Package cleveref Info: loaded `english' language definitions on input line 2292.
 [81
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 2295.
+Package cleveref Info: loaded `english' language definitions on input line 2292.
  [82
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 2300.
+(hyperref)                be the same. Added a new anchor on input line 2297.
 
 (./thesis-main.bbl
 Package cleveref Info: loaded `english' language definitions on input line 37.
@@ -1398,15 +1398,15 @@ Package cleveref Info: loaded `english' language definitions on input line 138.
 Package cleveref Info: loaded `english' language definitions on input line 185.
 Package cleveref Info: loaded `english' language definitions on input line 185.
  [86])
-Package cleveref Info: loaded `english' language definitions on input line 2303.
-Package cleveref Info: loaded `english' language definitions on input line 2303.
+Package cleveref Info: loaded `english' language definitions on input line 2300.
+Package cleveref Info: loaded `english' language definitions on input line 2300.
  [87]
-Package cleveref Info: loaded `english' language definitions on input line 2303.
-Package cleveref Info: loaded `english' language definitions on input line 2303.
+Package cleveref Info: loaded `english' language definitions on input line 2300.
+Package cleveref Info: loaded `english' language definitions on input line 2300.
  [88
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 2307.
+Package cleveref Info: loaded `english' language definitions on input line 2304.
  [89] (./thesis-main.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
 )
@@ -1415,21 +1415,21 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `thesis-main.out' has not changed.
-(rerunfilecheck)             Checksum: 871CCC79338E66FA33AE130E1221FEE2;8579.
+(rerunfilecheck)             Checksum: 67AB34229C4DA56ADA0628B8D42F8414;8394.
  ) 
 Here is how much of TeX's memory you used:
- 27886 strings out of 475237
- 504906 string characters out of 5768556
+ 27884 strings out of 475237
+ 504886 string characters out of 5768556
  2171238 words of memory out of 5000000
- 48234 multiletter control sequences out of 15000+600000
+ 48233 multiletter control sequences out of 15000+600000
  573085 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  114i,19n,115p,1722b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis-main.pdf (101 pages, 970563 bytes).
+Output written on thesis-main.pdf (101 pages, 978021 bytes).
 PDF statistics:
- 1399 PDF objects out of 1440 (max. 8388607)
- 1213 compressed objects within 13 object streams
- 427 named destinations out of 1000 (max. 500000)
- 387 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1393 PDF objects out of 1440 (max. 8388607)
+ 1207 compressed objects within 13 object streams
+ 426 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 

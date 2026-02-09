@@ -5,17 +5,16 @@
 \contentsline {chapter}{\numberline {3}Stato dell'arte}{9}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Formulazione matematica}{15}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Funzioni obiettivo}{18}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Formulazioni matematiche}{19}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Obiettivi delle diverse funzioni}{20}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.1}Obiettivi delle diverse funzioni}{20}{subsection.4.1.1}%
 \contentsline {paragraph}{Funzione $z_P^\text {cr}$ (Criticità con modificatori)~\eqref {Eq2.P1}.}{20}{section*.6}%
 \contentsline {paragraph}{Funzione $z_P^\text {unc}$ (Incertezza senza modificatori)~\eqref {Eq2.P2}.}{20}{section*.7}%
 \contentsline {paragraph}{Funzione $z_P^\text {unc+mod}$ (Incertezza con modificatori)~\eqref {Eq2.P3}.}{20}{section*.8}%
 \contentsline {paragraph}{Funzione $z_P^\text {load}$ (Carico di lavoro senza modificatori)~\eqref {Eq2.P4}.}{20}{section*.9}%
-\contentsline {paragraph}{Funzione $z_P^\text {load+mod}$ (Carico di lavoro con modificatori)~\eqref {Eq2.P5}.}{21}{section*.10}%
-\contentsline {subsection}{\numberline {4.1.3}Ruolo dei parametri modificatori}{21}{subsection.4.1.3}%
+\contentsline {paragraph}{Funzione $z_P^\text {load+mod}$ (Carico di lavoro con modificatori)~\eqref {Eq2.P5}.}{20}{section*.10}%
+\contentsline {subsection}{\numberline {4.1.2}Ruolo dei parametri modificatori}{21}{subsection.4.1.2}%
 \contentsline {paragraph}{Varianti senza modificatori (~\eqref {Eq2.P2},~\eqref {Eq2.P4}).}{21}{section*.11}%
 \contentsline {paragraph}{Varianti con modificatori (~\eqref {Eq2.P1},~\eqref {Eq2.P3},~\eqref {Eq2.P5}).}{21}{section*.12}%
-\contentsline {subsection}{\numberline {4.1.4}Confronto sperimentale}{21}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.3}Confronto sperimentale}{21}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Procedure di riduzione}{22}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Modifica delle capacità degli sprint}{22}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Modifica dei pesi delle user story}{22}{subsection.4.2.2}%
