@@ -55,6 +55,7 @@
 \contentsline {subsection}{\numberline {6.5.1}Riduzione del numero di sprint}{72}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Riduzioni capacita degli sprint}{75}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Accorpamento di sprint}{78}{subsection.6.5.3}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{81}{chapter.7}%
-\contentsline {part}{}{83}{chapter.7}%
-\contentsline {chapter}{Bibliography}{83}{section*.24}%
+\contentsline {subsection}{\numberline {6.5.4}Eliminazione vincoli AND e OR}{81}{subsection.6.5.4}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{85}{chapter.7}%
+\contentsline {part}{}{87}{chapter.7}%
+\contentsline {chapter}{Bibliography}{87}{section*.24}%
