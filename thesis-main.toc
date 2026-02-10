@@ -28,34 +28,32 @@
 \contentsline {section}{\numberline {5.3}Aggiornamenti ai metodi di cutting plane}{38}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Risultati ottenuti}{41}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Dati utilizzati}{41}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Raggruppamento dei progetti}{42}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Generazione di nuove istanze di test}{45}{subsection.6.1.2}%
-\contentsline {paragraph}{Algoritmo di generazione.}{46}{section*.14}%
-\contentsline {subsection}{\numberline {6.1.3}Benchmark suite generato}{46}{subsection.6.1.3}%
-\contentsline {paragraph}{Gruppo 1 (istanze small).}{46}{section*.15}%
-\contentsline {paragraph}{Gruppo 2 (istanze medium).}{46}{section*.16}%
-\contentsline {paragraph}{Gruppo 3 (istanze large).}{46}{section*.17}%
-\contentsline {paragraph}{Gruppo 4 (istanze extra-large).}{47}{section*.18}%
-\contentsline {paragraph}{Gruppo 5 (istanze Fibonacci).}{47}{section*.19}%
-\contentsline {paragraph}{Distribuzione degli story point.}{47}{section*.20}%
-\contentsline {subsection}{\numberline {6.1.4}Caratteristiche strutturali delle istanze}{47}{subsection.6.1.4}%
-\contentsline {section}{\numberline {6.2}KPI di valutazione}{49}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}KPI computazionali}{49}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}KPI di qualità della pianificazione}{50}{subsection.6.2.2}%
-\contentsline {paragraph}{Efficienza temporale e utilizzo delle risorse.}{50}{section*.21}%
-\contentsline {paragraph}{Distribuzione del rischio e dell'incertezza.}{51}{section*.22}%
-\contentsline {paragraph}{Progressione del valore consegnato.}{52}{section*.23}%
-\contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{52}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Risultati computazionali}{53}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Variazione dei parametri}{55}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Riduzione sprint}{55}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Riduzione capacità degli sprint}{57}{subsection.6.4.2}%
-\contentsline {section}{\numberline {6.5}Metodo aggiornato}{60}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Confronto funzioni obbiettivo}{61}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}funzuone obbiettovo \eqref {Eq2.P1}}{63}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{66}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Funzione obbiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{71}{subsection.6.6.3}%
-\contentsline {subsection}{\numberline {6.6.4}Confronto funzioni obbiettivo}{76}{subsection.6.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusioni}{81}{chapter.7}%
-\contentsline {part}{}{83}{chapter.7}%
-\contentsline {chapter}{Bibliography}{83}{section*.24}%
+\contentsline {subsection}{\numberline {6.1.1}Generazione di istanze di test}{42}{subsection.6.1.1}%
+\contentsline {paragraph}{Algoritmo di generazione.}{42}{section*.14}%
+\contentsline {subsection}{\numberline {6.1.2}Benchmark suite generato}{43}{subsection.6.1.2}%
+\contentsline {paragraph}{Gruppo 1 (istanze small).}{43}{section*.15}%
+\contentsline {paragraph}{Gruppo 2 (istanze medium).}{43}{section*.16}%
+\contentsline {paragraph}{Gruppo 3 (istanze large).}{43}{section*.17}%
+\contentsline {paragraph}{Gruppo 4 (istanze extra-large).}{43}{section*.18}%
+\contentsline {paragraph}{Gruppo 5 (istanze Fibonacci).}{43}{section*.19}%
+\contentsline {paragraph}{Distribuzione degli story point.}{43}{section*.20}%
+\contentsline {subsection}{\numberline {6.1.3}Caratteristiche strutturali delle istanze}{44}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}KPI di valutazione}{46}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}KPI computazionali}{46}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}KPI di qualità della pianificazione}{47}{subsection.6.2.2}%
+\contentsline {paragraph}{Efficienza temporale e utilizzo delle risorse.}{47}{section*.21}%
+\contentsline {paragraph}{Distribuzione del rischio e dell'incertezza.}{48}{section*.22}%
+\contentsline {paragraph}{Progressione del valore consegnato.}{49}{section*.23}%
+\contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{49}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Metodo aggiornato}{50}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Confronto funzioni obbiettivo}{51}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}funzuone obbiettovo \eqref {Eq2.P1}}{53}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{56}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Funzione obbiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{61}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Confronto funzioni obbiettivo}{66}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}Variazione dei parametri}{71}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Riduzione del numero di sprint}{72}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Riduzioni capacita degli sprint}{75}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusioni}{79}{chapter.7}%
+\contentsline {part}{}{81}{chapter.7}%
+\contentsline {chapter}{Bibliography}{81}{section*.24}%
