@@ -45,7 +45,7 @@
 \contentsline {paragraph}{Distribuzione del rischio e dell'incertezza.}{48}{section*.22}%
 \contentsline {paragraph}{Progressione del valore consegnato.}{49}{section*.23}%
 \contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{49}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Metodo aggiornato}{50}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Confronto tra il metodo euristico originale e la versione con modifiche ai tagli}{50}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Confronto funzioni obbiettivo}{51}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}funzuone obbiettovo \eqref {Eq2.P1}}{53}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{56}{subsection.6.4.2}%
