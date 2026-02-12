@@ -2440,6 +2440,11 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 
 \subsection{Riduzioni capacita degli sprint}
 
+In un progetto reale, e' possibile che la capacita degli sprint venga ridotta a causa di imprevisti, come ad esempio malattie, ferie o altri impegni dei membri del team, questo porta a un aumento dei tempi di completamento del progetto e in alcuni casi l'impossibilita al completamento nei tempi previsti.
+Per valutare l'impatto di una riduzione della capacita degli sprint sui KPI, abbiamo condotto un esperimento in cui abbiamo ridotto la capacita degli sprint del 20\% i cui risultati si trovano nelle tabelle \ref{tab.new9}, \ref{tab.new09} e \ref{tab.new009}.
+Si puo  notare come la riduzione della capacita dello sprint ha portato anche a una riduzione del valore della funzione obbiettivo del $8\%$ per il metodo esatto e del $6.1\%$ per i metodi euristici e si nota anche cle il gruppo di istanze piu grandi non e' in grado di essere risolto causa il non sufficenti story point a disposizione.
+Il KPI N.U.S. e' aumentato del $26.59\%$ per il metodo esatto e del $25.08\%$ per i metodi euristici, mentre per il KPI H.U.S. vi e' stato un aumentato del $26.67\%$ per il metodo esatto e del $15.51\%$ per i metodi euristici. Questo indicando come era presumibile che la riduzione della capacita degli sprint ha portato ad un aumeto del numero degli sprint necessari a completare il progetto.
+
 \begin{table}[H]
 \centering
 \caption{KPI con riduzione del 20\% della capacita degli sprint}
@@ -2639,11 +2644,11 @@ Istanza  &   &                        N.U.S. &  A.S.U.   &  H.U.S. & N.U.S. &  A
  instance\_06\_03             &     &   6  &    84.78\%  &   2       &   6  &   82.53\%  &   2       &   6  &    82.53\%  &   2  \\    
  instance\_06\_04             &     &   5  &    86.65\%  &   2       &   5  &   86.10\%  &   2       &   5  &    86.10\%  &   2  \\    
  instance\_06\_05             &     &   5  &   98.34\%  &   2       &   6  &    80.69\%  &   2        &   6  &   80.69\%  &   2  \\   
- instance\_20\_01             &     &   20  &  97.00\%  &   9       &   21    91.08\%  &   8         &   21  &  91.08\%  &   8  \\  
- instance\_20\_02             &     &   19  &  96.65\%  &   7       &   19    95.99\%  &   6         &   19  &  95.99\%  &   6  \\  
- instance\_20\_03             &     &   19  &  97.07\%  &   8       &   19    96.35\%  &   7         &   19  &  96.35\%  &   7  \\  
- instance\_20\_04             &     &   20  &  96.53\%  &   9       &   20    95.03\%  &   8         &   20  &  95.03\%  &   8  \\  
- instance\_20\_05             &     &   19  &  97.15\%  &   8       &   19    96.54\%  &   7         &   19  &  96.54\%  &   7  \\  
+ instance\_20\_01             &     &   20  &  97.00\%  &   9       &   21 &   91.08\%  &   8         &   21  &  91.08\%  &   8  \\  
+ instance\_20\_02             &     &   19  &  96.65\%  &   7       &   19 &   95.99\%  &   6         &   19  &  95.99\%  &   6  \\  
+ instance\_20\_03             &     &   19  &  97.07\%  &   8       &   19 &   96.35\%  &   7         &   19  &  96.35\%  &   7  \\  
+ instance\_20\_04             &     &   20  &  96.53\%  &   9       &   20 &   95.03\%  &   8         &   20  &  95.03\%  &   8  \\  
+ instance\_20\_05             &     &   19  &  97.15\%  &   8       &   19 &   96.54\%  &   7         &   19  &  96.54\%  &   7  \\  
  instance\_40\_01             &     &   19  &    97.87\%  &   6      &   19  &   97.67\%  &   6      &   19  &    97.67\%  &   6  \\      
  instance\_40\_02             &     &   18  &    97.11\%  &   5      &   18  &   97.14\%  &   5      &   18  &    97.14\%  &   5  \\      
  instance\_40\_03             &     &   19  &    95.77\%  &   6      &   19  &   96.01\%  &   5      &   19  &    96.01\%  &   5  \\      
