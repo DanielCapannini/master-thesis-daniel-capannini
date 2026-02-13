@@ -2731,7 +2731,10 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 \subsection{Eliminazione vincoli AND e OR}
 
 L'eliminazione dei vincoli AND e OR in un progetto reale non sarebbe possibile, visto che  risulta impossibile eliminare tutte le dipendenze tra le attivita. Tuttavia si e' voluto testare se questi vincoli incidono nulla soluzione e se si in quale misura. I risultati ottenuti sono riportati nelle tabelle \ref{tab.new11}, \ref{tab.new011} e \ref{tab.new0011}. 
-
+Si puo notare che i risultati ottenuti risultano essere migliori rispetto a quelli ottenuti con i vincoli AND e OR, il valore delle funzione obbiettvo e' aumentoato del $42.65\%$ per il metodo esatto e del $41.91\%$ per i metodo euristici. I tempi di esecuzione sono
+diminuiti drasticamente, con un tempo medio di esecuzione e' diminuito del $61.81\%$ per il metodo esatto, del $6.42\%$ per il metodo euristico e del $67.11\%$ per il metodo lagrangiano.
+Il miglioramento del valre della funzione obbiettvo e' dovuto al fatto che l'eliminazione dei vincoli permette di avere una maggiore flessibilita nella pianificazione delle attivita, consentendo di sfruttare meglio le risorse disponibili e di ridurre i tempi di completamento del progetto. Inoltre, l'eliminazione dei vincoli AND e OR consente di ridurre 
+il tempo di esecuzione perche una qualsiasi soluzione che soddisfa i vincoli sulla capcita degli sprint e' una soluzione ammissibile per cui non saranno necessari cercARE ULTERIORI SOLUZIONI.
 
 \begin{table}[H]
 \centering

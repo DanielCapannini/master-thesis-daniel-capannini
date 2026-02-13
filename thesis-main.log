@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  13 FEB 2026 11:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.1)  13 FEB 2026 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1370,59 +1370,59 @@ pdfTeX warning (ext4): destination with the same identifier (name{table.6.26}) h
                                                   \__shipout_drop_firstpage_...
 l.2730 
        ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1052) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2780.
-Package cleveref Info: loaded `english' language definitions on input line 2780.
+Package cleveref Info: loaded `english' language definitions on input line 2783.
+Package cleveref Info: loaded `english' language definitions on input line 2783.
  [82
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.27}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2780 
+l.2783 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2824.
-Package cleveref Info: loaded `english' language definitions on input line 2824.
+Package cleveref Info: loaded `english' language definitions on input line 2827.
+Package cleveref Info: loaded `english' language definitions on input line 2827.
  [83
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.28}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2824 
+l.2827 
        ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package cleveref Info: loaded `english' language definitions on input line 2868.
-Package cleveref Info: loaded `english' language definitions on input line 2868.
+Package cleveref Info: loaded `english' language definitions on input line 2871.
+Package cleveref Info: loaded `english' language definitions on input line 2871.
  [84
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.29}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2868 
+l.2871 
        ]
-Package cleveref Info: loaded `english' language definitions on input line 2869.
-Package cleveref Info: loaded `english' language definitions on input line 2869.
+Package cleveref Info: loaded `english' language definitions on input line 2872.
+Package cleveref Info: loaded `english' language definitions on input line 2872.
  [85
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.30}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.2869 \chapter
+l.2872 \chapter
                {Conclusioni}]
-Package cleveref Info: loaded `english' language definitions on input line 2869.
-Package cleveref Info: loaded `english' language definitions on input line 2869.
+Package cleveref Info: loaded `english' language definitions on input line 2872.
+Package cleveref Info: loaded `english' language definitions on input line 2872.
  [86
 
 ]
 Chapter 7.
-Package cleveref Info: loaded `english' language definitions on input line 2876.
+Package cleveref Info: loaded `english' language definitions on input line 2879.
 [87]
-Package cleveref Info: loaded `english' language definitions on input line 2876.
+Package cleveref Info: loaded `english' language definitions on input line 2879.
  [88
 
 ]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 2881.
+(hyperref)                be the same. Added a new anchor on input line 2884.
 
 (./thesis-main.bbl
 Package cleveref Info: loaded `english' language definitions on input line 37.
@@ -1442,15 +1442,15 @@ Package cleveref Info: loaded `english' language definitions on input line 138.
 Package cleveref Info: loaded `english' language definitions on input line 185.
 Package cleveref Info: loaded `english' language definitions on input line 185.
  [92])
-Package cleveref Info: loaded `english' language definitions on input line 2884.
-Package cleveref Info: loaded `english' language definitions on input line 2884.
+Package cleveref Info: loaded `english' language definitions on input line 2887.
+Package cleveref Info: loaded `english' language definitions on input line 2887.
  [93]
-Package cleveref Info: loaded `english' language definitions on input line 2884.
-Package cleveref Info: loaded `english' language definitions on input line 2884.
+Package cleveref Info: loaded `english' language definitions on input line 2887.
+Package cleveref Info: loaded `english' language definitions on input line 2887.
  [94
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 2888.
+Package cleveref Info: loaded `english' language definitions on input line 2891.
  [95] (./thesis-main.aux
 Package cleveref Info: loaded `english' language definitions on input line 21.
 )
@@ -1470,7 +1470,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  114i,19n,115p,1722b,1568s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on thesis-main.pdf (107 pages, 972717 bytes).
+Output written on thesis-main.pdf (107 pages, 973622 bytes).
 PDF statistics:
  1423 PDF objects out of 1440 (max. 8388607)
  1235 compressed objects within 13 object streams
