@@ -1237,7 +1237,7 @@ All'interno del progetto e' stato condotto uno studio per valutare l'impatto di 
   \item L'accorpamento di sprint una volta raggiunto un certo numero di sprint e il suo effetto sulla qualità della soluzione.
   \item Impatto del rilassamento del vincolo OR e AND tra le user story.
 \end{itemize}
-Per queste valutazioni si è scelto di utilizzare per tutti i test la funzione obbiettivo \eqref{Eq1.P1} e per cui le considerazioni che seguono si dasano sul confronto tra i risultati che ottenuti modificando i parametri delle istanze e quelli ottenuti con i parametri originali riportati nelle tabelle \ref{tab.new1}, \ref{tab.new2} e \ref{tab.new02}.
+Per queste valutazioni si è scelto di utilizzare per tutti i test la funzione obiettivo \eqref{Eq1.P1} e per cui le considerazioni che seguono si dasano sul confronto tra i risultati che ottenuti modificando i parametri delle istanze e quelli ottenuti con i parametri originali riportati nelle tabelle \ref{tab.new1}, \ref{tab.new2} e \ref{tab.new02}.
 
 
 \subsection{Riduzione sprint}
@@ -1496,13 +1496,13 @@ instance\_f\_05            &     &   121055.0  &      0.04  &     121055.0  &   
 %}
 \end{table}
 
-\section{Confronto funzioni obbiettivo}\label{confronto:fb}
+\section{Confronto funzioni obiettivo}\label{confronto:fb}
 
-In questa sezione vengono confrontati i risultati ottenuti utilizzando le due diverse funzioni obbiettivo descritte nella sezione \ref{sec:fo}. Si usera come riferimento la tabella \ref{tab.new1} la quale riporta i risultati ottenuti con la funzione obbiettivo \eqref{Eq1.P1} e nelle tabelle \ref{tab.new2}, \ref{tab.new02} che riportano i risultati delle metriche calcolate su tali risultati.
+In questa sezione vengono confrontati i risultati ottenuti utilizzando le due diverse funzioni obiettivo descritte nella sezione \ref{sec:fo}. Si userà come riferimento la tabella \ref{tab.new1} la quale riporta i risultati ottenuti con la funzione obiettivo \eqref{Eq1.P1} e nelle tabelle \ref{tab.new2}, \ref{tab.new02} che riportano i risultati delle metriche calcolate su tali risultati.
 
 \begin{table}[H]
 \centering
-\caption{results con funzione obbiettivo \eqref{Eq1.P1}}
+\caption{results con funzione obiettivo \eqref{Eq1.P1}}
 \label{tab.new1}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1545,7 +1545,7 @@ instance\_f\_05               &     &  137811.6 &    0.01 &     19.82 &  121055.
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq1.P1}}
+\caption{KPI con funzione obiettivo \eqref{Eq1.P1}}
 \label{tab.new2}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1589,7 +1589,7 @@ instance\_f\_05               &     &   9    &  95.09\%  &   3    &   9   &    9
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq1.P1}}
+\caption{KPI con funzione obiettivo \eqref{Eq1.P1}}
 \label{tab.new02}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1633,23 +1633,23 @@ instance\_f\_05               &     &   6.0  &   21.8  &  2.7  &   5.5  &   20.7
 
 come si notare nella tabella \ref{tab.new1} nella colonna del tempo di esecuzione relativa alla esecuzione di CPLEX, gia dal secondo gruppo di istanze  il tempo di esecuzione e sempre al limite massimo di 300 secondi, questo indica che CPLEX non riesce a trovare la soluzione ottima in tempi ragionevoli. 
 
-\subsection{funzuone obbiettovo \texorpdfstring{\eqref{Eq2.P1}}{(5.23)}}
+\subsection{funzuone obiettivo \texorpdfstring{\eqref{Eq2.P1}}{(5.23)}}
 
-Nella tabella \ref{tab.new3} vi e' riportato il confronto tra la funzione obbiettivo \eqref{Eq1.P1} e la funzione obbiettivo \eqref{Eq2.P1} in termini di tempo di esecuzione. come si pou notare vi differenze tra i tempi di esecuzione delle 2 funzioni obbiettivo, non considerando CPLEX che come gia detto tende a saturare il tempo massimo di esecuzione, i tempi di esecuzione del algoritmo euristico con la funzione obbiettivo \eqref{Eq2.P1} sono il $16.3\%$ piu veloci rispetto quelli della funzione obbiettivo \eqref{Eq1.P1}, mentre i tempi di esecuzione dell'euristica lagrangiana variano soli di un $2.2\%$ sempre a favore della funzione obbiettivo\eqref{Eq2.P1}. 
-Per quanto riguarda i KPI delle due funzioni obbiettivo si possono notare delle differenze minime, tra le tabelle \ref{tab.new2} e \ref{tab.new03} si possono notare che vi sono alcune istanze per cui i KPI N.U.S. e H.U.S. risultano inferiri per le istanze delle funzione obbiettivo \eqref{Eq2.P1}, percio questo indica che l'anticipare se possibile la risoluzione dei vincoli porta poi successivamente a veloccizzare il progetto.
-Si puo anche notare confrontando le tabelle \ref{tab.new02} e \ref{tab.new04} che i valori di D.R. e R.MAX risultano essere leggermente maggiori per la funzione obbiettivo \eqref{Eq1.P1}, rispettivamente D.R. della funzione obbiettivo \eqref{Eq1.P1} e' $9.8\%$ maggiore rispettoa quello della funzione obbiettivo \eqref{Eq2.P1} metre per  R.MAX e' maggiore del $ 13.2\%$, questo indica che anticipare la risoluzione dei vincoli porta ad avere sprint mediamente meno rischiosi.
+Nella tabella \ref{tab.new3} vi e' riportato il confronto tra la funzione obiettivo \eqref{Eq1.P1} e la funzione obiettivo \eqref{Eq2.P1} in termini di tempo di esecuzione. come si può notare vi differenze tra i tempi di esecuzione delle 2 funzioni obiettivo, non considerando CPLEX che come già detto tende a saturare il tempo massimo di esecuzione, i tempi di esecuzione dell'algoritmo euristico con la funzione obiettivo \eqref{Eq2.P1} sono il $16.3\%$ piu veloci rispetto quelli della funzione obiettivo \eqref{Eq1.P1}, mentre i tempi di esecuzione dell'euristica lagrangiana variano soli di un $2.2\%$ sempre a favore della funzione obiettivo\eqref{Eq2.P1}. 
+Per quanto riguarda i KPI delle due funzioni obiettivo si possono notare delle differenze minime, tra le tabelle \ref{tab.new2} e \ref{tab.new03} si possono notare che vi sono alcune istanze per cui i KPI N.U.S. e H.U.S. risultano inferiri per le istanze delle funzione obiettivo \eqref{Eq2.P1}, perciò questo indica che anticipare se possibile la risoluzione dei vincoli porta poi successivamente a velocizzare il progetto.
+Si può anche notare confrontando le tabelle \ref{tab.new02} e \ref{tab.new04} che i valori di D.R. e R.MAX risultano essere leggermente maggiori per la funzione obiettivo \eqref{Eq1.P1}, rispettivamente D.R. della funzione obiettivo \eqref{Eq1.P1} e' $9.8\%$ maggiore rispettoa quello della funzione obiettivo \eqref{Eq2.P1} mentre per  R.MAX e' maggiore del $ 13.2\%$, questo indica che anticipare la risoluzione dei vincoli porta ad avere sprint mediamente meno rischiosi.
 
 \begin{table}[H]
 \centering
-\caption{confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}}
+\caption{confronto tempi di esecuzione tra le due funzioni obiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}}
 \label{tab.new3}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|} 
 \hline
 \multicolumn{2}{c|}{   } &
-\multicolumn{3}{c|}{Funzioni obbiettivo\eqref{Eq1.P1}} &     
-\multicolumn{3}{c|}{Funzioni obbiettivo\eqref{Eq2.P1}}  \\  
+\multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq1.P1}} &     
+\multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P1}}  \\  
 \hline
 Istanza                       &     &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time  \\   
 instance\_06\_01              &     &      0.23 &   0.03 &      0.23 &      0.13 &     0.02 &      0.16 \\ 
@@ -1685,7 +1685,7 @@ instance\_f\_05                &     &   19.82 &     0.29 &    17.91   &     25.
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P1}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P1}}
 \label{tab.new03}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1729,7 +1729,7 @@ instance\_f\_05               &     &     9  &    95.10\%  &   3   &  9  &    94
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P1}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P1}}
 \label{tab.new003}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1771,25 +1771,24 @@ instance\_f\_05               &     &   7.0  &   23.7  &  2.7  &   6.3  &   20.9
 }
 \end{table}
 
-\subsection{Funzione obbiettivo \texorpdfstring{\eqref{Eq2.P2}}{(5.24)} e \texorpdfstring{\eqref{Eq2.P3}}{(5.25)}}
+\subsection{Funzione obiettivo \texorpdfstring{\eqref{Eq2.P2}}{(5.24)} e \texorpdfstring{\eqref{Eq2.P3}}{(5.25)}}
 
-I risultati ottenuti utilizzando le funzioni obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} come riportato nella tabella \ref{tab.new4}, che indica i tempi di esecuzione delle 2 funzioni obbiettivo, come nella relazione tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, vi e' un discostamento a per quanto riguarda i tempi di esecuzione dell'algoritmo euristico in cui la funzione obbiettivo \eqref{Eq2.P3} risulta piu veloce del $15.1\%$ rispetto alla sua controparte \eqref{Eq2.P2}, mentre per quanto riguarda l'euristica lagrangiana i tempi di esecuzione non si discostano in modo significativo. 
-Al contrario di quello che si e' notato nel confronto tra le funzioni obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, in questo caso il confronto dei KPI N.U.S. e H.U.S. tra le due funzioni obbiettivo risulta risulta per alcune istanze favorevole alla funzione obbiettivo \eqref{Eq2.P2} che risulta riuscire a concludere le istanze con un numero leggermente minore di sprint rispetto alla funzione obbiettivo \eqref{Eq2.P3}.
-Per quanto riguarda i KPI D.U. e U.MAX si puo notare confrontando le tabelle \ref{tab.new004} e \ref{tab.new005} che la funzione obbiettivo \eqref{Eq2.P2} rusulta avere un valore del D.U. del $ 8.1\%$ maggiore rispetto a quello della funzione obbiettivo \eqref{Eq2.P3}, mentre per il KPI U.MAX risulta essere maggiore del $ 12.3\%$, questo indica che vi sono presenti in media sprint maggiormente incerti. 
-
+I risultati ottenuti utilizzando le funzioni obiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} come riportato nella tabella \ref{tab.new4}, che indica i tempi di esecuzione delle 2 funzioni obiettivo, come nella relazione tra le funzioni obiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, vi e' un discostamento a per quanto riguarda i tempi di esecuzione dell'algoritmo euristico in cui la funzione obiettivo \eqref{Eq2.P3} risulta più veloce del $15.1\%$ rispetto alla sua controparte \eqref{Eq2.P2}, mentre per quanto riguarda l'euristica lagrangiana i tempi di esecuzione non si discostano in modo significativo. 
+Al contrario di quello che si e' notato nel confronto tra le funzioni obiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, in questo caso il confronto dei KPI N.U.S. e H.U.S. tra le due funzioni obiettivo risulta risulta per alcune istanze favorevole alla funzione obiettivo \eqref{Eq2.P2} che risulta riuscire a concludere le istanze con un numero leggermente minore di sprint rispetto alla funzione obiettivo \eqref{Eq2.P3}.
+Per quanto riguarda i KPI D.U. e U.MAX si puo notare confrontando le tabelle \ref{tab.new004} e \ref{tab.new005} che la funzione obiettivo \eqref{Eq2.P2} risulta avere un valore del D.U. del $ 8.1\%$ maggiore rispetto a quello della funzione obiettivo \eqref{Eq2.P3}, mentre per il KPI U.MAX risulta essere maggiore del $ 12.3\%$, questo indica che vi sono presenti in media sprint maggiormente incerti. 
 
 
 \begin{table}[H]
 \centering
-\caption{confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3}}
+\caption{confronto tempi di esecuzione tra le due funzioni obiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3}}
 \label{tab.new4}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|} 
 \hline
 \multicolumn{2}{c|}{   } &
-\multicolumn{3}{c|}{Funzioni obbiettivo\eqref{Eq2.P2}} &     
-\multicolumn{3}{c|}{Funzioni obbiettivo\eqref{Eq2.P3}}  \\  
+\multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P2}} &     
+\multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P3}}  \\  
 \hline
 Istanza                       &     &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time  \\   
 instance\_06\_01             &     &    0.12 &     0.02 &     0.14 &    0.03 &     0.02 &     0.16 \\ 
@@ -1825,7 +1824,7 @@ instance\_f\_05              &     &    26.09 &    0.32 &    17.52 &    14.03 & 
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P2}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P2}}
 \label{tab.new04}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1869,7 +1868,7 @@ instance\_f\_05               &     &     9  &    95.08\%  &   3    &   9  &    
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P2}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P2}}
 \label{tab.new004}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1913,7 +1912,7 @@ instance\_f\_05               &     &    6.4  &   22.4  &  2.7  &   6.4  &   24.
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P3}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P3}}
 \label{tab.new05}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1957,7 +1956,7 @@ instance\_f\_05               &     &      9  &    95.12\%  &   3     &   9  &  
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P3}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P3}}
 \label{tab.new005}
 \small
 \resizebox{\textwidth}{!}{%
@@ -1999,24 +1998,24 @@ instance\_f\_05               &     &  7.0  &   22.4  &  2.7  &   7.0  &   22.2 
 }
 \end{table}
 
-\subsection{Funzione obbiettivo \texorpdfstring{\eqref{Eq2.P4}}{(5.26)} e \texorpdfstring{\eqref{Eq2.P5}}{(5.27)}}
+\subsection{Funzione obiettivo \texorpdfstring{\eqref{Eq2.P4}}{(5.26)} e \texorpdfstring{\eqref{Eq2.P5}}{(5.27)}}
 
-I risultati ottenuti risolvendo le istanze con le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} per quanto riguarda i tempi di esecuzione come mostrato nella tabella \ref{tab.new6} risulta esserci una differenza che mostra che la funzione obbiettivo \eqref{Eq2.P5} risulta essere piu veloce del $14.6\%$ se si usa il metodo euristoco e del $16.4\%$ se si usa l'euristica Lagrangiana rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
-Osservando i KPI nelle tabelle \ref{tab.new06} e \ref{tab.new07} si nota una differenza in alcune istanze sostanzile per quanto riguarda il valore di H.U.S. che risulta essere piu basso utilizzando la funzione obbiettivo \eqref{Eq2.P4} rispetto alla funzione obbiettivo \eqref{Eq2.P5}, mentre il valore di N.U.S. rusilta essere pressoche uguale, questo sta ad indicare che per questa tipologia di funzione obbiettivo considerare i parametri $dp_{ij}$ e $ub_{ij}$ a un risultato non efficente dal punto di vista dell'utilita dell'utente.
-Osservando invece le tabelle \ref{tab.new006} e \ref{tab.new007} si nota come i valori di D.R., D.U. R.MAX e U.MAX risultano essere piu bassi utilizzando la funzione obbiettivo \eqref{Eq2.P5} di un valore compreso tra $19.8\%$ e $21.5\%$ rispetto alla funzione obbiettivo \eqref{Eq2.P4}, questo indica che la funzione obbiettivo \eqref{Eq2.P5} riesce a distribuire meglio sia il rischio che l'incertezza lungo i vari sprint rispetto alla funzione obbiettivo \eqref{Eq2.P4}.
+I risultati ottenuti risolvendo le istanze con le funzioni obiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} per quanto riguarda i tempi di esecuzione come mostrato nella tabella \ref{tab.new6} risulta esserci una differenza che mostra che la funzione obiettivo \eqref{Eq2.P5} risulta essere più veloce del $14.6\%$ se si usa il metodo euristico e del $16.4\%$ se si usa l'euristica Lagrangiana rispetto alla funzione obiettivo \eqref{Eq2.P4}.
+Osservando i KPI nelle tabelle \ref{tab.new06} e \ref{tab.new07} si nota una differenza in alcune istanze sostanziale per quanto riguarda il valore di H.U.S. che risulta essere più basso utilizzando la funzione obiettivo \eqref{Eq2.P4} rispetto alla funzione obiettivo \eqref{Eq2.P5}, mentre il valore di N.U.S. risulta essere pressoché uguale, questo sta ad indicare che per questa tipologia di funzione obiettivo considerare i parametri $dp_{ij}$ e $ub_{ij}$ a un risultato inefficiente dal punto di vista dell'utilità dell'utente.
+Osservando invece le tabelle \ref{tab.new006} e \ref{tab.new007} si nota come i valori di D.R., D.U. R.MAX e U.MAX risultano essere più bassi utilizzando la funzione obiettivo \eqref{Eq2.P5} di un valore compreso tra $19.8\%$ e $21.5\%$ rispetto alla funzione obiettivo \eqref{Eq2.P4}, questo indica che la funzione obiettivo \eqref{Eq2.P5} riesce a distribuire meglio sia il rischio che l'incertezza lungo i vari sprint rispetto alla funzione obiettivo \eqref{Eq2.P4}.
 
 
 \begin{table}[H]
 \centering
-\caption{confronto tempi di esecuzione tra le due funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5}}
+\caption{confronto tempi di esecuzione tra le due funzioni obiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5}}
 \label{tab.new6}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|} 
 \hline
 \multicolumn{2}{c|}{   } &
-\multicolumn{3}{c|}{Funzioni obbiettivo\eqref{Eq2.P4}} &     
-\multicolumn{3}{c|}{Funzioni obbiettivo\eqref{Eq2.P5}}  \\  
+\multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P4}} &     
+\multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P5}}  \\  
 \hline
 Istanza                       &     &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time  \\   
 instance\_06\_01             &     &     0.05 &      0.02 &       0.14   &    0.06 &     0.03 &     0.26 \\   
@@ -2053,7 +2052,7 @@ instance\_f\_05              &     &   300.55 &      0.77 &    18.89 &     4.86 
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P4}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P4}}
 \label{tab.new06}
 \small
 \resizebox{\textwidth}{!}{%
@@ -2097,7 +2096,7 @@ instance\_f\_05               &     &     9  &    95.08\%  &   3    &   9  &    
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P4}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P4}}
 \label{tab.new006}
 \small
 \resizebox{\textwidth}{!}{%
@@ -2141,7 +2140,7 @@ instance\_f\_05               &     &    6.4  &   22.4  &  2.7  &   6.4  &   24.
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P5}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P5}}
 \label{tab.new07}
 \small
 \resizebox{\textwidth}{!}{%
@@ -2185,7 +2184,7 @@ instance\_f\_05               &       &   9  &    95.13\%  &   4      &   9  &  
 
 \begin{table}[H]
 \centering
-\caption{KPI con funzione obbiettivo \eqref{Eq2.P5}}
+\caption{KPI con funzione obiettivo \eqref{Eq2.P5}}
 \label{tab.new007}
 \small
 \resizebox{\textwidth}{!}{%
@@ -2227,38 +2226,37 @@ instance\_f\_05               &     &   4.6  &   19.7  &  4.8  &   3.6  &   17.4
 }
 \end{table}
 
-\subsection{Confronto funzioni obbiettivo}
+\subsection{Confronto funzioni obiettivo}
 
-In questa sezione si confrontano i risultati presentati precedentemente delle diverse funzioni obbiettivo considerando solo il metodo euristico.
+In questa sezione si confrontano i risultati presentati precedentemente delle diverse funzioni obiettivo considerando solo il metodo euristico.
 
-Come si puo osservare nella figura \ref{fig:tempoFO}, tutte le funzioni obbiettivo presentano tempi di calcolo simili per quanto riguara i primi tre gruppi di istanze (es. instance\_06\_xx, instance\_20\_xx, instance\_40\_xx). Per le istanze piu grandi del gruppo 4 e quelle che presentano story point in base alle sequenza di Fibonacci (es. instance\_100\_xx e instance\_f\_xx) si nota che le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} impiegano piu tempo per essere risolte ed e' visibile il grap che e' stato presentato prima tra la funzione obbiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, la funzione obbiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} .
-Questa differenza di tempi tra le funzioni obbiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} e le altre e' probabilmente dovuta al fatto che gli algoritmi risultano in diffilcolta a selezionare la combinazione di user story migliori confrontando la quantita di story point che richiedono.
+Come si può osservare nella figura \ref{fig:tempoFO}, tutte le funzioni obiettivo presentano tempi di calcolo simili per quanto riguarda i primi tre gruppi di istanze (es. instance\_06\_xx, instance\_20\_xx, instance\_40\_xx). Per le istanze più grandi del gruppo 4 e quelle che presentano story point in base alle sequenza di Fibonacci (es. instance\_100\_xx e instance\_f\_xx) si nota che le funzioni obiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} impiegano più tempo per essere risolte ed e' visibile il grap che e' stato presentato prima tra la funzione obiettivo \eqref{Eq1.P1} e \eqref{Eq2.P1}, la funzione obiettivo \eqref{Eq2.P2} e \eqref{Eq2.P3} .
+Questa differenza di tempi tra le funzioni obiettivo \eqref{Eq2.P4} e \eqref{Eq2.P5} e le altre e' probabilmente dovuta al fatto che gli algoritmi risultano in difficoltà a selezionare la combinazione di user story migliori confrontando la quantità di story point che richiedono.
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/tempoFO1.png}
-    \caption{Tempo di calcolo per le diverse funzioni obbiettivo}
+    \caption{Tempo di calcolo per le diverse funzioni obiettivo}
     \label{fig:tempoFO}
 \end{figure}
 
-Analizzando la figura \ref{fig:POSFO} si puo notare che la percentuale di utilizzo degli sprint risulta essere similare per tutte le funzioni obbiettivo, la funzione obbiettivo \eqref{Eq2.P5} risulta essere quella che si discosta piu spesso dalle altre ma solo per alcune istanze, il fatto che lo scostamento sia solo su certe istanze sta ad indicare che per quelle istanze in cui riesce a presentare una percentuale miglire rispetto alle altre e' dovuto al fatto che riesce a ad utilizzare uno sprint in meno e quindi rispetto agli altri non presentare uno sprint semi vuoto che abbassa la percentuale di utilizzo degli sprint. migliora questo paragrafo
-
+Analizzando la Figura~\ref{fig:POSFO}, si nota che la percentuale di utilizzo degli sprint è simile per tutte le funzioni obiettivo. La funzione \eqref{Eq2.P5} si discosta più frequentemente dalle altre, ma solo per alcune istanze. Tale scostamento è dovuto alla capacità di questa funzione di utilizzare uno sprint in meno rispetto alle alternative: evitando sprint semi-vuoti, migliora la percentuale media di utilizzo nelle istanze favorevoli.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/POSFO1.png}
-    \caption{Tempo di calcolo per le diverse funzioni obbiettivo}
+    \caption{Tempo di calcolo per le diverse funzioni obiettivo}
     \label{fig:POSFO}
 \end{figure}
 
-nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo notare che in tutte e 4 le funzioni obbiettivo \eqref{Eq1.P1}, \eqref{Eq2.P2} e \eqref{Eq2.P4} risulatno presentare valori simili tra loro e maggiori rispetto alle altre funzioni obbiettivo, mentre la funzione obbiettivo \eqref{Eq2.P5} risulta essere quella che presenta i valori piu bassi in tutte e 4 le metriche considerate. Questo indica che la funzione obbiettivo \eqref{Eq2.P5} e' quella che riesce a bilanciare meglio il rischio e l'incertezza tra gli sprint rispetto alle altre funzioni obbiettivo e che le funzioni obbiettivo come la \eqref{Eq2.P1}, \eqref{Eq2.P3} e \eqref{Eq2.P5} che presentano al loro interno i parametri $dp_{ij}$ e $ub_{ij}$ risultano presentare valori minori rispetto alle controparti senza quindi riescono a distribuire meglio i rischi e le incertezze all'interno dei vari sprint. migliora questo paragrafo
+Nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo notare che in tutte e 4 le funzioni obiettivo \eqref{Eq1.P1}, \eqref{Eq2.P2} e \eqref{Eq2.P4} risultano presentare valori simili tra loro e maggiori rispetto alle altre funzioni obiettivo, mentre la funzione obiettivo \eqref{Eq2.P5} risulta essere quella che presenta i valori più bassi in tutte e 4 le metriche considerate. Questo indica che la funzione obiettivo \eqref{Eq2.P5} e' quella che riesce a bilanciare meglio il rischio e l'incertezza tra gli sprint rispetto alle altre funzioni obiettivo e che le funzioni obiettivo come la \eqref{Eq2.P1}, \eqref{Eq2.P3} e \eqref{Eq2.P5} che presentano al loro interno i parametri $dp_{ij}$ e $ub_{ij}$ risultano presentare valori minori rispetto alle controparti senza quindi riescono a distribuire meglio i rischi e le incertezze all'interno dei vari sprint. migliora questo paragrafo
 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/dr2.png}
-    \caption{Deviazione standard del rischio per le diverse funzioni obbiettivo}
+    \caption{Deviazione standard del rischio per le diverse funzioni obiettivo}
     \label{fig:dr}
 \end{figure}
 
@@ -2266,7 +2264,7 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/rmax2.png}
-    \caption{Valore massimo del rischio per le diverse funzioni obbiettivo}
+    \caption{Valore massimo del rischio per le diverse funzioni obiettivo}
     \label{fig:rmax}
 \end{figure}
 
@@ -2275,14 +2273,14 @@ nelle figure \ref{fig:dr}, \ref{fig:rmax}, \ref{fig:du}, \ref{fig:umax} si puo n
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/du2.png}
-    \caption{Deviazione standard dell'incertezza per le diverse funzioni obbiettivo}
+    \caption{Deviazione standard dell'incertezza per le diverse funzioni obiettivo}
     \label{fig:du}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/umax2.png}
-    \caption{Valore massimo dell'incertezza per le diverse funzioni obbiettivo}
+    \caption{Valore massimo dell'incertezza per le diverse funzioni obiettivo}
     \label{fig:umax}
 \end{figure}
 
@@ -2296,14 +2294,14 @@ All'interno del progetto e' stato condotto uno studio per valutare l'impatto di 
   \item Impatto del rilassamento del vincolo OR e AND tra le user story.
 \end{itemize}
 
-Per queste valutazioni si è scelto di utilizzare per tutti i test la funzione obbiettivo \eqref{Eq1.P1} e per cui le considerazioni che seguono si basano sul confronto tra i risultati ottenuti modificando i parametri delle istanze e quelli ottenuti con i parametri originali riportati nelle tabelle \ref{tab.new1}, \ref{tab.new2} e \ref{tab.new02}.
+Per queste valutazioni si è scelto di utilizzare per tutti i test la funzione obiettivo \eqref{Eq1.P1} e per cui le considerazioni che seguono si basano sul confronto tra i risultati ottenuti modificando i parametri delle istanze e quelli ottenuti con i parametri originali riportati nelle tabelle \ref{tab.new1}, \ref{tab.new2} e \ref{tab.new02}.
 
 \subsection{Riduzione del numero di sprint}
 
-La riduzione del numero di sprint disponibili indica una situazione in cui il team di sviluppo ha meno tempo a disposizione per completare il progetto, il che puo portare a una maggiore pressione e a una maggiore difficoltà nel completare tutte le user story entro il tempo previsto se non all'impossibilita di completarlo.
-Nel nostro test è importante valutare come la riduzione del numero di sprint influisce sulla qualità della soluzione e sui tempi di calcolo. I test che sono stati dondotti hanno previsto una riduzione di 2 sprint rispetto al numero di sprint originale per ogni istanza, e i risultati ottenuti sono riportati nelle tabelle \ref{tab.new8}, \ref{tab.new08} e \ref{tab.new008}.
-Si possono notare che le istanze $instance\_06\_02$, $instance\_06\_03$ e $instance\_100\_05$ presentano una soluzione con un valore della funzione obbiettivo pari a $Zopt = 0$ per il metodo esatto, questo indica che per quelle istanze non si puo avere una soluzione fattibile riducendo il numero di sprint a disposizione, metre le le altre istanze si puo notare che la riduzione del numero di sprint a disposizione non ha avuto nessun impatto sulla soluzione ottenuta dai metodi euristici.
-Si puo pero notare una variazione nei tempi di calcolo, per il metodo esatto la riduzione del numero di sprint porta un rispormi del $61.01\%$ di tempo di calcolo, metre per il metodo euristico del $117.54\%$ e per il metodo euristico Lagrangiano del $162.14\%$. Da questultima considerazione si puo notare come la riduzione del numero di sprint a disposizione porta a una diminuzione dei tempi di calcolo. 
+La riduzione del numero di sprint disponibili indica una situazione in cui il team di sviluppo ha meno tempo a disposizione per completare il progetto, il che puo portare a una maggiore pressione e a una maggiore difficoltà nel completare tutte le user story entro il tempo previsto se non all'impossibilità di completarlo.
+Nel nostro test è importante valutare come la riduzione del numero di sprint influisce sulla qualità della soluzione e sui tempi di calcolo. I test che sono stati condotti hanno previsto una riduzione di 2 sprint rispetto al numero di sprint originale per ogni istanza, e i risultati ottenuti sono riportati nelle tabelle \ref{tab.new8}, \ref{tab.new08} e \ref{tab.new008}.
+Si possono notare che le istanze $instance\_06\_02$, $instance\_06\_03$ e $instance\_100\_05$ presentano una soluzione con un valore della funzione obiettivo pari a $Zopt = 0$ per il metodo esatto, questo indica che per quelle istanze non si può avere una soluzione fattibile riducendo il numero di sprint a disposizione, mentre le le altre istanze si può notare che la riduzione del numero di sprint a disposizione non ha avuto nessun impatto sulla soluzione ottenuta dai metodi euristici.
+Si puo pero notare una variazione nei tempi di calcolo, per il metodo esatto la riduzione del numero di sprint porta un risparmio del $61.01\%$ di tempo di calcolo, mentre per il metodo euristico del $117.54\%$ e per il metodo euristico Lagrangiano del $162.14\%$. Da quest'ultima considerazione si può notare come la riduzione del numero di sprint a disposizione porta a una diminuzione dei tempi di calcolo. 
 
 \begin{table}[H]
 \centering
@@ -2440,10 +2438,13 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 
 \subsection{Riduzioni capacita degli sprint}
 
-In un progetto reale, e' possibile che la capacita degli sprint venga ridotta a causa di imprevisti, come ad esempio malattie, ferie o altri impegni dei membri del team, questo porta a un aumento dei tempi di completamento del progetto e in alcuni casi l'impossibilita al completamento nei tempi previsti.
-Per valutare l'impatto di una riduzione della capacita degli sprint sui KPI, abbiamo condotto un esperimento in cui abbiamo ridotto la capacita degli sprint del 20\% i cui risultati si trovano nelle tabelle \ref{tab.new9}, \ref{tab.new09} e \ref{tab.new009}.
-Si puo  notare come la riduzione della capacita dello sprint ha portato anche a una riduzione del valore della funzione obbiettivo del $8\%$ per il metodo esatto e del $6.1\%$ per i metodi euristici e si nota anche cle il gruppo di istanze piu grandi non e' in grado di essere risolto causa il non sufficenti story point a disposizione.
-Il KPI N.U.S. e' aumentato del $26.59\%$ per il metodo esatto e del $25.08\%$ per i metodi euristici, mentre per il KPI H.U.S. vi e' stato un aumentato del $26.67\%$ per il metodo esatto e del $15.51\%$ per i metodi euristici. Questo indicando come era presumibile che la riduzione della capacita degli sprint ha portato ad un aumeto del numero degli sprint necessari a completare il progetto.
+
+
+In un progetto reale, e' possibile che la capacità degli sprint venga ridotta a causa di imprevisti, come ad esempio malattie, ferie o altri impegni dei membri del team, questo porta a un aumento dei tempi di completamento del progetto e in alcuni casi l'impossibilità al completamento nei tempi previsti.
+Per valutare l'impatto di una riduzione della capacità degli sprint sui KPI, abbiamo condotto un esperimento in cui abbiamo ridotto la capacità degli sprint del 20\% i cui risultati si trovano nelle tabelle \ref{tab.new9}, \ref{tab.new09} e \ref{tab.new009}.
+Si può  notare come la riduzione della capacità dello sprint ha portato anche a una riduzione del valore della funzione obiettivo del $8\%$ per il metodo esatto e del $6.1\%$ per i metodi euristici e si nota anche che il gruppo di istanze più grandi non e' in grado di essere risolto causa il non sufficienti story point a disposizione.
+Il KPI N.U.S. e' aumentato del $26.59\%$ per il metodo esatto e del $25.08\%$ per i metodi euristici, mentre per il KPI H.U.S. vi e' stato un aumento del $26.67\%$ per il metodo esatto e del $15.51\%$ per i metodi euristici. Questo indicando come era presumibile che la riduzione della capacità degli sprint ha portato ad un aumento del numero degli sprint necessari a completare il progetto.
+
 
 \begin{table}[H]
 \centering
@@ -2581,19 +2582,12 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 \subsection{Accorpamento di sprint}
 
 L'accorpamento di sprint consiste nell'unire più sprint in uno solo, riducendo così il numero totale di sprint e, di conseguenza, le riunioni di pianificazione e revisione. Questa pratica si rivela utile in due scenari principali:
-
 \begin{itemize}
-    \item Dopo una fase iniziale del progetto, se si rileva che gli sprint sono troppo brevi per massimizzare l'efficacia del team.
-    \item Quando il progetto, post-fase iniziale, appare sufficientemente stabile da permettere l'accorpamento senza rischi di modifiche significative al piano complessivo.
+  \item Dopo una fase iniziale del progetto, se si rileva che gli sprint sono troppo brevi per massimizzare l'efficacia del team.
+  \item Quando il progetto, post-fase iniziale, appare sufficientemente stabile da permettere l'accorpamento senza rischi di modifiche significative al piano complessivo.
 \end{itemize}
-
-In questo modo, si ottimizza il flusso di lavoro mantenendo flessibilità.
-Per i test computazionali, si è deciso di accorpare gli sprint in gruppi di 2 a partire dalla metà del numero totale di sprint. 
-
-Ad esempio, in un progetto di 8 sprint, si accorpano gli sprint 5 e 6 (ottenendo un nuovo sprint 5 con capacità \( c_5 = c_5 + c_6 \)) e gli sprint 7 e 8 (ottenendo un nuovo sprint 6 con capacità \( c_6 = c_7 + c_8 \)). I risultati dei test si trovano nelle tabelle \ref{tab.new10}, \ref{tab.new010} e \ref{tab.new0010}.
-Si puo notare che l'accorpamento degli sprint non ha impattato sul valore ottenuto dalla  funzione obbiettivo rispetto alla versione base, questo dovuto al fatto che l'accorpamento non ha modificato la capacità totale disponibile, ma solo la distribuzione della stessa tra gli sprint. 
-Vi sono pero differenze sui KPI D.R. e D.U. che hanno avuto un aumento, per quanto ruguarda D.R. per la soluzione esatta l'aumento e' stato del $2.59\%$ mentre per le soluzioni euristiche e' stato del $8.83\%$, per quanto riguarda D.U. per la soluzione esatta l'aumento e' stato del $3.11\%$ mentre per le soluzioni euristiche e' stato del $11.36\%$.
-Lo stesso trend si nota anche nei KPI R.MAX e U.MAX, con un aumento rispettivamente del $9.75\%$ e del $11.02\%$ per le soluzioni euristiche, mentre per la soluzione esatta l'aumento è stato del $3.01\%$ per R.MAX e del $3.46\%$ per U.MAX. Questo aumento e' dovuto dal fatto che vi sono sprint piu' grandi che permettono di allocare piu' lavoro in un singolo sprint, ma questo comporta anche un aumento del rischio e dell'incertezza complessiva dello sprint.
+In questo modo, si ottimizza il flusso di lavoro mantenendo flessibilità.Per i test computazionali, si è deciso di accorpare gli sprint in gruppi di 2 a partire dalla metà del numero totale di sprint. 
+Ad esempio, in un progetto di 8 sprint, si accorpano gli sprint 5 e 6 (ottenendo un nuovo sprint 5 con capacità \( c_5 = c_5 + c_6 \)) e gli sprint 7 e 8 (ottenendo un nuovo sprint 6 con capacità \( c_6 = c_7 + c_8 \)). I risultati dei test si trovano nelle tabelle \ref{tab.new10}, \ref{tab.new010} e \ref{tab.new0010}.Si può notare che l'accorpamento degli sprint non ha impattato sul valore ottenuto dalla  funzione obiettivo rispetto alla versione base, questo dovuto al fatto che l'accorpamento non ha modificato la capacità totale disponibile, ma solo la distribuzione della stessa tra gli sprint. Vi sono però differenze sui KPI D.R. e D.U. che hanno avuto un aumento, per quanto riguarda D.R. per la soluzione esatta l'aumento e' stato del $2.59\%$ mentre per le soluzioni euristiche e' stato del $8.83\%$, per quanto riguarda D.U. per la soluzione esatta l'aumento e' stato del $3.11\%$ mentre per le soluzioni euristiche e' stato del $11.36\%$.Lo stesso trend si nota anche nei KPI R.MAX e U.MAX, con un aumento rispettivamente del $9.75\%$ e del $11.02\%$ per le soluzioni euristiche, mentre per la soluzione esatta l'aumento è stato del $3.01\%$ per R.MAX e del $3.46\%$ per U.MAX. Questo aumento e' dovuto dal fatto che vi sono sprint piu' grandi che permettono di allocare piu' lavoro in un singolo sprint, ma questo comporta anche un aumento del rischio e dell'incertezza complessiva dello sprint.
 
 \begin{table}[H]
 \centering
@@ -2730,11 +2724,11 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 
 \subsection{Eliminazione vincoli AND e OR}
 
-L'eliminazione dei vincoli AND e OR in un progetto reale non sarebbe possibile, visto che  risulta impossibile eliminare tutte le dipendenze tra le attivita. Tuttavia si e' voluto testare se questi vincoli incidono nulla soluzione e se si in quale misura. I risultati ottenuti sono riportati nelle tabelle \ref{tab.new11}, \ref{tab.new011} e \ref{tab.new0011}. 
-Si puo notare che i risultati ottenuti risultano essere migliori rispetto a quelli ottenuti con i vincoli AND e OR, il valore delle funzione obbiettvo e' aumentoato del $42.65\%$ per il metodo esatto e del $41.91\%$ per i metodo euristici. I tempi di esecuzione sono
+L'eliminazione dei vincoli AND e OR in un progetto reale non sarebbe possibile, visto che  risulta impossibile eliminare tutte le dipendenze tra le attività. Tuttavia si e' voluto testare se questi vincoli incidono sulla soluzione e se sì in quale misura. I risultati ottenuti sono riportati nelle tabelle \ref{tab.new11}, \ref{tab.new011} e \ref{tab.new0011}. 
+Si può notare che i risultati ottenuti risultano essere migliori rispetto a quelli ottenuti con i vincoli AND e OR, il valore delle funzione obbiettvo e' aumentato del $42.65\%$ per il metodo esatto e del $41.91\%$ per i metodo euristici. I tempi di esecuzione sono
 diminuiti drasticamente, con un tempo medio di esecuzione e' diminuito del $61.81\%$ per il metodo esatto, del $6.42\%$ per il metodo euristico e del $67.11\%$ per il metodo lagrangiano.
-Il miglioramento del valre della funzione obbiettvo e' dovuto al fatto che l'eliminazione dei vincoli permette di avere una maggiore flessibilita nella pianificazione delle attivita, consentendo di sfruttare meglio le risorse disponibili e di ridurre i tempi di completamento del progetto. Inoltre, l'eliminazione dei vincoli AND e OR consente di ridurre 
-il tempo di esecuzione perche una qualsiasi soluzione che soddisfa i vincoli sulla capcita degli sprint e' una soluzione ammissibile per cui non saranno necessari cercARE ULTERIORI SOLUZIONI.
+Il miglioramento del valore della funzione obiettivo e' dovuto al fatto che l'eliminazione dei vincoli permette di avere una maggiore flessibilità nella pianificazione delle attività, consentendo di sfruttare meglio le risorse disponibili e di ridurre i tempi di completamento del progetto. Inoltre, l'eliminazione dei vincoli AND e OR consente di ridurre 
+il tempo di esecuzione perché una qualsiasi soluzione che soddisfa i vincoli sulla capacità degli sprint e' una soluzione ammissibile per cui non saranno necessari cercARE ULTERIORI SOLUZIONI.
 
 \begin{table}[H]
 \centering

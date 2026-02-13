@@ -46,11 +46,11 @@
 \contentsline {paragraph}{Progressione del valore consegnato.}{49}{section*.23}%
 \contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{49}{subsection.6.2.3}%
 \contentsline {section}{\numberline {6.3}Confronto tra il metodo euristico originale e la versione con modifiche ai tagli}{50}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Confronto funzioni obbiettivo}{51}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}funzuone obbiettovo \eqref {Eq2.P1}}{53}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Funzione obbiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{56}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Funzione obbiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{61}{subsection.6.4.3}%
-\contentsline {subsection}{\numberline {6.4.4}Confronto funzioni obbiettivo}{66}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.4}Confronto funzioni obiettivo}{51}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}funzuone obiettivo \eqref {Eq2.P1}}{53}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Funzione obiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{56}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Funzione obiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{61}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Confronto funzioni obiettivo}{66}{subsection.6.4.4}%
 \contentsline {section}{\numberline {6.5}Variazione dei parametri}{71}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Riduzione del numero di sprint}{71}{subsection.6.5.1}%
 \contentsline {subsection}{\numberline {6.5.2}Riduzioni capacita degli sprint}{75}{subsection.6.5.2}%
