@@ -2580,6 +2580,21 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 
 \subsection{Accorpamento di sprint}
 
+L'accorpamento di sprint consiste nell'unire più sprint in uno solo, riducendo così il numero totale di sprint e, di conseguenza, le riunioni di pianificazione e revisione. Questa pratica si rivela utile in due scenari principali:
+
+\begin{itemize}
+    \item Dopo una fase iniziale del progetto, se si rileva che gli sprint sono troppo brevi per massimizzare l'efficacia del team.
+    \item Quando il progetto, post-fase iniziale, appare sufficientemente stabile da permettere l'accorpamento senza rischi di modifiche significative al piano complessivo.
+\end{itemize}
+
+In questo modo, si ottimizza il flusso di lavoro mantenendo flessibilità.
+Per i test computazionali, si è deciso di accorpare gli sprint in gruppi di 2 a partire dalla metà del numero totale di sprint. 
+
+Ad esempio, in un progetto di 8 sprint, si accorpano gli sprint 5 e 6 (ottenendo un nuovo sprint 5 con capacità \( c_5 = c_5 + c_6 \)) e gli sprint 7 e 8 (ottenendo un nuovo sprint 6 con capacità \( c_6 = c_7 + c_8 \)). I risultati dei test si trovano nelle tabelle \ref{tab.new10}, \ref{tab.new010} e \ref{tab.new0010}.
+Si puo notare che l'accorpamento degli sprint non ha impattato sul valore ottenuto dalla  funzione obbiettivo rispetto alla versione base, questo dovuto al fatto che l'accorpamento non ha modificato la capacità totale disponibile, ma solo la distribuzione della stessa tra gli sprint. 
+Vi sono pero differenze sui KPI D.R. e D.U. che hanno avuto un aumento, per quanto ruguarda D.R. per la soluzione esatta l'aumento e' stato del $2.59\%$ mentre per le soluzioni euristiche e' stato del $8.83\%$, per quanto riguarda D.U. per la soluzione esatta l'aumento e' stato del $3.11\%$ mentre per le soluzioni euristiche e' stato del $11.36\%$.
+Lo stesso trend si nota anche nei KPI R.MAX e U.MAX, con un aumento rispettivamente del $9.75\%$ e del $11.02\%$ per le soluzioni euristiche, mentre per la soluzione esatta l'aumento è stato del $3.01\%$ per R.MAX e del $3.46\%$ per U.MAX. Questo aumento e' dovuto dal fatto che vi sono sprint piu' grandi che permettono di allocare piu' lavoro in un singolo sprint, ma questo comporta anche un aumento del rischio e dell'incertezza complessiva dello sprint.
+
 \begin{table}[H]
 \centering
 \caption{KPI con accorpamento di sprint}
@@ -2714,6 +2729,9 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 \end{table}
 
 \subsection{Eliminazione vincoli AND e OR}
+
+L'eliminazione dei vincoli AND e OR in un progetto reale non sarebbe possibile, visto che  risulta impossibile eliminare tutte le dipendenze tra le attivita. Tuttavia si e' voluto testare se questi vincoli incidono nulla soluzione e se si in quale misura. I risultati ottenuti sono riportati nelle tabelle \ref{tab.new11}, \ref{tab.new011} e \ref{tab.new0011}. 
+
 
 \begin{table}[H]
 \centering
