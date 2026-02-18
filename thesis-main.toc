@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {4.2}Procedure di riduzione}{22}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Modifica delle capacità degli sprint}{22}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Modifica dei pesi delle user story}{22}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Formulazione matica alternativa}{23}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Formulazione matematica alternativa}{23}{subsection.4.2.3}%
 \contentsline {chapter}{\numberline {5}Euristiche per la pianificazione degli sprint}{25}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Euristiche greedy e di scambio del lavoro precedente}{25}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}GreedyHeuristic: costruzione sprint-per-sprint}{25}{subsection.5.1.1}%
@@ -57,7 +57,10 @@
 \contentsline {subsection}{\numberline {6.5.2}Riduzioni capacita degli sprint}{74}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Accorpamento di sprint}{77}{subsection.6.5.3}%
 \contentsline {subsection}{\numberline {6.5.4}Eliminazione vincoli AND e OR}{81}{subsection.6.5.4}%
-\contentsline {subsection}{\numberline {6.5.5}Risultati con formulazione matica alternativa}{84}{subsection.6.5.5}%
+\contentsline {subsection}{\numberline {6.5.5}Risultati con formulazione matematica alternativa}{84}{subsection.6.5.5}%
 \contentsline {chapter}{\numberline {7}Conclusioni}{87}{chapter.7}%
-\contentsline {part}{}{89}{chapter.7}%
-\contentsline {chapter}{Bibliography}{89}{section*.24}%
+\contentsline {subsection}{\numberline {7.0.1}Sviluppi futuri}{87}{subsection.7.0.1}%
+\contentsline {subsubsection}{Miglioramento della Formulazione matematica \ref {sec.formulazione2}}{87}{section*.24}%
+\contentsline {subsubsection}{Formulazione matematica alternativa}{88}{section*.25}%
+\contentsline {part}{}{93}{equation.7.0.22}%
+\contentsline {chapter}{Bibliography}{93}{section*.26}%

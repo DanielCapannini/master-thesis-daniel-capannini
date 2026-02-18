@@ -340,9 +340,10 @@ pr_1 \geq pr_2 \geq \dots \geq pr_n.
 Queste tecniche di riduzione sfruttano problemi classici come il Subset Sum, risolvibili con algoritmi di programmazione dinamica, contribuendo a semplificare il modello e a ridurre i tempi di calcolo necessari per la soluzione ottimale.
 
 
-\subsection{Formulazione matica alternativa}\label{sec.formulazione2}
+\subsection{Formulazione matematica alternativa}\label{sec.formulazione2}
 
-Si e' considerata anche una formulazione matematica alternativa, che si distingue per nella funzione \eqref{Eq5.P2} da quella originale  \eqref{Eq1.P2}, in cui $ p^{sp}$ rappresenta la capacita fissa di ogni sprint e $\xi_i$ e' una variabile intera che rappresenta il numero di sprints che veranno accorpati allo sprint $i$.
+Nella formelazione presentata in precedenza le capacità degli sprint sono fisse e rappresentate dai parametri \( p_i^{max} \). Si e' tuttavia valutato che invece di fornire una capacita fissa per ogni sprint, potrebbe essere vantaggioso permettere al modello di variare la capacità di ogni sprint, accorpando più sprint insieme, al fine di massimizzare l'utilizzo della capacità e migliorare la fattibilità delle soluzioni.
+Da questa considerazione nasce una formulazione matematica alternativa, che si distingue per nella funzione \eqref{Eq5.P2} da quella originale  \eqref{Eq1.P2}, in cui $ p^{sp}$ rappresenta la capacita fissa di ogni sprint e $\xi_i$ e' una variabile intera che rappresenta il numero di sprints che veranno accorpati allo sprint $i$.
 Questa variazione permette al modello di variare la capacita di ogni sprint, accorpando più sprint insieme, al fine di massimizzare l'utilizzo della capacità e migliorare la fattibilità delle soluzioni.
 
 \begin{alignat}{3}
@@ -2886,14 +2887,14 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 }
 \end{table}
 
-\subsection{Risultati con formulazione matica alternativa}
+\subsection{Risultati con formulazione matematica alternativa}\label{risultati.alternativi}
 
 Nelle tabelle \ref{tab.r22} e \ref{tab.r222} sono riportati i risulta ottenuti utilizzando la formulazione matematica della sezione \ref{sec.formulazione2} tramite il metodo esatto implementato in CPLEX.
 Come si puo notare dai KPI N.S.O. e H.U.S. il metodo per massimmizzare la funzione obbiettivo accorpa tutti gli sprint in uno unico. Questo e' doovuto perche la formulazione matematica cosi espressa non pone vincoli per la dimenzione dello sprint e ne per il rischio e l'incertezza massima che possono essere presenti in un unico sprint.
 
 \begin{table}[H]
 \centering
-\caption{KPI con formulazione matica alternativa}
+\caption{KPI con formulazione matematica alternativa}
 \label{tab.r22}
 \small
 %\resizebox{\textwidth}{!}{%
@@ -2936,7 +2937,7 @@ Istanza        &     &               Zopt &      Time   \\
 
 \begin{table}[H]
 \centering
-\caption{KPI con formulazione matica alternativa}
+\caption{KPI con formulazione matematica alternativa}
 \label{tab.r222}
 \small
 %\resizebox{\textwidth}{!}{%
@@ -2978,6 +2979,91 @@ Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. \\
 
 
 \chapter{Conclusioni}
+
+\subsection{Sviluppi futuri}
+
+\subsubsection{Miglioramento della Formulazione matematica \ref{sec.formulazione2}}
+
+Come si e' visto nei risultati \ref{risultati.alternativi} la formulazione matematica proposta nella sezione \ref{sec.formulazione2} non e' in grado di produrre soluzioni con un numero di sprint maggiore di 1, a causa della mancanza di vincoli che limitino la dimensione dello sprint e il rischio e l'incertezza massima che possono essere presenti in un unico sprint.
+Un possibile sviluppo futuro consiste nell'introduzione di tali vincoli nella formulazione matematica, al fine di ottenere soluzioni più realistiche e utili per la pianificazione degli sprint.
+Una formiglore potrebbe essere la seguente:
+
+\begin{alignat}{3}
+ \qquad z_P  = \max  & \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right)
+                                                                               &\                        \label{Eq6.P1}\\
+  s.t.\ & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} - p^{sp} \xi_{i}  \leq 0,                   &\ i \in S                \label{Eq6.P2}\\
+        & \sum_{j=1}^{n} r_j^{risk} x_{ij} \approx \sum_{j=1}^{n} r_j^{risk} x_{(i+1)j},                   &\ i \in S                \label{Eq6.P3}\\
+        & \sum_{i=1}^{m} x_{ij} = 1,                                           &\ j \in U                \label{Eq6.P4}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} \geq x_{ij},             &\ i \in S, j \in U^{OR}  \label{Eq6.P5}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j^{AND}|, &\quad i \in S, j \in U^{AND} \label{Eq6.P6}\\
+        & y_{ij} \leq \sum_{k \in Y_j} x_{ik},                                 &\ i \in S, j \in U       \label{Eq6.P7}\\
+        & y_{ij} \leq |Y_j| x_{ij},                                            &\ i \in S, j \in U       \label{Eq6.P8}\\
+        & x_{ij} \in \{0,1\},                                                  &\ i \in S, j \in U       \label{Eq6.P9}\\
+        & y_{ij} \geq 0,                                                       &\ i \in S, j \in U       \label{Eq6.P10}
+\end{alignat}
+
+dove con la funzione \eqref{Eq6.P3} si cerca di mantenere il rischio totale dello sprint $i$ approssimativamente uguale a quello dello sprint $i+1$, al fine di evitare soluzioni in cui un unico sprint contiene tutte le user story, con un rischio molto elevato, ma che le user story siano distribuite in modo più equilibrato tra gli sprint, con un rischio più omogeneo.
+
+\subsubsection{Formulazione matematica alternativa}
+
+Un promettente sviluppo futuro consiste in una riformulazione matematica alternativa del problema, basata su un approccio di tipo {\em pattern-based}. In tale approccio, anziché modellizzare direttamente l'assegnazione delle user story agli sprint, si considererebbero i possibili pattern di assegnazione delle user story agli sprint, selezionando quelli che massimizzano l'utilità totale.
+
+In particolare, un sottoinsieme di user story $E \subseteq U$ potrebbe essere eseguito nello sprint $i \in S$ se e solo se soddisfa il vincolo di capacità dello sprint, ovvero 
+\[
+\sum_{j \in E} p_j r_j^{un} \leq p_i^{max}.
+\] 
+Tale sottoinsieme $E$ verrebbe definito {\em pattern di sprint fattibile}, o semplicemente {\em pattern}.
+
+L'insieme indicizzato di tutti i pattern fattibili sarebbe denotato con $\mathbb{S}$, ovvero
+\[
+\mathbb{S} = \left\{ \ell : \sum_{j \in E_{\ell}} p_j r_j^{un} \leq p_i^{max}, E_{\ell} \subseteq U, i \in S \right\}.
+\]
+Per un pattern $\ell \in \mathbb{S}$, $\pi(\ell)$ indicherebbe lo sprint corrispondente.
+
+Si definirebbero inoltre $\mathbb{S}_j \subseteq \mathbb{S}$ come il sottoinsieme di pattern contenenti la user story $j \in U$, $\mathbb{S}'_i \subseteq \mathbb{S}$ come il sottoinsieme di pattern corrispondenti allo sprint $i \in S$, e $\mathbb{S}''_{ij} \subseteq \mathbb{S}$ come il sottoinsieme di pattern che corrispondono allo sprint $i \in S$ e contengono la user story $j \in U$.
+
+Il nuovo modello di programmazione lineare mista intera è il seguente:
+\begin{alignat}{3}
+(P) \: z_P  = & \max \sum_{\ell \in \mathbb{S}} u_{\ell} x_{\ell}                       &\               \label{Eq.F2.P1}\\
+  s.t.\ & \sum_{\ell \in \mathbb{S}_j} x_{\ell} = 1,                                    &\ j \in U       \label{Eq.F2.P2}\\
+        & \sum_{\ell \in \mathbb{S}'_i} x_{\ell} \leq 1,                                &\ i \in S       \label{Eq.F2.P3}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} \sum_{\ell \in \mathbb{S}''_{kz}} x_{\ell} \geq \sum_{\ell \in \mathbb{S}''_{ij}} x_{\ell},
+                                                                                        &\ i \in S, j \in U^{OR}      \label{Eq.F2.P4}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} \sum_{\ell \in \mathbb{S}''_{kz}} x_{\ell} \geq |D_j^{AND}|\sum_{\ell \in \mathbb{S}''_{ij}} x_{\ell},
+                                                                                        &\quad i \in S, j \in U^{AND} \label{Eq.F2.P5}\\
+        & x_{\ell} \in \{0,1\},                                                         &\ \ell \in \mathbb{S}        \label{Eq.F2.P6}
+\end{alignat}
+dove $u_{\ell} = \sum_{j \in E_{\ell}} u_j \left( r_j^{cr} + a'_j y_{\ell j} \right)$ e $y_{\ell j}$ rappresenta il numero di storie in $Y_j$ (storie affini alla storia $j$) incluse nel pattern $\ell$.
+
+L'utilità $u_j$ di ogni storia $j$ è incrementata dal rischio di criticità $r_j^{cr}$, favorendo così un posizionamento anticipato delle storie critiche, e dalle storie affini incluse nello stesso sprint, sommando la frazione $a'_j=\frac{a_j}{|Y_j|}$ per ciascuna di esse. Il numero di storie affini incluse nello sprint $\pi(\ell)$ è dato da 
+\[
+y_{\ell j} = |Y_j \cap E_{\ell}|,
+\] 
+se $j \in E_{\ell}$, altrimenti $y_{\ell j} = 0$.
+
+La funzione obiettivo \eqref{Eq.F2.P1} massimizza l'utilità totale dei pattern selezionati nella soluzione ottimale.
+
+I vincoli \eqref{Eq.F2.P2} garantiscono che ogni storia $j$ sia inclusa esattamente in un pattern, mentre i vincoli \eqref{Eq.F2.P3} assicurano che per ogni sprint $i$ sia selezionato al più un pattern.
+
+Le dipendenze sono modellizzate dai vincoli \eqref{Eq.F2.P4} e \eqref{Eq.F2.P5}. Per una dipendenza OR di una storia $j$, i vincoli \eqref{Eq.F2.P4} consentono l'assegnazione di $j$ a un pattern dello sprint $i$ solo se almeno una storia dell'insieme $D_j^{OR}$ è assegnata a un pattern corrispondente a uno sprint $i' \leq i$. Analogamente, per una dipendenza AND, i vincoli \eqref{Eq.F2.P5} richiedono che tutte le storie dell'insieme $D_j^{AND}$ siano assegnate a pattern corrispondenti a sprint precedenti o uguali a $i$.
+
+La rilassazione LP di P si ottiene sostituendo i vincoli di integralità \eqref{Eq.F2.P6} con $x_{\ell} \geq 0$, $\forall \ell \in \mathbb{S}$.
+
+Siano $u_j$, $v_i$, $\alpha_{ij}$, e $\beta_{ij}$ le variabili duali associate rispettivamente ai vincoli \eqref{Eq.F2.P2}, \eqref{Eq.F2.P3}, \eqref{Eq.F2.P4}, e \eqref{Eq.F2.P5}. Il duale è:
+\begin{alignat}{3}
+(D) \: z_D  = & \min \sum_{j \in U} u_j + \sum_{i \in S} v_i                                         &\hspace{-8.0cm} \label{Eq.F2.D1}\\
+  s.t.\ & \sum_{j \in E_{\ell}} u_j + v_{\pi(\ell)}
+          + \sum_{j \in E_{\ell}} \sum_{j' \in \bar{D}^{OR}_j} \sum_{k=\pi(\ell)}^{m} \alpha_{kj'}
+          + \sum_{j \in E_{\ell}} \sum_{j' \in \bar{D}^{AND}_j} \sum_{k=\pi(\ell)}^{m} \beta_{kj'} + &     \notag \\
+        & \quad - \sum_{j \in E_{\ell} \cap U^{OR}} \alpha_{\pi(\ell)j}
+                - \sum_{j \in E_{\ell} \cap U^{AND}} |D^{AND}_j|\beta_{\pi(\ell)j}\geq u_{\ell},
+                                                               &\hspace{-8.0cm} \ell \in \mathbb{S}    \hspace{1.0cm} \label{Eq.F2.D2} \\
+        & u_j \textrm{ unconstrained},                         &\hspace{-8.0cm} j \in U                \hspace{1.0cm} \label{Eq.F2.D3} \\
+        & v_i \geq 0,                                          &\hspace{-8.0cm} i \in S                \hspace{1.0cm} \label{Eq.F2.D4} \\
+        & \alpha_{ij} \leq 0,                                  &\hspace{-8.0cm} i \in S, j \in U^{OR}  \hspace{1.0cm} \label{Eq.F2.D5} \\
+        & \beta_{ij} \leq 0,                                   &\hspace{-8.0cm} i \in S, j \in U^{AND} \hspace{1.0cm} \label{Eq.F2.D6}
+\end{alignat}
+
 
 
 %----------------------------------------------------------------------------------------
