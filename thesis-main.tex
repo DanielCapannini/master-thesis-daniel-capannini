@@ -1277,7 +1277,7 @@ La differenza sostanziale riguarda il valore della funzione obiettivo \eqref{Eq1
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|rrr|}
 \hline
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} & 
 \multicolumn{3}{c|}{Heuristic} & 
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\
@@ -1343,7 +1343,7 @@ Nella tabella \ref{Tab.5} sono riportati i risultati ottenuti con una riduzione 
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|rrr|}
 \hline
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} & 
 \multicolumn{3}{c|}{Heuristic} & 
 \multicolumn{3}{c|}{Lagrangian Heuristic}  \\
@@ -1408,7 +1408,7 @@ web-2                        &     &    32068.5 &   0.00 &    0.10 &   31825.9 &
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|rrr|}
 \hline
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} & 
 \multicolumn{3}{c|}{Heuristic} & 
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\
@@ -1484,11 +1484,11 @@ Questo sta ad indicare che le modifiche apportate ai tagli non sono riusciti a p
 \begin{tabular}{|ll|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } &     
+\multicolumn{2}{|c|}{   } &     
 \multicolumn{2}{c|}{Heuristic} &    
 \multicolumn{2}{c|}{Improved Heuristic}  \\  
-\hline
 Istanza        &     &                   Zheu &      Time &       Zheu &      Time   \\   
+\hline
 instance\_06\_01            &     &    22686.6  &      0.03  &      22686.6  &     0.05  \\ 
 instance\_06\_02            &     &    21740.6  &      0.03  &      21740.6  &     0.05  \\ 
 instance\_06\_03            &     &    21159.2  &      0.03  &      21159.2  &     0.06  \\ 
@@ -1525,17 +1525,18 @@ In questa sezione vengono confrontati i risultati ottenuti utilizzando le due di
 
 \begin{table}[H]
 \centering
-\caption{results con funzione obiettivo \eqref{Eq1.P1}}
+\caption{risultati con funzione obiettivo \eqref{Eq1.P1}}
 \label{tab.new1}
 \small
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
-\multicolumn{2}{c|}{CPLEX} &     
+\multicolumn{2}{|c|}{  } &
+\multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic}  \\  
-\hline
 Istanza                       &     &       Zopt &     Gap &     Time &      Zheu &      Time &    GHeu &      Zheu &      Time &    GHeu \\   
+\hline
 instance\_06\_01              &     &  23409.9 &    0.01 &     0.23 &  22686.6 &     0.03 &    4.66 &   22686.6 &     0.23 &     4.66  \\ 
 instance\_06\_02              &     &  22540.6 &    0.01 &     0.42 &  21740.6 &     0.02 &    3.68 &   21740.6 &     0.22 &     3.68  \\ 
 instance\_06\_03              &     &  21779.1 &    0.01 &     0.30 &  21159.2 &     0.02 &    2.93 &   21159.2 &     0.32 &     2.93  \\ 
@@ -1575,11 +1576,12 @@ instance\_f\_05               &     &  137811.6 &    0.01 &     19.82 &  121055.
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\
+\hline
 instance\_06\_01              &     &   5    &  95.59\%  &   2    &   5   &    95.38\%  &   2   &   5   &   95.38\%  &   2  \\  
 instance\_06\_02              &     &   7    &  84.68\%  &   2    &   7   &    84.20\%  &   2   &   7   &   84.20\%  &   2  \\   
 instance\_06\_03              &     &   6    &  88.89\%  &   2    &   6   &    90.71\%  &   2   &   6   &   90.71\%  &   2  \\   
@@ -1619,11 +1621,12 @@ instance\_f\_05               &     &   9    &  95.09\%  &   3    &   9   &    9
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
+\hline
 instance\_06\_01              &     &   2.2  &   10.6  &  5.1  &   2.1  &   10.1  &  4.3  &   2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  &   2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9 \\  
 instance\_06\_02              &     &   2.3  &   9.2   &  1.8  &   2.0  &   7.7   &  1.6  &   2.9  &   11.7  &  1.8  &   2.5  &   10.3  &  1.6  &   2.9  &   11.7  &  1.8  &   2.5  &   10.3  &  1.6 \\   
 instance\_06\_03              &     &   3.6  &   13.5  &  1.9  &   4.3  &   15.7  &  1.7  &   4.3  &   15.1  &  2.3  &   4.5  &   16.4  &  3.5  &   4.3  &   15.1  &  2.3  &   4.5  &   16.4  &  3.5 \\   
@@ -1670,11 +1673,12 @@ Si può anche notare confrontando le tabelle \ref{tab.new02} e \ref{tab.new04} c
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|} 
 \hline
-\multicolumn{2}{c|}{   } &
+\multicolumn{2}{|c|}{   } &
 \multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq1.P1}} &     
 \multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P1}}  \\  
-\hline
+
 Istanza                       &     &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time  \\   
+\hline
 instance\_06\_01              &     &      0.23 &   0.03 &      0.23 &      0.13 &     0.02 &      0.16 \\ 
 instance\_06\_02              &     &      0.42 &   0.02 &      0.22 &      0.43 &     0.02 &      0.38 \\ 
 instance\_06\_03              &     &      0.30 &   0.02 &      0.32 &      0.26 &     0.02 &      0.28 \\ 
@@ -1715,11 +1719,12 @@ instance\_f\_05                &     &   19.82 &     0.29 &    17.91   &     25.
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\
+\hline
 instance\_06\_01              &     &      5  &    96.05\%  &   2  &  5  &    95.4\%  &   2   &  5  &    95.4\%  &   2  \\
 instance\_06\_02              &     &      7  &  84.17\%  &   3    &  7  &   84.7\%  &   2    &  7  &   84.7\%  &   2  \\ 
 instance\_06\_03              &     &      6  &    89.71\%  &   3  &  6  &    89.2\%  &   2   &  6  &    89.2\%  &   2  \\  
@@ -1759,11 +1764,12 @@ instance\_f\_05               &     &     9  &    95.10\%  &   3   &  9  &    94
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
+\hline
 instance\_06\_01              &     &   2.7  &   11.3  &  4.6  &   2.6  &   10.3  &  4.0  &    2.5  &   11.3  &  4.3  &   2.4  &   10.4  &  3.8 &   2.5  &   11.3  &  4.3  &   2.4  &   10.4  &  3.8\\ 
 instance\_06\_02              &     &   2.4  &   9.2  &  1.8  &   2.2  &   8.0  &  1.6    &    2.8  &   11.1  &  1.8  &   2.3  &   8.9  &  1.6 &   2.8  &   11.1  &  1.8  &   2.3  &   8.9  &  1.6\\  
 instance\_06\_03              &     &   2.4  &   10.5  &  3.1  &   2.9  &   12.3  &  2.7  &    3.6  &   13.5  &  3.1  &   4.0  &   14.9  &  2.7 &   3.6  &   13.5  &  3.1  &   4.0  &   14.9  &  2.7\\  
@@ -1809,11 +1815,11 @@ Per quanto riguarda i KPI D.U. e U.MAX si puo notare confrontando le tabelle \re
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|} 
 \hline
-\multicolumn{2}{c|}{   } &
+\multicolumn{2}{|c|}{   } &
 \multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P2}} &     
 \multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P3}}  \\  
-\hline
 Istanza                       &     &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time  \\   
+\hline
 instance\_06\_01             &     &    0.12 &     0.02 &     0.14 &    0.03 &     0.02 &     0.16 \\ 
 instance\_06\_02             &     &    0.39 &     0.02 &     0.24 &    0.26 &     0.02 &     0.34 \\ 
 instance\_06\_03             &     &    0.36 &     0.02 &     0.41 &    0.46 &     0.03 &     0.41 \\ 
@@ -1854,11 +1860,12 @@ instance\_f\_05              &     &    26.09 &    0.32 &    17.52 &    14.03 & 
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\
+\hline
 instance\_06\_01              &     &     5  &    95.62\%  &   2    &   5  &    95.32\%  &   2   &   5  &     95.32\%  &   2  \\
 instance\_06\_02              &     &     7  &  84.42\%  &   3     &   7  &  84.47\%  &  2 xt  &   7  &   84.47\%  &   2  \\
 instance\_06\_03              &     &     6  &    88.89\%  &   2    &   6  &    88.76\%  &   2   &   6  &     88.76\%  &   2  \\  
@@ -1898,11 +1905,12 @@ instance\_f\_05               &     &     9  &    95.08\%  &   3    &   9  &    
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
+\hline
 instance\_06\_01              &     &    2.6  &   11.2  &  4.3  &   2.4  &   10.4  &  3.8  &   2.5  &   10.8  &  4.6  &   2.6  &   10.3  &  4.0  &   2.5  &   10.8  &  4.6  &   2.6  &   10.3  &  4.0  \\   
 instance\_06\_02              &     &   2.1  &   7.9  &  1.6  &   2.4  &   8.0  &  1.1  &      2.6  &   9.7  &  1.6  &   2.6  &   9.2  &  1.1  &   2.6  &   9.7  &  1.6  &   2.6  &   9.2  &  1.1  \\
 instance\_06\_03              &     &    3.6  &   13.5  &  1.9  &   4.3  &   15.7  &  1.7  &   3.6  &   13.5  &  1.9  &   4.0  &   14.9  &  1.7  &   3.6  &   13.5  &  1.9  &   4.0  &   14.9  &  1.7  \\    
@@ -1942,11 +1950,12 @@ instance\_f\_05               &     &    6.4  &   22.4  &  2.7  &   6.4  &   24.
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\
+\hline
 instance\_06\_01              &     &      6  &    79.77\%  &   2     &   5  &    95.32\%  &   2    &   5  &     95.32\%  &   2  \\ 
 instance\_06\_02              &     &      7  &  84.42\%  &   3       &   7  &  84.56\%  &   2     &   7  &   84.56\%  &   2  \\
 instance\_06\_03              &     &      6  &    89.71\%  &   3     &   6  &    89.64\%  &   2    &   6  &     89.64\%  &   2  \\  
@@ -1986,11 +1995,12 @@ instance\_f\_05               &     &      9  &    95.12\%  &   3     &   9  &  
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
+\hline
 instance\_06\_01              &     &  3.1  &   10.8  &  1.8  &   3.0  &   10.2  &  1.3  &    2.5  &   10.8  &  4.6  &   2.6  &   10.3  &  4.0  &    2.5  &   10.8  &  4.6  &   2.6  &   10.3  &  4.0  \\   
 instance\_06\_02              &     &  2.1  &   7.9  &  1.6  &   2.4  &   8.0  &  1.1  &      2.3  &   9.7  &  1.8  &   2.3  &   9.1  &  1.6  &    2.3  &   9.7  &  1.8  &   2.3  &   9.1  &  1.6  \\
 instance\_06\_03              &     &  2.4  &   10.5  &  3.1  &   2.9  &   12.3  &  2.7  &    3.5  &   13.5  &  3.1  &   4.0  &   14.9  &  2.7  &     3.5  &   13.5  &  3.1  &   4.0  &   14.9  &  2.7  \\    
@@ -2036,11 +2046,11 @@ Osservando invece le tabelle \ref{tab.new006} e \ref{tab.new007} si nota come i 
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|ll|rrr|rrr|} 
 \hline
-\multicolumn{2}{c|}{   } &
+\multicolumn{2}{|c|}{   } &
 \multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P4}} &     
 \multicolumn{3}{c|}{Funzioni obiettivo\eqref{Eq2.P5}}  \\  
-\hline
 Istanza                       &     &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time &      CPLEX Time &  Heuristic Time &    Lagrangian Heuristic Time  \\   
+\hline
 instance\_06\_01             &     &     0.05 &      0.02 &       0.14   &    0.06 &     0.03 &     0.26 \\   
 instance\_06\_02             &     &     0.72 &      0.03 &       0.23   &    0.39 &     0.03 &     0.42 \\   
 instance\_06\_03             &     &     0.25 &      0.02 &       0.39   &    0.35 &     0.04 &     0.42 \\   
@@ -2082,11 +2092,12 @@ instance\_f\_05              &     &   300.55 &      0.77 &    18.89 &     4.86 
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\
+\hline
 instance\_06\_01              &     &     5  &    95.62\%  &   2    &   5  &    95.32\%  &   2   &   5  &     95.32\%  &   2  \\
 instance\_06\_02              &     &     7  &  84.42\%  &   3     &   7  &  84.47\%  &  2 xt  &   7  &   84.47\%  &   2  \\
 instance\_06\_03              &     &     6  &    88.89\%  &   2    &   6  &    88.76\%  &   2   &   6  &     88.76\%  &   2  \\  
@@ -2126,11 +2137,12 @@ instance\_f\_05               &     &     9  &    95.08\%  &   3    &   9  &    
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
+\hline
 instance\_06\_01              &     &    2.6  &   11.2  &  4.3  &   2.4  &   10.4  &  3.8  &   2.5  &   10.8  &  4.6  &   2.6  &   10.3  &  4.0  &   2.5  &   10.8  &  4.6  &   2.6  &   10.3  &  4.0  \\   
 instance\_06\_02              &     &   2.1  &   7.9  &  1.6  &   2.4  &   8.0  &  1.1  &      2.6  &   9.7  &  1.6  &   2.6  &   9.2  &  1.1  &   2.6  &   9.7  &  1.6  &   2.6  &   9.2  &  1.1  \\
 instance\_06\_03              &     &    3.6  &   13.5  &  1.9  &   4.3  &   15.7  &  1.7  &   3.6  &   13.5  &  1.9  &   4.0  &   14.9  &  1.7  &   3.6  &   13.5  &  1.9  &   4.0  &   14.9  &  1.7  \\    
@@ -2170,11 +2182,12 @@ instance\_f\_05               &     &    6.4  &   22.4  &  2.7  &   6.4  &   24.
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\
+\hline
 instance\_06\_01              &       &   6  &    79.15\%  &   2      &   5  &    95.11\%  &   2      &   5   &   95.11\%  &   2  \\  
 instance\_06\_02              &       &   7  &  84.27\%  &   3       &   7  &   84.56\%  &   3      &   7  &   84.56\%  &   3  \\
 instance\_06\_03              &       &   6  &  88.80\%  &   3        &   6  &    88.81\%  &   3     &   6   &   88.81\%  &   3  \\
@@ -2214,11 +2227,12 @@ instance\_f\_05               &       &   9  &    95.13\%  &   4      &   9  &  
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
+\hline
 instance\_06\_01              &     &   3.6  &   10.6  &  1.3  &   3.3  &   10.1  &  1.3  &    3.1  &   11.3  &  3.4  &   2.9  &   10.7  &  3.2  &     3.1  &   11.3  &  3.4  &   2.9  &   10.7  &  3.2   \\    
 instance\_06\_02              &     &   2.3  &   7.5  &  1.1  &   2.0  &   8.0  &  2.0  &      2.5  &   10.2  &  1.9  &   2.4  &   9.7  &  1.5  &      2.5  &   10.2  &  1.9  &   2.4  &   9.7  &  1.5   \\    
 instance\_06\_03              &     &   1.8  &   8.6  &  3.4  &   2.2  &   9.7  &  3.5  &      3.2  &   10.6  &  1.5  &   3.6  &   12.7  &  1.8  &     3.2  &   10.6  &  1.5  &   3.6  &   12.7  &  1.8   \\    
@@ -2335,13 +2349,13 @@ Si puo pero notare una variazione nei tempi di calcolo, per il metodo esatto la 
 \begin{tabular}{|ll|rr|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{2}{c|}{CPLEX} &     
 \multicolumn{2}{c|}{Heuristic} &    
 \multicolumn{2}{c|}{Lagrangian Heuristic} \\  
-\hline
 Istanza        &     &               Zopt &      Time &     Zheu &      Time &    Zheu &      Time \\   
- instance\_06\_01             &     &    23409.9 &     0.16 &  22686.6  &     0.02 &     22686.6 &     0.21 \\ 
+\hline
+instance\_06\_01             &     &    23409.9 &     0.16 &  22686.6  &     0.02 &     22686.6 &     0.21 \\ 
  instance\_06\_02             &     &        0.0 &     0.01 &  21740.6  &     0.02 &     21434.2 &     0.32 \\ 
  instance\_06\_03             &     &        0.0 &     0.01 &  21159.2  &     0.02 &     20868.4 &     0.33 \\ 
  instance\_06\_04             &     &    18125.7 &     0.06 &  15175.4  &     0.03 &     15175.4 &     0.29 \\ 
@@ -2380,12 +2394,13 @@ Istanza        &     &               Zopt &      Time &     Zheu &      Time &  
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\ 
- instance\_06\_01             &     &   5   &     95.59\%  &   2     &   5  &     95.38\%  &   2   &   5  &      95.38\%  &   2  \\
+\hline
+instance\_06\_01             &     &   5   &     95.59\%  &   2     &   5  &     95.38\%  &   2   &   5  &      95.38\%  &   2  \\
  instance\_06\_02             &     &   0   &   0.00\%     &   None    &   5  &     95.07\%  &   2   &   5  &      95.07\%  &   2  \\
  instance\_06\_03             &     &   0   &   0.00\%    &   None     &   5  &     92.43\%  &   2   &   5  &      92.43\%  &   2  \\
  instance\_06\_04             &     &   5   &     86.65\%  &   2     &   5  &     86.10\%  &   2   &   5  &      86.10\%  &   2  \\
@@ -2424,12 +2439,13 @@ Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
- instance\_06\_01             &     &    2.2  &   10.6  &  5.1  &   2.1  &   10.1  &  4.3  &   2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  &    2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9   \\ 
+\hline
+instance\_06\_01             &     &    2.2  &   10.6  &  5.1  &   2.1  &   10.1  &  4.3  &   2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  &    2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9   \\ 
  instance\_06\_02             &     &    0.0  &   0.0  &  0.0  &   0.0  &   0.0  &  0.0    &   2.6  &   11.7  &  4.7  &   2.0  &   10.3  &  5.0  &    2.6  &   11.7  &  4.7  &   2.0  &   10.3  &  5.0   \\   
  instance\_06\_03             &     &    0.6  &   4.8  &  3.5  &   0.7  &   4.7  &  3.2    &   4.5  &   15.1  &  2.3  &   4.7  &   16.4  &  3.6  &    4.5  &   15.1  &  2.3  &   4.7  &   16.4  &  3.6   \\ 
  instance\_06\_04             &     &    3.1  &   11.2  &  3.0  &   3.0  &   11.1  &  3.4  &   4.2  &   12.4  &  2.6  &   4.2  &   13.2  &  2.7  &    4.2  &   12.4  &  2.6  &   4.2  &   13.2  &  2.7   \\ 
@@ -2478,13 +2494,14 @@ Il KPI N.S.O. \`e aumentato del $26.59\%$ per il metodo esatto e del $25.08\%$ p
 \begin{tabular}{|ll|rr|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{2}{c|}{CPLEX} &     
 \multicolumn{2}{c|}{Heuristic} &    
 \multicolumn{2}{c|}{Lagrangian Heuristic} \\  
-\hline
+
 Istanza        &     &               Zopt &      Time &     Zheu &      Time &    Zheu &      Time \\   
- instance\_06\_01             &     &    22272.3 &     0.16 &    20464.9 &     0.04 &    20464.9 &     0.18 \\  
+\hline
+instance\_06\_01             &     &    22272.3 &     0.16 &    20464.9 &     0.04 &    20464.9 &     0.18 \\  
  instance\_06\_02             &     &    20329.6 &     0.52 &    20258.6 &     0.03 &    20258.6 &     0.28 \\  
  instance\_06\_03             &     &    19788.9 &     0.61 &    19533.2 &     0.02 &    19533.2 &     0.19 \\  
  instance\_06\_04             &     &    16492.0 &     0.32 &    15535.9 &     0.02 &    15535.9 &     0.20 \\  
@@ -2523,12 +2540,13 @@ Istanza        &     &               Zopt &      Time &     Zheu &      Time &  
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\ 
- instance\_06\_01             &     &  7  &  85.22\%  &   3          &   7  &     85.07\%  &   2     &   7  &     85.07\%  &   2  \\      
+\hline
+instance\_06\_01             &     &  7  &  85.22\%  &   3          &   7  &     85.07\%  &   2     &   7  &     85.07\%  &   2  \\      
  instance\_06\_02             &     &  8  &  90.90\%  &   3          &   8  &     90.46\%  &   3     &   8  &     90.46\%  &   3  \\    
  instance\_06\_03             &     &  8  &  86.48\%  &   2          &   8  &     87.12\%  &   2     &   8  &     87.12\%  &   2  \\      
  instance\_06\_04             &     &  6  &  89.39\%  &   2          &   6  &     89.41\%  &   2     &   6  &     89.41\%  &   2  \\      
@@ -2567,12 +2585,13 @@ Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
- instance\_06\_01             &     &    2.8  &   9.6  &  1.6  &   2.5  &   9.3  &  1.6  &           2.9  &   11.6  &  1.6  &   2.3  &   10.0  &  2.0  &   2.9  &   11.6  &  1.6  &   2.3  &   10.0  &  2.0   \\
+\hline
+instance\_06\_01             &     &    2.8  &   9.6  &  1.6  &   2.5  &   9.3  &  1.6  &           2.9  &   11.6  &  1.6  &   2.3  &   10.0  &  2.0  &   2.9  &   11.6  &  1.6  &   2.3  &   10.0  &  2.0   \\
  instance\_06\_02             &     &    1.2  &   6.6  &  3.1  &   1.2  &   6.3  &  2.7  &           2.3  &   10.5  &  3.0  &   1.9  &   9.1  &  3.1  &   2.3  &   10.5  &  3.0  &   1.9  &   9.1  &  3.1   \\
  instance\_06\_03             &     &    2.2  &   8.6  &  1.9  &   2.3  &   8.5  &  1.7  &           3.7  &   13.9  &  1.9  &   4.0  &   15.2  &  1.7  &   3.7  &   13.9  &  1.9  &   4.0  &   15.2  &  1.7   \\
  instance\_06\_04             &     &    2.0  &   9.0  &  2.7  &   1.9  &   9.5  &  3.2  &           3.3  &   12.1  &  2.6  &   3.1  &   12.4  &  2.7  &   3.3  &   12.1  &  2.6  &   3.1  &   12.4  &  2.7   \\
@@ -2622,13 +2641,13 @@ Si può notare che l'accorpamento degli sprint non ha impattato sul valore otten
 \begin{tabular}{|ll|rr|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{2}{c|}{CPLEX} &     
 \multicolumn{2}{c|}{Heuristic} &    
 \multicolumn{2}{c|}{Lagrangian Heuristic} \\  
-\hline
 Istanza        &     &               Zopt &      Time &     Zheu &      Time &    Zheu &      Time \\   
- instance\_06\_01             &     &      23409.9 &    0.22 &    22686.6 &     0.20 &    22686.6 &     0.31 \\  
+\hline
+instance\_06\_01             &     &      23409.9 &    0.22 &    22686.6 &     0.20 &    22686.6 &     0.31 \\  
  instance\_06\_02             &     &      22074.6 &    0.36 &    21762.2 &     0.15 &    21762.2 &     0.46 \\  
  instance\_06\_03             &     &      21546.1 &    0.20 &    21159.2 &     0.15 &    21159.2 &     0.42 \\  
  instance\_06\_04             &     &      18125.7 &    0.13 &    15175.4 &     0.22 &    15175.4 &     0.33 \\  
@@ -2667,12 +2686,13 @@ Istanza        &     &               Zopt &      Time &     Zheu &      Time &  
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\ 
- instance\_06\_01             &     &   5  &    95.59\%  &   2       &   5  &   95.38\%  &   2       &   5  &    95.38\%  &   2  \\    
+\hline
+instance\_06\_01             &     &   5  &    95.59\%  &   2       &   5  &   95.38\%  &   2       &   5  &    95.38\%  &   2  \\    
  instance\_06\_02             &     &   6  &    87.74\%  &   2       &   6  &   87.09\%  &   2       &   6  &    87.09\%  &   2  \\    
  instance\_06\_03             &     &   6  &    84.78\%  &   2       &   6  &   82.53\%  &   2       &   6  &    82.53\%  &   2  \\    
  instance\_06\_04             &     &   5  &    86.65\%  &   2       &   5  &   86.10\%  &   2       &   5  &    86.10\%  &   2  \\    
@@ -2711,12 +2731,13 @@ Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
- instance\_06\_01             &     &       2.2  &   10.6  &  5.1  &   2.1  &   10.1  &  4.3  &     2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  &    2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  \\            
+\hline
+instance\_06\_01             &     &       2.2  &   10.6  &  5.1  &   2.1  &   10.1  &  4.3  &     2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  &    2.5  &   11.3  &  4.7  &   2.0  &   10.4  &  4.9  \\            
  instance\_06\_02             &     &       2.1  &   9.6  &  4.5  &   1.6  &   8.9  &  4.5  &       2.4  &   11.7  &  4.7  &   1.9  &   10.3  &  5.0  &    2.4  &   11.7  &  4.7  &   1.9  &   10.3  &  5.0  \\            
  instance\_06\_03             &     &       3.6  &   13.5  &  1.9  &   4.3  &   15.7  &  1.7  &     4.3  &   15.1  &  2.3  &   4.5  &   16.4  &  3.5  &    4.3  &   15.1  &  2.3  &   4.5  &   16.4  &  3.5  \\            
  instance\_06\_04             &     &       3.1  &   11.2  &  3.0  &   3.0  &   11.1  &  3.4  &     4.2  &   12.4  &  2.6  &   4.2  &   13.2  &  2.7  &    4.2  &   12.4  &  2.6  &   4.2  &   13.2  &  2.7  \\            
@@ -2763,13 +2784,13 @@ il tempo di esecuzione perché una qualsiasi soluzione che soddisfa i vincoli su
 \begin{tabular}{|ll|rr|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{2}{c|}{CPLEX} &     
 \multicolumn{2}{c|}{Heuristic} &    
 \multicolumn{2}{c|}{Lagrangian Heuristic} \\  
-\hline
 Istanza        &     &               Zopt &      Time &     Zheu &      Time &    Zheu &      Time \\   
- instance\_06\_01                   &     &    45039.4 &      0.10 &    40865.4 &     0.06 &     40865.4 &     0.15 \\   
+\hline
+instance\_06\_01                   &     &    45039.4 &      0.10 &    40865.4 &     0.06 &     40865.4 &     0.15 \\   
  instance\_06\_02                   &     &    46233.3 &      0.11 &    43929.3 &     0.04 &     43929.3 &     0.20 \\   
  instance\_06\_03                   &     &    41495.1 &      0.27 &    40156.1 &     0.02 &     40156.1 &     0.20 \\   
  instance\_06\_04                   &     &    34073.1 &      0.13 &    28217.5 &     0.02 &     28217.5 &     0.14 \\   
@@ -2808,12 +2829,13 @@ Istanza        &     &               Zopt &      Time &     Zheu &      Time &  
 \begin{tabular}{|ll|rrr|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{3}{c|}{CPLEX} &     
 \multicolumn{3}{c|}{Heuristic} &    
 \multicolumn{3}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A.S.U.  &  H.U.S. & N.S.O. &  A.S.U.   &  H.U.S.\\ 
- instance\_06\_01             &     &     5  &      95.47\%  &   2     &   5  &     95.53\%  &   2        &   5  &     95.53\%  &   2  \\ 
+\hline
+instance\_06\_01             &     &     5  &      95.47\%  &   2     &   5  &     95.53\%  &   2        &   5  &     95.53\%  &   2  \\ 
  instance\_06\_02             &     &     7  &      84.43\%  &   2     &   7  &     84.51\%  &   2        &   7  &     84.51\%  &   2  \\
  instance\_06\_03             &     &     6  &      88.78\%  &   2     &   6  &     90.71\%  &   2        &   6  &     90.71\%  &   2  \\ 
  instance\_06\_04             &     &     5  &      86.65\%  &   2     &   5  &     86.97\%  &   1        &   5  &     86.97\%  &   1  \\ 
@@ -2852,12 +2874,13 @@ Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. & N.S.O. &  A
 \begin{tabular}{|ll|rrrrrr|rrrrrr|rrrrrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
+\multicolumn{2}{|c|}{   } & 
 \multicolumn{6}{c|}{CPLEX} &     
 \multicolumn{6}{c|}{Heuristic} &    
 \multicolumn{6}{c|}{Lagrangian Heuristic} \\  
 Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN &  D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX  & U.MIN  \\
- instance\_06\_01             &     &      2.3  &   10.8  &  4.4  &   2.2  &   10.2  &  4.3  &      3.0  &   13.0  &  4.7  &   2.3  &   11.4  &  4.9     &   3.0  &   13.0  &  4.7  &   2.3  &   11.4  &  4.9   \\           
+\hline
+instance\_06\_01             &     &      2.3  &   10.8  &  4.4  &   2.2  &   10.2  &  4.3  &      3.0  &   13.0  &  4.7  &   2.3  &   11.4  &  4.9     &   3.0  &   13.0  &  4.7  &   2.3  &   11.4  &  4.9   \\           
  instance\_06\_02             &     &      2.1  &   8.0  &  1.8  &   2.0  &   8.0  &  1.6  &        3.0  &   12.0  &  1.8  &   2.5  &   10.3  &  1.6     &   3.0  &   12.0  &  1.8  &   2.5  &   10.3  &  1.6   \\         
  instance\_06\_03             &     &      3.3  &   12.3  &  1.9  &   3.7  &   13.4  &  1.7  &      4.3  &   15.1  &  2.3  &   4.5  &   16.4  &  3.5     &   4.3  &   15.1  &  2.3  &   4.5  &   16.4  &  3.5   \\           
  instance\_06\_04             &     &      3.1  &   11.2  &  3.0  &   3.0  &   11.1  &  3.4  &      3.8  &   12.6  &  2.5  &   3.9  &   13.4  &  3.0     &   3.8  &   12.6  &  2.5  &   3.9  &   13.4  &  3.0   \\           
@@ -2889,7 +2912,7 @@ Istanza  &   &                         D.R. &  R.MAX &  R.MIN &  D.U.   &  U.MAX
 
 \subsection{Risultati con formulazione matematica alternativa}\label{risultati.alternativi}
 
-Nelle tabelle \ref{tab.r22} e \ref{tab.r222} sono riportati i risulta ottenuti utilizzando la formulazione matematica della sezione \ref{sec.formulazione2} tramite il metodo esatto implementato in CPLEX.
+Nelle tabelle \ref{tab.r22} e \ref{tab.r222} sono riportati i risulta ottenuti utilizzando la formulazione matematica della sezione \ref{sec.formulazione2} tramite il metodo esatto implementato in CPLEX e il metodo euristico.
 Come si puo notare dai KPI N.S.O. e H.U.S. il metodo per massimmizzare la funzione obbiettivo accorpa tutti gli sprint in uno unico. Questo e' doovuto perche la formulazione matematica cosi espressa non pone vincoli per la dimenzione dello sprint e ne per il rischio e l'incertezza massima che possono essere presenti in un unico sprint.
 
 \begin{table}[H]
@@ -2898,38 +2921,39 @@ Come si puo notare dai KPI N.S.O. e H.U.S. il metodo per massimmizzare la funzio
 \label{tab.r22}
 \small
 %\resizebox{\textwidth}{!}{%
-\begin{tabular}{|ll|rr|} 
+\begin{tabular}{|ll|rr|rr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
-\multicolumn{2}{c|}{CPLEX}  \\  
+\multicolumn{2}{|c|}{   } & 
+\multicolumn{2}{c|}{CPLEX} &     
+\multicolumn{2}{c|}{Heuristic} \\  
+Istanza        &     &               Zopt &      Time & Zopt &      Time   \\   
 \hline
-Istanza        &     &               Zopt &      Time   \\   
- instance\_06\_01                   &     &    26928.9 &      0.02 \\ 
- instance\_06\_02                   &     &    28491.3 &      0.01 \\ 
- instance\_06\_03                   &     &    25484.8 &      0.01 \\ 
- instance\_06\_04                   &     &    20503.8 &      0.02 \\ 
- instance\_06\_05                   &     &    21798.0 &      0.01 \\ 
- instance\_20\_01                   &     &   176685.0 &      0.02 \\ 
- instance\_20\_02                   &     &   183168.0 &      0.02 \\ 
- instance\_20\_03                   &     &   176618.0 &      0.02 \\ 
- instance\_20\_04                   &     &   167151.0 &      0.02 \\ 
- instance\_20\_05                   &     &   182553.0 &      0.02 \\ 
- instance\_40\_01                   &     &   329604.0 &      0.07 \\ 
- instance\_40\_02                   &     &   342816.0 &      0.06 \\ 
- instance\_40\_03                   &     &   330453.0 &      0.06 \\ 
- instance\_40\_04                   &     &   324516.5 &      0.06 \\ 
- instance\_40\_05                   &     &   320931.0 &      0.07 \\ 
- instance\_100\_01                  &     &  2854456.0 &      1.22 \\ 
- instance\_100\_02                  &     &  2837384.0 &      0.93 \\ 
- instance\_100\_03                  &     &  2828331.0 &      1.07 \\ 
- instance\_100\_04                  &     &  3000866.0 &      0.94 \\ 
- instance\_100\_05                  &     &  2771178.7 &      1.07 \\ 
- instance\_f\_01                    &     &   138936.7 &      0.02 \\ 
- instance\_f\_02                    &     &   149105.0 &      0.02 \\ 
- instance\_f\_03                    &     &   141372.5 &      0.02 \\ 
- instance\_f\_04                    &     &   138705.8 &      0.02 \\ 
- instance\_f\_05                    &     &   151400.8 &      0.03 \\ 
+instance\_06\_01                   &     &    26928.9 &     0.50 &    26928.9 &     0.05  \\ 
+ instance\_06\_02                   &     &     28491.3 &     0.54 &    28491.3 &     0.06  \\ 
+ instance\_06\_03                   &     &     25484.8 &     0.54 &    25484.8 &     0.06  \\ 
+ instance\_06\_04                   &     &     20503.8 &     0.50 &    20503.8 &     0.05  \\ 
+ instance\_06\_05                   &     &     21798.0 &     0.45 &    21798.0 &     0.07  \\ 
+ instance\_20\_01                   &     &    176685.0 &     0.52 &   176685.0 &     0.12  \\ 
+ instance\_20\_02                   &     &    183168.0 &     0.48 &   183168.0 &     0.11  \\ 
+ instance\_20\_03                   &     &    176618.0 &     0.51 &   176618.0 &     0.11  \\ 
+ instance\_20\_04                   &     &    167151.0 &     0.56 &   167151.0 &     0.10  \\ 
+ instance\_20\_05                   &     &    182553.0 &     0.48 &   182553.0 &     0.11  \\ 
+ instance\_40\_01                   &     &    329604.0 &     0.60 &   329604.0 &     0.14  \\ 
+ instance\_40\_02                   &     &    342816.0 &     0.70 &   342816.0 &     0.13  \\ 
+ instance\_40\_03                   &     &    330453.0 &     0.62 &   330453.0 &     0.12  \\ 
+ instance\_40\_04                   &     &    324516.5 &     0.63 &   324516.5 &     0.12  \\ 
+ instance\_40\_05                   &     &    320931.0 &     0.72 &   320931.0 &     0.13  \\ 
+ instance\_100\_01                  &     &   2854456.0 &     2.38 &  2854456.0 &     0.40  \\ 
+ instance\_100\_02                  &     &   2837384.0 &     1.83 &  2837384.0 &     0.40  \\ 
+ instance\_100\_03                  &     &   2828331.0 &     2.15 &  2828331.0 &     0.38  \\ 
+ instance\_100\_04                  &     &   3000866.0 &     2.05 &  3000866.0 &     0.36  \\ 
+ instance\_100\_05                  &     &   2771178.7 &     2.21 &  2771178.7 &     0.31  \\ 
+ instance\_f\_01                    &     &    138936.7 &     0.76 &   138936.7 &     0.11  \\ 
+ instance\_f\_02                    &     &    149105.0 &     0.81 &   149105.0 &     0.11  \\ 
+ instance\_f\_03                    &     &    141372.5 &     0.88 &   141372.5 &     0.11  \\ 
+ instance\_f\_04                    &     &    138705.8 &     0.78 &   138705.8 &     0.10  \\ 
+ instance\_f\_05                    &     &    151400.8 &     0.86 &   151400.8 &     0.10  \\ 
   \hline
 \end{tabular}
 
@@ -2941,37 +2965,39 @@ Istanza        &     &               Zopt &      Time   \\
 \label{tab.r222}
 \small
 %\resizebox{\textwidth}{!}{%
-\begin{tabular}{|ll|rrr|} 
+\begin{tabular}{|ll|rrr|rrr|} 
 \hline
 
-\multicolumn{2}{c|}{   } & 
-\multicolumn{3}{c|}{CPLEX}  \\  
-Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. \\ 
- instance\_06\_01             &     &    1  &      95.47\%  &   1    \\ 
- instance\_06\_02             &     &    1  &      87.43\%  &   1    \\
- instance\_06\_03             &     &    1  &      95.78\%  &   1    \\ 
- instance\_06\_04             &     &    1  &      94.65\%  &   1    \\ 
- instance\_06\_05             &     &    1  &      98.38\%  &   1   \\
- instance\_20\_01             &     &    1  &      95.89\%  &   1  \\
- instance\_20\_02             &     &    1  &      98.35\%  &   1  \\
- instance\_20\_03             &     &    1  &      95.74\%  &   1  \\
- instance\_20\_04             &     &    1  &      96.01\%  &   1  \\
- instance\_20\_05             &     &    1  &      95.88\%  &   1  \\
- instance\_40\_01             &     &    1   &     96.14\%  &  1    \\     
- instance\_40\_02             &     &    1   &     95.30\%  &  1    \\     
- instance\_40\_03             &     &    1   &     98.17\%  &  1    \\     
- instance\_40\_04             &     &    1   &     97.66\%  &  1    \\     
- instance\_40\_05             &     &    1   &     95.00\%  &  1    \\     
- instance\_100\_01            &     &    1   &     97.66\%  &   1   \\     
- instance\_100\_02            &     &    1   &     97.52\%  &   1   \\      
- instance\_100\_03            &     &    1   &     95.67\%  &   1   \\      
- instance\_100\_04            &     &    1   &     96.85\%  &   1   \\     
- instance\_100\_05            &     &    1   &     96.15\%  &   1    \\    
- instance\_f\_01              &     &    1  &      94.46\%  &   1    \\    
- instance\_f\_02              &     &    1   &     95.64\%  &   1    \\    
- instance\_f\_03              &     &    1  &      95.60\%  &   1    \\ 
- instance\_f\_04              &     &    1   &     96.22\%  &   1    \\    
- instance\_f\_05              &     &    1  &      94.34\%  &   1    \\   
+\multicolumn{2}{|c|}{   } & 
+\multicolumn{3}{c|}{CPLEX} &     
+\multicolumn{3}{c|}{Heuristic} \\  
+Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S.  & N.S.O. &  A.S.U.   &  H.U.S. \\ 
+\hline
+instance\_06\_01             &     &    1  &      95.47\%  &   1     &    1  &      95.47\%  &   1      \\ 
+ instance\_06\_02             &     &    1  &      87.43\%  &   1     &    1  &      87.43\%  &   1     \\
+ instance\_06\_03             &     &    1  &      95.78\%  &   1     &    1  &      95.78\%  &   1      \\ 
+ instance\_06\_04             &     &    1  &      94.65\%  &   1     &    1  &      94.65\%  &   1      \\ 
+ instance\_06\_05             &     &    1  &      98.38\%  &   1     &    1  &      98.38\%  &   1    \\
+ instance\_20\_01             &     &    1  &      95.89\%  &   1     &    1  &      95.89\%  &   1  \\
+ instance\_20\_02             &     &    1  &      98.35\%  &   1     &    1  &      98.35\%  &   1  \\
+ instance\_20\_03             &     &    1  &      95.74\%  &   1     &    1  &      95.74\%  &   1  \\
+ instance\_20\_04             &     &    1  &      96.01\%  &   1     &    1  &      96.01\%  &   1  \\
+ instance\_20\_05             &     &    1  &      95.88\%  &   1     &    1  &      95.88\%  &   1  \\
+ instance\_40\_01             &     &    1   &     96.14\%  &  1      &    1   &     96.14\%  &  1          \\     
+ instance\_40\_02             &     &    1   &     95.30\%  &  1      &    1   &     95.30\%  &  1          \\     
+ instance\_40\_03             &     &    1   &     98.17\%  &  1      &    1   &     98.17\%  &  1          \\     
+ instance\_40\_04             &     &    1   &     97.66\%  &  1      &    1   &     97.66\%  &  1          \\     
+ instance\_40\_05             &     &    1   &     95.00\%  &  1      &    1   &     95.00\%  &  1          \\     
+ instance\_100\_01            &     &    1   &     97.66\%  &   1     &    1   &     97.66\%  &   1         \\     
+ instance\_100\_02            &     &    1   &     97.52\%  &   1     &    1   &     97.52\%  &   1          \\      
+ instance\_100\_03            &     &    1   &     95.67\%  &   1     &    1   &     95.67\%  &   1          \\      
+ instance\_100\_04            &     &    1   &     96.85\%  &   1     &    1   &     96.85\%  &   1         \\     
+ instance\_100\_05            &     &    1   &     96.15\%  &   1     &    1   &     96.15\%  &   1         \\    
+ instance\_f\_01              &     &    1  &      94.46\%  &   1     &    1  &      94.46\%  &   1         \\    
+ instance\_f\_02              &     &    1   &     95.64\%  &   1     &    1   &     95.64\%  &   1         \\    
+ instance\_f\_03              &     &    1  &      95.60\%  &   1     &    1  &      95.60\%  &   1      \\ 
+ instance\_f\_04              &     &    1   &     96.22\%  &   1     &    1   &     96.22\%  &   1         \\    
+ instance\_f\_05              &     &    1  &      94.34\%  &   1     &    1  &      94.34\%  &   1     \\   
   \hline
 \end{tabular}
 
@@ -2980,19 +3006,32 @@ Istanza  &   &                        N.S.O. &  A.S.U.   &  H.U.S. \\
 
 \chapter{Conclusioni}
 
+L'obbiettivo della tesi era di raggiungere una migliore comprensione del problema di pianificazione degli sprint in un contesto di un progetto Scrum, al fine di testare l'efficacia di svariati metodi di risoluzione e proporre possibili funzioni obbiettivo alternative, in grado di massimizzare l'utilità totale del progetto, tenendo conto del rischio e dell'incertezza associati alle user story.
+
+\subsection{Contributo della tesi}
+
+Il contributo principale della tesi consiste nella proposta e valutazione di nuove funzioni obbiettivo, la cui analisi ha evidenziato che funzioni obbiettivo che incentivano a inserire precocemente le user story che sbloccano altre user story, tramite vincoli di dipendenza, tendono a fornire soluzioni paragonabili alle altre per numero di sprint utilizzati e utilita per il cliente, ma con sprint che risultano mediamente meno rischiosi e incerti.
+
+Altro contributo è stato quello di analizzare come possibili cambiamenti nelle istanze di progetto, come ad esempio una diminuzione del numero di sprint a disposizione o della capacità massima degli sprint, possa influire sulla pianificazione del progetto e sulla capacità dei metodi di risolvere il problema in tempi ragionevoli.
+
+\subsection{Limiti dello studio}
+
+Purtroppo, vi sono alcuni limiti in questo studio. Purtroppo, le istanze che sono state utilizzate per fare i test sono sintetiche, per cui potrebbero non riflettere completamente la complessità e le dinamiche di un progetto reale.
+Inoltre, il miglioramento proposto in \ref{sec:newheu} non ha portato a miglioramenti nei risultati, probabilmente a causa del fatto che i tagli inseriti non sono stati sufficientemente efficaci nel ridurre lo spazio di ricerca, o che il metodo euristico non è stato in grado di sfruttare appieno i tagli inseriti, al fine di migliorare i tempi di risoluzione.
+
 \subsection{Sviluppi futuri}
 
 \subsubsection{Miglioramento della Formulazione matematica \ref{sec.formulazione2}}
 
-Come si e' visto nei risultati \ref{risultati.alternativi} la formulazione matematica proposta nella sezione \ref{sec.formulazione2} non e' in grado di produrre soluzioni con un numero di sprint maggiore di 1, a causa della mancanza di vincoli che limitino la dimensione dello sprint e il rischio e l'incertezza massima che possono essere presenti in un unico sprint.
+Come si e' visto nei risultati \ref{risultati.alternativi} la formulazione matematica proposta nella sezione \ref{sec.formulazione2} non è in grado di produrre soluzioni con un numero di sprint maggiore di 1, a causa della mancanza di vincoli che limitino la dimensione dello sprint e il rischio e l'incertezza massima che possono essere presenti in un unico sprint.
 Un possibile sviluppo futuro consiste nell'introduzione di tali vincoli nella formulazione matematica, al fine di ottenere soluzioni più realistiche e utili per la pianificazione degli sprint.
-Una formiglore potrebbe essere la seguente:
+Una forma migliore potrebbe essere la seguente:
 
 \begin{alignat}{3}
  \qquad z_P  = \max  & \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right)
                                                                                &\                        \label{Eq6.P1}\\
   s.t.\ & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} - p^{sp} \xi_{i}  \leq 0,                   &\ i \in S                \label{Eq6.P2}\\
-        & \sum_{j=1}^{n} r_j^{risk} x_{ij} \approx \sum_{j=1}^{n} r_j^{risk} x_{(i+1)j},                   &\ i \in S                \label{Eq6.P3}\\
+        & \sum_{j=1}^{n} r_j^{cr} x_{ij} \approx \sum_{j=1}^{n} r_j^{cr} x_{(i+1)j},                   &\ i \in S                \label{Eq6.P3}\\
         & \sum_{i=1}^{m} x_{ij} = 1,                                           &\ j \in U                \label{Eq6.P4}\\
         & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} \geq x_{ij},             &\ i \in S, j \in U^{OR}  \label{Eq6.P5}\\
         & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j^{AND}|, &\quad i \in S, j \in U^{AND} \label{Eq6.P6}\\
@@ -3063,7 +3102,6 @@ Siano $u_j$, $v_i$, $\alpha_{ij}$, e $\beta_{ij}$ le variabili duali associate r
         & \alpha_{ij} \leq 0,                                  &\hspace{-8.0cm} i \in S, j \in U^{OR}  \hspace{1.0cm} \label{Eq.F2.D5} \\
         & \beta_{ij} \leq 0,                                   &\hspace{-8.0cm} i \in S, j \in U^{AND} \hspace{1.0cm} \label{Eq.F2.D6}
 \end{alignat}
-
 
 
 %----------------------------------------------------------------------------------------
