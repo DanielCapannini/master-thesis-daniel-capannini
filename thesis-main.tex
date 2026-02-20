@@ -2465,20 +2465,20 @@ instance\_06\_01             &     &    1  &      95.47\%  &   1     &    1  &  
 
 L'obbiettivo della tesi era di raggiungere una migliore comprensione del problema di pianificazione degli sprint in un contesto di un progetto Scrum, al fine di testare l'efficacia di svariati metodi di risoluzione e proporre possibili funzioni obbiettivo alternative, in grado di massimizzare l'utilità totale del progetto, tenendo conto del rischio e dell'incertezza associati alle user story.
 
-\subsection{Contributo della tesi}
+\section{Contributo della tesi}
 
 Il contributo principale della tesi consiste nella proposta e valutazione di nuove funzioni obbiettivo, la cui analisi ha evidenziato che funzioni obbiettivo che incentivano a inserire precocemente le user story che sbloccano altre user story, tramite vincoli di dipendenza, tendono a fornire soluzioni paragonabili alle altre per numero di sprint utilizzati e utilita per il cliente, ma con sprint che risultano mediamente meno rischiosi e incerti.
 
 Altro contributo è stato quello di analizzare come possibili cambiamenti nelle istanze di progetto, come ad esempio una diminuzione del numero di sprint a disposizione o della capacità massima degli sprint, possa influire sulla pianificazione del progetto e sulla capacità dei metodi di risolvere il problema in tempi ragionevoli.
 
-\subsection{Limiti dello studio}
+\section{Limiti dello studio}
 
 Purtroppo, vi sono alcuni limiti in questo studio. Purtroppo, le istanze che sono state utilizzate per fare i test sono sintetiche, per cui potrebbero non riflettere completamente la complessità e le dinamiche di un progetto reale.
 Inoltre, il miglioramento proposto in \ref{sec:newheu} non ha portato a miglioramenti nei risultati, probabilmente a causa del fatto che i tagli inseriti non sono stati sufficientemente efficaci nel ridurre lo spazio di ricerca, o che il metodo euristico non è stato in grado di sfruttare appieno i tagli inseriti, al fine di migliorare i tempi di risoluzione.
 
-\subsection{Sviluppi futuri}
+\section{Sviluppi futuri}
 
-\subsubsection{Miglioramento della Formulazione matematica \ref{sec.formulazione2}}
+\subsection{Miglioramento della Formulazione matematica \ref{sec.formulazione2}}
 
 Come si e' visto nei risultati \ref{risultati.alternativi} la formulazione matematica proposta nella sezione \ref{sec.formulazione2} non è in grado di produrre soluzioni con un numero di sprint maggiore di 1, a causa della mancanza di vincoli che limitino la dimensione dello sprint e il rischio e l'incertezza massima che possono essere presenti in un unico sprint.
 Un possibile sviluppo futuro consiste nell'introduzione di tali vincoli nella formulazione matematica, al fine di ottenere soluzioni più realistiche e utili per la pianificazione degli sprint.
@@ -2500,7 +2500,7 @@ Una forma migliore potrebbe essere la seguente:
 
 dove con la funzione \eqref{Eq6.P3} si cerca di mantenere il rischio totale dello sprint $i$ approssimativamente uguale a quello dello sprint $i+1$, al fine di evitare soluzioni in cui un unico sprint contiene tutte le user story, con un rischio molto elevato, ma che le user story siano distribuite in modo più equilibrato tra gli sprint, con un rischio più omogeneo.
 
-\subsubsection{Formulazione matematica alternativa}
+\subsection{Formulazione matematica alternativa}
 
 Un promettente sviluppo futuro consiste in una riformulazione matematica alternativa del problema, basata su un approccio di tipo {\em pattern-based}. In tale approccio, anziché modellizzare direttamente l'assegnazione delle user story agli sprint, si considererebbero i possibili pattern di assegnazione delle user story agli sprint, selezionando quelli che massimizzano l'utilità totale.
 

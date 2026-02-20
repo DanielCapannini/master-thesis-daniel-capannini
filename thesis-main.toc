@@ -59,10 +59,10 @@
 \contentsline {subsection}{\numberline {6.5.4}Eliminazione vincoli AND e OR}{81}{subsection.6.5.4}%
 \contentsline {subsection}{\numberline {6.5.5}Risultati con formulazione matematica alternativa}{84}{subsection.6.5.5}%
 \contentsline {chapter}{\numberline {7}Conclusioni}{87}{chapter.7}%
-\contentsline {subsection}{\numberline {7.0.1}Contributo della tesi}{87}{subsection.7.0.1}%
-\contentsline {subsection}{\numberline {7.0.2}Limiti dello studio}{88}{subsection.7.0.2}%
-\contentsline {subsection}{\numberline {7.0.3}Sviluppi futuri}{88}{subsection.7.0.3}%
-\contentsline {subsubsection}{Miglioramento della Formulazione matematica \ref {sec.formulazione2}}{88}{section*.24}%
-\contentsline {subsubsection}{Formulazione matematica alternativa}{89}{section*.25}%
-\contentsline {part}{}{93}{equation.7.0.22}%
-\contentsline {chapter}{Bibliography}{93}{section*.26}%
+\contentsline {section}{\numberline {7.1}Contributo della tesi}{87}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Limiti dello studio}{88}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Sviluppi futuri}{88}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Miglioramento della Formulazione matematica \ref {sec.formulazione2}}{88}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Formulazione matematica alternativa}{89}{subsection.7.3.2}%
+\contentsline {part}{}{93}{equation.7.3.22}%
+\contentsline {chapter}{Bibliography}{93}{section*.24}%
