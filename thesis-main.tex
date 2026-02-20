@@ -246,7 +246,7 @@ Per valutare approcci alternativi alla funzione obiettivo originale~\eqref{Eq1.P
 Le nuove funzioni obiettivo sono definite come segue:
 
 \begin{alignat}{3}
-z_P^\text{cr}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
+z_P^\text{cr+mod}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right) dp_{ij} + ub_{ij}
     &\label{Eq2.P1}\\
 z_P^\text{unc}  = \max  &\ \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{unc} x_{ij} + a_j y_{ij} \right) 
     &\label{Eq2.P2}\\
@@ -270,7 +270,7 @@ I nuovi parametri introdotti sono:
 
 Ciascuna funzione obiettivo persegue una specifica strategia di pianificazione:
 
-\paragraph{Funzione \texorpdfstring{$z_P^\text{cr}$}{z\_P\^{}cr} (Criticità con modificatori)~\eqref{Eq2.P1}.} 
+\paragraph{Funzione \texorpdfstring{$z_P^\text{cr+mod}$}{z\_P\^{}cr} (Criticità con modificatori)~\eqref{Eq2.P1}.} 
 Rappresenta la formulazione originale del problema, che massimizza il valore di business ponderato per la criticità $r_j^{cr}$ delle user story. I modificatori $dp_{ij}$ e $ub_{ij}$ penalizzano l'assegnazione precoce di story con dipendenze non soddisfatte e premiano le story ``critiche'' che sbloccano molte altre attività. \textbf{Obiettivo}: bilanciare valore di business e rispetto delle dipendenze architetturali.
 
 \paragraph{Funzione \texorpdfstring{$z_P^\text{unc}$}{z\_P\^{}unc} (Incertezza senza modificatori)~\eqref{Eq2.P2}.}
