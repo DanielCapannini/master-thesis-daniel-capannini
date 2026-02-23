@@ -2488,7 +2488,7 @@ Una forma migliore potrebbe essere la seguente:
  \qquad z_P  = \max  & \sum_{k=1}^m \sum_{i=1}^{k} \sum_{j=1}^{n} u_j \left( r_j^{cr} x_{ij} + a_j y_{ij} \right)
                                                                                &\                        \label{Eq6.P1}\\
   s.t.\ & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} - p^{sp} \xi_{i}  \leq 0,                   &\ i \in S                \label{Eq6.P2}\\
-        & \sum_{j=1}^{n} r_j^{cr} x_{ij} \approx \sum_{j=1}^{n} r_j^{cr} x_{(i+1)j},                   &\ i \in S                \label{Eq6.P3}\\
+        & \sum_{j=1}^{n} r_j^{cr} x_{ij} \leq \frac{\sum_{j=1}^{n} r_j^{cr}}{m} \psi,                   &\ i \in S                \label{Eq6.P3}\\
         & \sum_{i=1}^{m} x_{ij} = 1,                                           &\ j \in U                \label{Eq6.P4}\\
         & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} \geq x_{ij},             &\ i \in S, j \in U^{OR}  \label{Eq6.P5}\\
         & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j^{AND}|, &\quad i \in S, j \in U^{AND} \label{Eq6.P6}\\
@@ -2498,7 +2498,9 @@ Una forma migliore potrebbe essere la seguente:
         & y_{ij} \geq 0,                                                       &\ i \in S, j \in U       \label{Eq6.P10}
 \end{alignat}
 
-dove con la funzione \eqref{Eq6.P3} si cerca di mantenere il rischio totale dello sprint $i$ approssimativamente uguale a quello dello sprint $i+1$, al fine di evitare soluzioni in cui un unico sprint contiene tutte le user story, con un rischio molto elevato, ma che le user story siano distribuite in modo più equilibrato tra gli sprint, con un rischio più omogeneo.
+Dove con la funzione \eqref{Eq6.P3} si cerca di mantenere il rischio totale dello sprint $i$ minore del rischio totale di tuttle le user story diviso il numero di sprint, trovando cosi una media di rischio da tenere in ogni sprint, moltiplicato per un parametro $\psi$ il quale deve essere trovato per ogni istanza che si vuole analizzare, la sua presenza è dovuta perche ogni progetto presenta rischi diversi che possono variare sostanzialmete a seconda della tipologia di progetto, per esempoi progetti di ricerca rusultano essere molto più rischiosi di progetti di cui si ha gia esperienza e si conoscono tutte le specifiche.
+
+L'obbiettivo ultimo di questa funzione è quello di concentrare le user story più rischiose all'inizio del progetto in sprint che hanno capacita pari a $p^{sp}$ e successivamente la presenza di sprint più lunghi che comprendono le user story meno rischiose del progetto. 
 
 \subsection{Formulazione matematica alternativa}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.21)  20 FEB 2026 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.21)  23 FEB 2026 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1442,25 +1442,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package cleveref Info: loaded `english' language definitions on input line 2499.
 Package cleveref Info: loaded `english' language definitions on input line 2499.
  [88]
-Package cleveref Info: loaded `english' language definitions on input line 2506.
-Package cleveref Info: loaded `english' language definitions on input line 2506.
+Underfull \vbox (badness 6944) has occurred while \output is active []
+
+Package cleveref Info: loaded `english' language definitions on input line 2505.
+Package cleveref Info: loaded `english' language definitions on input line 2505.
  [89]
-Underfull \vbox (badness 3068) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package cleveref Info: loaded `english' language definitions on input line 2533.
 Package cleveref Info: loaded `english' language definitions on input line 2533.
  [90]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package cleveref Info: loaded `english' language definitions on input line 2561.
-Package cleveref Info: loaded `english' language definitions on input line 2561.
+Package cleveref Info: loaded `english' language definitions on input line 2547.
+Package cleveref Info: loaded `english' language definitions on input line 2547.
  [91]
-Package cleveref Info: loaded `english' language definitions on input line 2568.
-Package cleveref Info: loaded `english' language definitions on input line 2568.
+Package cleveref Info: loaded `english' language definitions on input line 2570.
+Package cleveref Info: loaded `english' language definitions on input line 2570.
  [92]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 2573.
+(hyperref)                be the same. Added a new anchor on input line 2575.
 
 (thesis-main.bbl
 Package cleveref Info: loaded `english' language definitions on input line 44.
@@ -1481,15 +1481,15 @@ Package cleveref Info: loaded `english' language definitions on input line 152.
 Package cleveref Info: loaded `english' language definitions on input line 209.
 Package cleveref Info: loaded `english' language definitions on input line 209.
  [96])
-Package cleveref Info: loaded `english' language definitions on input line 2576.
-Package cleveref Info: loaded `english' language definitions on input line 2576.
+Package cleveref Info: loaded `english' language definitions on input line 2578.
+Package cleveref Info: loaded `english' language definitions on input line 2578.
  [97]
-Package cleveref Info: loaded `english' language definitions on input line 2576.
-Package cleveref Info: loaded `english' language definitions on input line 2576.
+Package cleveref Info: loaded `english' language definitions on input line 2578.
+Package cleveref Info: loaded `english' language definitions on input line 2578.
  [98
 
 ]
-Package cleveref Info: loaded `english' language definitions on input line 2580.
+Package cleveref Info: loaded `english' language definitions on input line 2582.
  [99] (thesis-main.aux
 Package cleveref Info: loaded `english' language definitions on input line 10.
 )
@@ -1509,7 +1509,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  114i,19n,115p,1724b,1569s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk> <C:\Users\danie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb><C:/Users/danie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis-main.pdf (111 pages, 1148149 bytes).
+Output written on thesis-main.pdf (111 pages, 1148756 bytes).
 PDF statistics:
  1523 PDF objects out of 1728 (max. 8388607)
  478 named destinations out of 1000 (max. 500000)
