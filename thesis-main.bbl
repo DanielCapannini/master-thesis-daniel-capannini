@@ -140,12 +140,6 @@ Kolisch, R. and Padman, R. (2001).
 \newblock An integrated survey of deterministic project scheduling.
 \newblock {\em Omega}, 29(3):249--272.
 
-\bibitem[kos Sz{\"o}ke, 2011]{SZOKE2011574}
-kos Sz{\"o}ke, A. (2011).
-\newblock Conceptual scheduling model and optimized release scheduling for agile environments.
-\newblock {\em Information and Software Technology}, 53(6):574--591.
-\newblock Special Section: Best papers from the APSEC.
-
 \bibitem[Li et~al., 2010]{Li2010375}
 Li, C., van~den Akker, M., Brinkkemper, S., and Diepen, G. (2010).
 \newblock An integrated approach for requirement selection and scheduling in software release planning.
@@ -196,6 +190,12 @@ Schwaber, K. (1995).
 Schwaber, K. (1997).
 \newblock Scrum development process.
 \newblock In Sutherland, J., Casanave, C., Miller, J., Patel, P., and Hollowell, G., editors, {\em Business Object Design and Implementation}, pages 117--134, London. Springer London.
+
+\bibitem[Sz{\"o}ke, 2011]{SZOKE2011574}
+Sz{\"o}ke, A. (2011).
+\newblock Conceptual scheduling model and optimized release scheduling for agile environments.
+\newblock {\em Information and Software Technology}, 53(6):574--591.
+\newblock Special Section: Best papers from the APSEC.
 
 \bibitem[{van Valkenhoef} et~al., 2011]{VANVALKENHOEF20111227}
 {van Valkenhoef}, G., Tervonen, T., {de Brock}, B., and Postmus, D. (2011).
