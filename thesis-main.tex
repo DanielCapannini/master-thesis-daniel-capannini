@@ -159,7 +159,7 @@ Il problema della pianificazione ha acquisito crescente interesse nell'ambito de
 
 \vspace{1em}
 
-Un modello specificamente orientato ai metodi agili è descritto in \cite{SZOKE2011574}, dove viene presentato un modello concettuale per la pianificazione dei rilasci e sviluppato un modello di ottimizzazione finalizzato all’assegnazione dei requisiti alle diverse iterazioni di un rilascio, con l’obiettivo di massimizzare l’utilità complessiva fornita pur tenendo conto delle precedenze e delle condizioni di accoppiamento. In questo contesto, gli autori illustrano un algoritmo branch-and-bound per la risoluzione del modello, che incorpora esplicitamente la gestione del rischio. Un ulteriore contributo rilevante nel contesto agile è quello di \cite{VANVALKENHOEF20111227}, focalizzato primariamente sulla gestione del rischio e dell’incertezza nei progetti XP. L’approccio proposto stima la velocità di sviluppo del team e considera più set di user story con rilevanza decrescente secondo la classificazione MoSCoW:
+Un modello specificamente orientato ai metodi agili è descritto in \cite{SZOKE2011574}, dove viene presentato un modello concettuale per la pianificazione dei rilasci e sviluppato un modello di ottimizzazione finalizzato all’assegnazione dei requisiti alle diverse iterazioni di un rilascio, con l’obiettivo di massimizzare l’utilità complessiva fornita pur tenendo conto delle precedenze e delle condizioni di accoppiamento. In questo contesto, gli autori illustrano un algoritmo branch-and-bound per la risoluzione del modello, che incorpora esplicitamente la gestione del rischio. Un ulteriore contributo rilevante nel contesto Agile è stato quello di \cite{VANVALKENHOEF20111227}, focalizzato primariamente sulla gestione del rischio e dell’incertezza nei progetti XP. L’approccio proposto stima la velocità di sviluppo del team e considera più set di user story con rilevanza decrescente secondo la classificazione MoSCoW:
 
 \begin{itemize}
 \item set \textit{must have} (requisiti indispensabili)
@@ -176,7 +176,8 @@ Nei contesti reali, l'ambiente di progetto difficilmente può essere considerato
 
 \vspace{1em}
 
-Nel contesto specifico della pianificazione Scrum, in \cite{Li2010375} viene fornito un modello di ottimizzazione, basato sulla formulazione del problema dello zaino, per la pianificazione a singola iterazione che seleziona i requisiti massimizzando il profitto dell'iterazione successiva e rispettando i vincoli di sviluppo. L'evoluzione viene gestita consentendo modifiche ai parametri dopo ogni iterazione e valutandone l'impatto sul modello, con una nuova soluzione per l'iterazione successiva generata da zero incorporando modifiche e storie aggiuntive. Un approccio più sofisticato è rappresentato dalla pianificazione bi-obiettivo proposta in \cite{10.1145/1287624.1287641}, in cui l'iterazione successiva viene pianificata considerando l'impatto di nuovi requisiti o modifiche sul sistema esistente dal punto di vista aziendale e di sviluppo. Viene generato un insieme di piani alternativi, ciascuno dei quali riflette una diversa importanza relativa degli aspetti aziendali e di implementazione; il piano ottimale viene quindi selezionato come quello che meglio soddisfa un gruppo di interdipendenze, denominate SD-coupling, tra i requisiti identificati attraverso l'analisi di impatto. Questo approccio permette di bilanciare in modo esplicito le esigenze di business con le complessità tecniche derivanti dall'evoluzione del sistema.
+Nel contesto specifico della pianificazione Scrum, in \cite{Li2010375} viene fornito un modello di ottimizzazione, basato sulla formulazione del problema dello zaino, per la pianificazione a singola iterazione che seleziona i requisiti in modo da massimizzando il profitto dell'iterazione successiva e rispettando i vincoli di sviluppo.
+L'evoluzione viene gestita consentendo modifiche ai parametri dopo ogni iterazione e valutandone l'impatto sul modello, con una nuova soluzione per l'iterazione successiva generata da zero incorporando modifiche e storie aggiuntive. Un approccio più sofisticato è rappresentato dalla pianificazione bi-obiettivo proposta in \cite{10.1145/1287624.1287641}, in cui l'iterazione successiva viene pianificata considerando l'impatto di nuovi requisiti o modifiche sul sistema esistente dal punto di vista aziendale e di sviluppo. Viene generato un insieme di piani alternativi, ciascuno dei quali riflette una diversa importanza relativa degli aspetti aziendali e di implementazione; il piano ottimale viene quindi selezionato come quello che meglio soddisfa un gruppo di interdipendenze, denominate SD-coupling, tra i requisiti identificati attraverso l'analisi di impatto. Questo approccio permette di bilanciare in modo esplicito le esigenze di business con le complessità tecniche derivanti dall'evoluzione del sistema.
 
 Sebbene questi approcci affrontino specificamente le problematiche relative all'incertezza e alla ripianificazione, nessuno di essi si occupa di evitare che il nuovo piano interferisca con quello precedente, aspetto che costituisce uno dei contributi distintivi di questo lavoro. Per identificare contributi in questa direzione, è necessario esaminare l'area di ricerca sulla pianificazione in condizioni di incertezza, i cui sforzi si sono concentrati su due fronti principali: la pianificazione proattiva e la pianificazione reattiva \cite{demeulemeester2002project}.
 
@@ -312,7 +313,7 @@ Combina l'ottimizzazione del carico con i modificatori per evitare che la satura
 La presenza o assenza dei modificatori $dp_{ij}$ e $ub_{ij}$ definisce due varianti per ciascuna strategia:
 
 \paragraph{Varianti senza modificatori (\eqref{Eq2.P2},~\eqref{Eq2.P4}).} 
-Rappresentano formulazioni ``pure'' che ottimizzano esclusivamente il criterio principale (incertezza o carico) senza considerazioni esplicite sulle dipendenze. Queste varianti sono utili come baseline per valutare l'impatto dei modificatori, ma possono generare soluzioni che violano frequentemente i vincoli di precedenza, richiedendo correzioni successive.
+Rappresentano le formulazioni ``pure'' che ottimizzano esclusivamente il criterio principale (incertezza o carico) senza considerazioni esplicite sulle dipendenze. Queste varianti sono utili come baseline per valutare l'impatto dei modificatori, ma possono generare soluzioni che violano frequentemente i vincoli di precedenza, richiedendo correzioni successive.
 
 \paragraph{Varianti con modificatori (\eqref{Eq2.P1},~\eqref{Eq2.P3},~\eqref{Eq2.P5}).}
 Integrano due meccanismi di guida della ricerca: \textbf{Development penalty ($dp_{ij}$)} e \textbf{Urgency bonus ($ub_{ij}$)}. Questi modificatori agiscono come forze di attrazione o repulsione durante l'assegnazione delle user story agli sprint, influenzando la direzione della ricerca verso soluzioni più coerenti con le dipendenze tecniche e le priorità di business.
@@ -323,7 +324,7 @@ I risultati computazionali di confronto sono riportati nella Sezione~\ref{confro
 
 \section{Procedure di riduzione} \label{Sec.Red}
 
-Le procedure di riduzione mirano a rafforzare i vincoli di capacità \eqref{Eq1.P2} modificando le capacità degli sprint o i pesi \( pr_j = p_j r_j^{un} \) delle user story. Approcci simili sono utilizzati per problemi di packing in \cite{BHM02,BM03a,BM10}.
+Le procedure di riduzione mirano a rafforzare i vincoli di capacità \eqref{Eq1.P2} modificando le capacità degli sprint o i pesi \( pr_j = p_j r_j^{un} \) delle user story. Approcci simili sono utilizzati per problemi di packing presenti in \cite{BHM02,BM03a,BM10}.
 
 \subsection{Modifica delle capacità degli sprint} \label{SubSec.RedSprint}
 
@@ -368,7 +369,9 @@ Questa variazione permette al modello di variare la capacita di ogni sprint, acc
   s.t.\ & \sum_{j=1}^{n} p_j r_j^{un} x_{ij} - p^{sp} \xi_{i}  \leq 0,                   &\ i \in S                \label{Eq5.P2}\\
         & \sum_{i=1}^{m} x_{ij} = 1,                                           &\ j \in U                \label{Eq5.P3}\\
         & \sum_{k=1}^{i} \sum_{z \in D_j^{OR}} x_{kz} \geq x_{ij},             &\ i \in S, j \in U^{OR}  \label{Eq5.P4}\\
-        & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j^{AND}|, &\quad i \in S, j \in U^{AND} \label{Eq5.P5}\\
+        & \sum_{k=1}^{i} \sum_{z \in D_j^{AND}} x_{kz} \geq x_{ij}|D_j^{AND}|, &\quad i \in S, j \in U^{AND} \label{Eq5.P5}
+\end{alignat}
+\begin{alignat}{3}
         & y_{ij} \leq \sum_{k \in Y_j} x_{ik},                                 &\ i \in S, j \in U       \label{Eq5.P6}\\
         & y_{ij} \leq |Y_j| x_{ij},                                            &\ i \in S, j \in U       \label{Eq5.P7}\\
         & x_{ij} \in \{0,1\},                                                  &\ i \in S, j \in U       \label{Eq5.P8}\\
@@ -504,7 +507,7 @@ Nella fase sperimentale, si è fissato $\textit{MaxIter}=1000$. La strategia (iv
 
 Sia {\em GreedyHeuristic} sia {\em QuickGreedyHeuristic} possono terminare senza individuare una soluzione ammissibile, poiché tutti gli sprint risultano esaminati (cioè $i > m$) ma non tutte le user story sono assegnate agli sprint disponibili (ovvero $F_i \neq U$). Inoltre, anche quando {\em QuickGreedyHeuristic} produce una soluzione ammissibile, tale soluzione può in genere essere ulteriormente migliorata: le strategie di recupero della ammissibilità rispetto ai vincoli di dipendenza, infatti, possono condurre a configurazioni non localmente ottimali.
 
-In \cite{BOSCHETTI2014116} viene proposta \emph{ExchangeHeuristic} descritta in Figura~\ref{Alg.EH}. Data una soluzione $\mathbf{x}'$ da migliorare, la procedura tenta sistematicamente di scambiare user story tra coppie di sprint, ripetendo il processo fino a quando avviene almeno uno scambio migliorativo. In particolare, {\em ExchangeHeuristic} considera tre tipi di mosse:
+In \cite{BOSCHETTI2014116} viene proposta \emph{ExchangeHeuristic}, descritta in Figura \ref{Alg.EH}. Data una soluzione $\mathbf{x}'$ da migliorare, la procedura tenta sistematicamente di scambiare user story tra coppie di sprint, ripetendo il processo fino a quando avviene almeno uno scambio migliorativo. In particolare, {\em ExchangeHeuristic} considera tre tipi di mosse:
 \begin{description}
 \item[1-0:] spostamento di una user story $j \in U$ eseguita nello sprint $i'$ verso uno sprint $i$;
 \item[1-1:] scambio di una user story $j \in U$ eseguita nello sprint $i$ con una user story $j' \in U$ eseguita nello sprint $i'$;
@@ -740,7 +743,7 @@ Per i test computazionali sono stati utilizzati dati sintetici. Le istanze devon
 
 \subsection{Generazione di istanze di test}
 
-I dataset utilizzati per la valutazione sperimentale degli algoritmi proposti in~\cite{BOSCHETTI2014116} presentano alcune limitazioni significative: in particolare, mancano completamente i parametri relativi al rischio ($r_j^{cr}$) e all'incertezza ($r_j^{unc}$) delle user story, essendo stati concepiti prima dell'introduzione di queste metriche nella modellazione del problema. Questa carenza rende impossibile una valutazione empirica significativa delle nuove funzioni obiettivo introdotte nella Sezione~\ref{sec:fo}, che si basano proprio su questi parametri per guidare le decisioni di pianificazione.
+I dataset utilizzati per la valutazione sperimentale degli algoritmi proposti in \cite{BOSCHETTI2014116} presentano alcune limitazioni significative: in particolare, mancano completamente i parametri relativi al rischio ($r_j^{cr}$) e all'incertezza ($r_j^{unc}$) delle user story, essendo stati concepiti prima dell'introduzione di queste metriche nella modellazione del problema. Questa carenza rende impossibile una valutazione empirica significativa delle nuove funzioni obiettivo introdotte nella Sezione~\ref{sec:fo}, che si basano proprio su questi parametri per guidare le decisioni di pianificazione.
 
 Per ovviare a tale limitazione, è stato sviluppato un generatore sintetico di istanze che permette il controllo completo sui seguenti parametri configurabili:
 
@@ -888,7 +891,7 @@ I seguenti indicatori, già utilizzati in~\cite{BOSCHETTI2014116}, permettono di
     \]
     Misura direttamente la perdita di qualità dovuta all'uso dell'euristica anziché dell'ottimizzazione esatta. Valori prossimi allo zero indicano che l'euristica trova soluzioni quasi ottimali.
     \fi
-    \item[\textbf{Time (s)}] Tempo computazionale totale espresso in secondi, dall'inizializzazione dell'algoritmo fino al termine dell'esecuzione (sia per raggiungimento dell'ottimo certificato sia per time limit). Riflette la scalabilità pratica dell'approccio.
+    \item[\textbf{Time (s)}] Tempo computazionale totale espresso in secondi, dall'inizializzazione dell'algoritmo fino al termine dell'esecuzione (che sia per raggiungimento dell'ottimo certificato sia per time limit). Riflette la scalabilità pratica dell'approccio.
 \end{description}
 
 
@@ -946,7 +949,7 @@ I KPI computazionali e i KPI di qualità della pianificazione forniscono prospet
 \section{Confronto tra il metodo euristico originale e la versione con modifiche ai tagli}
 
 Nella tabella \ref{Tab.6} sono riportati i confronti tra il metodo euristico originale e la versione aggiornata che incorpora le modifiche descritte nella sezione \ref{sec:newheu}. I risulati mostrano che la versione aggiornata dell'euristica riporta la stessa soluzione di quella originale ma con un aumento dei tempi di esecuzione.
-Questo sta ad indicare che le modifiche apportate ai tagli non sono riusciti a portare il miglioramento sperato, anzi a portato ad un peggioramento dei tempi di calcolo senza alcun beneficio in termini di qualità della soluzione.
+Le modifiche ai tagli non hanno migliorato i tempi di calcolo come previsto, determinando anzi un peggioramento delle prestazioni computazionali senza benefici sulla qualità della soluzione.
 
 \begin{table}[h]
 \centering
