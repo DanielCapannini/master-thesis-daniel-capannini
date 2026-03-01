@@ -47,7 +47,7 @@
 \contentsline {subsection}{\numberline {6.2.3}Interpretazione congiunta dei KPI}{48}{subsection.6.2.3}%
 \contentsline {section}{\numberline {6.3}Confronto tra il metodo euristico originale e la versione con modifiche ai tagli}{49}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Confronto funzioni obiettivo}{50}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}funzuone obiettivo \eqref {Eq2.P1}}{52}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.1}Funzione obiettivo \eqref {Eq2.P1}}{52}{subsection.6.4.1}%
 \contentsline {subsection}{\numberline {6.4.2}Funzione obiettivo \eqref {Eq2.P2} e \eqref {Eq2.P3}}{55}{subsection.6.4.2}%
 \contentsline {subsection}{\numberline {6.4.3}Funzione obiettivo \eqref {Eq2.P4} e \eqref {Eq2.P5}}{60}{subsection.6.4.3}%
 \contentsline {subsection}{\numberline {6.4.4}Confronto funzioni obiettivo}{65}{subsection.6.4.4}%
