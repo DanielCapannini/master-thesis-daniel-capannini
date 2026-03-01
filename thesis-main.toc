@@ -21,7 +21,7 @@
 \contentsline {chapter}{\numberline {5}Euristiche per la pianificazione degli sprint}{25}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Euristiche greedy e di scambio del lavoro precedente}{25}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}GreedyHeuristic: costruzione sprint-per-sprint}{25}{subsection.5.1.1}%
-\contentsline {paragraph}{Pseudocodice della GreedyHeuristic.}{26}{lstnumber.5.1.6}%
+\contentsline {paragraph}{Pseudocodice della GreedyHeuristic.}{26}{lstnumber.5.1.8}%
 \contentsline {subsection}{\numberline {5.1.2}QuickGreedyHeuristic: versione veloce basata su knapsack}{27}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}ExchangeHeuristic: miglioramento locale per scambi}{30}{subsection.5.1.3}%
 \contentsline {section}{\numberline {5.2}A Lagrangian Heuristic}{33}{section.5.2}%
@@ -53,7 +53,7 @@
 \contentsline {subsection}{\numberline {6.4.4}Confronto funzioni obiettivo}{65}{subsection.6.4.4}%
 \contentsline {section}{\numberline {6.5}Variazione dei parametri}{70}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}Riduzione del numero di sprint}{70}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Riduzioni capacita degli sprint}{74}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.2}Riduzione della capacità degli sprint}{74}{subsection.6.5.2}%
 \contentsline {subsection}{\numberline {6.5.3}Accorpamento di sprint}{77}{subsection.6.5.3}%
 \contentsline {subsection}{\numberline {6.5.4}Eliminazione vincoli AND e OR}{81}{subsection.6.5.4}%
 \contentsline {subsection}{\numberline {6.5.5}Risultati con formulazione matematica alternativa}{84}{subsection.6.5.5}%
